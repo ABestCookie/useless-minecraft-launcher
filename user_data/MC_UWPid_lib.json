@@ -1,0 +1,9 @@
+{
+    "name": "MC_UWPid",
+    "version": "1.0.0",
+    "edition": ["Minecraft", "Minecraft_Preview", "Minecraft_Education", "Minecraft_Education_Preview"],
+    "Minecraft": "Microsoft.MinecraftUWP_8wekyb3d8bbwe!App",
+    "Minecraft_Preview": "Microsoft.MinecraftWindowsBeta_8wekyb3d8bbwe!App",
+    "Minecraft_Education": "Microsoft.MinecraftEducationEdition_8wekyb3d8bbwe!Microsoft.MinecraftEducationEdition",
+    "Minecraft_Education_Preview": "Microsoft.MinecraftEducationPreview_8wekyb3d8bbwe!Microsoft.MinecraftEducationEdition"
+}

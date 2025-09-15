@@ -1,0 +1,14 @@
+{
+  "mc_edu": "https://abestcookie.github.io/download-resources/MC-edu-installer.exe",
+  "mc_edu_pre": "https://abestcookie.github.io/download-resources/MC-edu-pre-installer.exe",
+  "jdk8-win-64bit": "https://builds.openlogic.com/downloadJDK/openlogic-openjdk/8u432-b06/openlogic-openjdk-8u432-b06-windows-x64.zip",
+  "jdk8-win-32bit": "https://builds.openlogic.com/downloadJDK/openlogic-openjdk/8u432-b06/openlogic-openjdk-8u432-b06-windows-x86.zip",
+  "jdk11-win-64bit": "https://builds.openlogic.com/downloadJDK/openlogic-openjdk/11.0.25+9/openlogic-openjdk-11.0.25+9-windows-x64.zip",
+  "jdk11-win-32bit": "https://builds.openlogic.com/downloadJDK/openlogic-openjdk/11.0.25+9/openlogic-openjdk-11.0.25+9-windows-x86.zip",
+  "jdk17-win-64bit": "https://builds.openlogic.com/downloadJDK/openlogic-openjdk/17.0.13+11/openlogic-openjdk-17.0.13+11-windows-x64.zip",
+  "jdk17-win-32bit": "https://builds.openlogic.com/downloadJDK/openlogic-openjdk/17.0.13+11/openlogic-openjdk-17.0.13+11-windows-x86.zip",
+  "jdk21-win-64bit": "https://builds.openlogic.com/downloadJDK/openlogic-openjdk/21.0.5+11/openlogic-openjdk-21.0.5+11-windows-x64.zip",
+  "jdk21-win-32bit": "https://builds.openlogic.com/downloadJDK/openlogic-openjdk/21.0.5+11/openlogic-openjdk-21.0.5+11-windows-x86.zip",
+  "jdk22-win-64bit": "https://builds.openlogic.com/downloadJDK/openlogic-openjdk/22.0.2+9/openlogic-openjdk-22.0.2+9-windows-x64.zip",
+  "jdk22-win-32bit": "https://builds.openlogic.com/downloadJDK/openlogic-openjdk/22.0.2+9/openlogic-openjdk-22.0.2+9-windows-x86.zip"
+}

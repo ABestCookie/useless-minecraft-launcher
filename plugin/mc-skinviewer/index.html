@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft skinviewer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="skinviewer.css">
+    <link rel="stylesheet" href="skinviewer-animation.css">
+</head>
+
+<body>
+    <div class="main-content">
+        <div class="skinviewer-container d-skin-aciton-rotate d-skin-aciton-run"></div>
+        <div class="controls">
+            <p>
+                <input type="checkbox" id="control_1" data-classname="d-skin-aciton-rotate-paused"
+                    onchange="changeSkinViewerClassName(event)">
+                <label for="control_1">暂停旋转 (Pause rotation)</label>
+            </p>
+            <p>
+                <input type="checkbox" id="control_2" data-classname="d-skin-aciton-skeleton-paused"
+                    onchange="changeSkinViewerClassName(event)">
+                <label for="control_2">暂停骨骼动画 (Pause skeleton animation)</label>
+            </p>
+            <p>
+                <label for="control_3">选择骨骼动画 (Select skeleton animation)</label>
+                <select id="control_3" onchange="changeSkeletonAnimation(event)">
+                    <option value="none">无动画 (No animation)</option>
+                    <option value="walk">走 (walk)</option>
+                    <option value="run" selected>跑 (run)</option>
+                </select>
+            </p>
+        </div>
+    </div>
+
+    <p>original author : <a href="https://github.com/daidr/mc-skinviewer" target="_blank">Github</a> | <a href="https://daidr.me" target="_blank">daidr</a> | <a href="./LICENCE.txt" target="_blank">License</a></p>
+    <p>Appearance style optimization by <a href="https://github.com/ABestCookie" target="_blank">ABestCookie</a> | <a href="./Disclaimer.txt" target="_blank">Disclaimer</a></p>
+
+    <script>
+        {
+            let skinViewer = document.querySelector('.skinviewer-container');
+            window.changeSkinViewerClassName = function (event) {
+                let className = event.target.dataset.classname.split(',');
+                let state = event.target.checked;
+                if (state) {
+                    skinViewer.classList.add(...className);
+                } else {
+                    skinViewer.classList.remove(...className);
+                }
+            }
+            window.changeSkeletonAnimation = function (event) {
+                let animationName = event.target.value;
+                if (animationName === 'none') {
+                    skinViewer.classList.remove('d-skin-aciton-walk');
+                    skinViewer.classList.remove('d-skin-aciton-run');
+                } else if (animationName === 'walk') {
+                    skinViewer.classList.remove('d-skin-aciton-run');
+                    skinViewer.classList.add('d-skin-aciton-walk');
+                } else if (animationName === 'run') {
+                    skinViewer.classList.remove('d-skin-aciton-walk');
+                    skinViewer.classList.add('d-skin-aciton-run');
+                }
+            }
+        }
+    </script>
+    <script src="skinviewer.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+{
+    "WafflyBat": {
+        "user_name": "WafflyBat",
+        "account_type": "offline",
+        "uuid": "*random*",
+        "token": "*random*",
+        "access_token": "*random*",
+        "client_token": "*empty*",
+        "skin": {
+            "model": "Alex",
+            "path": "user_data/hcbe9hdrLB0.png"
+        }
+    }
+}

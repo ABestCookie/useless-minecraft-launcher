@@ -1,0 +1,73 @@
+/* 主視覺區塊 */
+.skinviewer-container {
+    width: 600px;
+    height: 670px;
+    background: #f7f7f7;
+    touch-action: none;
+}
+
+.skinviewer-container > div {
+    transform: scale(0.6);
+}
+
+/* 排除作者資訊影響的置中區塊 */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* 頁面基礎設定 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+    background-color: #f0f2f5;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* 控制面板靈動島風格，預設隱藏 */
+.controls {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    padding: 20px 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 90vw;
+    z-index: 10;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    pointer-events: none;
+}
+
+/* 滑鼠靠近模型或 controls 本身就顯示 */
+.skinviewer-container:hover + .controls,
+.controls:hover {
+    transform: translate(-50%, 30px);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* controls 裡的文字排版 */
+.controls p {
+    margin: 10px 0;
+    text-align: center;
+    color: #333;
+}
+
+.controls label,
+.controls select {
+    font-size: 14px;
+}
+

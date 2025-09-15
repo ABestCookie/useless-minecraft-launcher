@@ -1,0 +1,83 @@
+CTK UI log initialized.
+2025-08-01 12:51:10,346 [INFO] CTK UI 初始化  yoho, america ya!, here is new log beginning
+2025-08-01 12:51:10,347 [INFO] 以下為日誌輸出測試
+2025-08-01 12:51:10,348 [DEBUG] 這是debug信息，通常用於開發時排錯
+2025-08-01 12:51:10,349 [INFO] 這是info信息，一般運行時輸出
+2025-08-01 12:51:10,349 [WARNING] 這是warning警告
+2025-08-01 12:51:10,350 [ERROR] 這是error錯誤
+2025-08-01 12:51:10,350 [CRITICAL] 這是critical嚴重錯誤
+2025-08-01 12:51:10,355 [INFO] 啟動 UI...
+2025-08-01 12:51:12,358 [DEBUG] Importing BlpImagePlugin
+2025-08-01 12:51:12,362 [DEBUG] Importing BmpImagePlugin
+2025-08-01 12:51:12,362 [DEBUG] Importing BufrStubImagePlugin
+2025-08-01 12:51:12,365 [DEBUG] Importing CurImagePlugin
+2025-08-01 12:51:12,369 [DEBUG] Importing DcxImagePlugin
+2025-08-01 12:51:12,375 [DEBUG] Importing DdsImagePlugin
+2025-08-01 12:51:12,378 [DEBUG] Importing EpsImagePlugin
+2025-08-01 12:51:12,903 [DEBUG] Importing FitsImagePlugin
+2025-08-01 12:51:12,905 [DEBUG] Importing FitsStubImagePlugin
+2025-08-01 12:51:12,908 [DEBUG] Importing FliImagePlugin
+2025-08-01 12:51:12,910 [DEBUG] Importing FpxImagePlugin
+2025-08-01 12:51:12,916 [DEBUG] Image: failed to import FpxImagePlugin: No module named 'olefile'
+2025-08-01 12:51:12,917 [DEBUG] Importing FtexImagePlugin
+2025-08-01 12:51:12,919 [DEBUG] Importing GbrImagePlugin
+2025-08-01 12:51:12,921 [DEBUG] Importing GifImagePlugin
+2025-08-01 12:51:12,922 [DEBUG] Importing GribStubImagePlugin
+2025-08-01 12:51:12,924 [DEBUG] Importing Hdf5StubImagePlugin
+2025-08-01 12:51:12,927 [DEBUG] Importing IcnsImagePlugin
+2025-08-01 12:51:12,935 [DEBUG] Importing IcoImagePlugin
+2025-08-01 12:51:12,937 [DEBUG] Importing ImImagePlugin
+2025-08-01 12:51:12,942 [DEBUG] Importing ImtImagePlugin
+2025-08-01 12:51:12,945 [DEBUG] Importing IptcImagePlugin
+2025-08-01 12:51:12,948 [DEBUG] Importing JpegImagePlugin
+2025-08-01 12:51:12,948 [DEBUG] Importing Jpeg2KImagePlugin
+2025-08-01 12:51:12,948 [DEBUG] Importing McIdasImagePlugin
+2025-08-01 12:51:12,951 [DEBUG] Importing MicImagePlugin
+2025-08-01 12:51:12,957 [DEBUG] Image: failed to import MicImagePlugin: No module named 'olefile'
+2025-08-01 12:51:12,957 [DEBUG] Importing MpegImagePlugin
+2025-08-01 12:51:12,960 [DEBUG] Importing MpoImagePlugin
+2025-08-01 12:51:12,988 [DEBUG] Importing MspImagePlugin
+2025-08-01 12:51:12,991 [DEBUG] Importing PalmImagePlugin
+2025-08-01 12:51:12,996 [DEBUG] Importing PcdImagePlugin
+2025-08-01 12:51:13,001 [DEBUG] Importing PcxImagePlugin
+2025-08-01 12:51:13,001 [DEBUG] Importing PdfImagePlugin
+2025-08-01 12:51:13,034 [DEBUG] Importing PixarImagePlugin
+2025-08-01 12:51:13,042 [DEBUG] Importing PngImagePlugin
+2025-08-01 12:51:13,042 [DEBUG] Importing PpmImagePlugin
+2025-08-01 12:51:13,043 [DEBUG] Importing PsdImagePlugin
+2025-08-01 12:51:13,051 [DEBUG] Importing QoiImagePlugin
+2025-08-01 12:51:13,056 [DEBUG] Importing SgiImagePlugin
+2025-08-01 12:51:13,063 [DEBUG] Importing SpiderImagePlugin
+2025-08-01 12:51:13,068 [DEBUG] Importing SunImagePlugin
+2025-08-01 12:51:13,072 [DEBUG] Importing TgaImagePlugin
+2025-08-01 12:51:13,076 [DEBUG] Importing TiffImagePlugin
+2025-08-01 12:51:13,076 [DEBUG] Importing WebPImagePlugin
+2025-08-01 12:51:13,089 [DEBUG] Importing WmfImagePlugin
+2025-08-01 12:51:13,093 [DEBUG] Importing XbmImagePlugin
+2025-08-01 12:51:13,101 [DEBUG] Importing XpmImagePlugin
+2025-08-01 12:51:13,106 [DEBUG] Importing XVThumbImagePlugin
+2025-08-01 12:51:13,219 [DEBUG] STREAM b'IHDR' 16 13
+2025-08-01 12:51:13,220 [DEBUG] STREAM b'IDAT' 41 4518973
+2025-08-01 12:51:13,320 [DEBUG] STREAM b'eXIf' 4519026 14
+2025-08-01 12:51:13,475 [DEBUG] STREAM b'IHDR' 16 13
+2025-08-01 12:51:13,476 [DEBUG] STREAM b'PLTE' 41 399
+2025-08-01 12:51:13,476 [DEBUG] STREAM b'tRNS' 452 78
+2025-08-01 12:51:13,476 [DEBUG] STREAM b'IDAT' 542 1550
+2025-08-01 12:51:14,671 [WARNING] [This is not an error message]你正在使用 UMCL 開發版：開發版包含一些實驗性新功能，較為不穩定。
+2025-08-01 12:51:14,836 [INFO] UI 已開啟
+2025-08-01 12:51:14,838 [INFO] UI 渲染時間: 4.482313100001193 秒
+2025-08-01 12:51:16,406 [INFO] 帳戶按鈕被點擊！
+2025-08-01 12:51:16,482 [DEBUG] STREAM b'IHDR' 16 13
+2025-08-01 12:51:16,482 [DEBUG] STREAM b'IDAT' 41 32768
+2025-08-01 12:51:16,528 [INFO] List all accounts.
+2025-08-01 12:51:16,530 [INFO] Listing all accounts:
+2025-08-01 12:51:16,530 [INFO] Total accounts: 1
+2025-08-01 12:51:16,560 [DEBUG] STREAM b'IHDR' 16 13
+2025-08-01 12:51:16,561 [DEBUG] STREAM b'PLTE' 41 399
+2025-08-01 12:51:16,561 [DEBUG] STREAM b'tRNS' 452 78
+2025-08-01 12:51:16,561 [DEBUG] STREAM b'IDAT' 542 1550
+2025-08-01 12:51:17,696 [DEBUG] STREAM b'IHDR' 16 13
+2025-08-01 12:51:17,696 [DEBUG] STREAM b'PLTE' 41 399
+2025-08-01 12:51:17,696 [DEBUG] STREAM b'tRNS' 452 78
+2025-08-01 12:51:17,696 [DEBUG] STREAM b'IDAT' 542 1550
+2025-08-01 12:51:35,168 [INFO] 皮膚已儲存到 plugin/mc-skinviewer/skin.png
