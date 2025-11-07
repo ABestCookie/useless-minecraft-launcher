@@ -13,8 +13,10 @@
 
 <body>
     <div class="main-content">
+        <!-- 控制面板切換按鈕 -->
+        <button id="controlsToggle" aria-pressed="false" title="顯示 / 隱藏 控制面板">☰</button>
         <div class="skinviewer-container d-skin-aciton-rotate d-skin-aciton-run"></div>
-        <div class="controls">
+        <div class="controls" aria-hidden="true">
             <p>
                 <input type="checkbox" id="control_1" data-classname="d-skin-aciton-rotate-paused"
                     onchange="changeSkinViewerClassName(event)">
@@ -65,6 +67,17 @@
                 }
             }
         }
+        (function () {
+        const toggle = document.getElementById('controlsToggle');
+        const container = document.querySelector('.main-content');
+        const controls = document.querySelector('.controls');
+        if (!toggle || !container || !controls) return;
+        toggle.addEventListener('click', () => {
+            const opened = container.classList.toggle('controls-open');
+            controls.setAttribute('aria-hidden', String(!opened));
+            toggle.setAttribute('aria-pressed', String(opened));
+        });
+    })();
     </script>
     <script src="skinviewer.js"></script>
     <script src="main.js"></script>

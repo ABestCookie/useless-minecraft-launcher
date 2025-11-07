@@ -14,8 +14,7 @@ import requests as req
 from tqdm import tqdm
 
 #加密
-from Crypto.PublicKey import RSA
-from Crypto.Cipher import PKCS1_OAEP
+
 import base64
 import pathlib
 
@@ -236,40 +235,7 @@ class other_function:
         else:
             raise Exception(f"無法檢查文件大小，HTTP 狀態碼：{response.status_code}")
     
-    def generate_keys():
-    # 生成 2048 位元的 RSA 金鑰
-        key = RSA.generate(2048)
-    # 匯出私鑰
-        private_key = key.export_key()
-    # 匯出公鑰
-        public_key = key.publickey().export_key()
-        return private_key, public_key
-        
-    def encrypt(plain_text, public_key):
-    # 導入公鑰
-        key = RSA.import_key(public_key)
-    
-    # 使用公鑰建立加密器
-        cipher = PKCS1_OAEP.new(key)
-    
-    # 加密文字並轉換為 base64 編碼的字串
-        encrypted_text = cipher.encrypt(plain_text.encode('utf-8'))
-    
-        return base64.b64encode(encrypted_text).decode('utf-8')
-    def decrypt(encrypted_text, private_key):
-    # 導入私鑰
-        key = RSA.import_key(private_key)
-    
-    # 使用私鑰建立解密器
-        cipher = PKCS1_OAEP.new(key)
-    
-    # 解密文字並轉換為 utf-8 字串
-        decrypted_text = cipher.decrypt(base64.b64decode(encrypted_text)).decode('utf-8')
-    
-        return decrypted_text
-
-
-        
+   
 
 
 

@@ -1,83 +1,82 @@
 CTK UI log initialized.
-2025-08-01 12:51:10,346 [INFO] CTK UI ÂàùÂßãÂåñ  yoho, america ya!, here is new log beginning
-2025-08-01 12:51:10,347 [INFO] ‰ª•‰∏ãÁÇ∫Êó•Ë™åËº∏Âá∫Ê∏¨Ë©¶
-2025-08-01 12:51:10,348 [DEBUG] ÈÄôÊòØdebug‰ø°ÊÅØÔºåÈÄöÂ∏∏Áî®ÊñºÈñãÁôºÊôÇÊéíÈåØ
-2025-08-01 12:51:10,349 [INFO] ÈÄôÊòØinfo‰ø°ÊÅØÔºå‰∏ÄËà¨ÈÅãË°åÊôÇËº∏Âá∫
-2025-08-01 12:51:10,349 [WARNING] ÈÄôÊòØwarningË≠¶Âëä
-2025-08-01 12:51:10,350 [ERROR] ÈÄôÊòØerrorÈåØË™§
-2025-08-01 12:51:10,350 [CRITICAL] ÈÄôÊòØcriticalÂö¥ÈáçÈåØË™§
-2025-08-01 12:51:10,355 [INFO] ÂïüÂãï UI...
-2025-08-01 12:51:12,358 [DEBUG] Importing BlpImagePlugin
-2025-08-01 12:51:12,362 [DEBUG] Importing BmpImagePlugin
-2025-08-01 12:51:12,362 [DEBUG] Importing BufrStubImagePlugin
-2025-08-01 12:51:12,365 [DEBUG] Importing CurImagePlugin
-2025-08-01 12:51:12,369 [DEBUG] Importing DcxImagePlugin
-2025-08-01 12:51:12,375 [DEBUG] Importing DdsImagePlugin
-2025-08-01 12:51:12,378 [DEBUG] Importing EpsImagePlugin
-2025-08-01 12:51:12,903 [DEBUG] Importing FitsImagePlugin
-2025-08-01 12:51:12,905 [DEBUG] Importing FitsStubImagePlugin
-2025-08-01 12:51:12,908 [DEBUG] Importing FliImagePlugin
-2025-08-01 12:51:12,910 [DEBUG] Importing FpxImagePlugin
-2025-08-01 12:51:12,916 [DEBUG] Image: failed to import FpxImagePlugin: No module named 'olefile'
-2025-08-01 12:51:12,917 [DEBUG] Importing FtexImagePlugin
-2025-08-01 12:51:12,919 [DEBUG] Importing GbrImagePlugin
-2025-08-01 12:51:12,921 [DEBUG] Importing GifImagePlugin
-2025-08-01 12:51:12,922 [DEBUG] Importing GribStubImagePlugin
-2025-08-01 12:51:12,924 [DEBUG] Importing Hdf5StubImagePlugin
-2025-08-01 12:51:12,927 [DEBUG] Importing IcnsImagePlugin
-2025-08-01 12:51:12,935 [DEBUG] Importing IcoImagePlugin
-2025-08-01 12:51:12,937 [DEBUG] Importing ImImagePlugin
-2025-08-01 12:51:12,942 [DEBUG] Importing ImtImagePlugin
-2025-08-01 12:51:12,945 [DEBUG] Importing IptcImagePlugin
-2025-08-01 12:51:12,948 [DEBUG] Importing JpegImagePlugin
-2025-08-01 12:51:12,948 [DEBUG] Importing Jpeg2KImagePlugin
-2025-08-01 12:51:12,948 [DEBUG] Importing McIdasImagePlugin
-2025-08-01 12:51:12,951 [DEBUG] Importing MicImagePlugin
-2025-08-01 12:51:12,957 [DEBUG] Image: failed to import MicImagePlugin: No module named 'olefile'
-2025-08-01 12:51:12,957 [DEBUG] Importing MpegImagePlugin
-2025-08-01 12:51:12,960 [DEBUG] Importing MpoImagePlugin
-2025-08-01 12:51:12,988 [DEBUG] Importing MspImagePlugin
-2025-08-01 12:51:12,991 [DEBUG] Importing PalmImagePlugin
-2025-08-01 12:51:12,996 [DEBUG] Importing PcdImagePlugin
-2025-08-01 12:51:13,001 [DEBUG] Importing PcxImagePlugin
-2025-08-01 12:51:13,001 [DEBUG] Importing PdfImagePlugin
-2025-08-01 12:51:13,034 [DEBUG] Importing PixarImagePlugin
-2025-08-01 12:51:13,042 [DEBUG] Importing PngImagePlugin
-2025-08-01 12:51:13,042 [DEBUG] Importing PpmImagePlugin
-2025-08-01 12:51:13,043 [DEBUG] Importing PsdImagePlugin
-2025-08-01 12:51:13,051 [DEBUG] Importing QoiImagePlugin
-2025-08-01 12:51:13,056 [DEBUG] Importing SgiImagePlugin
-2025-08-01 12:51:13,063 [DEBUG] Importing SpiderImagePlugin
-2025-08-01 12:51:13,068 [DEBUG] Importing SunImagePlugin
-2025-08-01 12:51:13,072 [DEBUG] Importing TgaImagePlugin
-2025-08-01 12:51:13,076 [DEBUG] Importing TiffImagePlugin
-2025-08-01 12:51:13,076 [DEBUG] Importing WebPImagePlugin
-2025-08-01 12:51:13,089 [DEBUG] Importing WmfImagePlugin
-2025-08-01 12:51:13,093 [DEBUG] Importing XbmImagePlugin
-2025-08-01 12:51:13,101 [DEBUG] Importing XpmImagePlugin
-2025-08-01 12:51:13,106 [DEBUG] Importing XVThumbImagePlugin
-2025-08-01 12:51:13,219 [DEBUG] STREAM b'IHDR' 16 13
-2025-08-01 12:51:13,220 [DEBUG] STREAM b'IDAT' 41 4518973
-2025-08-01 12:51:13,320 [DEBUG] STREAM b'eXIf' 4519026 14
-2025-08-01 12:51:13,475 [DEBUG] STREAM b'IHDR' 16 13
-2025-08-01 12:51:13,476 [DEBUG] STREAM b'PLTE' 41 399
-2025-08-01 12:51:13,476 [DEBUG] STREAM b'tRNS' 452 78
-2025-08-01 12:51:13,476 [DEBUG] STREAM b'IDAT' 542 1550
-2025-08-01 12:51:14,671 [WARNING] [This is not an error message]‰Ω†Ê≠£Âú®‰ΩøÁî® UMCL ÈñãÁôºÁâàÔºöÈñãÁôºÁâàÂåÖÂê´‰∏Ä‰∫õÂØ¶È©óÊÄßÊñ∞ÂäüËÉΩÔºåËºÉÁÇ∫‰∏çÁ©©ÂÆö„ÄÇ
-2025-08-01 12:51:14,836 [INFO] UI Â∑≤ÈñãÂïü
-2025-08-01 12:51:14,838 [INFO] UI Ê∏≤ÊüìÊôÇÈñì: 4.482313100001193 Áßí
-2025-08-01 12:51:16,406 [INFO] Â∏≥Êà∂ÊåâÈàïË¢´ÈªûÊìäÔºÅ
-2025-08-01 12:51:16,482 [DEBUG] STREAM b'IHDR' 16 13
-2025-08-01 12:51:16,482 [DEBUG] STREAM b'IDAT' 41 32768
-2025-08-01 12:51:16,528 [INFO] List all accounts.
-2025-08-01 12:51:16,530 [INFO] Listing all accounts:
-2025-08-01 12:51:16,530 [INFO] Total accounts: 1
-2025-08-01 12:51:16,560 [DEBUG] STREAM b'IHDR' 16 13
-2025-08-01 12:51:16,561 [DEBUG] STREAM b'PLTE' 41 399
-2025-08-01 12:51:16,561 [DEBUG] STREAM b'tRNS' 452 78
-2025-08-01 12:51:16,561 [DEBUG] STREAM b'IDAT' 542 1550
-2025-08-01 12:51:17,696 [DEBUG] STREAM b'IHDR' 16 13
-2025-08-01 12:51:17,696 [DEBUG] STREAM b'PLTE' 41 399
-2025-08-01 12:51:17,696 [DEBUG] STREAM b'tRNS' 452 78
-2025-08-01 12:51:17,696 [DEBUG] STREAM b'IDAT' 542 1550
-2025-08-01 12:51:35,168 [INFO] ÁöÆËÜöÂ∑≤ÂÑ≤Â≠òÂà∞ plugin/mc-skinviewer/skin.png
+2025-11-07 20:35:55,749 [INFO] CTK UI ™Ï©l§∆  yoho, america ya!, here is new log beginning
+2025-11-07 20:35:55,750 [INFO] •H§U¨∞§ÈªxøÈ•X¥˙∏’
+2025-11-07 20:35:55,751 [DEBUG] ≥o¨Odebug´HÆß°A≥q±`•Œ©Û∂}µoÆ…±∆ø˘
+2025-11-07 20:35:55,751 [INFO] ≥o¨Oinfo´HÆß°A§@ØÎπB¶ÊÆ…øÈ•X
+2025-11-07 20:35:55,751 [WARNING] ≥o¨Owarningƒµßi
+2025-11-07 20:35:55,751 [ERROR] ≥o¨Oerrorø˘ª~
+2025-11-07 20:35:55,751 [CRITICAL] ≥o¨OcriticalƒY≠´ø˘ª~
+2025-11-07 20:35:55,752 [INFO] ±“∞  UI...
+2025-11-07 20:35:58,306 [DEBUG] Importing AvifImagePlugin
+2025-11-07 20:36:00,557 [DEBUG] Importing BlpImagePlugin
+2025-11-07 20:36:00,562 [DEBUG] Importing BmpImagePlugin
+2025-11-07 20:36:00,563 [DEBUG] Importing BufrStubImagePlugin
+2025-11-07 20:36:00,567 [DEBUG] Importing CurImagePlugin
+2025-11-07 20:36:00,572 [DEBUG] Importing DcxImagePlugin
+2025-11-07 20:36:00,582 [DEBUG] Importing DdsImagePlugin
+2025-11-07 20:36:00,589 [DEBUG] Importing EpsImagePlugin
+2025-11-07 20:36:00,594 [DEBUG] Importing FitsImagePlugin
+2025-11-07 20:36:00,607 [DEBUG] Importing FliImagePlugin
+2025-11-07 20:36:00,612 [DEBUG] Importing FpxImagePlugin
+2025-11-07 20:36:00,617 [DEBUG] Image: failed to import FpxImagePlugin: No module named 'olefile'
+2025-11-07 20:36:00,617 [DEBUG] Importing FtexImagePlugin
+2025-11-07 20:36:00,622 [DEBUG] Importing GbrImagePlugin
+2025-11-07 20:36:00,626 [DEBUG] Importing GifImagePlugin
+2025-11-07 20:36:00,626 [DEBUG] Importing GribStubImagePlugin
+2025-11-07 20:36:00,632 [DEBUG] Importing Hdf5StubImagePlugin
+2025-11-07 20:36:00,636 [DEBUG] Importing IcnsImagePlugin
+2025-11-07 20:36:00,649 [DEBUG] Importing IcoImagePlugin
+2025-11-07 20:36:00,653 [DEBUG] Importing ImImagePlugin
+2025-11-07 20:36:00,658 [DEBUG] Importing ImtImagePlugin
+2025-11-07 20:36:00,662 [DEBUG] Importing IptcImagePlugin
+2025-11-07 20:36:00,666 [DEBUG] Importing JpegImagePlugin
+2025-11-07 20:36:00,666 [DEBUG] Importing Jpeg2KImagePlugin
+2025-11-07 20:36:00,666 [DEBUG] Importing McIdasImagePlugin
+2025-11-07 20:36:00,671 [DEBUG] Importing MicImagePlugin
+2025-11-07 20:36:00,677 [DEBUG] Image: failed to import MicImagePlugin: No module named 'olefile'
+2025-11-07 20:36:00,677 [DEBUG] Importing MpegImagePlugin
+2025-11-07 20:36:00,686 [DEBUG] Importing MpoImagePlugin
+2025-11-07 20:36:00,707 [DEBUG] Importing MspImagePlugin
+2025-11-07 20:36:00,713 [DEBUG] Importing PalmImagePlugin
+2025-11-07 20:36:00,719 [DEBUG] Importing PcdImagePlugin
+2025-11-07 20:36:00,723 [DEBUG] Importing PcxImagePlugin
+2025-11-07 20:36:00,723 [DEBUG] Importing PdfImagePlugin
+2025-11-07 20:36:00,745 [DEBUG] Importing PixarImagePlugin
+2025-11-07 20:36:00,750 [DEBUG] Importing PngImagePlugin
+2025-11-07 20:36:00,750 [DEBUG] Importing PpmImagePlugin
+2025-11-07 20:36:00,750 [DEBUG] Importing PsdImagePlugin
+2025-11-07 20:36:00,756 [DEBUG] Importing QoiImagePlugin
+2025-11-07 20:36:00,760 [DEBUG] Importing SgiImagePlugin
+2025-11-07 20:36:00,764 [DEBUG] Importing SpiderImagePlugin
+2025-11-07 20:36:00,768 [DEBUG] Importing SunImagePlugin
+2025-11-07 20:36:00,772 [DEBUG] Importing TgaImagePlugin
+2025-11-07 20:36:00,776 [DEBUG] Importing TiffImagePlugin
+2025-11-07 20:36:00,776 [DEBUG] Importing WebPImagePlugin
+2025-11-07 20:36:02,436 [DEBUG] Importing WmfImagePlugin
+2025-11-07 20:36:02,442 [DEBUG] Importing XbmImagePlugin
+2025-11-07 20:36:02,451 [DEBUG] Importing XpmImagePlugin
+2025-11-07 20:36:02,458 [DEBUG] Importing XVThumbImagePlugin
+2025-11-07 20:36:04,380 [DEBUG] STREAM b'IHDR' 16 13
+2025-11-07 20:36:04,380 [DEBUG] STREAM b'IDAT' 41 4518973
+2025-11-07 20:36:04,417 [DEBUG] STREAM b'eXIf' 4519026 14
+2025-11-07 20:36:04,473 [DEBUG] STREAM b'IHDR' 16 13
+2025-11-07 20:36:04,473 [DEBUG] STREAM b'PLTE' 41 399
+2025-11-07 20:36:04,473 [DEBUG] STREAM b'tRNS' 452 78
+2025-11-07 20:36:04,473 [DEBUG] STREAM b'IDAT' 542 1550
+2025-11-07 20:36:04,875 [WARNING] [This is not an error message]ßA•ø¶b®œ•Œ UMCL ∂}µo™©°G∂}µo™©•]ßt§@®«πÍ≈Á© ∑s•\Ø‡°A∏˚¨∞§£√≠©w°C
+2025-11-07 20:36:04,924 [INFO] UI §w∂}±“
+2025-11-07 20:36:04,924 [INFO] UI ¥Ë¨VÆ…∂°: 9.172335500014015 ¨Ì
+2025-11-07 20:36:07,485 [INFO] ±b§·´ˆ∂s≥Q¬I¿ª°I
+2025-11-07 20:36:07,501 [DEBUG] STREAM b'IHDR' 16 13
+2025-11-07 20:36:07,502 [DEBUG] STREAM b'IDAT' 41 32768
+2025-11-07 20:36:07,515 [INFO] List all accounts.
+2025-11-07 20:36:07,516 [INFO] Listing all accounts:
+2025-11-07 20:36:07,516 [INFO] Total accounts: 1
+2025-11-07 20:36:07,523 [DEBUG] STREAM b'IHDR' 16 13
+2025-11-07 20:36:07,523 [DEBUG] STREAM b'PLTE' 41 399
+2025-11-07 20:36:07,523 [DEBUG] STREAM b'tRNS' 452 78
+2025-11-07 20:36:07,523 [DEBUG] STREAM b'IDAT' 542 1550
+2025-11-07 20:36:08,004 [DEBUG] STREAM b'IHDR' 16 13
+2025-11-07 20:36:08,004 [DEBUG] STREAM b'PLTE' 41 399
+2025-11-07 20:36:08,004 [DEBUG] STREAM b'tRNS' 452 78
+2025-11-07 20:36:08,004 [DEBUG] STREAM b'IDAT' 542 1550

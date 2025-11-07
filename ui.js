@@ -164,9 +164,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  async function openFilePicker() {
+    try {
+        const [fileHandle] = await window.showOpenFilePicker();
+        const file = await fileHandle.getFile();
+        console.log(file); // 獲取 File 物件
+    } catch (err) {
+        console.error("User canceled the file picker or an error occurred", err);
+    }
+}
+
+
   /* 其餘互動不變 */
-  if ($('pickSkin')) $('pickSkin').addEventListener('click', () => alert('開啟檔案對話框（模擬）'));
-  if ($('previewSkin')) $('previewSkin').addEventListener('click', () => alert('啟動 skinviewer（模擬）'));
+  if ($('pickSkin')) $('pickSkin').addEventListener('click', () => {
+    openFilePicker();
+  });
+  if ($('previewSkin')) $('previewSkin').addEventListener('click', () => {
+    window.open('./plugin/mc-skinviewer/index.html', '_blank');
+  });
   if ($('createAcct')) {
     $('createAcct').addEventListener('click', () => {
       const name = $('acctName').value.trim();

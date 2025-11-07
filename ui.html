@@ -4,20 +4,13 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Useless! Minecraft Launcher v0.1</title>
-  <link rel="icon" href="art/java.ico" type="image/x-icon"/>
-
+  <link rel="icon" href="./art/java.ico" type="image/x-icon"/>
+  <script type="text/javascript" src="/eel.js"></script>
   <link rel="stylesheet" href="ui.css">
 </head>
 <body>
   <div class="app" role="application" aria-label="UMCL">
-    <div class="titlebar">
-      <img class="icon" src="art/java.ico" alt="icon" onerror="this.style.display='none'"/>
-      <div class="title">Useless! Minecraft Launcher v0.1</div>
-      <div class="tb-btn">
-        <button title="最小化" id="minBtn">–</button>
-        <button title="關閉" id="closeBtn">✕</button>
-      </div>
-    </div>
+    <!-- titlebar 已移除 -->
 
     <div class="main">
       <aside id="sidebar" class="sidebar">
@@ -77,8 +70,8 @@
       <div id="modalBody">
         <input id="acctName" placeholder="帳戶名稱" class="acctNameInput" type="text"/>
         <div style="margin-top:10px;display:flex;gap:8px">
-          <button id="pickSkin" class="pickSkinBtn" type="button">選取 skin (模擬)</button>
-          <button id="previewSkin" class="previewSkinBtn" type="button">預覽 skin</button>
+          <input id="pickSkin" class="pickSkinBtn" type='button' value="選取 skin (模擬)"/>
+          <button id="previewSkin" class="previewSkinBtn" type="button" value="預覽 skin">預覽 skin</button>
         </div>
         <div style="margin-top:18px">
           <button id="createAcct" class="createAcctBtn" type="button">新增</button>
