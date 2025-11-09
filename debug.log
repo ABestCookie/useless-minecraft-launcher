@@ -80,3 +80,404 @@ CTK UI log initialized.
 2025-11-07 20:36:08,004 [DEBUG] STREAM b'PLTE' 41 399
 2025-11-07 20:36:08,004 [DEBUG] STREAM b'tRNS' 452 78
 2025-11-07 20:36:08,004 [DEBUG] STREAM b'IDAT' 542 1550
+2025-11-08 19:00:46,495 [DEBUG] Initializing WebSocket
+2025-11-08 19:00:46,495 [DEBUG] Validating WebSocket request
+2025-11-08 19:00:46,497 [INFO] 127.0.0.1 - - [2025-11-08 19:00:46] "GET /ui.html HTTP/1.1" 200 3803 0.002635
+2025-11-08 19:00:46,554 [DEBUG] Initializing WebSocket
+2025-11-08 19:00:46,554 [DEBUG] Validating WebSocket request
+2025-11-08 19:00:46,556 [INFO] 127.0.0.1 - - [2025-11-08 19:00:46] "GET /eel.js HTTP/1.1" 200 6014 0.002137
+2025-11-08 19:00:46,558 [DEBUG] Initializing WebSocket
+2025-11-08 19:00:46,559 [DEBUG] Validating WebSocket request
+2025-11-08 19:00:46,561 [INFO] 127.0.0.1 - - [2025-11-08 19:00:46] "GET /ui.js HTTP/1.1" 200 10538 0.002331
+2025-11-08 19:00:46,562 [DEBUG] Initializing WebSocket
+2025-11-08 19:00:46,562 [DEBUG] Validating WebSocket request
+2025-11-08 19:00:46,564 [INFO] 127.0.0.1 - - [2025-11-08 19:00:46] "GET /ui.css HTTP/1.1" 200 10277 0.002482
+2025-11-08 19:00:46,649 [DEBUG] Initializing WebSocket
+2025-11-08 19:00:46,649 [DEBUG] Validating WebSocket request
+2025-11-08 19:00:46,716 [INFO] 127.0.0.1 - - [2025-11-08 19:00:46] "GET /art/background.png HTTP/1.1" 200 4519303 0.066922
+2025-11-08 19:00:46,883 [DEBUG] Initializing WebSocket
+2025-11-08 19:00:46,883 [DEBUG] Validating WebSocket request
+2025-11-08 19:00:46,886 [INFO] 127.0.0.1 - - [2025-11-08 19:00:46] "GET /art/java.ico HTTP/1.1" 200 4021 0.002429
+2025-11-08 19:00:47,056 [DEBUG] Initializing WebSocket
+2025-11-08 19:00:47,057 [DEBUG] Validating WebSocket request
+2025-11-08 19:00:47,057 [DEBUG] Attempting to upgrade connection
+2025-11-08 19:00:47,057 [DEBUG] WebSocket request accepted, switching protocols
+2025-11-08 19:00:52,339 [DEBUG] Closed WebSocket
+2025-11-08 19:00:52,339 [DEBUG] Failed to write closing frame -> closing socket
+2025-11-08 19:00:52,340 [DEBUG] Closed WebSocket
+2025-11-08 19:03:16,315 [DEBUG] Initializing WebSocket
+2025-11-08 19:03:16,316 [DEBUG] Validating WebSocket request
+2025-11-08 19:03:16,318 [INFO] 127.0.0.1 - - [2025-11-08 19:03:16] "GET /ui.html HTTP/1.1" 200 4175 0.003019
+2025-11-08 19:03:16,374 [DEBUG] Initializing WebSocket
+2025-11-08 19:03:16,374 [DEBUG] Validating WebSocket request
+2025-11-08 19:03:16,375 [INFO] 127.0.0.1 - - [2025-11-08 19:03:16] "GET /eel.js HTTP/1.1" 200 6014 0.001574
+2025-11-08 19:03:16,381 [DEBUG] Initializing WebSocket
+2025-11-08 19:03:16,381 [DEBUG] Validating WebSocket request
+2025-11-08 19:03:16,384 [INFO] 127.0.0.1 - - [2025-11-08 19:03:16] "GET /ui.css HTTP/1.1" 200 10277 0.002833
+2025-11-08 19:03:16,394 [DEBUG] Initializing WebSocket
+2025-11-08 19:03:16,394 [DEBUG] Validating WebSocket request
+2025-11-08 19:03:16,396 [INFO] 127.0.0.1 - - [2025-11-08 19:03:16] "GET /ui.js HTTP/1.1" 200 10224 0.002388
+2025-11-08 19:03:16,484 [DEBUG] Initializing WebSocket
+2025-11-08 19:03:16,484 [DEBUG] Validating WebSocket request
+2025-11-08 19:03:16,575 [INFO] 127.0.0.1 - - [2025-11-08 19:03:16] "GET /art/background.png HTTP/1.1" 200 4519303 0.091165
+2025-11-08 19:03:16,920 [DEBUG] Initializing WebSocket
+2025-11-08 19:03:16,921 [DEBUG] Validating WebSocket request
+2025-11-08 19:03:16,921 [DEBUG] Attempting to upgrade connection
+2025-11-08 19:03:16,921 [DEBUG] WebSocket request accepted, switching protocols
+2025-11-08 19:03:20,462 [DEBUG] Closed WebSocket
+2025-11-08 19:03:20,463 [DEBUG] Failed to write closing frame -> closing socket
+2025-11-08 19:03:20,463 [DEBUG] Closed WebSocket
+2025-11-08 19:04:12,148 [DEBUG] Initializing WebSocket
+2025-11-08 19:04:12,149 [DEBUG] Validating WebSocket request
+2025-11-08 19:04:12,150 [INFO] 127.0.0.1 - - [2025-11-08 19:04:12] "GET /ui.html HTTP/1.1" 200 4175 0.002165
+2025-11-08 19:04:12,228 [DEBUG] Initializing WebSocket
+2025-11-08 19:04:12,228 [DEBUG] Validating WebSocket request
+2025-11-08 19:04:12,229 [INFO] 127.0.0.1 - - [2025-11-08 19:04:12] "GET /eel.js HTTP/1.1" 200 6014 0.001345
+2025-11-08 19:04:12,231 [DEBUG] Initializing WebSocket
+2025-11-08 19:04:12,231 [DEBUG] Validating WebSocket request
+2025-11-08 19:04:12,234 [INFO] 127.0.0.1 - - [2025-11-08 19:04:12] "GET /ui.css HTTP/1.1" 200 10277 0.002788
+2025-11-08 19:04:12,243 [DEBUG] Initializing WebSocket
+2025-11-08 19:04:12,243 [DEBUG] Validating WebSocket request
+2025-11-08 19:04:12,247 [INFO] 127.0.0.1 - - [2025-11-08 19:04:12] "GET /ui.js HTTP/1.1" 200 10224 0.003378
+2025-11-08 19:04:12,335 [DEBUG] Initializing WebSocket
+2025-11-08 19:04:12,335 [DEBUG] Validating WebSocket request
+2025-11-08 19:04:12,413 [INFO] 127.0.0.1 - - [2025-11-08 19:04:12] "GET /art/background.png HTTP/1.1" 200 4519303 0.078089
+2025-11-08 19:04:12,760 [DEBUG] Initializing WebSocket
+2025-11-08 19:04:12,760 [DEBUG] Validating WebSocket request
+2025-11-08 19:04:12,761 [DEBUG] Attempting to upgrade connection
+2025-11-08 19:04:12,761 [DEBUG] WebSocket request accepted, switching protocols
+2025-11-08 19:04:18,846 [DEBUG] Closed WebSocket
+2025-11-08 19:04:18,847 [DEBUG] Failed to write closing frame -> closing socket
+2025-11-08 19:04:18,847 [DEBUG] Closed WebSocket
+2025-11-08 22:29:55,470 [DEBUG] Initializing WebSocket
+2025-11-08 22:29:55,470 [DEBUG] Validating WebSocket request
+2025-11-08 22:29:55,473 [INFO] 127.0.0.1 - - [2025-11-08 22:29:55] "GET /ui.html HTTP/1.1" 200 4173 0.004022
+2025-11-08 22:29:55,527 [DEBUG] Initializing WebSocket
+2025-11-08 22:29:55,527 [DEBUG] Validating WebSocket request
+2025-11-08 22:29:55,528 [INFO] 127.0.0.1 - - [2025-11-08 22:29:55] "GET /eel.js HTTP/1.1" 200 6014 0.001343
+2025-11-08 22:29:55,530 [DEBUG] Initializing WebSocket
+2025-11-08 22:29:55,530 [DEBUG] Validating WebSocket request
+2025-11-08 22:29:55,547 [INFO] 127.0.0.1 - - [2025-11-08 22:29:55] "GET /ui.css HTTP/1.1" 200 10277 0.017799
+2025-11-08 22:29:55,548 [DEBUG] Initializing WebSocket
+2025-11-08 22:29:55,549 [DEBUG] Validating WebSocket request
+2025-11-08 22:29:55,551 [INFO] 127.0.0.1 - - [2025-11-08 22:29:55] "GET /ui.js HTTP/1.1" 200 10224 0.002356
+2025-11-08 22:29:55,623 [DEBUG] Initializing WebSocket
+2025-11-08 22:29:55,623 [DEBUG] Validating WebSocket request
+2025-11-08 22:29:55,700 [INFO] 127.0.0.1 - - [2025-11-08 22:29:55] "GET /art/background.png HTTP/1.1" 200 4519303 0.077522
+2025-11-08 22:29:56,032 [DEBUG] Initializing WebSocket
+2025-11-08 22:29:56,032 [DEBUG] Validating WebSocket request
+2025-11-08 22:29:56,033 [DEBUG] Attempting to upgrade connection
+2025-11-08 22:29:56,033 [DEBUG] WebSocket request accepted, switching protocols
+2025-11-08 22:30:06,291 [DEBUG] Closed WebSocket
+2025-11-08 22:30:06,292 [DEBUG] Failed to write closing frame -> closing socket
+2025-11-08 22:30:06,292 [DEBUG] Closed WebSocket
+2025-11-09 00:10:22,642 [DEBUG] Initializing WebSocket
+2025-11-09 00:10:22,643 [DEBUG] Validating WebSocket request
+2025-11-09 00:10:22,646 [INFO] 127.0.0.1 - - [2025-11-09 00:10:22] "GET /ui.html HTTP/1.1" 200 4173 0.004124
+2025-11-09 00:10:22,709 [DEBUG] Initializing WebSocket
+2025-11-09 00:10:22,709 [DEBUG] Validating WebSocket request
+2025-11-09 00:10:22,712 [INFO] 127.0.0.1 - - [2025-11-09 00:10:22] "GET /eel.js HTTP/1.1" 200 6014 0.002589
+2025-11-09 00:10:22,713 [DEBUG] Initializing WebSocket
+2025-11-09 00:10:22,713 [DEBUG] Validating WebSocket request
+2025-11-09 00:10:22,716 [INFO] 127.0.0.1 - - [2025-11-09 00:10:22] "GET /ui.css HTTP/1.1" 200 10277 0.003387
+2025-11-09 00:10:22,725 [DEBUG] Initializing WebSocket
+2025-11-09 00:10:22,725 [DEBUG] Validating WebSocket request
+2025-11-09 00:10:22,728 [INFO] 127.0.0.1 - - [2025-11-09 00:10:22] "GET /ui.js HTTP/1.1" 200 10224 0.003113
+2025-11-09 00:10:22,815 [DEBUG] Initializing WebSocket
+2025-11-09 00:10:22,815 [DEBUG] Validating WebSocket request
+2025-11-09 00:10:22,885 [INFO] 127.0.0.1 - - [2025-11-09 00:10:22] "GET /art/background.png HTTP/1.1" 200 4519303 0.070182
+2025-11-09 00:10:23,227 [DEBUG] Initializing WebSocket
+2025-11-09 00:10:23,227 [DEBUG] Validating WebSocket request
+2025-11-09 00:10:23,227 [DEBUG] Attempting to upgrade connection
+2025-11-09 00:10:23,227 [DEBUG] WebSocket request accepted, switching protocols
+2025-11-09 00:10:25,956 [DEBUG] Closed WebSocket
+2025-11-09 00:10:25,957 [DEBUG] Failed to write closing frame -> closing socket
+2025-11-09 00:10:25,957 [DEBUG] Closed WebSocket
+2025-11-09 00:11:24,406 [DEBUG] Initializing WebSocket
+2025-11-09 00:11:24,406 [DEBUG] Validating WebSocket request
+2025-11-09 00:11:24,408 [INFO] 127.0.0.1 - - [2025-11-09 00:11:24] "GET /ui.html HTTP/1.1" 200 4198 0.002024
+2025-11-09 00:11:24,464 [DEBUG] Initializing WebSocket
+2025-11-09 00:11:24,464 [DEBUG] Validating WebSocket request
+2025-11-09 00:11:24,465 [INFO] 127.0.0.1 - - [2025-11-09 00:11:24] "GET /eel.js HTTP/1.1" 200 6014 0.001341
+2025-11-09 00:11:24,467 [DEBUG] Initializing WebSocket
+2025-11-09 00:11:24,467 [DEBUG] Validating WebSocket request
+2025-11-09 00:11:24,469 [INFO] 127.0.0.1 - - [2025-11-09 00:11:24] "GET /ui.css HTTP/1.1" 200 10277 0.002108
+2025-11-09 00:11:24,478 [DEBUG] Initializing WebSocket
+2025-11-09 00:11:24,478 [DEBUG] Validating WebSocket request
+2025-11-09 00:11:24,481 [INFO] 127.0.0.1 - - [2025-11-09 00:11:24] "GET /ui.js HTTP/1.1" 200 10224 0.003030
+2025-11-09 00:11:24,584 [DEBUG] Initializing WebSocket
+2025-11-09 00:11:24,584 [DEBUG] Validating WebSocket request
+2025-11-09 00:11:24,663 [INFO] 127.0.0.1 - - [2025-11-09 00:11:24] "GET /art/background.png HTTP/1.1" 200 4519303 0.079199
+2025-11-09 00:11:25,009 [DEBUG] Initializing WebSocket
+2025-11-09 00:11:25,009 [DEBUG] Validating WebSocket request
+2025-11-09 00:11:25,009 [DEBUG] Attempting to upgrade connection
+2025-11-09 00:11:25,009 [DEBUG] WebSocket request accepted, switching protocols
+2025-11-09 00:11:27,336 [DEBUG] Initializing WebSocket
+2025-11-09 00:11:27,337 [DEBUG] Validating WebSocket request
+2025-11-09 00:11:27,339 [INFO] 127.0.0.1 - - [2025-11-09 00:11:27] "GET /ui.css HTTP/1.1" 200 10277 0.002482
+2025-11-09 00:11:27,347 [DEBUG] Initializing WebSocket
+2025-11-09 00:11:27,348 [DEBUG] Validating WebSocket request
+2025-11-09 00:11:27,353 [INFO] 127.0.0.1 - - [2025-11-09 00:11:27] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 919 0.005517
+2025-11-09 00:11:31,041 [DEBUG] Closed WebSocket
+2025-11-09 00:11:31,042 [DEBUG] Failed to write closing frame -> closing socket
+2025-11-09 00:11:31,042 [DEBUG] Closed WebSocket
+2025-11-09 00:17:20,349 [DEBUG] Initializing WebSocket
+2025-11-09 00:17:20,349 [DEBUG] Validating WebSocket request
+2025-11-09 00:17:20,351 [INFO] 127.0.0.1 - - [2025-11-09 00:17:20] "GET /ui.html HTTP/1.1" 200 4210 0.001891
+2025-11-09 00:17:20,408 [DEBUG] Initializing WebSocket
+2025-11-09 00:17:20,408 [DEBUG] Validating WebSocket request
+2025-11-09 00:17:20,409 [INFO] 127.0.0.1 - - [2025-11-09 00:17:20] "GET /eel.js HTTP/1.1" 200 6014 0.001124
+2025-11-09 00:17:20,417 [DEBUG] Initializing WebSocket
+2025-11-09 00:17:20,417 [DEBUG] Validating WebSocket request
+2025-11-09 00:17:20,419 [INFO] 127.0.0.1 - - [2025-11-09 00:17:20] "GET /ui.css HTTP/1.1" 200 10277 0.001978
+2025-11-09 00:17:20,433 [DEBUG] Initializing WebSocket
+2025-11-09 00:17:20,433 [DEBUG] Validating WebSocket request
+2025-11-09 00:17:20,434 [INFO] 127.0.0.1 - - [2025-11-09 00:17:20] "GET /ui.js HTTP/1.1" 200 10224 0.001445
+2025-11-09 00:17:20,481 [DEBUG] Initializing WebSocket
+2025-11-09 00:17:20,481 [DEBUG] Validating WebSocket request
+2025-11-09 00:17:20,542 [INFO] 127.0.0.1 - - [2025-11-09 00:17:20] "GET /art/background.png HTTP/1.1" 200 4519303 0.060945
+2025-11-09 00:17:20,880 [DEBUG] Initializing WebSocket
+2025-11-09 00:17:20,880 [DEBUG] Validating WebSocket request
+2025-11-09 00:17:20,881 [DEBUG] Attempting to upgrade connection
+2025-11-09 00:17:20,881 [DEBUG] WebSocket request accepted, switching protocols
+2025-11-09 00:17:23,494 [DEBUG] Closed WebSocket
+2025-11-09 00:17:23,495 [DEBUG] Failed to write closing frame -> closing socket
+2025-11-09 00:17:23,495 [DEBUG] Closed WebSocket
+2025-11-09 00:18:04,143 [DEBUG] Initializing WebSocket
+2025-11-09 00:18:04,144 [DEBUG] Validating WebSocket request
+2025-11-09 00:18:04,147 [INFO] 127.0.0.1 - - [2025-11-09 00:18:04] "GET /ui.html HTTP/1.1" 200 4210 0.004042
+2025-11-09 00:18:04,189 [DEBUG] Initializing WebSocket
+2025-11-09 00:18:04,189 [DEBUG] Validating WebSocket request
+2025-11-09 00:18:04,191 [INFO] 127.0.0.1 - - [2025-11-09 00:18:04] "GET /eel.js HTTP/1.1" 200 6029 0.002133
+2025-11-09 00:18:04,193 [DEBUG] Initializing WebSocket
+2025-11-09 00:18:04,193 [DEBUG] Validating WebSocket request
+2025-11-09 00:18:04,195 [INFO] 127.0.0.1 - - [2025-11-09 00:18:04] "GET /ui.css HTTP/1.1" 200 10277 0.002232
+2025-11-09 00:18:04,210 [DEBUG] Initializing WebSocket
+2025-11-09 00:18:04,210 [DEBUG] Validating WebSocket request
+2025-11-09 00:18:04,212 [INFO] 127.0.0.1 - - [2025-11-09 00:18:04] "GET /ui.js HTTP/1.1" 200 10224 0.002656
+2025-11-09 00:18:04,279 [DEBUG] Initializing WebSocket
+2025-11-09 00:18:04,279 [DEBUG] Validating WebSocket request
+2025-11-09 00:18:04,349 [INFO] 127.0.0.1 - - [2025-11-09 00:18:04] "GET /art/background.png HTTP/1.1" 200 4519303 0.070087
+2025-11-09 00:18:04,688 [DEBUG] Initializing WebSocket
+2025-11-09 00:18:04,688 [DEBUG] Validating WebSocket request
+2025-11-09 00:18:04,688 [DEBUG] Attempting to upgrade connection
+2025-11-09 00:18:04,688 [DEBUG] WebSocket request accepted, switching protocols
+2025-11-09 00:18:12,843 [DEBUG] Initializing WebSocket
+2025-11-09 00:18:12,843 [DEBUG] Validating WebSocket request
+2025-11-09 00:18:12,845 [INFO] 127.0.0.1 - - [2025-11-09 00:18:12] "GET /ui.css HTTP/1.1" 200 10277 0.001859
+2025-11-09 00:18:12,854 [DEBUG] Initializing WebSocket
+2025-11-09 00:18:12,854 [DEBUG] Validating WebSocket request
+2025-11-09 00:18:12,857 [INFO] 127.0.0.1 - - [2025-11-09 00:18:12] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 919 0.003045
+2025-11-09 00:18:53,336 [DEBUG] Closed WebSocket
+2025-11-09 00:18:53,337 [DEBUG] Failed to write closing frame -> closing socket
+2025-11-09 00:18:53,337 [DEBUG] Closed WebSocket
+2025-11-09 00:22:04,636 [DEBUG] Initializing WebSocket
+2025-11-09 00:22:04,636 [DEBUG] Validating WebSocket request
+2025-11-09 00:22:04,638 [INFO] 127.0.0.1 - - [2025-11-09 00:22:04] "GET /ui.html HTTP/1.1" 200 4178 0.001857
+2025-11-09 00:22:04,715 [DEBUG] Initializing WebSocket
+2025-11-09 00:22:04,716 [DEBUG] Validating WebSocket request
+2025-11-09 00:22:04,717 [INFO] 127.0.0.1 - - [2025-11-09 00:22:04] "GET /eel.js HTTP/1.1" 200 6029 0.001859
+2025-11-09 00:22:04,719 [DEBUG] Initializing WebSocket
+2025-11-09 00:22:04,719 [DEBUG] Validating WebSocket request
+2025-11-09 00:22:04,722 [INFO] 127.0.0.1 - - [2025-11-09 00:22:04] "GET /ui.css HTTP/1.1" 200 10277 0.003620
+2025-11-09 00:22:04,736 [DEBUG] Initializing WebSocket
+2025-11-09 00:22:04,736 [DEBUG] Validating WebSocket request
+2025-11-09 00:22:04,739 [INFO] 127.0.0.1 - - [2025-11-09 00:22:04] "GET /ui.js HTTP/1.1" 200 10224 0.003018
+2025-11-09 00:22:04,828 [DEBUG] Initializing WebSocket
+2025-11-09 00:22:04,829 [DEBUG] Validating WebSocket request
+2025-11-09 00:22:04,890 [INFO] 127.0.0.1 - - [2025-11-09 00:22:04] "GET /art/background.png HTTP/1.1" 200 4519303 0.061543
+2025-11-09 00:22:05,226 [DEBUG] Initializing WebSocket
+2025-11-09 00:22:05,227 [DEBUG] Validating WebSocket request
+2025-11-09 00:22:05,227 [DEBUG] Attempting to upgrade connection
+2025-11-09 00:22:05,227 [DEBUG] WebSocket request accepted, switching protocols
+2025-11-09 00:24:06,365 [DEBUG] Closed WebSocket
+2025-11-09 00:24:06,366 [DEBUG] Failed to write closing frame -> closing socket
+2025-11-09 00:24:06,366 [DEBUG] Closed WebSocket
+2025-11-09 00:56:42,346 [DEBUG] Initializing WebSocket
+2025-11-09 00:56:42,346 [DEBUG] Validating WebSocket request
+2025-11-09 00:56:42,349 [INFO] 127.0.0.1 - - [2025-11-09 00:56:42] "GET /ui.html HTTP/1.1" 200 4178 0.003637
+2025-11-09 00:56:42,414 [DEBUG] Initializing WebSocket
+2025-11-09 00:56:42,414 [DEBUG] Validating WebSocket request
+2025-11-09 00:56:42,416 [INFO] 127.0.0.1 - - [2025-11-09 00:56:42] "GET /eel.js HTTP/1.1" 200 6029 0.001937
+2025-11-09 00:56:42,421 [DEBUG] Initializing WebSocket
+2025-11-09 00:56:42,421 [DEBUG] Validating WebSocket request
+2025-11-09 00:56:42,433 [INFO] 127.0.0.1 - - [2025-11-09 00:56:42] "GET /ui.css HTTP/1.1" 200 10277 0.011375
+2025-11-09 00:56:42,436 [DEBUG] Initializing WebSocket
+2025-11-09 00:56:42,436 [DEBUG] Validating WebSocket request
+2025-11-09 00:56:42,439 [INFO] 127.0.0.1 - - [2025-11-09 00:56:42] "GET /ui.js HTTP/1.1" 200 10224 0.002697
+2025-11-09 00:56:42,591 [DEBUG] Initializing WebSocket
+2025-11-09 00:56:42,591 [DEBUG] Validating WebSocket request
+2025-11-09 00:56:42,701 [INFO] 127.0.0.1 - - [2025-11-09 00:56:42] "GET /art/background.png HTTP/1.1" 200 4519303 0.110347
+2025-11-09 00:56:42,893 [DEBUG] Initializing WebSocket
+2025-11-09 00:56:42,894 [DEBUG] Validating WebSocket request
+2025-11-09 00:56:42,894 [DEBUG] Attempting to upgrade connection
+2025-11-09 00:56:42,894 [DEBUG] WebSocket request accepted, switching protocols
+2025-11-09 00:57:42,631 [DEBUG] Closed WebSocket
+2025-11-09 00:57:42,631 [DEBUG] Failed to write closing frame -> closing socket
+2025-11-09 00:57:42,632 [DEBUG] Closed WebSocket
+2025-11-09 01:05:45,422 [DEBUG] Initializing WebSocket
+2025-11-09 01:05:45,423 [DEBUG] Validating WebSocket request
+2025-11-09 01:05:45,425 [INFO] 127.0.0.1 - - [2025-11-09 01:05:45] "GET /ui.html HTTP/1.1" 200 3798 0.002458
+2025-11-09 01:05:45,493 [DEBUG] Initializing WebSocket
+2025-11-09 01:05:45,493 [DEBUG] Validating WebSocket request
+2025-11-09 01:05:45,495 [INFO] 127.0.0.1 - - [2025-11-09 01:05:45] "GET /eel.js HTTP/1.1" 200 6029 0.001997
+2025-11-09 01:05:45,496 [DEBUG] Initializing WebSocket
+2025-11-09 01:05:45,496 [DEBUG] Validating WebSocket request
+2025-11-09 01:05:45,498 [INFO] 127.0.0.1 - - [2025-11-09 01:05:45] "GET /ui.css HTTP/1.1" 200 10277 0.002261
+2025-11-09 01:05:45,518 [DEBUG] Initializing WebSocket
+2025-11-09 01:05:45,518 [DEBUG] Validating WebSocket request
+2025-11-09 01:05:45,520 [INFO] 127.0.0.1 - - [2025-11-09 01:05:45] "GET /ui.js HTTP/1.1" 200 10729 0.002043
+2025-11-09 01:05:45,603 [DEBUG] Initializing WebSocket
+2025-11-09 01:05:45,604 [DEBUG] Validating WebSocket request
+2025-11-09 01:05:45,672 [INFO] 127.0.0.1 - - [2025-11-09 01:05:45] "GET /art/background.png HTTP/1.1" 200 4519303 0.068576
+2025-11-09 01:05:45,996 [DEBUG] Initializing WebSocket
+2025-11-09 01:05:45,996 [DEBUG] Validating WebSocket request
+2025-11-09 01:05:45,996 [DEBUG] Attempting to upgrade connection
+2025-11-09 01:05:45,996 [DEBUG] WebSocket request accepted, switching protocols
+2025-11-09 01:05:59,248 [DEBUG] Initializing WebSocket
+2025-11-09 01:05:59,249 [DEBUG] Validating WebSocket request
+2025-11-09 01:05:59,250 [INFO] 127.0.0.1 - - [2025-11-09 01:05:59] "GET /ui.css HTTP/1.1" 200 10277 0.001757
+2025-11-09 01:05:59,261 [DEBUG] Initializing WebSocket
+2025-11-09 01:05:59,261 [DEBUG] Validating WebSocket request
+2025-11-09 01:05:59,265 [INFO] 127.0.0.1 - - [2025-11-09 01:05:59] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 919 0.004500
+2025-11-09 01:06:31,944 [DEBUG] Closed WebSocket
+2025-11-09 01:06:31,945 [DEBUG] Failed to write closing frame -> closing socket
+2025-11-09 01:06:31,945 [DEBUG] Closed WebSocket
+2025-11-09 01:09:13,055 [DEBUG] Initializing WebSocket
+2025-11-09 01:09:13,056 [DEBUG] Validating WebSocket request
+2025-11-09 01:09:13,057 [INFO] 127.0.0.1 - - [2025-11-09 01:09:13] "GET /ui.html HTTP/1.1" 200 3798 0.001470
+2025-11-09 01:09:13,102 [DEBUG] Initializing WebSocket
+2025-11-09 01:09:13,102 [DEBUG] Validating WebSocket request
+2025-11-09 01:09:13,103 [INFO] 127.0.0.1 - - [2025-11-09 01:09:13] "GET /eel.js HTTP/1.1" 200 6029 0.001489
+2025-11-09 01:09:13,108 [DEBUG] Initializing WebSocket
+2025-11-09 01:09:13,108 [DEBUG] Validating WebSocket request
+2025-11-09 01:09:13,111 [INFO] 127.0.0.1 - - [2025-11-09 01:09:13] "GET /ui.css HTTP/1.1" 200 10277 0.002563
+2025-11-09 01:09:13,118 [DEBUG] Initializing WebSocket
+2025-11-09 01:09:13,118 [DEBUG] Validating WebSocket request
+2025-11-09 01:09:13,120 [INFO] 127.0.0.1 - - [2025-11-09 01:09:13] "GET /ui.js HTTP/1.1" 200 10729 0.002113
+2025-11-09 01:09:13,197 [DEBUG] Initializing WebSocket
+2025-11-09 01:09:13,197 [DEBUG] Validating WebSocket request
+2025-11-09 01:09:13,253 [INFO] 127.0.0.1 - - [2025-11-09 01:09:13] "GET /art/background.png HTTP/1.1" 200 4519303 0.056002
+2025-11-09 01:09:13,583 [DEBUG] Initializing WebSocket
+2025-11-09 01:09:13,583 [DEBUG] Validating WebSocket request
+2025-11-09 01:09:13,583 [DEBUG] Attempting to upgrade connection
+2025-11-09 01:09:13,583 [DEBUG] WebSocket request accepted, switching protocols
+2025-11-09 01:09:22,298 [DEBUG] Closed WebSocket
+2025-11-09 01:09:22,299 [DEBUG] Failed to write closing frame -> closing socket
+2025-11-09 01:09:22,300 [DEBUG] Closed WebSocket
+2025-11-09 01:10:15,236 [DEBUG] Initializing WebSocket
+2025-11-09 01:10:15,236 [DEBUG] Validating WebSocket request
+2025-11-09 01:10:15,238 [INFO] 127.0.0.1 - - [2025-11-09 01:10:15] "GET /ui.html HTTP/1.1" 200 3798 0.002137
+2025-11-09 01:10:15,280 [DEBUG] Initializing WebSocket
+2025-11-09 01:10:15,281 [DEBUG] Validating WebSocket request
+2025-11-09 01:10:15,282 [INFO] 127.0.0.1 - - [2025-11-09 01:10:15] "GET /eel.js HTTP/1.1" 200 6029 0.001954
+2025-11-09 01:10:15,284 [DEBUG] Initializing WebSocket
+2025-11-09 01:10:15,284 [DEBUG] Validating WebSocket request
+2025-11-09 01:10:15,286 [INFO] 127.0.0.1 - - [2025-11-09 01:10:15] "GET /ui.css HTTP/1.1" 200 10277 0.002760
+2025-11-09 01:10:15,295 [DEBUG] Initializing WebSocket
+2025-11-09 01:10:15,295 [DEBUG] Validating WebSocket request
+2025-11-09 01:10:15,297 [INFO] 127.0.0.1 - - [2025-11-09 01:10:15] "GET /ui.js HTTP/1.1" 200 10775 0.001805
+2025-11-09 01:10:15,373 [DEBUG] Initializing WebSocket
+2025-11-09 01:10:15,373 [DEBUG] Validating WebSocket request
+2025-11-09 01:10:15,433 [INFO] 127.0.0.1 - - [2025-11-09 01:10:15] "GET /art/background.png HTTP/1.1" 200 4519303 0.060439
+2025-11-09 01:10:15,777 [DEBUG] Initializing WebSocket
+2025-11-09 01:10:15,778 [DEBUG] Validating WebSocket request
+2025-11-09 01:10:15,778 [DEBUG] Attempting to upgrade connection
+2025-11-09 01:10:15,778 [DEBUG] WebSocket request accepted, switching protocols
+2025-11-09 01:10:21,111 [DEBUG] Initializing WebSocket
+2025-11-09 01:10:21,111 [DEBUG] Validating WebSocket request
+2025-11-09 01:10:21,112 [INFO] 127.0.0.1 - - [2025-11-09 01:10:21] "GET /ui.css HTTP/1.1" 200 10277 0.001578
+2025-11-09 01:10:21,121 [DEBUG] Initializing WebSocket
+2025-11-09 01:10:21,121 [DEBUG] Validating WebSocket request
+2025-11-09 01:10:21,124 [INFO] 127.0.0.1 - - [2025-11-09 01:10:21] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 919 0.002318
+2025-11-09 01:10:32,927 [DEBUG] Closed WebSocket
+2025-11-09 01:10:32,928 [DEBUG] Failed to write closing frame -> closing socket
+2025-11-09 01:10:32,928 [DEBUG] Closed WebSocket
+2025-11-09 01:10:51,181 [DEBUG] Initializing WebSocket
+2025-11-09 01:10:51,181 [DEBUG] Validating WebSocket request
+2025-11-09 01:10:51,183 [INFO] 127.0.0.1 - - [2025-11-09 01:10:51] "GET /ui.html HTTP/1.1" 200 3798 0.002209
+2025-11-09 01:10:51,220 [DEBUG] Initializing WebSocket
+2025-11-09 01:10:51,221 [DEBUG] Validating WebSocket request
+2025-11-09 01:10:51,222 [INFO] 127.0.0.1 - - [2025-11-09 01:10:51] "GET /eel.js HTTP/1.1" 200 6051 0.001554
+2025-11-09 01:10:51,223 [DEBUG] Initializing WebSocket
+2025-11-09 01:10:51,223 [DEBUG] Validating WebSocket request
+2025-11-09 01:10:51,226 [INFO] 127.0.0.1 - - [2025-11-09 01:10:51] "GET /ui.css HTTP/1.1" 200 10277 0.002680
+2025-11-09 01:10:51,238 [DEBUG] Initializing WebSocket
+2025-11-09 01:10:51,238 [DEBUG] Validating WebSocket request
+2025-11-09 01:10:51,241 [INFO] 127.0.0.1 - - [2025-11-09 01:10:51] "GET /ui.js HTTP/1.1" 200 10775 0.003183
+2025-11-09 01:10:51,312 [DEBUG] Initializing WebSocket
+2025-11-09 01:10:51,312 [DEBUG] Validating WebSocket request
+2025-11-09 01:10:51,367 [INFO] 127.0.0.1 - - [2025-11-09 01:10:51] "GET /art/background.png HTTP/1.1" 200 4519303 0.055124
+2025-11-09 01:10:51,707 [DEBUG] Initializing WebSocket
+2025-11-09 01:10:51,708 [DEBUG] Validating WebSocket request
+2025-11-09 01:10:51,708 [DEBUG] Attempting to upgrade connection
+2025-11-09 01:10:51,708 [DEBUG] WebSocket request accepted, switching protocols
+2025-11-09 01:11:10,155 [DEBUG] Closed WebSocket
+2025-11-09 01:11:10,156 [DEBUG] Failed to write closing frame -> closing socket
+2025-11-09 01:11:10,156 [DEBUG] Closed WebSocket
+2025-11-09 01:11:42,397 [DEBUG] Initializing WebSocket
+2025-11-09 01:11:42,397 [DEBUG] Validating WebSocket request
+2025-11-09 01:11:42,398 [INFO] 127.0.0.1 - - [2025-11-09 01:11:42] "GET /ui.html HTTP/1.1" 200 3745 0.002142
+2025-11-09 01:11:42,480 [DEBUG] Initializing WebSocket
+2025-11-09 01:11:42,480 [DEBUG] Validating WebSocket request
+2025-11-09 01:11:42,483 [INFO] 127.0.0.1 - - [2025-11-09 01:11:42] "GET /ui.css HTTP/1.1" 200 10277 0.002630
+2025-11-09 01:11:42,484 [DEBUG] Initializing WebSocket
+2025-11-09 01:11:42,485 [DEBUG] Validating WebSocket request
+2025-11-09 01:11:42,486 [INFO] 127.0.0.1 - - [2025-11-09 01:11:42] "GET /eel.js HTTP/1.1" 200 6051 0.001890
+2025-11-09 01:11:42,498 [DEBUG] Initializing WebSocket
+2025-11-09 01:11:42,498 [DEBUG] Validating WebSocket request
+2025-11-09 01:11:42,500 [INFO] 127.0.0.1 - - [2025-11-09 01:11:42] "GET /ui.js HTTP/1.1" 200 10775 0.002323
+2025-11-09 01:11:42,592 [DEBUG] Initializing WebSocket
+2025-11-09 01:11:42,592 [DEBUG] Validating WebSocket request
+2025-11-09 01:11:42,664 [INFO] 127.0.0.1 - - [2025-11-09 01:11:42] "GET /art/background.png HTTP/1.1" 200 4519303 0.071302
+2025-11-09 01:11:43,003 [DEBUG] Initializing WebSocket
+2025-11-09 01:11:43,003 [DEBUG] Validating WebSocket request
+2025-11-09 01:11:43,003 [DEBUG] Attempting to upgrade connection
+2025-11-09 01:11:43,003 [DEBUG] WebSocket request accepted, switching protocols
+2025-11-09 01:11:56,366 [DEBUG] Closed WebSocket
+2025-11-09 01:11:56,367 [DEBUG] Failed to write closing frame -> closing socket
+2025-11-09 01:11:56,367 [DEBUG] Closed WebSocket
+2025-11-09 01:16:40,325 [DEBUG] Initializing WebSocket
+2025-11-09 01:16:40,325 [DEBUG] Validating WebSocket request
+2025-11-09 01:16:40,327 [INFO] 127.0.0.1 - - [2025-11-09 01:16:40] "GET /ui.html HTTP/1.1" 200 3745 0.001833
+2025-11-09 01:16:40,381 [DEBUG] Initializing WebSocket
+2025-11-09 01:16:40,382 [DEBUG] Validating WebSocket request
+2025-11-09 01:16:40,383 [INFO] 127.0.0.1 - - [2025-11-09 01:16:40] "GET /eel.js HTTP/1.1" 200 6066 0.001437
+2025-11-09 01:16:40,390 [DEBUG] Initializing WebSocket
+2025-11-09 01:16:40,391 [DEBUG] Validating WebSocket request
+2025-11-09 01:16:40,394 [INFO] 127.0.0.1 - - [2025-11-09 01:16:40] "GET /ui.css HTTP/1.1" 200 10277 0.004142
+2025-11-09 01:16:40,411 [DEBUG] Initializing WebSocket
+2025-11-09 01:16:40,412 [DEBUG] Validating WebSocket request
+2025-11-09 01:16:40,413 [INFO] 127.0.0.1 - - [2025-11-09 01:16:40] "GET /ui.js HTTP/1.1" 200 10816 0.002213
+2025-11-09 01:16:40,505 [DEBUG] Initializing WebSocket
+2025-11-09 01:16:40,505 [DEBUG] Validating WebSocket request
+2025-11-09 01:16:40,576 [INFO] 127.0.0.1 - - [2025-11-09 01:16:40] "GET /art/background.png HTTP/1.1" 200 4519303 0.071508
+2025-11-09 01:16:40,913 [DEBUG] Initializing WebSocket
+2025-11-09 01:16:40,913 [DEBUG] Validating WebSocket request
+2025-11-09 01:16:40,913 [DEBUG] Attempting to upgrade connection
+2025-11-09 01:16:40,913 [DEBUG] WebSocket request accepted, switching protocols
+2025-11-09 01:17:37,145 [DEBUG] Closed WebSocket
+2025-11-09 01:17:37,146 [DEBUG] Failed to write closing frame -> closing socket
+2025-11-09 01:17:37,146 [DEBUG] Closed WebSocket
+2025-11-09 13:30:36,069 [DEBUG] Initializing WebSocket
+2025-11-09 13:30:36,070 [DEBUG] Validating WebSocket request
+2025-11-09 13:30:36,075 [INFO] 127.0.0.1 - - [2025-11-09 13:30:36] "GET /ui.html HTTP/1.1" 200 3745 0.006054
+2025-11-09 13:30:36,242 [DEBUG] Initializing WebSocket
+2025-11-09 13:30:36,243 [DEBUG] Validating WebSocket request
+2025-11-09 13:30:36,245 [INFO] 127.0.0.1 - - [2025-11-09 13:30:36] "GET /eel.js HTTP/1.1" 200 6066 0.002386
+2025-11-09 13:30:36,246 [DEBUG] Initializing WebSocket
+2025-11-09 13:30:36,246 [DEBUG] Validating WebSocket request
+2025-11-09 13:30:36,275 [INFO] 127.0.0.1 - - [2025-11-09 13:30:36] "GET /ui.css HTTP/1.1" 200 10277 0.029330
+2025-11-09 13:30:36,312 [DEBUG] Initializing WebSocket
+2025-11-09 13:30:36,313 [DEBUG] Validating WebSocket request
+2025-11-09 13:30:36,315 [INFO] 127.0.0.1 - - [2025-11-09 13:30:36] "GET /ui.js HTTP/1.1" 200 10816 0.002693
+2025-11-09 13:30:36,495 [DEBUG] Initializing WebSocket
+2025-11-09 13:30:36,496 [DEBUG] Validating WebSocket request
+2025-11-09 13:30:36,640 [INFO] 127.0.0.1 - - [2025-11-09 13:30:36] "GET /art/background.png HTTP/1.1" 200 4519303 0.144599
+2025-11-09 13:30:36,992 [DEBUG] Initializing WebSocket
+2025-11-09 13:30:36,992 [DEBUG] Validating WebSocket request
+2025-11-09 13:30:36,992 [DEBUG] Attempting to upgrade connection
+2025-11-09 13:30:36,992 [DEBUG] WebSocket request accepted, switching protocols
+2025-11-09 13:47:53,251 [DEBUG] Closed WebSocket
+2025-11-09 13:47:53,252 [DEBUG] Failed to write closing frame -> closing socket
+2025-11-09 13:47:53,253 [DEBUG] Closed WebSocket

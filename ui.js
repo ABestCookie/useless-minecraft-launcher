@@ -5,6 +5,7 @@
  */
 const AUTO_SHOW_TIP = true;
 
+
 document.addEventListener('DOMContentLoaded', () => {
   const $ = id => document.getElementById(id);
 
@@ -204,7 +205,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const launchBtn = $('launchBtn');
   if (launchBtn) {
     launchBtn.addEventListener('click', () => {
-      alert('啟動遊戲（模擬）');
+      eel.launch_game()(function(response) {
+        alert(response);
+      });
     });
   }
 
@@ -263,6 +266,24 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  const versionSelect = document.getElementById('versionSelect');
+  eel.get_local_ver()(function(ver) {
+    console.log(ver);
+    versionSelect.innerHTML = '';
+    ver.forEach(v => {
+      const option = document.createElement('option');
+      option.innerHTML = v;
+      versionSelect.appendChild(option);
+    });
+  });
+  versionSelect.addEventListener('change', function(e) {
+    const selectedVersion = e.target.value;
+    console.log('選擇的版本：', selectedVersion);
+    eel.load_versionSelect(selectedVersion);
+  });
+
+
 
   // 若需程式載入時就自動顯示 msgbox，可在此呼叫：
   // showMsg('歡迎', '啟動完成').then(...);
