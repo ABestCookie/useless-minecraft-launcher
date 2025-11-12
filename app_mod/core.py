@@ -200,6 +200,9 @@ class Launcher:
             15: "1.20.5+"
         }
         return format_map.get(pack_format, "未知版本（可能為未來或錯誤）")
+    
+    def install_game(ver: str):
+        minecraft_launcher_lib.install.install_minecraft_version(ver, minecraft_directory)
 
 
 class other_function:
@@ -234,6 +237,8 @@ class other_function:
                 return None, None  # 沒有 Content-Length 標頭
         else:
             raise Exception(f"無法檢查文件大小，HTTP 狀態碼：{response.status_code}")
+
+    
     
    
 

@@ -1,0 +1,2 @@
+修一下const terminalBack = document.getElementById('terminal');
+那個關不掉terminal的bug

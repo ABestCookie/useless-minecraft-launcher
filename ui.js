@@ -4,6 +4,17 @@
  * 設為 true 則頁面載入時自動彈出 tip，設為 false 則不自動顯示
  */
 const AUTO_SHOW_TIP = true;
+const keyboardEvent = window.event;
+
+function terminal_show(message, e) {
+    const terminalOutput = document.getElementById('terminalOutput');
+    const terminalBack = document.getElementById('terminal');
+    if (terminalOutput) {
+        terminalBack.classList.add('show');
+        terminalOutput.value += message + '\n';
+        terminalOutput.scrollTop = terminalOutput.scrollHeight;
+    }
+  }
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -155,13 +166,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  
+
+
   /* settings 按鈕改為開啟 panel（同上） */
   const settingsBtn = $('settingsBtn');
   if (settingsBtn && accountPanel) {
     settingsBtn.addEventListener('click', () => {
       accountPanel.classList.add('show');
       const list = $('accountsList');
-      if (list) list.innerHTML = '<div style="padding:12px;color:#666">設定內容（模擬）</div>';
+      if (list) list.innerHTML = `
+      <div style="padding:12px;color:#666">
+        <button class="menu-btn" style="text-align: center;" onclick="alert('模擬更改設定')">⚙️ 更改設定（模擬）</button><br/><br/>
+        <button class="menu-btn" style="text-align: center;" onclick="terminal_show('模擬查看日誌')">📄 查看日誌</button><br/><br/>
+        <button class="menu-btn" style="text-align: center;" onclick="alert('模擬關於本程式')">ℹ️ 關於 UMCL（模擬）</button>
+      </div>`;
     });
   }
 
@@ -283,7 +302,14 @@ document.addEventListener('DOMContentLoaded', () => {
     eel.load_versionSelect(selectedVersion);
   });
 
+  const terminalClose = document.getElementById('terminalClose');
+  const terminalBack = document.getElementById('terminal');
 
+  if (terminalClose) {
+    terminalClose.addEventListener('click', () => {
+      terminalBack.classList.remove('show');
+    });
+  }
 
   // 若需程式載入時就自動顯示 msgbox，可在此呼叫：
   // showMsg('歡迎', '啟動完成').then(...);

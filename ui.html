@@ -10,7 +10,7 @@
 </head>
 <body>
   <div class="app" role="application" aria-label="UMCL">
-    <!-- titlebar 已移除 -->
+    
 
     <div class="main">
       <aside id="sidebar" class="sidebar">
@@ -30,7 +30,6 @@
             <button class="menu-btn">下載</button>
             <button class="menu-btn">資源</button>
             <button class="menu-btn" id="settingsBtn">設定</button>
-            <button class="menu-btn">官方網站</button>
           </div>
         </div>
       </aside>
@@ -79,6 +78,11 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="terminal", id="terminal">
+    <button class="close-x" id="terminalClose" title="關閉">✕</button>
+    <textarea id="terminalOutput" class="terminalOutput" cols="60" rows="40" readonly></textarea>
   </div>
 
   <script src="ui.js"></script>

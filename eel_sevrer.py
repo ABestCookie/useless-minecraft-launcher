@@ -19,19 +19,22 @@ logging.basicConfig(
     format="%(asctime)s [%(levelname)s] %(message)s"
 )
 
+select_ver="1.21.10"
+
 @eel.expose
 def get_local_ver():
     return core.Launcher.get_local_ver()
 
 @eel.expose
 def load_versionSelect(ver):
-    global select_ver
+    
     select_ver = ver
     print(select_ver)
     
 @eel.expose
 def launch_game():
     try:
+        core.Launcher.install_game(ver=select_ver)
         core.Launcher.normal(ver=select_ver)
         subprocess.Popen("launch_cmd_temp.bat")
         return "遊戲啟動成功"

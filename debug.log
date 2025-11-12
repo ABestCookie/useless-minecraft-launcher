@@ -481,3 +481,526 @@ CTK UI log initialized.
 2025-11-09 13:47:53,251 [DEBUG] Closed WebSocket
 2025-11-09 13:47:53,252 [DEBUG] Failed to write closing frame -> closing socket
 2025-11-09 13:47:53,253 [DEBUG] Closed WebSocket
+2025-11-12 19:02:15,581 [DEBUG] Initializing WebSocket
+2025-11-12 19:02:15,581 [DEBUG] Validating WebSocket request
+2025-11-12 19:02:15,583 [INFO] 127.0.0.1 - - [2025-11-12 19:02:15] "GET /ui.html HTTP/1.1" 200 3745 0.002390
+2025-11-12 19:02:15,630 [DEBUG] Initializing WebSocket
+2025-11-12 19:02:15,631 [DEBUG] Validating WebSocket request
+2025-11-12 19:02:15,633 [INFO] 127.0.0.1 - - [2025-11-12 19:02:15] "GET /eel.js HTTP/1.1" 200 6066 0.002593
+2025-11-12 19:02:15,634 [DEBUG] Initializing WebSocket
+2025-11-12 19:02:15,634 [DEBUG] Validating WebSocket request
+2025-11-12 19:02:15,640 [INFO] 127.0.0.1 - - [2025-11-12 19:02:15] "GET /ui.css HTTP/1.1" 200 10277 0.005899
+2025-11-12 19:02:15,642 [DEBUG] Initializing WebSocket
+2025-11-12 19:02:15,643 [DEBUG] Validating WebSocket request
+2025-11-12 19:02:15,647 [INFO] 127.0.0.1 - - [2025-11-12 19:02:15] "GET /ui.js HTTP/1.1" 200 10816 0.004180
+2025-11-12 19:02:15,744 [DEBUG] Initializing WebSocket
+2025-11-12 19:02:15,745 [DEBUG] Validating WebSocket request
+2025-11-12 19:02:15,831 [INFO] 127.0.0.1 - - [2025-11-12 19:02:15] "GET /art/background.png HTTP/1.1" 200 4519303 0.086726
+2025-11-12 19:02:16,056 [DEBUG] Initializing WebSocket
+2025-11-12 19:02:16,056 [DEBUG] Validating WebSocket request
+2025-11-12 19:02:16,056 [DEBUG] Attempting to upgrade connection
+2025-11-12 19:02:16,056 [DEBUG] WebSocket request accepted, switching protocols
+2025-11-12 19:02:23,845 [ERROR] Failed to launch game: name 'select_ver' is not defined
+2025-11-12 19:03:30,684 [DEBUG] Initializing WebSocket
+2025-11-12 19:03:30,685 [DEBUG] Validating WebSocket request
+2025-11-12 19:03:30,690 [INFO] 127.0.0.1 - - [2025-11-12 19:03:30] "GET /ui.html HTTP/1.1" 200 3745 0.006071
+2025-11-12 19:03:30,770 [DEBUG] Initializing WebSocket
+2025-11-12 19:03:30,770 [DEBUG] Validating WebSocket request
+2025-11-12 19:03:30,772 [INFO] 127.0.0.1 - - [2025-11-12 19:03:30] "GET /eel.js HTTP/1.1" 200 6066 0.001587
+2025-11-12 19:03:30,781 [DEBUG] Initializing WebSocket
+2025-11-12 19:03:30,781 [DEBUG] Validating WebSocket request
+2025-11-12 19:03:30,784 [INFO] 127.0.0.1 - - [2025-11-12 19:03:30] "GET /ui.css HTTP/1.1" 200 10277 0.003474
+2025-11-12 19:03:30,789 [DEBUG] Initializing WebSocket
+2025-11-12 19:03:30,790 [DEBUG] Validating WebSocket request
+2025-11-12 19:03:30,793 [INFO] 127.0.0.1 - - [2025-11-12 19:03:30] "GET /ui.js HTTP/1.1" 200 10816 0.003583
+2025-11-12 19:03:30,909 [DEBUG] Initializing WebSocket
+2025-11-12 19:03:30,909 [DEBUG] Validating WebSocket request
+2025-11-12 19:03:30,987 [INFO] 127.0.0.1 - - [2025-11-12 19:03:30] "GET /art/background.png HTTP/1.1" 200 4519303 0.078720
+2025-11-12 19:03:31,343 [DEBUG] Initializing WebSocket
+2025-11-12 19:03:31,343 [DEBUG] Validating WebSocket request
+2025-11-12 19:03:31,343 [DEBUG] Attempting to upgrade connection
+2025-11-12 19:03:31,343 [DEBUG] WebSocket request accepted, switching protocols
+2025-11-12 19:03:55,974 [ERROR] Failed to launch game: name 'select_ver' is not defined
+2025-11-12 19:05:19,267 [DEBUG] Initializing WebSocket
+2025-11-12 19:05:19,268 [DEBUG] Validating WebSocket request
+2025-11-12 19:05:19,269 [INFO] 127.0.0.1 - - [2025-11-12 19:05:19] "GET /ui.html HTTP/1.1" 200 3745 0.002421
+2025-11-12 19:05:19,314 [DEBUG] Initializing WebSocket
+2025-11-12 19:05:19,315 [DEBUG] Validating WebSocket request
+2025-11-12 19:05:19,316 [INFO] 127.0.0.1 - - [2025-11-12 19:05:19] "GET /eel.js HTTP/1.1" 200 6066 0.001384
+2025-11-12 19:05:19,317 [DEBUG] Initializing WebSocket
+2025-11-12 19:05:19,318 [DEBUG] Validating WebSocket request
+2025-11-12 19:05:19,320 [INFO] 127.0.0.1 - - [2025-11-12 19:05:19] "GET /ui.css HTTP/1.1" 200 10277 0.002140
+2025-11-12 19:05:19,327 [DEBUG] Initializing WebSocket
+2025-11-12 19:05:19,327 [DEBUG] Validating WebSocket request
+2025-11-12 19:05:19,329 [INFO] 127.0.0.1 - - [2025-11-12 19:05:19] "GET /ui.js HTTP/1.1" 200 10816 0.001987
+2025-11-12 19:05:19,400 [DEBUG] Initializing WebSocket
+2025-11-12 19:05:19,400 [DEBUG] Validating WebSocket request
+2025-11-12 19:05:19,452 [INFO] 127.0.0.1 - - [2025-11-12 19:05:19] "GET /art/background.png HTTP/1.1" 200 4519303 0.052241
+2025-11-12 19:05:19,790 [DEBUG] Initializing WebSocket
+2025-11-12 19:05:19,790 [DEBUG] Validating WebSocket request
+2025-11-12 19:05:19,791 [DEBUG] Attempting to upgrade connection
+2025-11-12 19:05:19,791 [DEBUG] WebSocket request accepted, switching protocols
+2025-11-12 19:07:07,629 [DEBUG] Starting new HTTPS connection (1): launchermeta.mojang.com:443
+2025-11-12 19:07:08,343 [DEBUG] https://launchermeta.mojang.com:443 "GET /mc/game/version_manifest_v2.json HTTP/1.1" 200 None
+2025-11-12 19:07:08,401 [ERROR] Failed to launch game: Version 1.21.0 was not found
+2025-11-12 19:08:27,906 [DEBUG] Initializing WebSocket
+2025-11-12 19:08:27,906 [DEBUG] Validating WebSocket request
+2025-11-12 19:08:27,907 [INFO] 127.0.0.1 - - [2025-11-12 19:08:27] "GET /ui.html HTTP/1.1" 200 3745 0.001439
+2025-11-12 19:08:27,954 [DEBUG] Initializing WebSocket
+2025-11-12 19:08:27,955 [DEBUG] Validating WebSocket request
+2025-11-12 19:08:27,956 [INFO] 127.0.0.1 - - [2025-11-12 19:08:27] "GET /eel.js HTTP/1.1" 200 6066 0.001218
+2025-11-12 19:08:27,957 [DEBUG] Initializing WebSocket
+2025-11-12 19:08:27,957 [DEBUG] Validating WebSocket request
+2025-11-12 19:08:27,959 [INFO] 127.0.0.1 - - [2025-11-12 19:08:27] "GET /ui.css HTTP/1.1" 200 10277 0.002082
+2025-11-12 19:08:27,967 [DEBUG] Initializing WebSocket
+2025-11-12 19:08:27,967 [DEBUG] Validating WebSocket request
+2025-11-12 19:08:27,969 [INFO] 127.0.0.1 - - [2025-11-12 19:08:27] "GET /ui.js HTTP/1.1" 200 10816 0.002064
+2025-11-12 19:08:28,044 [DEBUG] Initializing WebSocket
+2025-11-12 19:08:28,045 [DEBUG] Validating WebSocket request
+2025-11-12 19:08:28,093 [INFO] 127.0.0.1 - - [2025-11-12 19:08:28] "GET /art/background.png HTTP/1.1" 200 4519303 0.048675
+2025-11-12 19:08:28,434 [DEBUG] Initializing WebSocket
+2025-11-12 19:08:28,434 [DEBUG] Validating WebSocket request
+2025-11-12 19:08:28,434 [DEBUG] Attempting to upgrade connection
+2025-11-12 19:08:28,434 [DEBUG] WebSocket request accepted, switching protocols
+2025-11-12 19:08:42,423 [DEBUG] Starting new HTTPS connection (1): launchermeta.mojang.com:443
+2025-11-12 19:08:43,017 [DEBUG] https://launchermeta.mojang.com:443 "GET /v1/products/java-runtime/2ec0cc96c44e5a76b9c8b7c39df7210883d12871/all.json HTTP/1.1" 200 None
+2025-11-12 19:08:43,019 [DEBUG] Starting new HTTPS connection (1): piston-meta.mojang.com:443
+2025-11-12 19:08:43,554 [DEBUG] https://piston-meta.mojang.com:443 "GET /v1/packages/cb4394a27089d19f65d5baa6cf0482c27c3c7865/manifest.json HTTP/1.1" 200 None
+2025-11-12 19:08:43,570 [DEBUG] Starting new HTTPS connection (1): piston-data.mojang.com:443
+2025-11-12 19:08:43,571 [DEBUG] Starting new HTTPS connection (3): piston-data.mojang.com:443
+2025-11-12 19:08:43,570 [DEBUG] Starting new HTTPS connection (2): piston-data.mojang.com:443
+2025-11-12 19:08:43,572 [DEBUG] Starting new HTTPS connection (4): piston-data.mojang.com:443
+2025-11-12 19:08:43,573 [DEBUG] Starting new HTTPS connection (5): piston-data.mojang.com:443
+2025-11-12 19:08:43,574 [DEBUG] Starting new HTTPS connection (9): piston-data.mojang.com:443
+2025-11-12 19:08:43,573 [DEBUG] Starting new HTTPS connection (7): piston-data.mojang.com:443
+2025-11-12 19:08:43,575 [DEBUG] Starting new HTTPS connection (11): piston-data.mojang.com:443
+2025-11-12 19:08:43,573 [DEBUG] Starting new HTTPS connection (6): piston-data.mojang.com:443
+2025-11-12 19:08:43,574 [DEBUG] Starting new HTTPS connection (10): piston-data.mojang.com:443
+2025-11-12 19:08:43,574 [DEBUG] Starting new HTTPS connection (8): piston-data.mojang.com:443
+2025-11-12 19:08:43,575 [DEBUG] Starting new HTTPS connection (12): piston-data.mojang.com:443
+2025-11-12 19:08:43,578 [DEBUG] Starting new HTTPS connection (13): piston-data.mojang.com:443
+2025-11-12 19:08:43,579 [DEBUG] Starting new HTTPS connection (14): piston-data.mojang.com:443
+2025-11-12 19:08:43,579 [DEBUG] Starting new HTTPS connection (15): piston-data.mojang.com:443
+2025-11-12 19:08:43,579 [DEBUG] Starting new HTTPS connection (16): piston-data.mojang.com:443
+2025-11-12 19:08:45,324 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/49e3a9c6ebe454097d7dda88604952e85c89036e/api-ms-win-core-fibers-l1-1-0.dll HTTP/1.1" 200 7286
+2025-11-12 19:08:45,350 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/55aced39cea6769d36ca4fbacc064e1bdce205f3/api-ms-win-core-namedpipe-l1-1-0.dll HTTP/1.1" 200 7399
+2025-11-12 19:08:45,356 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/7abd7530df15c241100e223143c855d9cc891c2c/api-ms-win-core-file-l1-2-0.dll HTTP/1.1" 200 7299
+2025-11-12 19:08:45,357 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/f00325758852dc5a68377d71c4d6830ded2d120d/api-ms-win-core-handle-l1-1-0.dll HTTP/1.1" 200 7315
+2025-11-12 19:08:45,357 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/19d27586702dc13cb282e2f40f7300944e5629f0/api-ms-win-core-datetime-l1-1-0.dll HTTP/1.1" 200 7262
+2025-11-12 19:08:45,380 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/d2383b0da07ec21c15834b00a13d7b4925868acd/api-ms-win-core-console-l1-1-0.dll HTTP/1.1" 200 7424
+2025-11-12 19:08:45,384 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/266680ba4648fe745c2e7ad296a61f0be275f1a1/api-ms-win-core-file-l2-1-0.dll HTTP/1.1" 200 7397
+2025-11-12 19:08:45,401 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/05a049f2cb29e724fda3c3930b6e10af9616d2e6/api-ms-win-core-localization-l1-2-0.dll HTTP/1.1" 200 7994
+2025-11-12 19:08:45,405 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/0dfba93cabd323a1fce06d33d2e933ed0b65f4b4/api-ms-win-core-interlocked-l1-1-0.dll HTTP/1.1" 200 7327
+2025-11-12 19:08:45,414 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/d9d8f5cbd4f898ed5e293eef1f9e51f135eeb463/api-ms-win-core-processenvironment-l1-1-0.dll HTTP/1.1" 200 7508
+2025-11-12 19:08:45,421 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/0d97e22ac8a973f9cfad77bcfa84d3790424fc19/api-ms-win-core-file-l1-1-0.dll HTTP/1.1" 200 8131
+2025-11-12 19:08:45,421 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/9e2badadc3629d0a2078af9aef81247a55e5c056/api-ms-win-core-errorhandling-l1-1-0.dll HTTP/1.1" 200 7329
+2025-11-12 19:08:45,436 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/1719b2853d57b3d8656924938ffff34160c1f070/api-ms-win-core-libraryloader-l1-1-0.dll HTTP/1.1" 200 7578
+2025-11-12 19:08:45,449 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/b0463994caedc1f0222b4420355166475c3183d8/api-ms-win-core-processthreads-l1-1-0.dll HTTP/1.1" 200 7898
+2025-11-12 19:08:45,449 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/6d5e52d85f68d73fcc776c576e97aeae76f5972b/api-ms-win-core-console-l1-2-0.dll HTTP/1.1" 200 7452
+2025-11-12 19:08:45,455 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c029c747ac8283c9853ec6c869249b0f05d22ff6/api-ms-win-core-debug-l1-1-0.dll HTTP/1.1" 200 7292
+2025-11-12 19:08:45,465 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/f906285770ea637a1895777a624e62fc6c409723/api-ms-win-core-processthreads-l1-1-1.dll HTTP/1.1" 200 7463
+2025-11-12 19:08:45,466 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/e4bd94860d3693d498d4b8a20987f118aab52b37/api-ms-win-core-profile-l1-1-0.dll HTTP/1.1" 200 7265
+2025-11-12 19:08:45,466 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/55119e8d849c117608c19db733cff3b106e260eb/api-ms-win-core-rtlsupport-l1-1-0.dll HTTP/1.1" 200 7475
+2025-11-12 19:08:45,470 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/22ff947b1bb0359ef255e03fe2482a6dc93365b6/api-ms-win-core-memory-l1-1-0.dll HTTP/1.1" 200 7438
+2025-11-12 19:08:45,470 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/03ff9494e9c9abae23cafa5691a34a2364ef9d0e/api-ms-win-core-heap-l1-1-0.dll HTTP/1.1" 200 7438
+2025-11-12 19:08:45,477 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/adfab3a27e93e5a60fdd9effc4524344ba245693/api-ms-win-core-synch-l1-1-0.dll HTTP/1.1" 200 7756
+2025-11-12 19:08:45,478 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/6a006b7fa569858b91fe3f62dc2a1ad1425564c0/api-ms-win-core-string-l1-1-0.dll HTTP/1.1" 200 7335
+2025-11-12 19:08:45,488 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/813a2a5a2cdca2e74bb4b3cabbe5aa934bf7dca6/api-ms-win-core-timezone-l1-1-0.dll HTTP/1.1" 200 7433
+2025-11-12 19:08:45,488 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/ffe9c6a5c81ebf55e97dc56f5404600b8ec046f6/api-ms-win-core-synch-l1-2-0.dll HTTP/1.1" 200 7503
+2025-11-12 19:08:45,489 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/3b76460295d1019c4b8df0ce26fb920c6af88fec/api-ms-win-core-sysinfo-l1-1-0.dll HTTP/1.1" 200 7567
+2025-11-12 19:08:45,501 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/e6c2cf63af99069e36f86f886284f38456b1a81a/api-ms-win-core-util-l1-1-0.dll HTTP/1.1" 200 7292
+2025-11-12 19:08:45,501 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/5c1157dc1fa888d4e74d0739c7102b261bad8d22/api-ms-win-crt-conio-l1-1-0.dll HTTP/1.1" 200 7545
+2025-11-12 19:08:45,513 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/559b93889e2a0e2d547bd644c9070383e84d228d/api-ms-win-crt-convert-l1-1-0.dll HTTP/1.1" 200 8332
+2025-11-12 19:08:45,527 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/9850a7f36a90725adb8bf23868f9bb671edbea9d/api-ms-win-crt-environment-l1-1-0.dll HTTP/1.1" 200 7425
+2025-11-12 19:08:45,527 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/9c19a9d0a9fdefafab725130178a2417af0d5d8b/api-ms-win-crt-filesystem-l1-1-0.dll HTTP/1.1" 200 7900
+2025-11-12 19:08:45,528 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c2d76c6dd05cd877c21b634cdd18b3f0c02a319a/api-ms-win-crt-heap-l1-1-0.dll HTTP/1.1" 200 7555
+2025-11-12 19:08:45,556 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/0252032e7f427d8558501b74db701d6e5b07934d/api-ms-win-crt-process-l1-1-0.dll HTTP/1.1" 200 7569
+2025-11-12 19:08:45,557 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/1fd06d15dbe1a6dbab6153cd059d2832888ed39d/api-ms-win-crt-locale-l1-1-0.dll HTTP/1.1" 200 7534
+2025-11-12 19:08:45,563 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/d18a8463130487a0e6092c8d03b58313ba45a97b/api-ms-win-crt-runtime-l1-1-0.dll HTTP/1.1" 200 8543
+2025-11-12 19:08:45,564 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/eeafbdb607c85d00c80836401086eb57aa4ae581/api-ms-win-crt-stdio-l1-1-0.dll HTTP/1.1" 200 8747
+2025-11-12 19:08:45,564 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/1f455022fc5b1db619f9a50cb387272bd65c3066/attach.dll HTTP/1.1" 200 8088
+2025-11-12 19:08:45,564 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/3a9734be9932324231645b246f2fd1e73860b374/api-ms-win-crt-math-l1-1-0.dll HTTP/1.1" 200 9459
+2025-11-12 19:08:45,565 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/b695946fff28037d5b40b3f210ec52dbcdffabfc/api-ms-win-crt-utility-l1-1-0.dll HTTP/1.1" 200 7558
+2025-11-12 19:08:45,567 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/ca5c2fb60534f6a1cdaf56b82a7ede3780fe95af/awt.dll HTTP/1.1" 200 462836
+2025-11-12 19:08:45,568 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/d51c8acfbbe9c53256d187b07b10e21dddf38d6d/api-ms-win-crt-time-l1-1-0.dll HTTP/1.1" 200 7960
+2025-11-12 19:08:45,568 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/2bcf5ee5ca2ba889722d90690f6d6587b1848088/api-ms-win-crt-private-l1-1-0.dll HTTP/1.1" 200 17496
+2025-11-12 19:08:45,568 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/8278bf42c74e61e141b734e9d20a0019e2892ea5/api-ms-win-crt-multibyte-l1-1-0.dll HTTP/1.1" 200 8958
+2025-11-12 19:08:45,568 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/7283bb543afbf68b43efb353ba554c1044ea8550/api-ms-win-crt-string-l1-1-0.dll HTTP/1.1" 200 8744
+2025-11-12 19:08:45,584 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/ba4c5522a0a6854d0e5e3d4598a32c07ee55f597/extnet.dll HTTP/1.1" 200 5551
+2025-11-12 19:08:45,588 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/7c702cabc6d4ea6732d252aeda1d9a92bfb581d0/dt_socket.dll HTTP/1.1" 200 11739
+2025-11-12 19:08:45,588 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/8240daa361e100685e5c607241b460115ef1edac/dt_shmem.dll HTTP/1.1" 200 11616
+2025-11-12 19:08:45,600 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/7a5a00cd66b6f9494667b89e7f93ca0743f53b0d/fontmanager.dll HTTP/1.1" 200 295417
+2025-11-12 19:08:45,632 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/a5472cdebfe8f50a0f89c314ced2a668d984a8f8/jaas.dll HTTP/1.1" 200 7260
+2025-11-12 19:08:45,632 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/3da1075c3d0b2ca0e5bf4127fcaf1fe801c96ada/freetype.dll HTTP/1.1" 200 248418
+2025-11-12 19:08:45,643 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/57830e7cb23e2f5160282a2f9559566e6897dbd3/jabswitch.exe HTTP/1.1" 200 12840
+2025-11-12 19:08:45,643 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/95d22e859257dab40c73271faa0aba77ac9bb031/instrument.dll HTTP/1.1" 200 17997
+2025-11-12 19:08:45,644 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/48c168c60de081e245cf55f2cbbe578d84d1eeed/jarsigner.exe HTTP/1.1" 200 5297
+2025-11-12 19:08:45,645 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/7133ce6922fda39c420057bd1ebe9d01e42f34c7/jar.exe HTTP/1.1" 200 5280
+2025-11-12 19:08:45,647 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/75555fd88a9b4ce81b8bc2f7eb88840180a46ba3/j2pcsc.dll HTTP/1.1" 200 6578
+2025-11-12 19:08:45,659 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/effc3a17602a67d6aeb2ce62059a9ca08e6fbd3f/jaccessinspector.exe HTTP/1.1" 200 24846
+2025-11-12 19:08:45,659 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/9878bfa040d0f58ba96fcc567bde55f9828937b5/j2pkcs11.dll HTTP/1.1" 200 23375
+2025-11-12 19:08:45,659 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/46ca4b89ca3bd52e7dd350c2f99581606df27ab0/j2gss.dll HTTP/1.1" 200 14232
+2025-11-12 19:08:45,668 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/e017fa476580dacf18c70508de5e3574332817ff/jaccesswalker.exe HTTP/1.1" 200 16936
+2025-11-12 19:08:45,694 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/a2f09bcc2a0e0491f7e6512d14ac0514b9632e25/javac.exe HTTP/1.1" 200 5318
+2025-11-12 19:08:45,698 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/b4d610f2cc9d12d2b9907622eecdc1833d441551/java.exe HTTP/1.1" 200 14407
+2025-11-12 19:08:45,699 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/21b445e5a9eb90694209a2921503472716b87a07/java.dll HTTP/1.1" 200 40690
+2025-11-12 19:08:45,700 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/5a6f447076027da6cdfa2b75366eb135dd6f60dc/javap.exe HTTP/1.1" 200 5287
+2025-11-12 19:08:45,701 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/a9817f26a8fa3fd5367491c67ac3bbe8cf7745e3/javaaccessbridge.dll HTTP/1.1" 200 101057
+2025-11-12 19:08:45,732 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/0a084f054fb9f3cc2c98ee4dbdf45ece3549d5b2/jawt.dll HTTP/1.1" 200 4291
+2025-11-12 19:08:45,735 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/703251df942146ca21408617d1d1eb3a3ae319e3/javadoc.exe HTTP/1.1" 200 5331
+2025-11-12 19:08:45,745 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/047c086019a8e8c622752ebbddf8f5181ad53498/javaw.exe HTTP/1.1" 200 14452
+2025-11-12 19:08:45,747 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/db98f32901d9a0a20b34f7be3912e146d172f00f/javajpeg.dll HTTP/1.1" 200 72657
+2025-11-12 19:08:45,800 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/966171de1d7a9e893ec56bf6762aa50e9101c48d/jconsole.exe HTTP/1.1" 200 5430
+2025-11-12 19:08:45,801 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/7e2e9c23a68e674dbfe4bb032f7c57af832ca2d9/jdb.exe HTTP/1.1" 200 5291
+2025-11-12 19:08:45,802 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/95ce22de7995f735129df65f3afcb74010dfa45e/jcmd.exe HTTP/1.1" 200 5284
+2025-11-12 19:08:45,802 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/6105267d67255f1352ce856d4146f894e2a83301/jdeprscan.exe HTTP/1.1" 200 5295
+2025-11-12 19:08:45,815 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/43801f14251555deee3142060680086eaf95e8e1/jfr.exe HTTP/1.1" 200 5283
+2025-11-12 19:08:45,818 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/3a8714f96b8a3bb15430e89c5e31cf826844cbe0/jdeps.exe HTTP/1.1" 200 5282
+2025-11-12 19:08:45,821 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/50c4f8582e1421b95310a21e2c6a6946d628fc42/jdwp.dll HTTP/1.1" 200 88103
+2025-11-12 19:08:45,828 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/a29201083b5ec187e1083f0bc49211711f374a2e/jhsdb.exe HTTP/1.1" 200 5294
+2025-11-12 19:08:45,829 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/6e4cb7e677b4aa48b8e816ebb85811e3c949d2cb/jimage.dll HTTP/1.1" 200 10322
+2025-11-12 19:08:45,839 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/1c8ecdfd658ecccd1e2ce66dd6afa5fad0863775/jimage.exe HTTP/1.1" 200 5286
+2025-11-12 19:08:45,874 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/bf1751456dfa20b6db7fe262ae0ba05ae1b5f103/jmod.exe HTTP/1.1" 200 5283
+2025-11-12 19:08:45,875 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/e57761f90615c1a51cec945267e6f8d69d25d092/jmap.exe HTTP/1.1" 200 5331
+2025-11-12 19:08:45,878 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/dca34d9b2a404752f0f20f8368fdb86641b9e6c7/jinfo.exe HTTP/1.1" 200 5333
+2025-11-12 19:08:45,879 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/4ca1e7fcef01ead36f5cf889308a46690b3ed1ea/jlink.exe HTTP/1.1" 200 5307
+2025-11-12 19:08:45,886 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/791fd3d454830834c9fe23a461ea69fc478c8ce1/jpackage.exe HTTP/1.1" 200 5289
+2025-11-12 19:08:45,890 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/6143cb459201b702ded8ce35b0a565a79c104546/jli.dll HTTP/1.1" 200 42310
+2025-11-12 19:08:45,910 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/8fa07301202f15829c0df3358a910f105de3ab99/jpackage.dll HTTP/1.1" 200 45851
+2025-11-12 19:08:45,917 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/f193fbc8e6b6fc6d43ac9f8f0015eb7c382664f1/jshell.exe HTTP/1.1" 200 5308
+2025-11-12 19:08:45,917 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/ac7ac8282f1c3a46a2d4f20b9bf7aa1b92abffa9/jps.exe HTTP/1.1" 200 5282
+2025-11-12 19:08:45,917 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/084218945edb3476322430082647b2f125560ee9/jrunscript.exe HTTP/1.1" 200 5332
+2025-11-12 19:08:45,963 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/2e78de12dfbdb725c9fcfb6bd5691e6dff92f236/jwebserver.exe HTTP/1.1" 200 5302
+2025-11-12 19:08:45,966 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/a27c5606c7281355fadbc559dfa48cfd0b43cfff/jstack.exe HTTP/1.1" 200 5341
+2025-11-12 19:08:45,966 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/79ccdd841382fd85a7cc0d0898c9e5e92123952a/jstat.exe HTTP/1.1" 200 5282
+2025-11-12 19:08:45,970 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/116e1230cd7577180e795ae5a73c5f4aeda9562b/jstatd.exe HTTP/1.1" 200 5289
+2025-11-12 19:08:45,975 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/6a25822a5a59daef730f616ed34ed03d1d6755ba/jsound.dll HTTP/1.1" 200 21036
+2025-11-12 19:08:45,975 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/680d00ac04da00412fd6e8afa95f88f8aded624c/jsvml.dll HTTP/1.1" 200 261350
+2025-11-12 19:08:46,008 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/6d78c00e8af3fa61fee259950fcc16aecb7d1d2e/kinit.exe HTTP/1.1" 200 5301
+2025-11-12 19:08:46,008 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/95e09435996c838787734acd60dec83e09780999/ktab.exe HTTP/1.1" 200 5293
+2025-11-12 19:08:46,008 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c7646d67a0df89524cdb883d9f031deb0ee5bd3c/keytool.exe HTTP/1.1" 200 5302
+2025-11-12 19:08:46,008 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/b418a1748d888bd30791769dd26a06ec9c4e07c1/klist.exe HTTP/1.1" 200 5298
+2025-11-12 19:08:46,014 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/57b42d7cc41234bdadb7f3803503fa7ace0bb6a1/lcms.dll HTTP/1.1" 200 97766
+2025-11-12 19:08:46,017 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/34e91610497a927507b3c9e84610398c2f9bf6f5/le.dll HTTP/1.1" 200 8434
+2025-11-12 19:08:46,033 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/39a775e601ebcf7d459cec44fd1a11d1a8d6b73e/management_agent.dll HTTP/1.1" 200 5757
+2025-11-12 19:08:46,034 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/01c13d5ffcbdc08c7f9a6613f27b188f2ff4b9d7/management_ext.dll HTTP/1.1" 200 10896
+2025-11-12 19:08:46,043 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/3d7a0466d7c6331e020e4f77dd808445a54e3eb0/management.dll HTTP/1.1" 200 6536
+2025-11-12 19:08:46,047 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/b77baf2acd2f9531f2c81754c824dd1fe13d0ae7/mlib_image.dll HTTP/1.1" 200 152034
+2025-11-12 19:08:46,091 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/6bc8dbf0cbacc23c8d18b30cd2b3565df83581bb/saproc.dll HTTP/1.1" 200 11290
+2025-11-12 19:08:46,094 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/ff887ec58df85b1cf90ae9650ae6cc57f0f13d22/rmi.dll HTTP/1.1" 200 4127
+2025-11-12 19:08:46,099 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/2c393a4190a6e10bed6904537a5d5277d133ced3/net.dll HTTP/1.1" 200 20617
+2025-11-12 19:08:46,099 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/216ad7da2c58459eab2be7d3b55b8df6684a3671/serialver.exe HTTP/1.1" 200 5291
+2025-11-12 19:08:46,100 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/f1d0b6566f773960c799eb854c2655251dfe5a56/rmiregistry.exe HTTP/1.1" 200 5325
+2025-11-12 19:08:46,101 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/a40a032951218267378eb318a88d5421b0b7567a/nio.dll HTTP/1.1" 200 26376
+2025-11-12 19:08:46,104 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/285d365ce6c33177558ea1d51856a414ab074ac3/prefs.dll HTTP/1.1" 200 5829
+2025-11-12 19:08:46,105 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/f587847991a9e53258b746ac0664682dc27aab53/msvcp140.dll HTTP/1.1" 200 140938
+2025-11-12 19:08:46,111 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/a06f7cfcb94b2c968818b8d11e1e841d556507cb/jvm.dll HTTP/1.1" 200 3859951
+2025-11-12 19:08:46,118 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/634a4ba52614e63096d0507e2205792cd58166bb/sunmscapi.dll HTTP/1.1" 200 15064
+2025-11-12 19:08:46,122 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/e376b8ce3a6e45b2988efb7a6574b1220fc8fe79/splashscreen.dll HTTP/1.1" 200 107518
+2025-11-12 19:08:46,137 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/25897a06c0581fb84536455f2fed54e4b3d2bfa6/syslookup.dll HTTP/1.1" 200 5454
+2025-11-12 19:08:46,139 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/7d19c7c88346b878c920ebd10e4357b376439b68/sspi_bridge.dll HTTP/1.1" 200 14679
+2025-11-12 19:08:46,181 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/5f17973271f7e77429fc34c781a648756904067a/ucrtbase.dll HTTP/1.1" 200 410886
+2025-11-12 19:08:46,186 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/0d7b14c7375523120317708e5b930d2e0ee1bec2/vcruntime140.dll HTTP/1.1" 200 51127
+2025-11-12 19:08:46,207 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/2c4c07471fad1c77ef5856d18c64b33e4bb76498/jmxremote.password.template HTTP/1.1" 200 2228
+2025-11-12 19:08:46,209 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/eb6ce145b9eab485a183c6e78e047f0225e0fe00/logging.properties HTTP/1.1" 200 1008
+2025-11-12 19:08:46,209 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/ca1986d5aec894b6d6281ee33c91cf86a14d7276/jmxremote.access HTTP/1.1" 200 1418
+2025-11-12 19:08:46,219 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/a4331c5511faf56804c9e48f8a740c9e36777e37/w2k_lsa_auth.dll HTTP/1.1" 200 8449
+2025-11-12 19:08:46,223 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/6ec4c7eebdcd71e478b0c82ca41e89c92978986d/vcruntime140_1.dll HTTP/1.1" 200 22566
+2025-11-12 19:08:46,228 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/0b05127e3f2655d0a385e26fa71fb520e81cd09b/jaxp.properties HTTP/1.1" 200 2402
+2025-11-12 19:08:46,244 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/aec9a86969aaed62906aeb9a83a657382123d0aa/verify.dll HTTP/1.1" 200 20538
+2025-11-12 19:08:46,246 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/1e3b072ed90e84777db56a336e21bb1082b775d3/windowsaccessbridge-64.dll HTTP/1.1" 200 19439
+2025-11-12 19:08:46,263 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/5c357ee67570438ade7b892a08856deeca2e99f4/zip.dll HTTP/1.1" 200 40358
+2025-11-12 19:08:46,300 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/f6ba46124076c0e9856bc36384b45cfae95c11f3/management.properties HTTP/1.1" 200 3780
+2025-11-12 19:08:46,300 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/4386a67d7a3ab52050aba807fbc1e2cfd9f84c51/net.properties HTTP/1.1" 200 2626
+2025-11-12 19:08:46,312 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/f0eb567d9ac1df616776fed4f5682ff230a64c95/README.txt HTTP/1.1" 200 None
+2025-11-12 19:08:46,317 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c409094410d77932e875a33fe050367bf2dfd541/java.security HTTP/1.1" 200 16995
+2025-11-12 19:08:46,323 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/551f03120a77e725a37a6911b5fc1a587ce81b38/default_local.policy HTTP/1.1" 200 233
+2025-11-12 19:08:46,323 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/f3f974d3f6245c50804dcc47173aa29d4d7f0e2c/default_US_export.policy HTTP/1.1" 200 146
+2025-11-12 19:08:46,383 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/f3f974d3f6245c50804dcc47173aa29d4d7f0e2c/default_US_export.policy HTTP/1.1" 200 146
+2025-11-12 19:08:46,384 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/b29e6e23900bff08f5de8e3f9b71a37bb9f59d96/exempt_local.policy HTTP/1.1" 200 264
+2025-11-12 19:08:46,393 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/3b5f7e4ec437d79048af35094290577f483b3fe1/sound.properties HTTP/1.1" 200 473
+2025-11-12 19:08:46,394 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/ad2509631ed743c882999ac1200fd5fb8a593639/default_local.policy HTTP/1.1" 200 193
+2025-11-12 19:08:46,407 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/353d632b48754d8f87aeca4c25cb76362d0fbae2/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 1042
+2025-11-12 19:08:46,408 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/218ece616945da67657df3812297b7dc428cf43e/ASSEMBLY_EXCEPTION HTTP/1.1" 200 803
+2025-11-12 19:08:46,409 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/3a80edf6a53feb3b27360f0f9ed159db84c5df9a/LICENSE HTTP/1.1" 200 6842
+2025-11-12 19:08:46,413 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/44280de11df1d5c0fc2126a6306386ed70d24d56/aes.md HTTP/1.1" 200 812
+2025-11-12 19:08:46,418 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/ee671ee3890a7b0c6e4bbc169c661abf787af3aa/asm.md HTTP/1.1" 200 908
+2025-11-12 19:08:46,418 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/df7528dbff2be16f68a2c80459a23f4be86bfc92/c-libutl.md HTTP/1.1" 200 849
+2025-11-12 19:08:46,478 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/b7171085dcb1a51953032708554efeea9bee0f2e/icu.md HTTP/1.1" 200 7438
+2025-11-12 19:08:46,480 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/37a3cbf0ad54df74ec6d57e23188ba833265b26c/unicode.md HTTP/1.1" 200 3584
+2025-11-12 19:08:46,481 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/37c3818d12c860428318145e35adccc57271322f/wepoll.md HTTP/1.1" 200 832
+2025-11-12 19:08:46,482 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/91ddd479de5c0d911047f5eed84490a1f433a619/cldr.md HTTP/1.1" 200 3616
+2025-11-12 19:08:46,482 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/1adcf33fc9513c40be3a8ff4cf4c5cd8780e85f3/siphash.md HTTP/1.1" 200 3277
+2025-11-12 19:08:46,485 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/705182f1334978bd79b960d99816d64c1b103018/public_suffix.md HTTP/1.1" 200 5492
+2025-11-12 19:08:46,486 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:46,488 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/245c8863592e75d1b189cb0137538e2cd9a85ee8/zlib.md HTTP/1.1" 200 617
+2025-11-12 19:08:46,489 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:46,488 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:46,487 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:46,488 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:46,495 [WARNING] Connection pool is full, discarding connection: piston-data.mojang.com. Connection pool size: 10
+2025-11-12 19:08:46,496 [WARNING] Connection pool is full, discarding connection: piston-data.mojang.com. Connection pool size: 9
+2025-11-12 19:08:46,512 [DEBUG] Starting new HTTPS connection (17): piston-data.mojang.com:443
+2025-11-12 19:08:46,514 [DEBUG] Starting new HTTPS connection (18): piston-data.mojang.com:443
+2025-11-12 19:08:46,590 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/d175c6fbf7bfa3f2f64b38a9a530bdc1cb79d435/jpeg.md HTTP/1.1" 200 1668
+2025-11-12 19:08:46,591 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/9d0b49799e4c554b76494f12576e52c53a83071d/harfbuzz.md HTTP/1.1" 200 1725
+2025-11-12 19:08:46,591 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/d0d10c604b36d2904e077406fbf58dd0d076b8af/java.policy HTTP/1.1" 200 559
+2025-11-12 19:08:46,592 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/fd1eacb526914501399d5645ee23dba9c1006ffd/mesa3d.md HTTP/1.1" 200 1282
+2025-11-12 19:08:46,590 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/6fc5ebbee24bd5639a0ec7f6503c9502eaa48bdc/lcms.md HTTP/1.1" 200 1513
+2025-11-12 19:08:46,592 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/bc14d7400989cad46c7b3986dbf5cc7481a64627/giflib.md HTTP/1.1" 200 1026
+2025-11-12 19:08:46,593 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:46,600 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/cad28edeb7c3e3a449442651baf8d94df9cfc83b/freetype.md HTTP/1.1" 200 10292
+2025-11-12 19:08:46,601 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:46,601 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:46,602 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:46,603 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/7a7e547452ee1c72e8b0d96dccbe315f62d5b564/colorimaging.md HTTP/1.1" 200 167
+2025-11-12 19:08:46,654 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:46,655 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:46,658 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:46,689 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:46,690 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:46,689 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:46,690 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:46,690 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:46,690 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:46,689 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:46,691 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:46,691 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:46,692 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:46,708 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:46,712 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:46,712 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:46,738 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:46,738 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:46,744 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:46,745 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:46,745 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:46,744 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:46,761 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:46,762 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:46,762 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:46,762 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:46,762 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:46,763 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:46,763 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:46,813 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:46,816 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:46,816 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:46,817 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:46,817 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:46,818 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:46,818 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:46,818 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:46,818 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:46,826 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:46,826 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:46,827 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:46,827 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:46,867 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:46,876 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:46,881 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:46,881 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:46,888 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:46,889 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:46,889 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:46,889 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:46,890 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:46,891 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/a81cef2540e207a8ac623e48e544558ebd28b608/santuario.md HTTP/1.1" 200 4073
+2025-11-12 19:08:46,891 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/ad2e32109d86e81f36004cfdae979d4f71a8c796/bcel.md HTTP/1.1" 200 3940
+2025-11-12 19:08:46,891 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:46,891 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:46,938 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/e2d6961a2748cb3d0c2bea20c38ad6d66b63ac99/jcup.md HTTP/1.1" 200 823
+2025-11-12 19:08:46,939 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/5e1deb996f36ea64340e19d66302fe385bd65fa5/xalan.md HTTP/1.1" 200 4638
+2025-11-12 19:08:46,941 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:46,940 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:46,941 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/21e428ef389d7544f9e8e70aae958a230115b3e2/xerces.md HTTP/1.1" 200 4083
+2025-11-12 19:08:46,941 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:46,942 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:46,942 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:46,940 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/55b0696ed1472b930e85258742c5d1e76d7f262d/dom.md HTTP/1.1" 200 1841
+2025-11-12 19:08:46,942 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:46,942 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:46,942 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:46,942 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:46,949 [WARNING] Connection pool is full, discarding connection: piston-data.mojang.com. Connection pool size: 10
+2025-11-12 19:08:46,951 [WARNING] Connection pool is full, discarding connection: piston-data.mojang.com. Connection pool size: 10
+2025-11-12 19:08:46,949 [WARNING] Connection pool is full, discarding connection: piston-data.mojang.com. Connection pool size: 10
+2025-11-12 19:08:46,964 [DEBUG] Starting new HTTPS connection (19): piston-data.mojang.com:443
+2025-11-12 19:08:46,965 [DEBUG] Starting new HTTPS connection (20): piston-data.mojang.com:443
+2025-11-12 19:08:46,965 [DEBUG] Starting new HTTPS connection (21): piston-data.mojang.com:443
+2025-11-12 19:08:46,997 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:46,997 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,019 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,020 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/da6b3e42f0b9c4f54325bced6d2d68708ddf8861/pkcs11wrapper.md HTTP/1.1" 200 1095
+2025-11-12 19:08:47,021 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,021 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/b33cf36f8cf30ca3bdec4700ce29c356c3491ab5/pkcs11cryptotoken.md HTTP/1.1" 200 1847
+2025-11-12 19:08:47,021 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,021 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,021 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,022 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,064 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,064 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,107 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,108 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,108 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,108 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,108 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/2b251aaa4a5a574d1f18ab541bd691d353951667/dynalink.md HTTP/1.1" 200 858
+2025-11-12 19:08:47,109 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,114 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,119 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,121 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,122 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,168 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,169 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/7e38e02758f4c035da9c8abcd84ce2796f41adbc/libpng.md HTTP/1.1" 200 2578
+2025-11-12 19:08:47,169 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,172 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,174 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,172 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,173 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,173 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,174 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,172 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,174 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,174 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,180 [WARNING] Connection pool is full, discarding connection: piston-data.mojang.com. Connection pool size: 10
+2025-11-12 19:08:47,191 [DEBUG] Starting new HTTPS connection (22): piston-data.mojang.com:443
+2025-11-12 19:08:47,248 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,248 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,250 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,250 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,250 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,254 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/cb485c466b85af80c192c9b9f8821341d637651e/jopt-simple.md HTTP/1.1" 200 734
+2025-11-12 19:08:47,255 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,254 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/86f50b300c7a75090f5715fefecbd349ab44b6b6/jline.md HTTP/1.1" 200 907
+2025-11-12 19:08:47,255 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,256 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,256 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,317 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,317 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,318 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,318 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,319 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,319 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,319 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,320 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,318 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,320 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,321 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,323 [WARNING] Connection pool is full, discarding connection: piston-data.mojang.com. Connection pool size: 10
+2025-11-12 19:08:47,335 [DEBUG] Starting new HTTPS connection (23): piston-data.mojang.com:443
+2025-11-12 19:08:47,386 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,387 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,386 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,386 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,386 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,388 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,389 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/0cb821c4f801368db0ecfcc7fbc6f0cca97bd306/jquery.md HTTP/1.1" 200 735
+2025-11-12 19:08:47,388 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,388 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,394 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/97427d846aa9d2860a234ebce0dce2606c106e0d/jqueryUI.md HTTP/1.1" 200 1087
+2025-11-12 19:08:47,463 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,464 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,464 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,464 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,464 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,464 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,465 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,465 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,465 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,465 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,516 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,517 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,524 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,526 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,525 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,525 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,525 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,526 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,525 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,528 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,576 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,578 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,585 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/6ed7d0f5e2cfa09b86a78edb860e7d8824355fef/thaidict.md HTTP/1.1" 200 818
+2025-11-12 19:08:47,585 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/9e9327daec3e42181bad78152bad8e1050c8d5d9/cldr.md HTTP/1.1" 200 32
+2025-11-12 19:08:47,586 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,585 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,586 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,586 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,587 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,586 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,638 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,638 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,638 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,638 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,638 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,638 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,640 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,645 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,646 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,645 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,689 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,689 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,693 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,701 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,702 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,701 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,701 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,701 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,702 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,701 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,728 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,728 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,738 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,744 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,745 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,749 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,758 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,761 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,762 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,762 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,762 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,762 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,762 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,768 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,768 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,778 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,798 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,798 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,798 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,816 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,816 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,817 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,817 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,817 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,818 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:47,819 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,819 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,819 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
+2025-11-12 19:08:47,838 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/92136808c46a9082bdda0b806d64a06a20aa881f/classlist HTTP/1.1" 200 9453
+2025-11-12 19:08:47,848 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/e3b282fb54e22e52cede4bc673a9ad61693c02c2/fontconfig.bfc HTTP/1.1" 200 1590
+2025-11-12 19:08:47,848 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/f595e5bc4cf59df376df78de7eaee9a0464a2e50/fontconfig.properties.src HTTP/1.1" 200 2667
+2025-11-12 19:08:47,858 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/e3d754c4ee9982962695054583b633fc4466dcae/ct.sym HTTP/1.1" 200 4988401
+2025-11-12 19:08:47,861 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
+2025-11-12 19:08:47,879 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c5a940d2dee8e7bfc01a87d585ddca420d37e226/jvm.cfg HTTP/1.1" 200 29
+2025-11-12 19:08:47,879 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c42116ff3ca50ad9cdb6022f0cbba4a8f4fe878d/default.jfc HTTP/1.1" 200 3487
+2025-11-12 19:08:47,879 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/0f55391f6252ab5195322a37df22cfa84936b502/profile.jfc HTTP/1.1" 200 3476
+2025-11-12 19:08:47,884 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/22667d150a852dff484dc78f0389455d6abe575a/psfont.properties.ja HTTP/1.1" 200 1254
+2025-11-12 19:08:47,884 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/00476bbfb53971eb49229a0204bd557a63c18fba/psfontj2d.properties HTTP/1.1" 200 2783
+2025-11-12 19:08:47,885 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/cbd0e824f29a5da7d8e121217c3e8802a8b991bc/blacklisted.certs HTTP/1.1" 200 1459
+2025-11-12 19:08:47,890 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/e6572ec544cb4f25fe82f8fc4b14bd4fb3198edc/jrt-fs.jar HTTP/1.1" 200 110116
+2025-11-12 19:08:47,891 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/e8fba4c7ae588fdc6562f4e02d638b4d5e8ac524/modules HTTP/1.1" 200 61880399
+2025-11-12 19:08:47,893 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/26380fc958caaab73a0619cec5cdfdb03b6fd3e5/jawt.lib HTTP/1.1" 200 473
+2025-11-12 19:08:47,895 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/4ca1310237ec2fb05c35a50f58b21efc28e54b7e/default.policy HTTP/1.1" 200 1714
+2025-11-12 19:08:47,916 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/6f5fd8dc6d26b32d7496ca0fa342d7573317d372/jvm.lib HTTP/1.1" 200 124853
+2025-11-12 19:08:47,941 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/98456763a4bf284d471ba5de1874727387f19fc7/cacerts HTTP/1.1" 200 116579
+2025-11-12 19:08:47,943 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/a3b486d8d3bc59c51b632ac7bad9c5ab4691fbad/public_suffix_list.dat HTTP/1.1" 200 73642
+2025-11-12 19:08:47,967 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/5bcb1355c5f1e2cddf3c20f40feeccc89a562369/release HTTP/1.1" 200 485
+2025-11-12 19:08:47,976 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/e376455c622b21c07c9e91b6a98fd87144638e48/tzmappings HTTP/1.1" 200 4290
+2025-11-12 19:08:47,984 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/4c0dae7620057e1c1c8955787059436cb2a13ad2/tzdb.dat HTTP/1.1" 200 31814
+2025-11-12 19:08:48,042 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
+2025-11-12 19:08:48,043 [WARNING] Connection pool is full, discarding connection: piston-data.mojang.com. Connection pool size: 10
+2025-11-12 19:08:48,081 [WARNING] Connection pool is full, discarding connection: piston-data.mojang.com. Connection pool size: 10
+2025-11-12 19:08:48,115 [WARNING] Connection pool is full, discarding connection: piston-data.mojang.com. Connection pool size: 10
+2025-11-12 19:08:48,133 [WARNING] Connection pool is full, discarding connection: piston-data.mojang.com. Connection pool size: 10
+2025-11-12 19:08:49,406 [WARNING] Connection pool is full, discarding connection: piston-data.mojang.com. Connection pool size: 10
+2025-11-12 19:08:59,600 [WARNING] Connection pool is full, discarding connection: piston-data.mojang.com. Connection pool size: 10
