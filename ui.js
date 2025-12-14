@@ -14,7 +14,7 @@ function terminal_show(message, e) {
         terminalOutput.value += message + '\n';
         terminalOutput.scrollTop = terminalOutput.scrollHeight;
     }
-  }
+}
 
 
 document.addEventListener('DOMContentLoaded', () => {
