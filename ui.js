@@ -6,6 +6,76 @@
 const AUTO_SHOW_TIP = true;
 const keyboardEvent = window.event;
 
+/* 新增：管理 terminal 的 focus 與 ESC handler（用於可靠關閉） */
+let lastTerminalFocusedElement = null;
+let terminalEscHandler = null;
+
+/* 更新：讓 terminal_show 也處理 focus 與 aria，並註冊 ESC 可以關閉 */
+function terminal_show(message, e) {
+    const terminalOutput = document.getElementById('terminalOutput');
+    const terminalBack = document.getElementById('terminal');
+    if (terminalOutput && terminalBack) {
+        // 記錄顯示前的焦點，以便關閉時還原
+        lastTerminalFocusedElement = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+
+        terminalBack.classList.add('show');
+        terminalBack.setAttribute('aria-hidden', 'false');
+
+        terminalOutput.value += message + '\n';
+        terminalOutput.scrollTop = terminalOutput.scrollHeight;
+
+        // 把焦點放到 textarea 以便使用者可以直接滾動 / 複製
+        if (typeof terminalOutput.focus === 'function') terminalOutput.focus();
+
+        // 註冊 ESC 關閉（儲存引用以便後續移除）
+        terminalEscHandler = function(evt) {
+            if (evt.key === 'Escape') closeTerminal();
+        };
+        document.addEventListener('keydown', terminalEscHandler);
+    }
+}
+
+eel.expose(terminal_show);
+
+/* 新增：可從其他地方呼叫的關閉函式（負責 aria / focus 還原 / 清除事件） */
+function closeTerminal() {
+    
+    const terminalOutput = document.getElementById('terminalOutput');
+    const terminalBack = document.getElementById('terminal');
+    if (!terminalBack) return;
+
+    // 啟動離場（CSS transition）
+    terminalBack.classList.remove('show');
+    terminalOutput.value = '';
+
+    // 如果目前焦點仍在 terminal 內，先 blur 再還原到先前元素（或 fallback）
+    try {
+        const active = document.activeElement;
+        if (active && terminalBack.contains(active)) {
+            try { active.blur(); } catch (e) { /* ignore */ }
+        }
+
+        if (lastTerminalFocusedElement && typeof lastTerminalFocusedElement.focus === 'function') {
+            lastTerminalFocusedElement.focus();
+        } else {
+            // fallback：嘗試把焦點交給某些常見按鈕（若存在）
+            const fallback = document.getElementById('openModalBtn') || document.getElementById('accountBtn') || document.getElementById('sidebarToggle');
+            if (fallback && typeof fallback.focus === 'function') fallback.focus();
+        }
+    } catch (e) { /* ignore focus errors */ }
+
+    // 在確保 focus 移出後更新 aria（避免 assistive tech 在有 focus 時被隱藏）
+    terminalBack.setAttribute('aria-hidden', 'true');
+
+    // 移除 ESC 監聽
+    if (terminalEscHandler) {
+        document.removeEventListener('keydown', terminalEscHandler);
+        terminalEscHandler = null;
+    }
+    lastTerminalFocusedElement = null;
+}
+
+
 function terminal_show(message, e) {
     const terminalOutput = document.getElementById('terminalOutput');
     const terminalBack = document.getElementById('terminal');
@@ -224,6 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const launchBtn = $('launchBtn');
   if (launchBtn) {
     launchBtn.addEventListener('click', () => {
+      terminalBack.classList.add('show');
       eel.launch_game()(function(response) {
         alert(response);
       });
@@ -305,10 +376,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const terminalClose = document.getElementById('terminalClose');
   const terminalBack = document.getElementById('terminal');
 
-  if (terminalClose) {
-    terminalClose.addEventListener('click', () => {
-      terminalBack.classList.remove('show');
-    });
+  if (e.key === 'Escape' ) {
+    closeTerminal();
   }
 
   // 若需程式載入時就自動顯示 msgbox，可在此呼叫：

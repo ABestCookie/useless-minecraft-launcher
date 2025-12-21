@@ -37,7 +37,7 @@
       <section class="viewer">
 
         <div class="tip" id="tip">
-          <button class="close-x" id="tipClose">✕</button>
+          <button class="close-x" id="">✕</button>
           <h4>開發版提示</h4>
           <div style="color:#444">你正在使用 UMCL 開發版：開發版包含一些實驗性新功能，較為不穩定。</div>
         </div>
@@ -81,7 +81,7 @@
   </div>
 
   <div class="terminal", id="terminal">
-    <button class="close-x" id="terminalClose" title="關閉">✕</button>
+    <button class="close-x" id="terminalClose" title="關閉" onclick="closeTerminal()">✕</button>
     <textarea id="terminalOutput" class="terminalOutput" cols="60" rows="40" readonly></textarea>
   </div>
 

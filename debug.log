@@ -1004,3 +1004,96 @@ CTK UI log initialized.
 2025-11-12 19:08:48,133 [WARNING] Connection pool is full, discarding connection: piston-data.mojang.com. Connection pool size: 10
 2025-11-12 19:08:49,406 [WARNING] Connection pool is full, discarding connection: piston-data.mojang.com. Connection pool size: 10
 2025-11-12 19:08:59,600 [WARNING] Connection pool is full, discarding connection: piston-data.mojang.com. Connection pool size: 10
+2025-12-21 22:55:22,017 [DEBUG] Initializing WebSocket
+2025-12-21 22:55:22,019 [DEBUG] Validating WebSocket request
+2025-12-21 22:55:22,022 [INFO] 127.0.0.1 - - [2025-12-21 22:55:22] "GET /ui.html HTTP/1.1" 200 3904 0.004300
+2025-12-21 22:55:22,052 [DEBUG] Initializing WebSocket
+2025-12-21 22:55:22,053 [DEBUG] Validating WebSocket request
+2025-12-21 22:55:22,054 [INFO] 127.0.0.1 - - [2025-12-21 22:55:22] "GET /eel.js HTTP/1.1" 200 6066 0.001094
+2025-12-21 22:55:22,055 [DEBUG] Initializing WebSocket
+2025-12-21 22:55:22,056 [DEBUG] Validating WebSocket request
+2025-12-21 22:55:22,061 [INFO] 127.0.0.1 - - [2025-12-21 22:55:22] "GET /ui.css HTTP/1.1" 200 10939 0.005237
+2025-12-21 22:55:22,062 [DEBUG] Initializing WebSocket
+2025-12-21 22:55:22,062 [DEBUG] Validating WebSocket request
+2025-12-21 22:55:22,064 [INFO] 127.0.0.1 - - [2025-12-21 22:55:22] "GET /ui.js HTTP/1.1" 200 14799 0.002168
+2025-12-21 22:55:22,128 [DEBUG] Initializing WebSocket
+2025-12-21 22:55:22,129 [DEBUG] Validating WebSocket request
+2025-12-21 22:55:22,188 [INFO] 127.0.0.1 - - [2025-12-21 22:55:22] "GET /art/background.png HTTP/1.1" 200 4519303 0.059905
+2025-12-21 22:55:22,349 [DEBUG] Initializing WebSocket
+2025-12-21 22:55:22,349 [DEBUG] Validating WebSocket request
+2025-12-21 22:55:22,354 [INFO] 127.0.0.1 - - [2025-12-21 22:55:22] "GET /art/java.ico HTTP/1.1" 200 4021 0.005264
+2025-12-21 22:55:22,441 [DEBUG] Initializing WebSocket
+2025-12-21 22:55:22,441 [DEBUG] Validating WebSocket request
+2025-12-21 22:55:22,441 [DEBUG] Attempting to upgrade connection
+2025-12-21 22:55:22,441 [DEBUG] WebSocket request accepted, switching protocols
+2025-12-21 22:56:46,087 [DEBUG] Starting new HTTPS connection (1): launchermeta.mojang.com:443
+2025-12-21 22:56:46,862 [DEBUG] https://launchermeta.mojang.com:443 "GET /v1/products/java-runtime/2ec0cc96c44e5a76b9c8b7c39df7210883d12871/all.json HTTP/1.1" 200 None
+2025-12-21 22:56:46,866 [DEBUG] Starting new HTTPS connection (1): piston-meta.mojang.com:443
+2025-12-21 22:56:47,861 [DEBUG] https://piston-meta.mojang.com:443 "GET /v1/packages/cb4394a27089d19f65d5baa6cf0482c27c3c7865/manifest.json HTTP/1.1" 200 None
+2025-12-21 22:56:55,575 [ERROR] Failed to launch game: module 'eel' has no attribute 'terminal_append'
+2025-12-21 22:58:57,345 [DEBUG] Initializing WebSocket
+2025-12-21 22:58:57,346 [DEBUG] Validating WebSocket request
+2025-12-21 22:58:57,347 [INFO] 127.0.0.1 - - [2025-12-21 22:58:57] "GET /ui.html HTTP/1.1" 200 3904 0.002737
+2025-12-21 22:58:57,378 [DEBUG] Initializing WebSocket
+2025-12-21 22:58:57,378 [DEBUG] Validating WebSocket request
+2025-12-21 22:58:57,379 [INFO] 127.0.0.1 - - [2025-12-21 22:58:57] "GET /eel.js HTTP/1.1" 200 6066 0.001454
+2025-12-21 22:58:57,381 [DEBUG] Initializing WebSocket
+2025-12-21 22:58:57,381 [DEBUG] Validating WebSocket request
+2025-12-21 22:58:57,385 [INFO] 127.0.0.1 - - [2025-12-21 22:58:57] "GET /ui.css HTTP/1.1" 200 10939 0.004529
+2025-12-21 22:58:57,391 [DEBUG] Initializing WebSocket
+2025-12-21 22:58:57,392 [DEBUG] Validating WebSocket request
+2025-12-21 22:58:57,394 [INFO] 127.0.0.1 - - [2025-12-21 22:58:57] "GET /ui.js HTTP/1.1" 200 14842 0.003042
+2025-12-21 22:58:57,423 [DEBUG] Initializing WebSocket
+2025-12-21 22:58:57,423 [DEBUG] Validating WebSocket request
+2025-12-21 22:58:57,480 [INFO] 127.0.0.1 - - [2025-12-21 22:58:57] "GET /art/background.png HTTP/1.1" 200 4519303 0.057639
+2025-12-21 22:58:57,813 [DEBUG] Initializing WebSocket
+2025-12-21 22:58:57,814 [DEBUG] Validating WebSocket request
+2025-12-21 22:58:57,814 [DEBUG] Attempting to upgrade connection
+2025-12-21 22:58:57,814 [DEBUG] WebSocket request accepted, switching protocols
+2025-12-21 22:59:24,645 [DEBUG] Starting new HTTPS connection (1): launchermeta.mojang.com:443
+2025-12-21 22:59:25,482 [DEBUG] https://launchermeta.mojang.com:443 "GET /v1/products/java-runtime/2ec0cc96c44e5a76b9c8b7c39df7210883d12871/all.json HTTP/1.1" 200 None
+2025-12-21 22:59:25,484 [DEBUG] Starting new HTTPS connection (1): piston-meta.mojang.com:443
+2025-12-21 22:59:26,198 [DEBUG] https://piston-meta.mojang.com:443 "GET /v1/packages/cb4394a27089d19f65d5baa6cf0482c27c3c7865/manifest.json HTTP/1.1" 200 None
+2025-12-21 22:59:29,601 [ERROR] Failed to launch game: module 'eel' has no attribute 'terminal_append'
+2025-12-21 23:16:46,022 [DEBUG] Initializing WebSocket
+2025-12-21 23:16:46,022 [DEBUG] Validating WebSocket request
+2025-12-21 23:16:46,025 [INFO] 127.0.0.1 - - [2025-12-21 23:16:46] "GET /ui.html HTTP/1.1" 200 3904 0.003249
+2025-12-21 23:16:46,076 [DEBUG] Initializing WebSocket
+2025-12-21 23:16:46,076 [DEBUG] Validating WebSocket request
+2025-12-21 23:16:46,077 [INFO] 127.0.0.1 - - [2025-12-21 23:16:46] "GET /eel.js HTTP/1.1" 200 6066 0.001410
+2025-12-21 23:16:46,078 [DEBUG] Initializing WebSocket
+2025-12-21 23:16:46,079 [DEBUG] Validating WebSocket request
+2025-12-21 23:16:46,081 [INFO] 127.0.0.1 - - [2025-12-21 23:16:46] "GET /ui.css HTTP/1.1" 200 10939 0.002282
+2025-12-21 23:16:46,089 [DEBUG] Initializing WebSocket
+2025-12-21 23:16:46,089 [DEBUG] Validating WebSocket request
+2025-12-21 23:16:46,091 [INFO] 127.0.0.1 - - [2025-12-21 23:16:46] "GET /ui.js HTTP/1.1" 200 14842 0.002326
+2025-12-21 23:16:46,129 [DEBUG] Initializing WebSocket
+2025-12-21 23:16:46,129 [DEBUG] Validating WebSocket request
+2025-12-21 23:16:46,193 [INFO] 127.0.0.1 - - [2025-12-21 23:16:46] "GET /art/background.png HTTP/1.1" 200 4519303 0.064270
+2025-12-21 23:16:46,534 [DEBUG] Initializing WebSocket
+2025-12-21 23:16:46,534 [DEBUG] Validating WebSocket request
+2025-12-21 23:16:46,534 [DEBUG] Attempting to upgrade connection
+2025-12-21 23:16:46,534 [DEBUG] WebSocket request accepted, switching protocols
+2025-12-21 23:16:49,008 [DEBUG] Starting new HTTPS connection (1): launchermeta.mojang.com:443
+2025-12-21 23:16:49,646 [DEBUG] https://launchermeta.mojang.com:443 "GET /v1/products/java-runtime/2ec0cc96c44e5a76b9c8b7c39df7210883d12871/all.json HTTP/1.1" 200 None
+2025-12-21 23:16:49,648 [DEBUG] Starting new HTTPS connection (1): piston-meta.mojang.com:443
+2025-12-21 23:16:50,270 [DEBUG] https://piston-meta.mojang.com:443 "GET /v1/packages/cb4394a27089d19f65d5baa6cf0482c27c3c7865/manifest.json HTTP/1.1" 200 None
+2025-12-21 23:18:30,044 [DEBUG] Starting new HTTPS connection (1): launchermeta.mojang.com:443
+2025-12-21 23:18:30,784 [DEBUG] https://launchermeta.mojang.com:443 "GET /v1/products/java-runtime/2ec0cc96c44e5a76b9c8b7c39df7210883d12871/all.json HTTP/1.1" 200 None
+2025-12-21 23:18:30,786 [DEBUG] Starting new HTTPS connection (1): piston-meta.mojang.com:443
+2025-12-21 23:18:31,351 [DEBUG] https://piston-meta.mojang.com:443 "GET /v1/packages/cb4394a27089d19f65d5baa6cf0482c27c3c7865/manifest.json HTTP/1.1" 200 None
+2025-12-21 23:19:44,722 [DEBUG] Starting new HTTPS connection (1): launchermeta.mojang.com:443
+2025-12-21 23:19:45,259 [DEBUG] https://launchermeta.mojang.com:443 "GET /v1/products/java-runtime/2ec0cc96c44e5a76b9c8b7c39df7210883d12871/all.json HTTP/1.1" 200 None
+2025-12-21 23:19:45,261 [DEBUG] Starting new HTTPS connection (1): piston-meta.mojang.com:443
+2025-12-21 23:19:45,976 [DEBUG] https://piston-meta.mojang.com:443 "GET /v1/packages/cb4394a27089d19f65d5baa6cf0482c27c3c7865/manifest.json HTTP/1.1" 200 None
+2025-12-21 23:20:14,196 [DEBUG] Starting new HTTPS connection (1): launchermeta.mojang.com:443
+2025-12-21 23:20:14,850 [DEBUG] https://launchermeta.mojang.com:443 "GET /v1/products/java-runtime/2ec0cc96c44e5a76b9c8b7c39df7210883d12871/all.json HTTP/1.1" 200 None
+2025-12-21 23:20:14,852 [DEBUG] Starting new HTTPS connection (1): piston-meta.mojang.com:443
+2025-12-21 23:20:15,569 [DEBUG] https://piston-meta.mojang.com:443 "GET /v1/packages/cb4394a27089d19f65d5baa6cf0482c27c3c7865/manifest.json HTTP/1.1" 200 None
+2025-12-21 23:21:55,302 [DEBUG] Starting new HTTPS connection (1): launchermeta.mojang.com:443
+2025-12-21 23:21:55,924 [DEBUG] https://launchermeta.mojang.com:443 "GET /v1/products/java-runtime/2ec0cc96c44e5a76b9c8b7c39df7210883d12871/all.json HTTP/1.1" 200 None
+2025-12-21 23:21:55,926 [DEBUG] Starting new HTTPS connection (1): piston-meta.mojang.com:443
+2025-12-21 23:21:56,567 [DEBUG] https://piston-meta.mojang.com:443 "GET /v1/packages/cb4394a27089d19f65d5baa6cf0482c27c3c7865/manifest.json HTTP/1.1" 200 None
+2025-12-21 23:22:26,803 [DEBUG] Closed WebSocket
+2025-12-21 23:22:26,804 [DEBUG] Failed to write closing frame -> closing socket
+2025-12-21 23:22:26,804 [DEBUG] Closed WebSocket

@@ -98,6 +98,8 @@ class Launcher:
                         f.write(i)
                         if (times == long) == False:
                             f.write(" ")
+                            
+            return minecraft_command
             
             
 

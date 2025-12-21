@@ -21,6 +21,28 @@ logging.basicConfig(
 
 select_ver="1.21.10"
 
+def run_command(command):
+    # 使用 Popen 啟動進程
+    global process
+    process = subprocess.Popen(
+        command,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT, # 將錯誤輸出也合併到標準輸出
+        text=True,                 # 自動解碼為字串
+        bufsize=1                  # 行緩衝
+    )
+    
+    # 即時循環讀取每一行
+    for line in process.stdout:
+        eel.terminal_show(line.strip())
+        # 在這裡可以進行日誌寫入文件、GUI 更新或條件判斷
+
+    # 等待進程結束並獲取回傳碼
+    return_code = process.wait()
+    return return_code
+
+
+
 @eel.expose
 def get_local_ver():
     return core.Launcher.get_local_ver()
@@ -35,9 +57,9 @@ def load_versionSelect(ver):
 def launch_game():
     try:
         core.Launcher.install_game(ver=select_ver)
-        core.Launcher.normal(ver=select_ver)
-        subprocess.Popen("launch_cmd_temp.bat")
-        return "遊戲啟動成功"
+        cmd=core.Launcher.normal(ver=select_ver)
+        return_code=run_command(cmd)
+        return f"遊戲啟動成功，回傳碼: {return_code}"
     except Exception as e:
         logging.error(f"Failed to launch game: {e}")
         messagebox.showerror("啟動失敗", f"無法啟動遊戲：{e}")
