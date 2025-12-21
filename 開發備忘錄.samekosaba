@@ -1,2 +1,2 @@
-修一下const terminalBack = document.getElementById('terminal');
-那個關不掉terminal的bug
+下一步把版本選單搞好
+再下一步搞好安裝，然後這個專案就可以放著生灰塵了
