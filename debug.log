@@ -1097,3 +1097,29 @@ CTK UI log initialized.
 2025-12-21 23:22:26,803 [DEBUG] Closed WebSocket
 2025-12-21 23:22:26,804 [DEBUG] Failed to write closing frame -> closing socket
 2025-12-21 23:22:26,804 [DEBUG] Closed WebSocket
+2025-12-22 20:40:14,023 [DEBUG] Initializing WebSocket
+2025-12-22 20:40:14,024 [DEBUG] Validating WebSocket request
+2025-12-22 20:40:14,042 [INFO] 127.0.0.1 - - [2025-12-22 20:40:14] "GET /ui.html HTTP/1.1" 200 3904 0.019381
+2025-12-22 20:40:14,239 [DEBUG] Initializing WebSocket
+2025-12-22 20:40:14,239 [DEBUG] Validating WebSocket request
+2025-12-22 20:40:14,243 [INFO] 127.0.0.1 - - [2025-12-22 20:40:14] "GET /eel.js HTTP/1.1" 200 6066 0.003258
+2025-12-22 20:40:14,247 [DEBUG] Initializing WebSocket
+2025-12-22 20:40:14,248 [DEBUG] Validating WebSocket request
+2025-12-22 20:40:14,256 [INFO] 127.0.0.1 - - [2025-12-22 20:40:14] "GET /ui.css HTTP/1.1" 200 10939 0.008902
+2025-12-22 20:40:14,307 [DEBUG] Initializing WebSocket
+2025-12-22 20:40:14,308 [DEBUG] Validating WebSocket request
+2025-12-22 20:40:14,324 [INFO] 127.0.0.1 - - [2025-12-22 20:40:14] "GET /ui.js HTTP/1.1" 200 14842 0.015879
+2025-12-22 20:40:14,531 [DEBUG] Initializing WebSocket
+2025-12-22 20:40:14,535 [DEBUG] Validating WebSocket request
+2025-12-22 20:40:14,675 [INFO] 127.0.0.1 - - [2025-12-22 20:40:14] "GET /art/background.png HTTP/1.1" 200 4519303 0.143025
+2025-12-22 20:40:14,847 [DEBUG] Initializing WebSocket
+2025-12-22 20:40:14,848 [DEBUG] Validating WebSocket request
+2025-12-22 20:40:14,848 [DEBUG] Attempting to upgrade connection
+2025-12-22 20:40:14,849 [DEBUG] WebSocket request accepted, switching protocols
+2025-12-22 20:41:08,279 [DEBUG] Starting new HTTPS connection (1): launchermeta.mojang.com:443
+2025-12-22 20:41:09,022 [DEBUG] https://launchermeta.mojang.com:443 "GET /v1/products/java-runtime/2ec0cc96c44e5a76b9c8b7c39df7210883d12871/all.json HTTP/1.1" 200 None
+2025-12-22 20:41:09,028 [DEBUG] Starting new HTTPS connection (1): piston-meta.mojang.com:443
+2025-12-22 20:41:09,675 [DEBUG] https://piston-meta.mojang.com:443 "GET /v1/packages/cb4394a27089d19f65d5baa6cf0482c27c3c7865/manifest.json HTTP/1.1" 200 None
+2025-12-22 20:41:39,892 [DEBUG] Closed WebSocket
+2025-12-22 20:41:39,893 [DEBUG] Failed to write closing frame -> closing socket
+2025-12-22 20:41:39,893 [DEBUG] Closed WebSocket
