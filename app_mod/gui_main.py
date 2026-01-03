@@ -1,7 +1,7 @@
 import os, sys, tkinter, threading, webbrowser, json
 import  tkinter.filedialog, tkinter.messagebox, tkinter.ttk, tkinter.scrolledtext
 import minecraft_launcher_lib
-import app_mod.core as core
+import core as core
 #from tkinter.ttk import *
 from tkinter import *
 from tkinter import ttk
@@ -314,7 +314,7 @@ class UWPwindow:
         
         if (app_name == None) == False:
             
-            subprocess.Popen(f"start shell:AppsFolder\{self.data[app_name]}", shell=True)
+            subprocess.Popen(f"start shell:AppsFolder\\{self.data[app_name]}", shell=True)
 
     
     def on_select(self, event=None):
@@ -501,3 +501,6 @@ def main_app():
     combo.bind("<<ComboboxSelected>>", on_select)
 
     main.mainloop()
+    
+if __name__ == "__main__":
+    main_app()

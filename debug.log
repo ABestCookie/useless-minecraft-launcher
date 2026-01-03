@@ -1,1125 +1,318 @@
-CTK UI log initialized.
-2025-11-07 20:35:55,749 [INFO] CTK UI 初始化  yoho, america ya!, here is new log beginning
-2025-11-07 20:35:55,750 [INFO] 以下為日誌輸出測試
-2025-11-07 20:35:55,751 [DEBUG] 這是debug信息，通常用於開發時排錯
-2025-11-07 20:35:55,751 [INFO] 這是info信息，一般運行時輸出
-2025-11-07 20:35:55,751 [WARNING] 這是warning警告
-2025-11-07 20:35:55,751 [ERROR] 這是error錯誤
-2025-11-07 20:35:55,751 [CRITICAL] 這是critical嚴重錯誤
-2025-11-07 20:35:55,752 [INFO] 啟動 UI...
-2025-11-07 20:35:58,306 [DEBUG] Importing AvifImagePlugin
-2025-11-07 20:36:00,557 [DEBUG] Importing BlpImagePlugin
-2025-11-07 20:36:00,562 [DEBUG] Importing BmpImagePlugin
-2025-11-07 20:36:00,563 [DEBUG] Importing BufrStubImagePlugin
-2025-11-07 20:36:00,567 [DEBUG] Importing CurImagePlugin
-2025-11-07 20:36:00,572 [DEBUG] Importing DcxImagePlugin
-2025-11-07 20:36:00,582 [DEBUG] Importing DdsImagePlugin
-2025-11-07 20:36:00,589 [DEBUG] Importing EpsImagePlugin
-2025-11-07 20:36:00,594 [DEBUG] Importing FitsImagePlugin
-2025-11-07 20:36:00,607 [DEBUG] Importing FliImagePlugin
-2025-11-07 20:36:00,612 [DEBUG] Importing FpxImagePlugin
-2025-11-07 20:36:00,617 [DEBUG] Image: failed to import FpxImagePlugin: No module named 'olefile'
-2025-11-07 20:36:00,617 [DEBUG] Importing FtexImagePlugin
-2025-11-07 20:36:00,622 [DEBUG] Importing GbrImagePlugin
-2025-11-07 20:36:00,626 [DEBUG] Importing GifImagePlugin
-2025-11-07 20:36:00,626 [DEBUG] Importing GribStubImagePlugin
-2025-11-07 20:36:00,632 [DEBUG] Importing Hdf5StubImagePlugin
-2025-11-07 20:36:00,636 [DEBUG] Importing IcnsImagePlugin
-2025-11-07 20:36:00,649 [DEBUG] Importing IcoImagePlugin
-2025-11-07 20:36:00,653 [DEBUG] Importing ImImagePlugin
-2025-11-07 20:36:00,658 [DEBUG] Importing ImtImagePlugin
-2025-11-07 20:36:00,662 [DEBUG] Importing IptcImagePlugin
-2025-11-07 20:36:00,666 [DEBUG] Importing JpegImagePlugin
-2025-11-07 20:36:00,666 [DEBUG] Importing Jpeg2KImagePlugin
-2025-11-07 20:36:00,666 [DEBUG] Importing McIdasImagePlugin
-2025-11-07 20:36:00,671 [DEBUG] Importing MicImagePlugin
-2025-11-07 20:36:00,677 [DEBUG] Image: failed to import MicImagePlugin: No module named 'olefile'
-2025-11-07 20:36:00,677 [DEBUG] Importing MpegImagePlugin
-2025-11-07 20:36:00,686 [DEBUG] Importing MpoImagePlugin
-2025-11-07 20:36:00,707 [DEBUG] Importing MspImagePlugin
-2025-11-07 20:36:00,713 [DEBUG] Importing PalmImagePlugin
-2025-11-07 20:36:00,719 [DEBUG] Importing PcdImagePlugin
-2025-11-07 20:36:00,723 [DEBUG] Importing PcxImagePlugin
-2025-11-07 20:36:00,723 [DEBUG] Importing PdfImagePlugin
-2025-11-07 20:36:00,745 [DEBUG] Importing PixarImagePlugin
-2025-11-07 20:36:00,750 [DEBUG] Importing PngImagePlugin
-2025-11-07 20:36:00,750 [DEBUG] Importing PpmImagePlugin
-2025-11-07 20:36:00,750 [DEBUG] Importing PsdImagePlugin
-2025-11-07 20:36:00,756 [DEBUG] Importing QoiImagePlugin
-2025-11-07 20:36:00,760 [DEBUG] Importing SgiImagePlugin
-2025-11-07 20:36:00,764 [DEBUG] Importing SpiderImagePlugin
-2025-11-07 20:36:00,768 [DEBUG] Importing SunImagePlugin
-2025-11-07 20:36:00,772 [DEBUG] Importing TgaImagePlugin
-2025-11-07 20:36:00,776 [DEBUG] Importing TiffImagePlugin
-2025-11-07 20:36:00,776 [DEBUG] Importing WebPImagePlugin
-2025-11-07 20:36:02,436 [DEBUG] Importing WmfImagePlugin
-2025-11-07 20:36:02,442 [DEBUG] Importing XbmImagePlugin
-2025-11-07 20:36:02,451 [DEBUG] Importing XpmImagePlugin
-2025-11-07 20:36:02,458 [DEBUG] Importing XVThumbImagePlugin
-2025-11-07 20:36:04,380 [DEBUG] STREAM b'IHDR' 16 13
-2025-11-07 20:36:04,380 [DEBUG] STREAM b'IDAT' 41 4518973
-2025-11-07 20:36:04,417 [DEBUG] STREAM b'eXIf' 4519026 14
-2025-11-07 20:36:04,473 [DEBUG] STREAM b'IHDR' 16 13
-2025-11-07 20:36:04,473 [DEBUG] STREAM b'PLTE' 41 399
-2025-11-07 20:36:04,473 [DEBUG] STREAM b'tRNS' 452 78
-2025-11-07 20:36:04,473 [DEBUG] STREAM b'IDAT' 542 1550
-2025-11-07 20:36:04,875 [WARNING] [This is not an error message]你正在使用 UMCL 開發版：開發版包含一些實驗性新功能，較為不穩定。
-2025-11-07 20:36:04,924 [INFO] UI 已開啟
-2025-11-07 20:36:04,924 [INFO] UI 渲染時間: 9.172335500014015 秒
-2025-11-07 20:36:07,485 [INFO] 帳戶按鈕被點擊！
-2025-11-07 20:36:07,501 [DEBUG] STREAM b'IHDR' 16 13
-2025-11-07 20:36:07,502 [DEBUG] STREAM b'IDAT' 41 32768
-2025-11-07 20:36:07,515 [INFO] List all accounts.
-2025-11-07 20:36:07,516 [INFO] Listing all accounts:
-2025-11-07 20:36:07,516 [INFO] Total accounts: 1
-2025-11-07 20:36:07,523 [DEBUG] STREAM b'IHDR' 16 13
-2025-11-07 20:36:07,523 [DEBUG] STREAM b'PLTE' 41 399
-2025-11-07 20:36:07,523 [DEBUG] STREAM b'tRNS' 452 78
-2025-11-07 20:36:07,523 [DEBUG] STREAM b'IDAT' 542 1550
-2025-11-07 20:36:08,004 [DEBUG] STREAM b'IHDR' 16 13
-2025-11-07 20:36:08,004 [DEBUG] STREAM b'PLTE' 41 399
-2025-11-07 20:36:08,004 [DEBUG] STREAM b'tRNS' 452 78
-2025-11-07 20:36:08,004 [DEBUG] STREAM b'IDAT' 542 1550
-2025-11-08 19:00:46,495 [DEBUG] Initializing WebSocket
-2025-11-08 19:00:46,495 [DEBUG] Validating WebSocket request
-2025-11-08 19:00:46,497 [INFO] 127.0.0.1 - - [2025-11-08 19:00:46] "GET /ui.html HTTP/1.1" 200 3803 0.002635
-2025-11-08 19:00:46,554 [DEBUG] Initializing WebSocket
-2025-11-08 19:00:46,554 [DEBUG] Validating WebSocket request
-2025-11-08 19:00:46,556 [INFO] 127.0.0.1 - - [2025-11-08 19:00:46] "GET /eel.js HTTP/1.1" 200 6014 0.002137
-2025-11-08 19:00:46,558 [DEBUG] Initializing WebSocket
-2025-11-08 19:00:46,559 [DEBUG] Validating WebSocket request
-2025-11-08 19:00:46,561 [INFO] 127.0.0.1 - - [2025-11-08 19:00:46] "GET /ui.js HTTP/1.1" 200 10538 0.002331
-2025-11-08 19:00:46,562 [DEBUG] Initializing WebSocket
-2025-11-08 19:00:46,562 [DEBUG] Validating WebSocket request
-2025-11-08 19:00:46,564 [INFO] 127.0.0.1 - - [2025-11-08 19:00:46] "GET /ui.css HTTP/1.1" 200 10277 0.002482
-2025-11-08 19:00:46,649 [DEBUG] Initializing WebSocket
-2025-11-08 19:00:46,649 [DEBUG] Validating WebSocket request
-2025-11-08 19:00:46,716 [INFO] 127.0.0.1 - - [2025-11-08 19:00:46] "GET /art/background.png HTTP/1.1" 200 4519303 0.066922
-2025-11-08 19:00:46,883 [DEBUG] Initializing WebSocket
-2025-11-08 19:00:46,883 [DEBUG] Validating WebSocket request
-2025-11-08 19:00:46,886 [INFO] 127.0.0.1 - - [2025-11-08 19:00:46] "GET /art/java.ico HTTP/1.1" 200 4021 0.002429
-2025-11-08 19:00:47,056 [DEBUG] Initializing WebSocket
-2025-11-08 19:00:47,057 [DEBUG] Validating WebSocket request
-2025-11-08 19:00:47,057 [DEBUG] Attempting to upgrade connection
-2025-11-08 19:00:47,057 [DEBUG] WebSocket request accepted, switching protocols
-2025-11-08 19:00:52,339 [DEBUG] Closed WebSocket
-2025-11-08 19:00:52,339 [DEBUG] Failed to write closing frame -> closing socket
-2025-11-08 19:00:52,340 [DEBUG] Closed WebSocket
-2025-11-08 19:03:16,315 [DEBUG] Initializing WebSocket
-2025-11-08 19:03:16,316 [DEBUG] Validating WebSocket request
-2025-11-08 19:03:16,318 [INFO] 127.0.0.1 - - [2025-11-08 19:03:16] "GET /ui.html HTTP/1.1" 200 4175 0.003019
-2025-11-08 19:03:16,374 [DEBUG] Initializing WebSocket
-2025-11-08 19:03:16,374 [DEBUG] Validating WebSocket request
-2025-11-08 19:03:16,375 [INFO] 127.0.0.1 - - [2025-11-08 19:03:16] "GET /eel.js HTTP/1.1" 200 6014 0.001574
-2025-11-08 19:03:16,381 [DEBUG] Initializing WebSocket
-2025-11-08 19:03:16,381 [DEBUG] Validating WebSocket request
-2025-11-08 19:03:16,384 [INFO] 127.0.0.1 - - [2025-11-08 19:03:16] "GET /ui.css HTTP/1.1" 200 10277 0.002833
-2025-11-08 19:03:16,394 [DEBUG] Initializing WebSocket
-2025-11-08 19:03:16,394 [DEBUG] Validating WebSocket request
-2025-11-08 19:03:16,396 [INFO] 127.0.0.1 - - [2025-11-08 19:03:16] "GET /ui.js HTTP/1.1" 200 10224 0.002388
-2025-11-08 19:03:16,484 [DEBUG] Initializing WebSocket
-2025-11-08 19:03:16,484 [DEBUG] Validating WebSocket request
-2025-11-08 19:03:16,575 [INFO] 127.0.0.1 - - [2025-11-08 19:03:16] "GET /art/background.png HTTP/1.1" 200 4519303 0.091165
-2025-11-08 19:03:16,920 [DEBUG] Initializing WebSocket
-2025-11-08 19:03:16,921 [DEBUG] Validating WebSocket request
-2025-11-08 19:03:16,921 [DEBUG] Attempting to upgrade connection
-2025-11-08 19:03:16,921 [DEBUG] WebSocket request accepted, switching protocols
-2025-11-08 19:03:20,462 [DEBUG] Closed WebSocket
-2025-11-08 19:03:20,463 [DEBUG] Failed to write closing frame -> closing socket
-2025-11-08 19:03:20,463 [DEBUG] Closed WebSocket
-2025-11-08 19:04:12,148 [DEBUG] Initializing WebSocket
-2025-11-08 19:04:12,149 [DEBUG] Validating WebSocket request
-2025-11-08 19:04:12,150 [INFO] 127.0.0.1 - - [2025-11-08 19:04:12] "GET /ui.html HTTP/1.1" 200 4175 0.002165
-2025-11-08 19:04:12,228 [DEBUG] Initializing WebSocket
-2025-11-08 19:04:12,228 [DEBUG] Validating WebSocket request
-2025-11-08 19:04:12,229 [INFO] 127.0.0.1 - - [2025-11-08 19:04:12] "GET /eel.js HTTP/1.1" 200 6014 0.001345
-2025-11-08 19:04:12,231 [DEBUG] Initializing WebSocket
-2025-11-08 19:04:12,231 [DEBUG] Validating WebSocket request
-2025-11-08 19:04:12,234 [INFO] 127.0.0.1 - - [2025-11-08 19:04:12] "GET /ui.css HTTP/1.1" 200 10277 0.002788
-2025-11-08 19:04:12,243 [DEBUG] Initializing WebSocket
-2025-11-08 19:04:12,243 [DEBUG] Validating WebSocket request
-2025-11-08 19:04:12,247 [INFO] 127.0.0.1 - - [2025-11-08 19:04:12] "GET /ui.js HTTP/1.1" 200 10224 0.003378
-2025-11-08 19:04:12,335 [DEBUG] Initializing WebSocket
-2025-11-08 19:04:12,335 [DEBUG] Validating WebSocket request
-2025-11-08 19:04:12,413 [INFO] 127.0.0.1 - - [2025-11-08 19:04:12] "GET /art/background.png HTTP/1.1" 200 4519303 0.078089
-2025-11-08 19:04:12,760 [DEBUG] Initializing WebSocket
-2025-11-08 19:04:12,760 [DEBUG] Validating WebSocket request
-2025-11-08 19:04:12,761 [DEBUG] Attempting to upgrade connection
-2025-11-08 19:04:12,761 [DEBUG] WebSocket request accepted, switching protocols
-2025-11-08 19:04:18,846 [DEBUG] Closed WebSocket
-2025-11-08 19:04:18,847 [DEBUG] Failed to write closing frame -> closing socket
-2025-11-08 19:04:18,847 [DEBUG] Closed WebSocket
-2025-11-08 22:29:55,470 [DEBUG] Initializing WebSocket
-2025-11-08 22:29:55,470 [DEBUG] Validating WebSocket request
-2025-11-08 22:29:55,473 [INFO] 127.0.0.1 - - [2025-11-08 22:29:55] "GET /ui.html HTTP/1.1" 200 4173 0.004022
-2025-11-08 22:29:55,527 [DEBUG] Initializing WebSocket
-2025-11-08 22:29:55,527 [DEBUG] Validating WebSocket request
-2025-11-08 22:29:55,528 [INFO] 127.0.0.1 - - [2025-11-08 22:29:55] "GET /eel.js HTTP/1.1" 200 6014 0.001343
-2025-11-08 22:29:55,530 [DEBUG] Initializing WebSocket
-2025-11-08 22:29:55,530 [DEBUG] Validating WebSocket request
-2025-11-08 22:29:55,547 [INFO] 127.0.0.1 - - [2025-11-08 22:29:55] "GET /ui.css HTTP/1.1" 200 10277 0.017799
-2025-11-08 22:29:55,548 [DEBUG] Initializing WebSocket
-2025-11-08 22:29:55,549 [DEBUG] Validating WebSocket request
-2025-11-08 22:29:55,551 [INFO] 127.0.0.1 - - [2025-11-08 22:29:55] "GET /ui.js HTTP/1.1" 200 10224 0.002356
-2025-11-08 22:29:55,623 [DEBUG] Initializing WebSocket
-2025-11-08 22:29:55,623 [DEBUG] Validating WebSocket request
-2025-11-08 22:29:55,700 [INFO] 127.0.0.1 - - [2025-11-08 22:29:55] "GET /art/background.png HTTP/1.1" 200 4519303 0.077522
-2025-11-08 22:29:56,032 [DEBUG] Initializing WebSocket
-2025-11-08 22:29:56,032 [DEBUG] Validating WebSocket request
-2025-11-08 22:29:56,033 [DEBUG] Attempting to upgrade connection
-2025-11-08 22:29:56,033 [DEBUG] WebSocket request accepted, switching protocols
-2025-11-08 22:30:06,291 [DEBUG] Closed WebSocket
-2025-11-08 22:30:06,292 [DEBUG] Failed to write closing frame -> closing socket
-2025-11-08 22:30:06,292 [DEBUG] Closed WebSocket
-2025-11-09 00:10:22,642 [DEBUG] Initializing WebSocket
-2025-11-09 00:10:22,643 [DEBUG] Validating WebSocket request
-2025-11-09 00:10:22,646 [INFO] 127.0.0.1 - - [2025-11-09 00:10:22] "GET /ui.html HTTP/1.1" 200 4173 0.004124
-2025-11-09 00:10:22,709 [DEBUG] Initializing WebSocket
-2025-11-09 00:10:22,709 [DEBUG] Validating WebSocket request
-2025-11-09 00:10:22,712 [INFO] 127.0.0.1 - - [2025-11-09 00:10:22] "GET /eel.js HTTP/1.1" 200 6014 0.002589
-2025-11-09 00:10:22,713 [DEBUG] Initializing WebSocket
-2025-11-09 00:10:22,713 [DEBUG] Validating WebSocket request
-2025-11-09 00:10:22,716 [INFO] 127.0.0.1 - - [2025-11-09 00:10:22] "GET /ui.css HTTP/1.1" 200 10277 0.003387
-2025-11-09 00:10:22,725 [DEBUG] Initializing WebSocket
-2025-11-09 00:10:22,725 [DEBUG] Validating WebSocket request
-2025-11-09 00:10:22,728 [INFO] 127.0.0.1 - - [2025-11-09 00:10:22] "GET /ui.js HTTP/1.1" 200 10224 0.003113
-2025-11-09 00:10:22,815 [DEBUG] Initializing WebSocket
-2025-11-09 00:10:22,815 [DEBUG] Validating WebSocket request
-2025-11-09 00:10:22,885 [INFO] 127.0.0.1 - - [2025-11-09 00:10:22] "GET /art/background.png HTTP/1.1" 200 4519303 0.070182
-2025-11-09 00:10:23,227 [DEBUG] Initializing WebSocket
-2025-11-09 00:10:23,227 [DEBUG] Validating WebSocket request
-2025-11-09 00:10:23,227 [DEBUG] Attempting to upgrade connection
-2025-11-09 00:10:23,227 [DEBUG] WebSocket request accepted, switching protocols
-2025-11-09 00:10:25,956 [DEBUG] Closed WebSocket
-2025-11-09 00:10:25,957 [DEBUG] Failed to write closing frame -> closing socket
-2025-11-09 00:10:25,957 [DEBUG] Closed WebSocket
-2025-11-09 00:11:24,406 [DEBUG] Initializing WebSocket
-2025-11-09 00:11:24,406 [DEBUG] Validating WebSocket request
-2025-11-09 00:11:24,408 [INFO] 127.0.0.1 - - [2025-11-09 00:11:24] "GET /ui.html HTTP/1.1" 200 4198 0.002024
-2025-11-09 00:11:24,464 [DEBUG] Initializing WebSocket
-2025-11-09 00:11:24,464 [DEBUG] Validating WebSocket request
-2025-11-09 00:11:24,465 [INFO] 127.0.0.1 - - [2025-11-09 00:11:24] "GET /eel.js HTTP/1.1" 200 6014 0.001341
-2025-11-09 00:11:24,467 [DEBUG] Initializing WebSocket
-2025-11-09 00:11:24,467 [DEBUG] Validating WebSocket request
-2025-11-09 00:11:24,469 [INFO] 127.0.0.1 - - [2025-11-09 00:11:24] "GET /ui.css HTTP/1.1" 200 10277 0.002108
-2025-11-09 00:11:24,478 [DEBUG] Initializing WebSocket
-2025-11-09 00:11:24,478 [DEBUG] Validating WebSocket request
-2025-11-09 00:11:24,481 [INFO] 127.0.0.1 - - [2025-11-09 00:11:24] "GET /ui.js HTTP/1.1" 200 10224 0.003030
-2025-11-09 00:11:24,584 [DEBUG] Initializing WebSocket
-2025-11-09 00:11:24,584 [DEBUG] Validating WebSocket request
-2025-11-09 00:11:24,663 [INFO] 127.0.0.1 - - [2025-11-09 00:11:24] "GET /art/background.png HTTP/1.1" 200 4519303 0.079199
-2025-11-09 00:11:25,009 [DEBUG] Initializing WebSocket
-2025-11-09 00:11:25,009 [DEBUG] Validating WebSocket request
-2025-11-09 00:11:25,009 [DEBUG] Attempting to upgrade connection
-2025-11-09 00:11:25,009 [DEBUG] WebSocket request accepted, switching protocols
-2025-11-09 00:11:27,336 [DEBUG] Initializing WebSocket
-2025-11-09 00:11:27,337 [DEBUG] Validating WebSocket request
-2025-11-09 00:11:27,339 [INFO] 127.0.0.1 - - [2025-11-09 00:11:27] "GET /ui.css HTTP/1.1" 200 10277 0.002482
-2025-11-09 00:11:27,347 [DEBUG] Initializing WebSocket
-2025-11-09 00:11:27,348 [DEBUG] Validating WebSocket request
-2025-11-09 00:11:27,353 [INFO] 127.0.0.1 - - [2025-11-09 00:11:27] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 919 0.005517
-2025-11-09 00:11:31,041 [DEBUG] Closed WebSocket
-2025-11-09 00:11:31,042 [DEBUG] Failed to write closing frame -> closing socket
-2025-11-09 00:11:31,042 [DEBUG] Closed WebSocket
-2025-11-09 00:17:20,349 [DEBUG] Initializing WebSocket
-2025-11-09 00:17:20,349 [DEBUG] Validating WebSocket request
-2025-11-09 00:17:20,351 [INFO] 127.0.0.1 - - [2025-11-09 00:17:20] "GET /ui.html HTTP/1.1" 200 4210 0.001891
-2025-11-09 00:17:20,408 [DEBUG] Initializing WebSocket
-2025-11-09 00:17:20,408 [DEBUG] Validating WebSocket request
-2025-11-09 00:17:20,409 [INFO] 127.0.0.1 - - [2025-11-09 00:17:20] "GET /eel.js HTTP/1.1" 200 6014 0.001124
-2025-11-09 00:17:20,417 [DEBUG] Initializing WebSocket
-2025-11-09 00:17:20,417 [DEBUG] Validating WebSocket request
-2025-11-09 00:17:20,419 [INFO] 127.0.0.1 - - [2025-11-09 00:17:20] "GET /ui.css HTTP/1.1" 200 10277 0.001978
-2025-11-09 00:17:20,433 [DEBUG] Initializing WebSocket
-2025-11-09 00:17:20,433 [DEBUG] Validating WebSocket request
-2025-11-09 00:17:20,434 [INFO] 127.0.0.1 - - [2025-11-09 00:17:20] "GET /ui.js HTTP/1.1" 200 10224 0.001445
-2025-11-09 00:17:20,481 [DEBUG] Initializing WebSocket
-2025-11-09 00:17:20,481 [DEBUG] Validating WebSocket request
-2025-11-09 00:17:20,542 [INFO] 127.0.0.1 - - [2025-11-09 00:17:20] "GET /art/background.png HTTP/1.1" 200 4519303 0.060945
-2025-11-09 00:17:20,880 [DEBUG] Initializing WebSocket
-2025-11-09 00:17:20,880 [DEBUG] Validating WebSocket request
-2025-11-09 00:17:20,881 [DEBUG] Attempting to upgrade connection
-2025-11-09 00:17:20,881 [DEBUG] WebSocket request accepted, switching protocols
-2025-11-09 00:17:23,494 [DEBUG] Closed WebSocket
-2025-11-09 00:17:23,495 [DEBUG] Failed to write closing frame -> closing socket
-2025-11-09 00:17:23,495 [DEBUG] Closed WebSocket
-2025-11-09 00:18:04,143 [DEBUG] Initializing WebSocket
-2025-11-09 00:18:04,144 [DEBUG] Validating WebSocket request
-2025-11-09 00:18:04,147 [INFO] 127.0.0.1 - - [2025-11-09 00:18:04] "GET /ui.html HTTP/1.1" 200 4210 0.004042
-2025-11-09 00:18:04,189 [DEBUG] Initializing WebSocket
-2025-11-09 00:18:04,189 [DEBUG] Validating WebSocket request
-2025-11-09 00:18:04,191 [INFO] 127.0.0.1 - - [2025-11-09 00:18:04] "GET /eel.js HTTP/1.1" 200 6029 0.002133
-2025-11-09 00:18:04,193 [DEBUG] Initializing WebSocket
-2025-11-09 00:18:04,193 [DEBUG] Validating WebSocket request
-2025-11-09 00:18:04,195 [INFO] 127.0.0.1 - - [2025-11-09 00:18:04] "GET /ui.css HTTP/1.1" 200 10277 0.002232
-2025-11-09 00:18:04,210 [DEBUG] Initializing WebSocket
-2025-11-09 00:18:04,210 [DEBUG] Validating WebSocket request
-2025-11-09 00:18:04,212 [INFO] 127.0.0.1 - - [2025-11-09 00:18:04] "GET /ui.js HTTP/1.1" 200 10224 0.002656
-2025-11-09 00:18:04,279 [DEBUG] Initializing WebSocket
-2025-11-09 00:18:04,279 [DEBUG] Validating WebSocket request
-2025-11-09 00:18:04,349 [INFO] 127.0.0.1 - - [2025-11-09 00:18:04] "GET /art/background.png HTTP/1.1" 200 4519303 0.070087
-2025-11-09 00:18:04,688 [DEBUG] Initializing WebSocket
-2025-11-09 00:18:04,688 [DEBUG] Validating WebSocket request
-2025-11-09 00:18:04,688 [DEBUG] Attempting to upgrade connection
-2025-11-09 00:18:04,688 [DEBUG] WebSocket request accepted, switching protocols
-2025-11-09 00:18:12,843 [DEBUG] Initializing WebSocket
-2025-11-09 00:18:12,843 [DEBUG] Validating WebSocket request
-2025-11-09 00:18:12,845 [INFO] 127.0.0.1 - - [2025-11-09 00:18:12] "GET /ui.css HTTP/1.1" 200 10277 0.001859
-2025-11-09 00:18:12,854 [DEBUG] Initializing WebSocket
-2025-11-09 00:18:12,854 [DEBUG] Validating WebSocket request
-2025-11-09 00:18:12,857 [INFO] 127.0.0.1 - - [2025-11-09 00:18:12] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 919 0.003045
-2025-11-09 00:18:53,336 [DEBUG] Closed WebSocket
-2025-11-09 00:18:53,337 [DEBUG] Failed to write closing frame -> closing socket
-2025-11-09 00:18:53,337 [DEBUG] Closed WebSocket
-2025-11-09 00:22:04,636 [DEBUG] Initializing WebSocket
-2025-11-09 00:22:04,636 [DEBUG] Validating WebSocket request
-2025-11-09 00:22:04,638 [INFO] 127.0.0.1 - - [2025-11-09 00:22:04] "GET /ui.html HTTP/1.1" 200 4178 0.001857
-2025-11-09 00:22:04,715 [DEBUG] Initializing WebSocket
-2025-11-09 00:22:04,716 [DEBUG] Validating WebSocket request
-2025-11-09 00:22:04,717 [INFO] 127.0.0.1 - - [2025-11-09 00:22:04] "GET /eel.js HTTP/1.1" 200 6029 0.001859
-2025-11-09 00:22:04,719 [DEBUG] Initializing WebSocket
-2025-11-09 00:22:04,719 [DEBUG] Validating WebSocket request
-2025-11-09 00:22:04,722 [INFO] 127.0.0.1 - - [2025-11-09 00:22:04] "GET /ui.css HTTP/1.1" 200 10277 0.003620
-2025-11-09 00:22:04,736 [DEBUG] Initializing WebSocket
-2025-11-09 00:22:04,736 [DEBUG] Validating WebSocket request
-2025-11-09 00:22:04,739 [INFO] 127.0.0.1 - - [2025-11-09 00:22:04] "GET /ui.js HTTP/1.1" 200 10224 0.003018
-2025-11-09 00:22:04,828 [DEBUG] Initializing WebSocket
-2025-11-09 00:22:04,829 [DEBUG] Validating WebSocket request
-2025-11-09 00:22:04,890 [INFO] 127.0.0.1 - - [2025-11-09 00:22:04] "GET /art/background.png HTTP/1.1" 200 4519303 0.061543
-2025-11-09 00:22:05,226 [DEBUG] Initializing WebSocket
-2025-11-09 00:22:05,227 [DEBUG] Validating WebSocket request
-2025-11-09 00:22:05,227 [DEBUG] Attempting to upgrade connection
-2025-11-09 00:22:05,227 [DEBUG] WebSocket request accepted, switching protocols
-2025-11-09 00:24:06,365 [DEBUG] Closed WebSocket
-2025-11-09 00:24:06,366 [DEBUG] Failed to write closing frame -> closing socket
-2025-11-09 00:24:06,366 [DEBUG] Closed WebSocket
-2025-11-09 00:56:42,346 [DEBUG] Initializing WebSocket
-2025-11-09 00:56:42,346 [DEBUG] Validating WebSocket request
-2025-11-09 00:56:42,349 [INFO] 127.0.0.1 - - [2025-11-09 00:56:42] "GET /ui.html HTTP/1.1" 200 4178 0.003637
-2025-11-09 00:56:42,414 [DEBUG] Initializing WebSocket
-2025-11-09 00:56:42,414 [DEBUG] Validating WebSocket request
-2025-11-09 00:56:42,416 [INFO] 127.0.0.1 - - [2025-11-09 00:56:42] "GET /eel.js HTTP/1.1" 200 6029 0.001937
-2025-11-09 00:56:42,421 [DEBUG] Initializing WebSocket
-2025-11-09 00:56:42,421 [DEBUG] Validating WebSocket request
-2025-11-09 00:56:42,433 [INFO] 127.0.0.1 - - [2025-11-09 00:56:42] "GET /ui.css HTTP/1.1" 200 10277 0.011375
-2025-11-09 00:56:42,436 [DEBUG] Initializing WebSocket
-2025-11-09 00:56:42,436 [DEBUG] Validating WebSocket request
-2025-11-09 00:56:42,439 [INFO] 127.0.0.1 - - [2025-11-09 00:56:42] "GET /ui.js HTTP/1.1" 200 10224 0.002697
-2025-11-09 00:56:42,591 [DEBUG] Initializing WebSocket
-2025-11-09 00:56:42,591 [DEBUG] Validating WebSocket request
-2025-11-09 00:56:42,701 [INFO] 127.0.0.1 - - [2025-11-09 00:56:42] "GET /art/background.png HTTP/1.1" 200 4519303 0.110347
-2025-11-09 00:56:42,893 [DEBUG] Initializing WebSocket
-2025-11-09 00:56:42,894 [DEBUG] Validating WebSocket request
-2025-11-09 00:56:42,894 [DEBUG] Attempting to upgrade connection
-2025-11-09 00:56:42,894 [DEBUG] WebSocket request accepted, switching protocols
-2025-11-09 00:57:42,631 [DEBUG] Closed WebSocket
-2025-11-09 00:57:42,631 [DEBUG] Failed to write closing frame -> closing socket
-2025-11-09 00:57:42,632 [DEBUG] Closed WebSocket
-2025-11-09 01:05:45,422 [DEBUG] Initializing WebSocket
-2025-11-09 01:05:45,423 [DEBUG] Validating WebSocket request
-2025-11-09 01:05:45,425 [INFO] 127.0.0.1 - - [2025-11-09 01:05:45] "GET /ui.html HTTP/1.1" 200 3798 0.002458
-2025-11-09 01:05:45,493 [DEBUG] Initializing WebSocket
-2025-11-09 01:05:45,493 [DEBUG] Validating WebSocket request
-2025-11-09 01:05:45,495 [INFO] 127.0.0.1 - - [2025-11-09 01:05:45] "GET /eel.js HTTP/1.1" 200 6029 0.001997
-2025-11-09 01:05:45,496 [DEBUG] Initializing WebSocket
-2025-11-09 01:05:45,496 [DEBUG] Validating WebSocket request
-2025-11-09 01:05:45,498 [INFO] 127.0.0.1 - - [2025-11-09 01:05:45] "GET /ui.css HTTP/1.1" 200 10277 0.002261
-2025-11-09 01:05:45,518 [DEBUG] Initializing WebSocket
-2025-11-09 01:05:45,518 [DEBUG] Validating WebSocket request
-2025-11-09 01:05:45,520 [INFO] 127.0.0.1 - - [2025-11-09 01:05:45] "GET /ui.js HTTP/1.1" 200 10729 0.002043
-2025-11-09 01:05:45,603 [DEBUG] Initializing WebSocket
-2025-11-09 01:05:45,604 [DEBUG] Validating WebSocket request
-2025-11-09 01:05:45,672 [INFO] 127.0.0.1 - - [2025-11-09 01:05:45] "GET /art/background.png HTTP/1.1" 200 4519303 0.068576
-2025-11-09 01:05:45,996 [DEBUG] Initializing WebSocket
-2025-11-09 01:05:45,996 [DEBUG] Validating WebSocket request
-2025-11-09 01:05:45,996 [DEBUG] Attempting to upgrade connection
-2025-11-09 01:05:45,996 [DEBUG] WebSocket request accepted, switching protocols
-2025-11-09 01:05:59,248 [DEBUG] Initializing WebSocket
-2025-11-09 01:05:59,249 [DEBUG] Validating WebSocket request
-2025-11-09 01:05:59,250 [INFO] 127.0.0.1 - - [2025-11-09 01:05:59] "GET /ui.css HTTP/1.1" 200 10277 0.001757
-2025-11-09 01:05:59,261 [DEBUG] Initializing WebSocket
-2025-11-09 01:05:59,261 [DEBUG] Validating WebSocket request
-2025-11-09 01:05:59,265 [INFO] 127.0.0.1 - - [2025-11-09 01:05:59] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 919 0.004500
-2025-11-09 01:06:31,944 [DEBUG] Closed WebSocket
-2025-11-09 01:06:31,945 [DEBUG] Failed to write closing frame -> closing socket
-2025-11-09 01:06:31,945 [DEBUG] Closed WebSocket
-2025-11-09 01:09:13,055 [DEBUG] Initializing WebSocket
-2025-11-09 01:09:13,056 [DEBUG] Validating WebSocket request
-2025-11-09 01:09:13,057 [INFO] 127.0.0.1 - - [2025-11-09 01:09:13] "GET /ui.html HTTP/1.1" 200 3798 0.001470
-2025-11-09 01:09:13,102 [DEBUG] Initializing WebSocket
-2025-11-09 01:09:13,102 [DEBUG] Validating WebSocket request
-2025-11-09 01:09:13,103 [INFO] 127.0.0.1 - - [2025-11-09 01:09:13] "GET /eel.js HTTP/1.1" 200 6029 0.001489
-2025-11-09 01:09:13,108 [DEBUG] Initializing WebSocket
-2025-11-09 01:09:13,108 [DEBUG] Validating WebSocket request
-2025-11-09 01:09:13,111 [INFO] 127.0.0.1 - - [2025-11-09 01:09:13] "GET /ui.css HTTP/1.1" 200 10277 0.002563
-2025-11-09 01:09:13,118 [DEBUG] Initializing WebSocket
-2025-11-09 01:09:13,118 [DEBUG] Validating WebSocket request
-2025-11-09 01:09:13,120 [INFO] 127.0.0.1 - - [2025-11-09 01:09:13] "GET /ui.js HTTP/1.1" 200 10729 0.002113
-2025-11-09 01:09:13,197 [DEBUG] Initializing WebSocket
-2025-11-09 01:09:13,197 [DEBUG] Validating WebSocket request
-2025-11-09 01:09:13,253 [INFO] 127.0.0.1 - - [2025-11-09 01:09:13] "GET /art/background.png HTTP/1.1" 200 4519303 0.056002
-2025-11-09 01:09:13,583 [DEBUG] Initializing WebSocket
-2025-11-09 01:09:13,583 [DEBUG] Validating WebSocket request
-2025-11-09 01:09:13,583 [DEBUG] Attempting to upgrade connection
-2025-11-09 01:09:13,583 [DEBUG] WebSocket request accepted, switching protocols
-2025-11-09 01:09:22,298 [DEBUG] Closed WebSocket
-2025-11-09 01:09:22,299 [DEBUG] Failed to write closing frame -> closing socket
-2025-11-09 01:09:22,300 [DEBUG] Closed WebSocket
-2025-11-09 01:10:15,236 [DEBUG] Initializing WebSocket
-2025-11-09 01:10:15,236 [DEBUG] Validating WebSocket request
-2025-11-09 01:10:15,238 [INFO] 127.0.0.1 - - [2025-11-09 01:10:15] "GET /ui.html HTTP/1.1" 200 3798 0.002137
-2025-11-09 01:10:15,280 [DEBUG] Initializing WebSocket
-2025-11-09 01:10:15,281 [DEBUG] Validating WebSocket request
-2025-11-09 01:10:15,282 [INFO] 127.0.0.1 - - [2025-11-09 01:10:15] "GET /eel.js HTTP/1.1" 200 6029 0.001954
-2025-11-09 01:10:15,284 [DEBUG] Initializing WebSocket
-2025-11-09 01:10:15,284 [DEBUG] Validating WebSocket request
-2025-11-09 01:10:15,286 [INFO] 127.0.0.1 - - [2025-11-09 01:10:15] "GET /ui.css HTTP/1.1" 200 10277 0.002760
-2025-11-09 01:10:15,295 [DEBUG] Initializing WebSocket
-2025-11-09 01:10:15,295 [DEBUG] Validating WebSocket request
-2025-11-09 01:10:15,297 [INFO] 127.0.0.1 - - [2025-11-09 01:10:15] "GET /ui.js HTTP/1.1" 200 10775 0.001805
-2025-11-09 01:10:15,373 [DEBUG] Initializing WebSocket
-2025-11-09 01:10:15,373 [DEBUG] Validating WebSocket request
-2025-11-09 01:10:15,433 [INFO] 127.0.0.1 - - [2025-11-09 01:10:15] "GET /art/background.png HTTP/1.1" 200 4519303 0.060439
-2025-11-09 01:10:15,777 [DEBUG] Initializing WebSocket
-2025-11-09 01:10:15,778 [DEBUG] Validating WebSocket request
-2025-11-09 01:10:15,778 [DEBUG] Attempting to upgrade connection
-2025-11-09 01:10:15,778 [DEBUG] WebSocket request accepted, switching protocols
-2025-11-09 01:10:21,111 [DEBUG] Initializing WebSocket
-2025-11-09 01:10:21,111 [DEBUG] Validating WebSocket request
-2025-11-09 01:10:21,112 [INFO] 127.0.0.1 - - [2025-11-09 01:10:21] "GET /ui.css HTTP/1.1" 200 10277 0.001578
-2025-11-09 01:10:21,121 [DEBUG] Initializing WebSocket
-2025-11-09 01:10:21,121 [DEBUG] Validating WebSocket request
-2025-11-09 01:10:21,124 [INFO] 127.0.0.1 - - [2025-11-09 01:10:21] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 919 0.002318
-2025-11-09 01:10:32,927 [DEBUG] Closed WebSocket
-2025-11-09 01:10:32,928 [DEBUG] Failed to write closing frame -> closing socket
-2025-11-09 01:10:32,928 [DEBUG] Closed WebSocket
-2025-11-09 01:10:51,181 [DEBUG] Initializing WebSocket
-2025-11-09 01:10:51,181 [DEBUG] Validating WebSocket request
-2025-11-09 01:10:51,183 [INFO] 127.0.0.1 - - [2025-11-09 01:10:51] "GET /ui.html HTTP/1.1" 200 3798 0.002209
-2025-11-09 01:10:51,220 [DEBUG] Initializing WebSocket
-2025-11-09 01:10:51,221 [DEBUG] Validating WebSocket request
-2025-11-09 01:10:51,222 [INFO] 127.0.0.1 - - [2025-11-09 01:10:51] "GET /eel.js HTTP/1.1" 200 6051 0.001554
-2025-11-09 01:10:51,223 [DEBUG] Initializing WebSocket
-2025-11-09 01:10:51,223 [DEBUG] Validating WebSocket request
-2025-11-09 01:10:51,226 [INFO] 127.0.0.1 - - [2025-11-09 01:10:51] "GET /ui.css HTTP/1.1" 200 10277 0.002680
-2025-11-09 01:10:51,238 [DEBUG] Initializing WebSocket
-2025-11-09 01:10:51,238 [DEBUG] Validating WebSocket request
-2025-11-09 01:10:51,241 [INFO] 127.0.0.1 - - [2025-11-09 01:10:51] "GET /ui.js HTTP/1.1" 200 10775 0.003183
-2025-11-09 01:10:51,312 [DEBUG] Initializing WebSocket
-2025-11-09 01:10:51,312 [DEBUG] Validating WebSocket request
-2025-11-09 01:10:51,367 [INFO] 127.0.0.1 - - [2025-11-09 01:10:51] "GET /art/background.png HTTP/1.1" 200 4519303 0.055124
-2025-11-09 01:10:51,707 [DEBUG] Initializing WebSocket
-2025-11-09 01:10:51,708 [DEBUG] Validating WebSocket request
-2025-11-09 01:10:51,708 [DEBUG] Attempting to upgrade connection
-2025-11-09 01:10:51,708 [DEBUG] WebSocket request accepted, switching protocols
-2025-11-09 01:11:10,155 [DEBUG] Closed WebSocket
-2025-11-09 01:11:10,156 [DEBUG] Failed to write closing frame -> closing socket
-2025-11-09 01:11:10,156 [DEBUG] Closed WebSocket
-2025-11-09 01:11:42,397 [DEBUG] Initializing WebSocket
-2025-11-09 01:11:42,397 [DEBUG] Validating WebSocket request
-2025-11-09 01:11:42,398 [INFO] 127.0.0.1 - - [2025-11-09 01:11:42] "GET /ui.html HTTP/1.1" 200 3745 0.002142
-2025-11-09 01:11:42,480 [DEBUG] Initializing WebSocket
-2025-11-09 01:11:42,480 [DEBUG] Validating WebSocket request
-2025-11-09 01:11:42,483 [INFO] 127.0.0.1 - - [2025-11-09 01:11:42] "GET /ui.css HTTP/1.1" 200 10277 0.002630
-2025-11-09 01:11:42,484 [DEBUG] Initializing WebSocket
-2025-11-09 01:11:42,485 [DEBUG] Validating WebSocket request
-2025-11-09 01:11:42,486 [INFO] 127.0.0.1 - - [2025-11-09 01:11:42] "GET /eel.js HTTP/1.1" 200 6051 0.001890
-2025-11-09 01:11:42,498 [DEBUG] Initializing WebSocket
-2025-11-09 01:11:42,498 [DEBUG] Validating WebSocket request
-2025-11-09 01:11:42,500 [INFO] 127.0.0.1 - - [2025-11-09 01:11:42] "GET /ui.js HTTP/1.1" 200 10775 0.002323
-2025-11-09 01:11:42,592 [DEBUG] Initializing WebSocket
-2025-11-09 01:11:42,592 [DEBUG] Validating WebSocket request
-2025-11-09 01:11:42,664 [INFO] 127.0.0.1 - - [2025-11-09 01:11:42] "GET /art/background.png HTTP/1.1" 200 4519303 0.071302
-2025-11-09 01:11:43,003 [DEBUG] Initializing WebSocket
-2025-11-09 01:11:43,003 [DEBUG] Validating WebSocket request
-2025-11-09 01:11:43,003 [DEBUG] Attempting to upgrade connection
-2025-11-09 01:11:43,003 [DEBUG] WebSocket request accepted, switching protocols
-2025-11-09 01:11:56,366 [DEBUG] Closed WebSocket
-2025-11-09 01:11:56,367 [DEBUG] Failed to write closing frame -> closing socket
-2025-11-09 01:11:56,367 [DEBUG] Closed WebSocket
-2025-11-09 01:16:40,325 [DEBUG] Initializing WebSocket
-2025-11-09 01:16:40,325 [DEBUG] Validating WebSocket request
-2025-11-09 01:16:40,327 [INFO] 127.0.0.1 - - [2025-11-09 01:16:40] "GET /ui.html HTTP/1.1" 200 3745 0.001833
-2025-11-09 01:16:40,381 [DEBUG] Initializing WebSocket
-2025-11-09 01:16:40,382 [DEBUG] Validating WebSocket request
-2025-11-09 01:16:40,383 [INFO] 127.0.0.1 - - [2025-11-09 01:16:40] "GET /eel.js HTTP/1.1" 200 6066 0.001437
-2025-11-09 01:16:40,390 [DEBUG] Initializing WebSocket
-2025-11-09 01:16:40,391 [DEBUG] Validating WebSocket request
-2025-11-09 01:16:40,394 [INFO] 127.0.0.1 - - [2025-11-09 01:16:40] "GET /ui.css HTTP/1.1" 200 10277 0.004142
-2025-11-09 01:16:40,411 [DEBUG] Initializing WebSocket
-2025-11-09 01:16:40,412 [DEBUG] Validating WebSocket request
-2025-11-09 01:16:40,413 [INFO] 127.0.0.1 - - [2025-11-09 01:16:40] "GET /ui.js HTTP/1.1" 200 10816 0.002213
-2025-11-09 01:16:40,505 [DEBUG] Initializing WebSocket
-2025-11-09 01:16:40,505 [DEBUG] Validating WebSocket request
-2025-11-09 01:16:40,576 [INFO] 127.0.0.1 - - [2025-11-09 01:16:40] "GET /art/background.png HTTP/1.1" 200 4519303 0.071508
-2025-11-09 01:16:40,913 [DEBUG] Initializing WebSocket
-2025-11-09 01:16:40,913 [DEBUG] Validating WebSocket request
-2025-11-09 01:16:40,913 [DEBUG] Attempting to upgrade connection
-2025-11-09 01:16:40,913 [DEBUG] WebSocket request accepted, switching protocols
-2025-11-09 01:17:37,145 [DEBUG] Closed WebSocket
-2025-11-09 01:17:37,146 [DEBUG] Failed to write closing frame -> closing socket
-2025-11-09 01:17:37,146 [DEBUG] Closed WebSocket
-2025-11-09 13:30:36,069 [DEBUG] Initializing WebSocket
-2025-11-09 13:30:36,070 [DEBUG] Validating WebSocket request
-2025-11-09 13:30:36,075 [INFO] 127.0.0.1 - - [2025-11-09 13:30:36] "GET /ui.html HTTP/1.1" 200 3745 0.006054
-2025-11-09 13:30:36,242 [DEBUG] Initializing WebSocket
-2025-11-09 13:30:36,243 [DEBUG] Validating WebSocket request
-2025-11-09 13:30:36,245 [INFO] 127.0.0.1 - - [2025-11-09 13:30:36] "GET /eel.js HTTP/1.1" 200 6066 0.002386
-2025-11-09 13:30:36,246 [DEBUG] Initializing WebSocket
-2025-11-09 13:30:36,246 [DEBUG] Validating WebSocket request
-2025-11-09 13:30:36,275 [INFO] 127.0.0.1 - - [2025-11-09 13:30:36] "GET /ui.css HTTP/1.1" 200 10277 0.029330
-2025-11-09 13:30:36,312 [DEBUG] Initializing WebSocket
-2025-11-09 13:30:36,313 [DEBUG] Validating WebSocket request
-2025-11-09 13:30:36,315 [INFO] 127.0.0.1 - - [2025-11-09 13:30:36] "GET /ui.js HTTP/1.1" 200 10816 0.002693
-2025-11-09 13:30:36,495 [DEBUG] Initializing WebSocket
-2025-11-09 13:30:36,496 [DEBUG] Validating WebSocket request
-2025-11-09 13:30:36,640 [INFO] 127.0.0.1 - - [2025-11-09 13:30:36] "GET /art/background.png HTTP/1.1" 200 4519303 0.144599
-2025-11-09 13:30:36,992 [DEBUG] Initializing WebSocket
-2025-11-09 13:30:36,992 [DEBUG] Validating WebSocket request
-2025-11-09 13:30:36,992 [DEBUG] Attempting to upgrade connection
-2025-11-09 13:30:36,992 [DEBUG] WebSocket request accepted, switching protocols
-2025-11-09 13:47:53,251 [DEBUG] Closed WebSocket
-2025-11-09 13:47:53,252 [DEBUG] Failed to write closing frame -> closing socket
-2025-11-09 13:47:53,253 [DEBUG] Closed WebSocket
-2025-11-12 19:02:15,581 [DEBUG] Initializing WebSocket
-2025-11-12 19:02:15,581 [DEBUG] Validating WebSocket request
-2025-11-12 19:02:15,583 [INFO] 127.0.0.1 - - [2025-11-12 19:02:15] "GET /ui.html HTTP/1.1" 200 3745 0.002390
-2025-11-12 19:02:15,630 [DEBUG] Initializing WebSocket
-2025-11-12 19:02:15,631 [DEBUG] Validating WebSocket request
-2025-11-12 19:02:15,633 [INFO] 127.0.0.1 - - [2025-11-12 19:02:15] "GET /eel.js HTTP/1.1" 200 6066 0.002593
-2025-11-12 19:02:15,634 [DEBUG] Initializing WebSocket
-2025-11-12 19:02:15,634 [DEBUG] Validating WebSocket request
-2025-11-12 19:02:15,640 [INFO] 127.0.0.1 - - [2025-11-12 19:02:15] "GET /ui.css HTTP/1.1" 200 10277 0.005899
-2025-11-12 19:02:15,642 [DEBUG] Initializing WebSocket
-2025-11-12 19:02:15,643 [DEBUG] Validating WebSocket request
-2025-11-12 19:02:15,647 [INFO] 127.0.0.1 - - [2025-11-12 19:02:15] "GET /ui.js HTTP/1.1" 200 10816 0.004180
-2025-11-12 19:02:15,744 [DEBUG] Initializing WebSocket
-2025-11-12 19:02:15,745 [DEBUG] Validating WebSocket request
-2025-11-12 19:02:15,831 [INFO] 127.0.0.1 - - [2025-11-12 19:02:15] "GET /art/background.png HTTP/1.1" 200 4519303 0.086726
-2025-11-12 19:02:16,056 [DEBUG] Initializing WebSocket
-2025-11-12 19:02:16,056 [DEBUG] Validating WebSocket request
-2025-11-12 19:02:16,056 [DEBUG] Attempting to upgrade connection
-2025-11-12 19:02:16,056 [DEBUG] WebSocket request accepted, switching protocols
-2025-11-12 19:02:23,845 [ERROR] Failed to launch game: name 'select_ver' is not defined
-2025-11-12 19:03:30,684 [DEBUG] Initializing WebSocket
-2025-11-12 19:03:30,685 [DEBUG] Validating WebSocket request
-2025-11-12 19:03:30,690 [INFO] 127.0.0.1 - - [2025-11-12 19:03:30] "GET /ui.html HTTP/1.1" 200 3745 0.006071
-2025-11-12 19:03:30,770 [DEBUG] Initializing WebSocket
-2025-11-12 19:03:30,770 [DEBUG] Validating WebSocket request
-2025-11-12 19:03:30,772 [INFO] 127.0.0.1 - - [2025-11-12 19:03:30] "GET /eel.js HTTP/1.1" 200 6066 0.001587
-2025-11-12 19:03:30,781 [DEBUG] Initializing WebSocket
-2025-11-12 19:03:30,781 [DEBUG] Validating WebSocket request
-2025-11-12 19:03:30,784 [INFO] 127.0.0.1 - - [2025-11-12 19:03:30] "GET /ui.css HTTP/1.1" 200 10277 0.003474
-2025-11-12 19:03:30,789 [DEBUG] Initializing WebSocket
-2025-11-12 19:03:30,790 [DEBUG] Validating WebSocket request
-2025-11-12 19:03:30,793 [INFO] 127.0.0.1 - - [2025-11-12 19:03:30] "GET /ui.js HTTP/1.1" 200 10816 0.003583
-2025-11-12 19:03:30,909 [DEBUG] Initializing WebSocket
-2025-11-12 19:03:30,909 [DEBUG] Validating WebSocket request
-2025-11-12 19:03:30,987 [INFO] 127.0.0.1 - - [2025-11-12 19:03:30] "GET /art/background.png HTTP/1.1" 200 4519303 0.078720
-2025-11-12 19:03:31,343 [DEBUG] Initializing WebSocket
-2025-11-12 19:03:31,343 [DEBUG] Validating WebSocket request
-2025-11-12 19:03:31,343 [DEBUG] Attempting to upgrade connection
-2025-11-12 19:03:31,343 [DEBUG] WebSocket request accepted, switching protocols
-2025-11-12 19:03:55,974 [ERROR] Failed to launch game: name 'select_ver' is not defined
-2025-11-12 19:05:19,267 [DEBUG] Initializing WebSocket
-2025-11-12 19:05:19,268 [DEBUG] Validating WebSocket request
-2025-11-12 19:05:19,269 [INFO] 127.0.0.1 - - [2025-11-12 19:05:19] "GET /ui.html HTTP/1.1" 200 3745 0.002421
-2025-11-12 19:05:19,314 [DEBUG] Initializing WebSocket
-2025-11-12 19:05:19,315 [DEBUG] Validating WebSocket request
-2025-11-12 19:05:19,316 [INFO] 127.0.0.1 - - [2025-11-12 19:05:19] "GET /eel.js HTTP/1.1" 200 6066 0.001384
-2025-11-12 19:05:19,317 [DEBUG] Initializing WebSocket
-2025-11-12 19:05:19,318 [DEBUG] Validating WebSocket request
-2025-11-12 19:05:19,320 [INFO] 127.0.0.1 - - [2025-11-12 19:05:19] "GET /ui.css HTTP/1.1" 200 10277 0.002140
-2025-11-12 19:05:19,327 [DEBUG] Initializing WebSocket
-2025-11-12 19:05:19,327 [DEBUG] Validating WebSocket request
-2025-11-12 19:05:19,329 [INFO] 127.0.0.1 - - [2025-11-12 19:05:19] "GET /ui.js HTTP/1.1" 200 10816 0.001987
-2025-11-12 19:05:19,400 [DEBUG] Initializing WebSocket
-2025-11-12 19:05:19,400 [DEBUG] Validating WebSocket request
-2025-11-12 19:05:19,452 [INFO] 127.0.0.1 - - [2025-11-12 19:05:19] "GET /art/background.png HTTP/1.1" 200 4519303 0.052241
-2025-11-12 19:05:19,790 [DEBUG] Initializing WebSocket
-2025-11-12 19:05:19,790 [DEBUG] Validating WebSocket request
-2025-11-12 19:05:19,791 [DEBUG] Attempting to upgrade connection
-2025-11-12 19:05:19,791 [DEBUG] WebSocket request accepted, switching protocols
-2025-11-12 19:07:07,629 [DEBUG] Starting new HTTPS connection (1): launchermeta.mojang.com:443
-2025-11-12 19:07:08,343 [DEBUG] https://launchermeta.mojang.com:443 "GET /mc/game/version_manifest_v2.json HTTP/1.1" 200 None
-2025-11-12 19:07:08,401 [ERROR] Failed to launch game: Version 1.21.0 was not found
-2025-11-12 19:08:27,906 [DEBUG] Initializing WebSocket
-2025-11-12 19:08:27,906 [DEBUG] Validating WebSocket request
-2025-11-12 19:08:27,907 [INFO] 127.0.0.1 - - [2025-11-12 19:08:27] "GET /ui.html HTTP/1.1" 200 3745 0.001439
-2025-11-12 19:08:27,954 [DEBUG] Initializing WebSocket
-2025-11-12 19:08:27,955 [DEBUG] Validating WebSocket request
-2025-11-12 19:08:27,956 [INFO] 127.0.0.1 - - [2025-11-12 19:08:27] "GET /eel.js HTTP/1.1" 200 6066 0.001218
-2025-11-12 19:08:27,957 [DEBUG] Initializing WebSocket
-2025-11-12 19:08:27,957 [DEBUG] Validating WebSocket request
-2025-11-12 19:08:27,959 [INFO] 127.0.0.1 - - [2025-11-12 19:08:27] "GET /ui.css HTTP/1.1" 200 10277 0.002082
-2025-11-12 19:08:27,967 [DEBUG] Initializing WebSocket
-2025-11-12 19:08:27,967 [DEBUG] Validating WebSocket request
-2025-11-12 19:08:27,969 [INFO] 127.0.0.1 - - [2025-11-12 19:08:27] "GET /ui.js HTTP/1.1" 200 10816 0.002064
-2025-11-12 19:08:28,044 [DEBUG] Initializing WebSocket
-2025-11-12 19:08:28,045 [DEBUG] Validating WebSocket request
-2025-11-12 19:08:28,093 [INFO] 127.0.0.1 - - [2025-11-12 19:08:28] "GET /art/background.png HTTP/1.1" 200 4519303 0.048675
-2025-11-12 19:08:28,434 [DEBUG] Initializing WebSocket
-2025-11-12 19:08:28,434 [DEBUG] Validating WebSocket request
-2025-11-12 19:08:28,434 [DEBUG] Attempting to upgrade connection
-2025-11-12 19:08:28,434 [DEBUG] WebSocket request accepted, switching protocols
-2025-11-12 19:08:42,423 [DEBUG] Starting new HTTPS connection (1): launchermeta.mojang.com:443
-2025-11-12 19:08:43,017 [DEBUG] https://launchermeta.mojang.com:443 "GET /v1/products/java-runtime/2ec0cc96c44e5a76b9c8b7c39df7210883d12871/all.json HTTP/1.1" 200 None
-2025-11-12 19:08:43,019 [DEBUG] Starting new HTTPS connection (1): piston-meta.mojang.com:443
-2025-11-12 19:08:43,554 [DEBUG] https://piston-meta.mojang.com:443 "GET /v1/packages/cb4394a27089d19f65d5baa6cf0482c27c3c7865/manifest.json HTTP/1.1" 200 None
-2025-11-12 19:08:43,570 [DEBUG] Starting new HTTPS connection (1): piston-data.mojang.com:443
-2025-11-12 19:08:43,571 [DEBUG] Starting new HTTPS connection (3): piston-data.mojang.com:443
-2025-11-12 19:08:43,570 [DEBUG] Starting new HTTPS connection (2): piston-data.mojang.com:443
-2025-11-12 19:08:43,572 [DEBUG] Starting new HTTPS connection (4): piston-data.mojang.com:443
-2025-11-12 19:08:43,573 [DEBUG] Starting new HTTPS connection (5): piston-data.mojang.com:443
-2025-11-12 19:08:43,574 [DEBUG] Starting new HTTPS connection (9): piston-data.mojang.com:443
-2025-11-12 19:08:43,573 [DEBUG] Starting new HTTPS connection (7): piston-data.mojang.com:443
-2025-11-12 19:08:43,575 [DEBUG] Starting new HTTPS connection (11): piston-data.mojang.com:443
-2025-11-12 19:08:43,573 [DEBUG] Starting new HTTPS connection (6): piston-data.mojang.com:443
-2025-11-12 19:08:43,574 [DEBUG] Starting new HTTPS connection (10): piston-data.mojang.com:443
-2025-11-12 19:08:43,574 [DEBUG] Starting new HTTPS connection (8): piston-data.mojang.com:443
-2025-11-12 19:08:43,575 [DEBUG] Starting new HTTPS connection (12): piston-data.mojang.com:443
-2025-11-12 19:08:43,578 [DEBUG] Starting new HTTPS connection (13): piston-data.mojang.com:443
-2025-11-12 19:08:43,579 [DEBUG] Starting new HTTPS connection (14): piston-data.mojang.com:443
-2025-11-12 19:08:43,579 [DEBUG] Starting new HTTPS connection (15): piston-data.mojang.com:443
-2025-11-12 19:08:43,579 [DEBUG] Starting new HTTPS connection (16): piston-data.mojang.com:443
-2025-11-12 19:08:45,324 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/49e3a9c6ebe454097d7dda88604952e85c89036e/api-ms-win-core-fibers-l1-1-0.dll HTTP/1.1" 200 7286
-2025-11-12 19:08:45,350 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/55aced39cea6769d36ca4fbacc064e1bdce205f3/api-ms-win-core-namedpipe-l1-1-0.dll HTTP/1.1" 200 7399
-2025-11-12 19:08:45,356 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/7abd7530df15c241100e223143c855d9cc891c2c/api-ms-win-core-file-l1-2-0.dll HTTP/1.1" 200 7299
-2025-11-12 19:08:45,357 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/f00325758852dc5a68377d71c4d6830ded2d120d/api-ms-win-core-handle-l1-1-0.dll HTTP/1.1" 200 7315
-2025-11-12 19:08:45,357 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/19d27586702dc13cb282e2f40f7300944e5629f0/api-ms-win-core-datetime-l1-1-0.dll HTTP/1.1" 200 7262
-2025-11-12 19:08:45,380 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/d2383b0da07ec21c15834b00a13d7b4925868acd/api-ms-win-core-console-l1-1-0.dll HTTP/1.1" 200 7424
-2025-11-12 19:08:45,384 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/266680ba4648fe745c2e7ad296a61f0be275f1a1/api-ms-win-core-file-l2-1-0.dll HTTP/1.1" 200 7397
-2025-11-12 19:08:45,401 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/05a049f2cb29e724fda3c3930b6e10af9616d2e6/api-ms-win-core-localization-l1-2-0.dll HTTP/1.1" 200 7994
-2025-11-12 19:08:45,405 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/0dfba93cabd323a1fce06d33d2e933ed0b65f4b4/api-ms-win-core-interlocked-l1-1-0.dll HTTP/1.1" 200 7327
-2025-11-12 19:08:45,414 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/d9d8f5cbd4f898ed5e293eef1f9e51f135eeb463/api-ms-win-core-processenvironment-l1-1-0.dll HTTP/1.1" 200 7508
-2025-11-12 19:08:45,421 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/0d97e22ac8a973f9cfad77bcfa84d3790424fc19/api-ms-win-core-file-l1-1-0.dll HTTP/1.1" 200 8131
-2025-11-12 19:08:45,421 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/9e2badadc3629d0a2078af9aef81247a55e5c056/api-ms-win-core-errorhandling-l1-1-0.dll HTTP/1.1" 200 7329
-2025-11-12 19:08:45,436 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/1719b2853d57b3d8656924938ffff34160c1f070/api-ms-win-core-libraryloader-l1-1-0.dll HTTP/1.1" 200 7578
-2025-11-12 19:08:45,449 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/b0463994caedc1f0222b4420355166475c3183d8/api-ms-win-core-processthreads-l1-1-0.dll HTTP/1.1" 200 7898
-2025-11-12 19:08:45,449 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/6d5e52d85f68d73fcc776c576e97aeae76f5972b/api-ms-win-core-console-l1-2-0.dll HTTP/1.1" 200 7452
-2025-11-12 19:08:45,455 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c029c747ac8283c9853ec6c869249b0f05d22ff6/api-ms-win-core-debug-l1-1-0.dll HTTP/1.1" 200 7292
-2025-11-12 19:08:45,465 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/f906285770ea637a1895777a624e62fc6c409723/api-ms-win-core-processthreads-l1-1-1.dll HTTP/1.1" 200 7463
-2025-11-12 19:08:45,466 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/e4bd94860d3693d498d4b8a20987f118aab52b37/api-ms-win-core-profile-l1-1-0.dll HTTP/1.1" 200 7265
-2025-11-12 19:08:45,466 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/55119e8d849c117608c19db733cff3b106e260eb/api-ms-win-core-rtlsupport-l1-1-0.dll HTTP/1.1" 200 7475
-2025-11-12 19:08:45,470 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/22ff947b1bb0359ef255e03fe2482a6dc93365b6/api-ms-win-core-memory-l1-1-0.dll HTTP/1.1" 200 7438
-2025-11-12 19:08:45,470 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/03ff9494e9c9abae23cafa5691a34a2364ef9d0e/api-ms-win-core-heap-l1-1-0.dll HTTP/1.1" 200 7438
-2025-11-12 19:08:45,477 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/adfab3a27e93e5a60fdd9effc4524344ba245693/api-ms-win-core-synch-l1-1-0.dll HTTP/1.1" 200 7756
-2025-11-12 19:08:45,478 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/6a006b7fa569858b91fe3f62dc2a1ad1425564c0/api-ms-win-core-string-l1-1-0.dll HTTP/1.1" 200 7335
-2025-11-12 19:08:45,488 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/813a2a5a2cdca2e74bb4b3cabbe5aa934bf7dca6/api-ms-win-core-timezone-l1-1-0.dll HTTP/1.1" 200 7433
-2025-11-12 19:08:45,488 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/ffe9c6a5c81ebf55e97dc56f5404600b8ec046f6/api-ms-win-core-synch-l1-2-0.dll HTTP/1.1" 200 7503
-2025-11-12 19:08:45,489 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/3b76460295d1019c4b8df0ce26fb920c6af88fec/api-ms-win-core-sysinfo-l1-1-0.dll HTTP/1.1" 200 7567
-2025-11-12 19:08:45,501 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/e6c2cf63af99069e36f86f886284f38456b1a81a/api-ms-win-core-util-l1-1-0.dll HTTP/1.1" 200 7292
-2025-11-12 19:08:45,501 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/5c1157dc1fa888d4e74d0739c7102b261bad8d22/api-ms-win-crt-conio-l1-1-0.dll HTTP/1.1" 200 7545
-2025-11-12 19:08:45,513 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/559b93889e2a0e2d547bd644c9070383e84d228d/api-ms-win-crt-convert-l1-1-0.dll HTTP/1.1" 200 8332
-2025-11-12 19:08:45,527 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/9850a7f36a90725adb8bf23868f9bb671edbea9d/api-ms-win-crt-environment-l1-1-0.dll HTTP/1.1" 200 7425
-2025-11-12 19:08:45,527 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/9c19a9d0a9fdefafab725130178a2417af0d5d8b/api-ms-win-crt-filesystem-l1-1-0.dll HTTP/1.1" 200 7900
-2025-11-12 19:08:45,528 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c2d76c6dd05cd877c21b634cdd18b3f0c02a319a/api-ms-win-crt-heap-l1-1-0.dll HTTP/1.1" 200 7555
-2025-11-12 19:08:45,556 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/0252032e7f427d8558501b74db701d6e5b07934d/api-ms-win-crt-process-l1-1-0.dll HTTP/1.1" 200 7569
-2025-11-12 19:08:45,557 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/1fd06d15dbe1a6dbab6153cd059d2832888ed39d/api-ms-win-crt-locale-l1-1-0.dll HTTP/1.1" 200 7534
-2025-11-12 19:08:45,563 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/d18a8463130487a0e6092c8d03b58313ba45a97b/api-ms-win-crt-runtime-l1-1-0.dll HTTP/1.1" 200 8543
-2025-11-12 19:08:45,564 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/eeafbdb607c85d00c80836401086eb57aa4ae581/api-ms-win-crt-stdio-l1-1-0.dll HTTP/1.1" 200 8747
-2025-11-12 19:08:45,564 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/1f455022fc5b1db619f9a50cb387272bd65c3066/attach.dll HTTP/1.1" 200 8088
-2025-11-12 19:08:45,564 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/3a9734be9932324231645b246f2fd1e73860b374/api-ms-win-crt-math-l1-1-0.dll HTTP/1.1" 200 9459
-2025-11-12 19:08:45,565 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/b695946fff28037d5b40b3f210ec52dbcdffabfc/api-ms-win-crt-utility-l1-1-0.dll HTTP/1.1" 200 7558
-2025-11-12 19:08:45,567 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/ca5c2fb60534f6a1cdaf56b82a7ede3780fe95af/awt.dll HTTP/1.1" 200 462836
-2025-11-12 19:08:45,568 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/d51c8acfbbe9c53256d187b07b10e21dddf38d6d/api-ms-win-crt-time-l1-1-0.dll HTTP/1.1" 200 7960
-2025-11-12 19:08:45,568 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/2bcf5ee5ca2ba889722d90690f6d6587b1848088/api-ms-win-crt-private-l1-1-0.dll HTTP/1.1" 200 17496
-2025-11-12 19:08:45,568 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/8278bf42c74e61e141b734e9d20a0019e2892ea5/api-ms-win-crt-multibyte-l1-1-0.dll HTTP/1.1" 200 8958
-2025-11-12 19:08:45,568 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/7283bb543afbf68b43efb353ba554c1044ea8550/api-ms-win-crt-string-l1-1-0.dll HTTP/1.1" 200 8744
-2025-11-12 19:08:45,584 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/ba4c5522a0a6854d0e5e3d4598a32c07ee55f597/extnet.dll HTTP/1.1" 200 5551
-2025-11-12 19:08:45,588 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/7c702cabc6d4ea6732d252aeda1d9a92bfb581d0/dt_socket.dll HTTP/1.1" 200 11739
-2025-11-12 19:08:45,588 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/8240daa361e100685e5c607241b460115ef1edac/dt_shmem.dll HTTP/1.1" 200 11616
-2025-11-12 19:08:45,600 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/7a5a00cd66b6f9494667b89e7f93ca0743f53b0d/fontmanager.dll HTTP/1.1" 200 295417
-2025-11-12 19:08:45,632 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/a5472cdebfe8f50a0f89c314ced2a668d984a8f8/jaas.dll HTTP/1.1" 200 7260
-2025-11-12 19:08:45,632 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/3da1075c3d0b2ca0e5bf4127fcaf1fe801c96ada/freetype.dll HTTP/1.1" 200 248418
-2025-11-12 19:08:45,643 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/57830e7cb23e2f5160282a2f9559566e6897dbd3/jabswitch.exe HTTP/1.1" 200 12840
-2025-11-12 19:08:45,643 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/95d22e859257dab40c73271faa0aba77ac9bb031/instrument.dll HTTP/1.1" 200 17997
-2025-11-12 19:08:45,644 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/48c168c60de081e245cf55f2cbbe578d84d1eeed/jarsigner.exe HTTP/1.1" 200 5297
-2025-11-12 19:08:45,645 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/7133ce6922fda39c420057bd1ebe9d01e42f34c7/jar.exe HTTP/1.1" 200 5280
-2025-11-12 19:08:45,647 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/75555fd88a9b4ce81b8bc2f7eb88840180a46ba3/j2pcsc.dll HTTP/1.1" 200 6578
-2025-11-12 19:08:45,659 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/effc3a17602a67d6aeb2ce62059a9ca08e6fbd3f/jaccessinspector.exe HTTP/1.1" 200 24846
-2025-11-12 19:08:45,659 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/9878bfa040d0f58ba96fcc567bde55f9828937b5/j2pkcs11.dll HTTP/1.1" 200 23375
-2025-11-12 19:08:45,659 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/46ca4b89ca3bd52e7dd350c2f99581606df27ab0/j2gss.dll HTTP/1.1" 200 14232
-2025-11-12 19:08:45,668 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/e017fa476580dacf18c70508de5e3574332817ff/jaccesswalker.exe HTTP/1.1" 200 16936
-2025-11-12 19:08:45,694 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/a2f09bcc2a0e0491f7e6512d14ac0514b9632e25/javac.exe HTTP/1.1" 200 5318
-2025-11-12 19:08:45,698 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/b4d610f2cc9d12d2b9907622eecdc1833d441551/java.exe HTTP/1.1" 200 14407
-2025-11-12 19:08:45,699 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/21b445e5a9eb90694209a2921503472716b87a07/java.dll HTTP/1.1" 200 40690
-2025-11-12 19:08:45,700 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/5a6f447076027da6cdfa2b75366eb135dd6f60dc/javap.exe HTTP/1.1" 200 5287
-2025-11-12 19:08:45,701 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/a9817f26a8fa3fd5367491c67ac3bbe8cf7745e3/javaaccessbridge.dll HTTP/1.1" 200 101057
-2025-11-12 19:08:45,732 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/0a084f054fb9f3cc2c98ee4dbdf45ece3549d5b2/jawt.dll HTTP/1.1" 200 4291
-2025-11-12 19:08:45,735 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/703251df942146ca21408617d1d1eb3a3ae319e3/javadoc.exe HTTP/1.1" 200 5331
-2025-11-12 19:08:45,745 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/047c086019a8e8c622752ebbddf8f5181ad53498/javaw.exe HTTP/1.1" 200 14452
-2025-11-12 19:08:45,747 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/db98f32901d9a0a20b34f7be3912e146d172f00f/javajpeg.dll HTTP/1.1" 200 72657
-2025-11-12 19:08:45,800 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/966171de1d7a9e893ec56bf6762aa50e9101c48d/jconsole.exe HTTP/1.1" 200 5430
-2025-11-12 19:08:45,801 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/7e2e9c23a68e674dbfe4bb032f7c57af832ca2d9/jdb.exe HTTP/1.1" 200 5291
-2025-11-12 19:08:45,802 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/95ce22de7995f735129df65f3afcb74010dfa45e/jcmd.exe HTTP/1.1" 200 5284
-2025-11-12 19:08:45,802 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/6105267d67255f1352ce856d4146f894e2a83301/jdeprscan.exe HTTP/1.1" 200 5295
-2025-11-12 19:08:45,815 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/43801f14251555deee3142060680086eaf95e8e1/jfr.exe HTTP/1.1" 200 5283
-2025-11-12 19:08:45,818 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/3a8714f96b8a3bb15430e89c5e31cf826844cbe0/jdeps.exe HTTP/1.1" 200 5282
-2025-11-12 19:08:45,821 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/50c4f8582e1421b95310a21e2c6a6946d628fc42/jdwp.dll HTTP/1.1" 200 88103
-2025-11-12 19:08:45,828 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/a29201083b5ec187e1083f0bc49211711f374a2e/jhsdb.exe HTTP/1.1" 200 5294
-2025-11-12 19:08:45,829 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/6e4cb7e677b4aa48b8e816ebb85811e3c949d2cb/jimage.dll HTTP/1.1" 200 10322
-2025-11-12 19:08:45,839 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/1c8ecdfd658ecccd1e2ce66dd6afa5fad0863775/jimage.exe HTTP/1.1" 200 5286
-2025-11-12 19:08:45,874 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/bf1751456dfa20b6db7fe262ae0ba05ae1b5f103/jmod.exe HTTP/1.1" 200 5283
-2025-11-12 19:08:45,875 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/e57761f90615c1a51cec945267e6f8d69d25d092/jmap.exe HTTP/1.1" 200 5331
-2025-11-12 19:08:45,878 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/dca34d9b2a404752f0f20f8368fdb86641b9e6c7/jinfo.exe HTTP/1.1" 200 5333
-2025-11-12 19:08:45,879 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/4ca1e7fcef01ead36f5cf889308a46690b3ed1ea/jlink.exe HTTP/1.1" 200 5307
-2025-11-12 19:08:45,886 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/791fd3d454830834c9fe23a461ea69fc478c8ce1/jpackage.exe HTTP/1.1" 200 5289
-2025-11-12 19:08:45,890 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/6143cb459201b702ded8ce35b0a565a79c104546/jli.dll HTTP/1.1" 200 42310
-2025-11-12 19:08:45,910 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/8fa07301202f15829c0df3358a910f105de3ab99/jpackage.dll HTTP/1.1" 200 45851
-2025-11-12 19:08:45,917 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/f193fbc8e6b6fc6d43ac9f8f0015eb7c382664f1/jshell.exe HTTP/1.1" 200 5308
-2025-11-12 19:08:45,917 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/ac7ac8282f1c3a46a2d4f20b9bf7aa1b92abffa9/jps.exe HTTP/1.1" 200 5282
-2025-11-12 19:08:45,917 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/084218945edb3476322430082647b2f125560ee9/jrunscript.exe HTTP/1.1" 200 5332
-2025-11-12 19:08:45,963 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/2e78de12dfbdb725c9fcfb6bd5691e6dff92f236/jwebserver.exe HTTP/1.1" 200 5302
-2025-11-12 19:08:45,966 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/a27c5606c7281355fadbc559dfa48cfd0b43cfff/jstack.exe HTTP/1.1" 200 5341
-2025-11-12 19:08:45,966 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/79ccdd841382fd85a7cc0d0898c9e5e92123952a/jstat.exe HTTP/1.1" 200 5282
-2025-11-12 19:08:45,970 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/116e1230cd7577180e795ae5a73c5f4aeda9562b/jstatd.exe HTTP/1.1" 200 5289
-2025-11-12 19:08:45,975 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/6a25822a5a59daef730f616ed34ed03d1d6755ba/jsound.dll HTTP/1.1" 200 21036
-2025-11-12 19:08:45,975 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/680d00ac04da00412fd6e8afa95f88f8aded624c/jsvml.dll HTTP/1.1" 200 261350
-2025-11-12 19:08:46,008 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/6d78c00e8af3fa61fee259950fcc16aecb7d1d2e/kinit.exe HTTP/1.1" 200 5301
-2025-11-12 19:08:46,008 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/95e09435996c838787734acd60dec83e09780999/ktab.exe HTTP/1.1" 200 5293
-2025-11-12 19:08:46,008 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c7646d67a0df89524cdb883d9f031deb0ee5bd3c/keytool.exe HTTP/1.1" 200 5302
-2025-11-12 19:08:46,008 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/b418a1748d888bd30791769dd26a06ec9c4e07c1/klist.exe HTTP/1.1" 200 5298
-2025-11-12 19:08:46,014 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/57b42d7cc41234bdadb7f3803503fa7ace0bb6a1/lcms.dll HTTP/1.1" 200 97766
-2025-11-12 19:08:46,017 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/34e91610497a927507b3c9e84610398c2f9bf6f5/le.dll HTTP/1.1" 200 8434
-2025-11-12 19:08:46,033 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/39a775e601ebcf7d459cec44fd1a11d1a8d6b73e/management_agent.dll HTTP/1.1" 200 5757
-2025-11-12 19:08:46,034 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/01c13d5ffcbdc08c7f9a6613f27b188f2ff4b9d7/management_ext.dll HTTP/1.1" 200 10896
-2025-11-12 19:08:46,043 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/3d7a0466d7c6331e020e4f77dd808445a54e3eb0/management.dll HTTP/1.1" 200 6536
-2025-11-12 19:08:46,047 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/b77baf2acd2f9531f2c81754c824dd1fe13d0ae7/mlib_image.dll HTTP/1.1" 200 152034
-2025-11-12 19:08:46,091 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/6bc8dbf0cbacc23c8d18b30cd2b3565df83581bb/saproc.dll HTTP/1.1" 200 11290
-2025-11-12 19:08:46,094 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/ff887ec58df85b1cf90ae9650ae6cc57f0f13d22/rmi.dll HTTP/1.1" 200 4127
-2025-11-12 19:08:46,099 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/2c393a4190a6e10bed6904537a5d5277d133ced3/net.dll HTTP/1.1" 200 20617
-2025-11-12 19:08:46,099 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/216ad7da2c58459eab2be7d3b55b8df6684a3671/serialver.exe HTTP/1.1" 200 5291
-2025-11-12 19:08:46,100 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/f1d0b6566f773960c799eb854c2655251dfe5a56/rmiregistry.exe HTTP/1.1" 200 5325
-2025-11-12 19:08:46,101 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/a40a032951218267378eb318a88d5421b0b7567a/nio.dll HTTP/1.1" 200 26376
-2025-11-12 19:08:46,104 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/285d365ce6c33177558ea1d51856a414ab074ac3/prefs.dll HTTP/1.1" 200 5829
-2025-11-12 19:08:46,105 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/f587847991a9e53258b746ac0664682dc27aab53/msvcp140.dll HTTP/1.1" 200 140938
-2025-11-12 19:08:46,111 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/a06f7cfcb94b2c968818b8d11e1e841d556507cb/jvm.dll HTTP/1.1" 200 3859951
-2025-11-12 19:08:46,118 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/634a4ba52614e63096d0507e2205792cd58166bb/sunmscapi.dll HTTP/1.1" 200 15064
-2025-11-12 19:08:46,122 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/e376b8ce3a6e45b2988efb7a6574b1220fc8fe79/splashscreen.dll HTTP/1.1" 200 107518
-2025-11-12 19:08:46,137 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/25897a06c0581fb84536455f2fed54e4b3d2bfa6/syslookup.dll HTTP/1.1" 200 5454
-2025-11-12 19:08:46,139 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/7d19c7c88346b878c920ebd10e4357b376439b68/sspi_bridge.dll HTTP/1.1" 200 14679
-2025-11-12 19:08:46,181 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/5f17973271f7e77429fc34c781a648756904067a/ucrtbase.dll HTTP/1.1" 200 410886
-2025-11-12 19:08:46,186 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/0d7b14c7375523120317708e5b930d2e0ee1bec2/vcruntime140.dll HTTP/1.1" 200 51127
-2025-11-12 19:08:46,207 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/2c4c07471fad1c77ef5856d18c64b33e4bb76498/jmxremote.password.template HTTP/1.1" 200 2228
-2025-11-12 19:08:46,209 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/eb6ce145b9eab485a183c6e78e047f0225e0fe00/logging.properties HTTP/1.1" 200 1008
-2025-11-12 19:08:46,209 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/ca1986d5aec894b6d6281ee33c91cf86a14d7276/jmxremote.access HTTP/1.1" 200 1418
-2025-11-12 19:08:46,219 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/a4331c5511faf56804c9e48f8a740c9e36777e37/w2k_lsa_auth.dll HTTP/1.1" 200 8449
-2025-11-12 19:08:46,223 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/6ec4c7eebdcd71e478b0c82ca41e89c92978986d/vcruntime140_1.dll HTTP/1.1" 200 22566
-2025-11-12 19:08:46,228 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/0b05127e3f2655d0a385e26fa71fb520e81cd09b/jaxp.properties HTTP/1.1" 200 2402
-2025-11-12 19:08:46,244 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/aec9a86969aaed62906aeb9a83a657382123d0aa/verify.dll HTTP/1.1" 200 20538
-2025-11-12 19:08:46,246 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/1e3b072ed90e84777db56a336e21bb1082b775d3/windowsaccessbridge-64.dll HTTP/1.1" 200 19439
-2025-11-12 19:08:46,263 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/5c357ee67570438ade7b892a08856deeca2e99f4/zip.dll HTTP/1.1" 200 40358
-2025-11-12 19:08:46,300 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/f6ba46124076c0e9856bc36384b45cfae95c11f3/management.properties HTTP/1.1" 200 3780
-2025-11-12 19:08:46,300 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/4386a67d7a3ab52050aba807fbc1e2cfd9f84c51/net.properties HTTP/1.1" 200 2626
-2025-11-12 19:08:46,312 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/f0eb567d9ac1df616776fed4f5682ff230a64c95/README.txt HTTP/1.1" 200 None
-2025-11-12 19:08:46,317 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c409094410d77932e875a33fe050367bf2dfd541/java.security HTTP/1.1" 200 16995
-2025-11-12 19:08:46,323 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/551f03120a77e725a37a6911b5fc1a587ce81b38/default_local.policy HTTP/1.1" 200 233
-2025-11-12 19:08:46,323 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/f3f974d3f6245c50804dcc47173aa29d4d7f0e2c/default_US_export.policy HTTP/1.1" 200 146
-2025-11-12 19:08:46,383 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/f3f974d3f6245c50804dcc47173aa29d4d7f0e2c/default_US_export.policy HTTP/1.1" 200 146
-2025-11-12 19:08:46,384 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/b29e6e23900bff08f5de8e3f9b71a37bb9f59d96/exempt_local.policy HTTP/1.1" 200 264
-2025-11-12 19:08:46,393 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/3b5f7e4ec437d79048af35094290577f483b3fe1/sound.properties HTTP/1.1" 200 473
-2025-11-12 19:08:46,394 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/ad2509631ed743c882999ac1200fd5fb8a593639/default_local.policy HTTP/1.1" 200 193
-2025-11-12 19:08:46,407 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/353d632b48754d8f87aeca4c25cb76362d0fbae2/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 1042
-2025-11-12 19:08:46,408 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/218ece616945da67657df3812297b7dc428cf43e/ASSEMBLY_EXCEPTION HTTP/1.1" 200 803
-2025-11-12 19:08:46,409 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/3a80edf6a53feb3b27360f0f9ed159db84c5df9a/LICENSE HTTP/1.1" 200 6842
-2025-11-12 19:08:46,413 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/44280de11df1d5c0fc2126a6306386ed70d24d56/aes.md HTTP/1.1" 200 812
-2025-11-12 19:08:46,418 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/ee671ee3890a7b0c6e4bbc169c661abf787af3aa/asm.md HTTP/1.1" 200 908
-2025-11-12 19:08:46,418 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/df7528dbff2be16f68a2c80459a23f4be86bfc92/c-libutl.md HTTP/1.1" 200 849
-2025-11-12 19:08:46,478 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/b7171085dcb1a51953032708554efeea9bee0f2e/icu.md HTTP/1.1" 200 7438
-2025-11-12 19:08:46,480 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/37a3cbf0ad54df74ec6d57e23188ba833265b26c/unicode.md HTTP/1.1" 200 3584
-2025-11-12 19:08:46,481 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/37c3818d12c860428318145e35adccc57271322f/wepoll.md HTTP/1.1" 200 832
-2025-11-12 19:08:46,482 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/91ddd479de5c0d911047f5eed84490a1f433a619/cldr.md HTTP/1.1" 200 3616
-2025-11-12 19:08:46,482 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/1adcf33fc9513c40be3a8ff4cf4c5cd8780e85f3/siphash.md HTTP/1.1" 200 3277
-2025-11-12 19:08:46,485 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/705182f1334978bd79b960d99816d64c1b103018/public_suffix.md HTTP/1.1" 200 5492
-2025-11-12 19:08:46,486 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:46,488 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/245c8863592e75d1b189cb0137538e2cd9a85ee8/zlib.md HTTP/1.1" 200 617
-2025-11-12 19:08:46,489 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:46,488 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:46,487 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:46,488 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:46,495 [WARNING] Connection pool is full, discarding connection: piston-data.mojang.com. Connection pool size: 10
-2025-11-12 19:08:46,496 [WARNING] Connection pool is full, discarding connection: piston-data.mojang.com. Connection pool size: 9
-2025-11-12 19:08:46,512 [DEBUG] Starting new HTTPS connection (17): piston-data.mojang.com:443
-2025-11-12 19:08:46,514 [DEBUG] Starting new HTTPS connection (18): piston-data.mojang.com:443
-2025-11-12 19:08:46,590 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/d175c6fbf7bfa3f2f64b38a9a530bdc1cb79d435/jpeg.md HTTP/1.1" 200 1668
-2025-11-12 19:08:46,591 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/9d0b49799e4c554b76494f12576e52c53a83071d/harfbuzz.md HTTP/1.1" 200 1725
-2025-11-12 19:08:46,591 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/d0d10c604b36d2904e077406fbf58dd0d076b8af/java.policy HTTP/1.1" 200 559
-2025-11-12 19:08:46,592 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/fd1eacb526914501399d5645ee23dba9c1006ffd/mesa3d.md HTTP/1.1" 200 1282
-2025-11-12 19:08:46,590 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/6fc5ebbee24bd5639a0ec7f6503c9502eaa48bdc/lcms.md HTTP/1.1" 200 1513
-2025-11-12 19:08:46,592 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/bc14d7400989cad46c7b3986dbf5cc7481a64627/giflib.md HTTP/1.1" 200 1026
-2025-11-12 19:08:46,593 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:46,600 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/cad28edeb7c3e3a449442651baf8d94df9cfc83b/freetype.md HTTP/1.1" 200 10292
-2025-11-12 19:08:46,601 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:46,601 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:46,602 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:46,603 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/7a7e547452ee1c72e8b0d96dccbe315f62d5b564/colorimaging.md HTTP/1.1" 200 167
-2025-11-12 19:08:46,654 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:46,655 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:46,658 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:46,689 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:46,690 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:46,689 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:46,690 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:46,690 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:46,690 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:46,689 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:46,691 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:46,691 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:46,692 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:46,708 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:46,712 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:46,712 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:46,738 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:46,738 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:46,744 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:46,745 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:46,745 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:46,744 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:46,761 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:46,762 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:46,762 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:46,762 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:46,762 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:46,763 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:46,763 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:46,813 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:46,816 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:46,816 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:46,817 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:46,817 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:46,818 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:46,818 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:46,818 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:46,818 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:46,826 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:46,826 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:46,827 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:46,827 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:46,867 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:46,876 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:46,881 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:46,881 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:46,888 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:46,889 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:46,889 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:46,889 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:46,890 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:46,891 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/a81cef2540e207a8ac623e48e544558ebd28b608/santuario.md HTTP/1.1" 200 4073
-2025-11-12 19:08:46,891 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/ad2e32109d86e81f36004cfdae979d4f71a8c796/bcel.md HTTP/1.1" 200 3940
-2025-11-12 19:08:46,891 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:46,891 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:46,938 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/e2d6961a2748cb3d0c2bea20c38ad6d66b63ac99/jcup.md HTTP/1.1" 200 823
-2025-11-12 19:08:46,939 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/5e1deb996f36ea64340e19d66302fe385bd65fa5/xalan.md HTTP/1.1" 200 4638
-2025-11-12 19:08:46,941 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:46,940 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:46,941 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/21e428ef389d7544f9e8e70aae958a230115b3e2/xerces.md HTTP/1.1" 200 4083
-2025-11-12 19:08:46,941 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:46,942 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:46,942 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:46,940 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/55b0696ed1472b930e85258742c5d1e76d7f262d/dom.md HTTP/1.1" 200 1841
-2025-11-12 19:08:46,942 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:46,942 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:46,942 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:46,942 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:46,949 [WARNING] Connection pool is full, discarding connection: piston-data.mojang.com. Connection pool size: 10
-2025-11-12 19:08:46,951 [WARNING] Connection pool is full, discarding connection: piston-data.mojang.com. Connection pool size: 10
-2025-11-12 19:08:46,949 [WARNING] Connection pool is full, discarding connection: piston-data.mojang.com. Connection pool size: 10
-2025-11-12 19:08:46,964 [DEBUG] Starting new HTTPS connection (19): piston-data.mojang.com:443
-2025-11-12 19:08:46,965 [DEBUG] Starting new HTTPS connection (20): piston-data.mojang.com:443
-2025-11-12 19:08:46,965 [DEBUG] Starting new HTTPS connection (21): piston-data.mojang.com:443
-2025-11-12 19:08:46,997 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:46,997 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,019 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,020 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/da6b3e42f0b9c4f54325bced6d2d68708ddf8861/pkcs11wrapper.md HTTP/1.1" 200 1095
-2025-11-12 19:08:47,021 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,021 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/b33cf36f8cf30ca3bdec4700ce29c356c3491ab5/pkcs11cryptotoken.md HTTP/1.1" 200 1847
-2025-11-12 19:08:47,021 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,021 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,021 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,022 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,064 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,064 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,107 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,108 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,108 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,108 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,108 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/2b251aaa4a5a574d1f18ab541bd691d353951667/dynalink.md HTTP/1.1" 200 858
-2025-11-12 19:08:47,109 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,114 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,119 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,121 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,122 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,168 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,169 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/7e38e02758f4c035da9c8abcd84ce2796f41adbc/libpng.md HTTP/1.1" 200 2578
-2025-11-12 19:08:47,169 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,172 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,174 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,172 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,173 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,173 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,174 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,172 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,174 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,174 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,180 [WARNING] Connection pool is full, discarding connection: piston-data.mojang.com. Connection pool size: 10
-2025-11-12 19:08:47,191 [DEBUG] Starting new HTTPS connection (22): piston-data.mojang.com:443
-2025-11-12 19:08:47,248 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,248 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,250 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,250 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,250 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,254 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/cb485c466b85af80c192c9b9f8821341d637651e/jopt-simple.md HTTP/1.1" 200 734
-2025-11-12 19:08:47,255 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,254 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/86f50b300c7a75090f5715fefecbd349ab44b6b6/jline.md HTTP/1.1" 200 907
-2025-11-12 19:08:47,255 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,256 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,256 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,317 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,317 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,318 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,318 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,319 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,319 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,319 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,320 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,318 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,320 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,321 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,323 [WARNING] Connection pool is full, discarding connection: piston-data.mojang.com. Connection pool size: 10
-2025-11-12 19:08:47,335 [DEBUG] Starting new HTTPS connection (23): piston-data.mojang.com:443
-2025-11-12 19:08:47,386 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,387 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,386 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,386 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,386 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,388 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,389 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/0cb821c4f801368db0ecfcc7fbc6f0cca97bd306/jquery.md HTTP/1.1" 200 735
-2025-11-12 19:08:47,388 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,388 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,394 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/97427d846aa9d2860a234ebce0dce2606c106e0d/jqueryUI.md HTTP/1.1" 200 1087
-2025-11-12 19:08:47,463 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,464 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,464 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,464 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,464 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,464 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,465 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,465 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,465 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,465 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,516 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,517 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,524 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,526 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,525 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,525 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,525 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,526 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,525 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,528 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,576 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,578 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,585 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/6ed7d0f5e2cfa09b86a78edb860e7d8824355fef/thaidict.md HTTP/1.1" 200 818
-2025-11-12 19:08:47,585 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/9e9327daec3e42181bad78152bad8e1050c8d5d9/cldr.md HTTP/1.1" 200 32
-2025-11-12 19:08:47,586 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,585 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,586 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,586 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,587 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,586 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,638 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,638 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,638 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,638 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,638 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,638 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,640 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,645 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,646 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,645 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,689 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,689 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,693 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,701 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,702 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,701 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,701 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,701 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,702 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,701 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,728 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,728 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,738 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,744 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,745 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,749 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,758 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,761 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,762 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,762 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,762 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,762 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,762 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,768 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,768 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,778 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,798 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,798 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,798 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,816 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,816 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,817 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,817 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,817 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,818 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:47,819 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,819 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,819 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/84d2102ad171863db04e7ee22a259d1f6c5de4a5/ADDITIONAL_LICENSE_INFO HTTP/1.1" 200 48
-2025-11-12 19:08:47,838 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/92136808c46a9082bdda0b806d64a06a20aa881f/classlist HTTP/1.1" 200 9453
-2025-11-12 19:08:47,848 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/e3b282fb54e22e52cede4bc673a9ad61693c02c2/fontconfig.bfc HTTP/1.1" 200 1590
-2025-11-12 19:08:47,848 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/f595e5bc4cf59df376df78de7eaee9a0464a2e50/fontconfig.properties.src HTTP/1.1" 200 2667
-2025-11-12 19:08:47,858 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/e3d754c4ee9982962695054583b633fc4466dcae/ct.sym HTTP/1.1" 200 4988401
-2025-11-12 19:08:47,861 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/12976a6c2b227cbac58969c1455444596c894656/LICENSE HTTP/1.1" 200 32
-2025-11-12 19:08:47,879 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c5a940d2dee8e7bfc01a87d585ddca420d37e226/jvm.cfg HTTP/1.1" 200 29
-2025-11-12 19:08:47,879 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c42116ff3ca50ad9cdb6022f0cbba4a8f4fe878d/default.jfc HTTP/1.1" 200 3487
-2025-11-12 19:08:47,879 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/0f55391f6252ab5195322a37df22cfa84936b502/profile.jfc HTTP/1.1" 200 3476
-2025-11-12 19:08:47,884 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/22667d150a852dff484dc78f0389455d6abe575a/psfont.properties.ja HTTP/1.1" 200 1254
-2025-11-12 19:08:47,884 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/00476bbfb53971eb49229a0204bd557a63c18fba/psfontj2d.properties HTTP/1.1" 200 2783
-2025-11-12 19:08:47,885 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/cbd0e824f29a5da7d8e121217c3e8802a8b991bc/blacklisted.certs HTTP/1.1" 200 1459
-2025-11-12 19:08:47,890 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/e6572ec544cb4f25fe82f8fc4b14bd4fb3198edc/jrt-fs.jar HTTP/1.1" 200 110116
-2025-11-12 19:08:47,891 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/e8fba4c7ae588fdc6562f4e02d638b4d5e8ac524/modules HTTP/1.1" 200 61880399
-2025-11-12 19:08:47,893 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/26380fc958caaab73a0619cec5cdfdb03b6fd3e5/jawt.lib HTTP/1.1" 200 473
-2025-11-12 19:08:47,895 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/4ca1310237ec2fb05c35a50f58b21efc28e54b7e/default.policy HTTP/1.1" 200 1714
-2025-11-12 19:08:47,916 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/6f5fd8dc6d26b32d7496ca0fa342d7573317d372/jvm.lib HTTP/1.1" 200 124853
-2025-11-12 19:08:47,941 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/98456763a4bf284d471ba5de1874727387f19fc7/cacerts HTTP/1.1" 200 116579
-2025-11-12 19:08:47,943 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/a3b486d8d3bc59c51b632ac7bad9c5ab4691fbad/public_suffix_list.dat HTTP/1.1" 200 73642
-2025-11-12 19:08:47,967 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/5bcb1355c5f1e2cddf3c20f40feeccc89a562369/release HTTP/1.1" 200 485
-2025-11-12 19:08:47,976 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/e376455c622b21c07c9e91b6a98fd87144638e48/tzmappings HTTP/1.1" 200 4290
-2025-11-12 19:08:47,984 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/4c0dae7620057e1c1c8955787059436cb2a13ad2/tzdb.dat HTTP/1.1" 200 31814
-2025-11-12 19:08:48,042 [DEBUG] https://piston-data.mojang.com:443 "GET /v1/objects/c80e4bab46e34d02826eab226a4441d0970f2aba/ASSEMBLY_EXCEPTION HTTP/1.1" 200 43
-2025-11-12 19:08:48,043 [WARNING] Connection pool is full, discarding connection: piston-data.mojang.com. Connection pool size: 10
-2025-11-12 19:08:48,081 [WARNING] Connection pool is full, discarding connection: piston-data.mojang.com. Connection pool size: 10
-2025-11-12 19:08:48,115 [WARNING] Connection pool is full, discarding connection: piston-data.mojang.com. Connection pool size: 10
-2025-11-12 19:08:48,133 [WARNING] Connection pool is full, discarding connection: piston-data.mojang.com. Connection pool size: 10
-2025-11-12 19:08:49,406 [WARNING] Connection pool is full, discarding connection: piston-data.mojang.com. Connection pool size: 10
-2025-11-12 19:08:59,600 [WARNING] Connection pool is full, discarding connection: piston-data.mojang.com. Connection pool size: 10
-2025-12-21 22:55:22,017 [DEBUG] Initializing WebSocket
-2025-12-21 22:55:22,019 [DEBUG] Validating WebSocket request
-2025-12-21 22:55:22,022 [INFO] 127.0.0.1 - - [2025-12-21 22:55:22] "GET /ui.html HTTP/1.1" 200 3904 0.004300
-2025-12-21 22:55:22,052 [DEBUG] Initializing WebSocket
-2025-12-21 22:55:22,053 [DEBUG] Validating WebSocket request
-2025-12-21 22:55:22,054 [INFO] 127.0.0.1 - - [2025-12-21 22:55:22] "GET /eel.js HTTP/1.1" 200 6066 0.001094
-2025-12-21 22:55:22,055 [DEBUG] Initializing WebSocket
-2025-12-21 22:55:22,056 [DEBUG] Validating WebSocket request
-2025-12-21 22:55:22,061 [INFO] 127.0.0.1 - - [2025-12-21 22:55:22] "GET /ui.css HTTP/1.1" 200 10939 0.005237
-2025-12-21 22:55:22,062 [DEBUG] Initializing WebSocket
-2025-12-21 22:55:22,062 [DEBUG] Validating WebSocket request
-2025-12-21 22:55:22,064 [INFO] 127.0.0.1 - - [2025-12-21 22:55:22] "GET /ui.js HTTP/1.1" 200 14799 0.002168
-2025-12-21 22:55:22,128 [DEBUG] Initializing WebSocket
-2025-12-21 22:55:22,129 [DEBUG] Validating WebSocket request
-2025-12-21 22:55:22,188 [INFO] 127.0.0.1 - - [2025-12-21 22:55:22] "GET /art/background.png HTTP/1.1" 200 4519303 0.059905
-2025-12-21 22:55:22,349 [DEBUG] Initializing WebSocket
-2025-12-21 22:55:22,349 [DEBUG] Validating WebSocket request
-2025-12-21 22:55:22,354 [INFO] 127.0.0.1 - - [2025-12-21 22:55:22] "GET /art/java.ico HTTP/1.1" 200 4021 0.005264
-2025-12-21 22:55:22,441 [DEBUG] Initializing WebSocket
-2025-12-21 22:55:22,441 [DEBUG] Validating WebSocket request
-2025-12-21 22:55:22,441 [DEBUG] Attempting to upgrade connection
-2025-12-21 22:55:22,441 [DEBUG] WebSocket request accepted, switching protocols
-2025-12-21 22:56:46,087 [DEBUG] Starting new HTTPS connection (1): launchermeta.mojang.com:443
-2025-12-21 22:56:46,862 [DEBUG] https://launchermeta.mojang.com:443 "GET /v1/products/java-runtime/2ec0cc96c44e5a76b9c8b7c39df7210883d12871/all.json HTTP/1.1" 200 None
-2025-12-21 22:56:46,866 [DEBUG] Starting new HTTPS connection (1): piston-meta.mojang.com:443
-2025-12-21 22:56:47,861 [DEBUG] https://piston-meta.mojang.com:443 "GET /v1/packages/cb4394a27089d19f65d5baa6cf0482c27c3c7865/manifest.json HTTP/1.1" 200 None
-2025-12-21 22:56:55,575 [ERROR] Failed to launch game: module 'eel' has no attribute 'terminal_append'
-2025-12-21 22:58:57,345 [DEBUG] Initializing WebSocket
-2025-12-21 22:58:57,346 [DEBUG] Validating WebSocket request
-2025-12-21 22:58:57,347 [INFO] 127.0.0.1 - - [2025-12-21 22:58:57] "GET /ui.html HTTP/1.1" 200 3904 0.002737
-2025-12-21 22:58:57,378 [DEBUG] Initializing WebSocket
-2025-12-21 22:58:57,378 [DEBUG] Validating WebSocket request
-2025-12-21 22:58:57,379 [INFO] 127.0.0.1 - - [2025-12-21 22:58:57] "GET /eel.js HTTP/1.1" 200 6066 0.001454
-2025-12-21 22:58:57,381 [DEBUG] Initializing WebSocket
-2025-12-21 22:58:57,381 [DEBUG] Validating WebSocket request
-2025-12-21 22:58:57,385 [INFO] 127.0.0.1 - - [2025-12-21 22:58:57] "GET /ui.css HTTP/1.1" 200 10939 0.004529
-2025-12-21 22:58:57,391 [DEBUG] Initializing WebSocket
-2025-12-21 22:58:57,392 [DEBUG] Validating WebSocket request
-2025-12-21 22:58:57,394 [INFO] 127.0.0.1 - - [2025-12-21 22:58:57] "GET /ui.js HTTP/1.1" 200 14842 0.003042
-2025-12-21 22:58:57,423 [DEBUG] Initializing WebSocket
-2025-12-21 22:58:57,423 [DEBUG] Validating WebSocket request
-2025-12-21 22:58:57,480 [INFO] 127.0.0.1 - - [2025-12-21 22:58:57] "GET /art/background.png HTTP/1.1" 200 4519303 0.057639
-2025-12-21 22:58:57,813 [DEBUG] Initializing WebSocket
-2025-12-21 22:58:57,814 [DEBUG] Validating WebSocket request
-2025-12-21 22:58:57,814 [DEBUG] Attempting to upgrade connection
-2025-12-21 22:58:57,814 [DEBUG] WebSocket request accepted, switching protocols
-2025-12-21 22:59:24,645 [DEBUG] Starting new HTTPS connection (1): launchermeta.mojang.com:443
-2025-12-21 22:59:25,482 [DEBUG] https://launchermeta.mojang.com:443 "GET /v1/products/java-runtime/2ec0cc96c44e5a76b9c8b7c39df7210883d12871/all.json HTTP/1.1" 200 None
-2025-12-21 22:59:25,484 [DEBUG] Starting new HTTPS connection (1): piston-meta.mojang.com:443
-2025-12-21 22:59:26,198 [DEBUG] https://piston-meta.mojang.com:443 "GET /v1/packages/cb4394a27089d19f65d5baa6cf0482c27c3c7865/manifest.json HTTP/1.1" 200 None
-2025-12-21 22:59:29,601 [ERROR] Failed to launch game: module 'eel' has no attribute 'terminal_append'
-2025-12-21 23:16:46,022 [DEBUG] Initializing WebSocket
-2025-12-21 23:16:46,022 [DEBUG] Validating WebSocket request
-2025-12-21 23:16:46,025 [INFO] 127.0.0.1 - - [2025-12-21 23:16:46] "GET /ui.html HTTP/1.1" 200 3904 0.003249
-2025-12-21 23:16:46,076 [DEBUG] Initializing WebSocket
-2025-12-21 23:16:46,076 [DEBUG] Validating WebSocket request
-2025-12-21 23:16:46,077 [INFO] 127.0.0.1 - - [2025-12-21 23:16:46] "GET /eel.js HTTP/1.1" 200 6066 0.001410
-2025-12-21 23:16:46,078 [DEBUG] Initializing WebSocket
-2025-12-21 23:16:46,079 [DEBUG] Validating WebSocket request
-2025-12-21 23:16:46,081 [INFO] 127.0.0.1 - - [2025-12-21 23:16:46] "GET /ui.css HTTP/1.1" 200 10939 0.002282
-2025-12-21 23:16:46,089 [DEBUG] Initializing WebSocket
-2025-12-21 23:16:46,089 [DEBUG] Validating WebSocket request
-2025-12-21 23:16:46,091 [INFO] 127.0.0.1 - - [2025-12-21 23:16:46] "GET /ui.js HTTP/1.1" 200 14842 0.002326
-2025-12-21 23:16:46,129 [DEBUG] Initializing WebSocket
-2025-12-21 23:16:46,129 [DEBUG] Validating WebSocket request
-2025-12-21 23:16:46,193 [INFO] 127.0.0.1 - - [2025-12-21 23:16:46] "GET /art/background.png HTTP/1.1" 200 4519303 0.064270
-2025-12-21 23:16:46,534 [DEBUG] Initializing WebSocket
-2025-12-21 23:16:46,534 [DEBUG] Validating WebSocket request
-2025-12-21 23:16:46,534 [DEBUG] Attempting to upgrade connection
-2025-12-21 23:16:46,534 [DEBUG] WebSocket request accepted, switching protocols
-2025-12-21 23:16:49,008 [DEBUG] Starting new HTTPS connection (1): launchermeta.mojang.com:443
-2025-12-21 23:16:49,646 [DEBUG] https://launchermeta.mojang.com:443 "GET /v1/products/java-runtime/2ec0cc96c44e5a76b9c8b7c39df7210883d12871/all.json HTTP/1.1" 200 None
-2025-12-21 23:16:49,648 [DEBUG] Starting new HTTPS connection (1): piston-meta.mojang.com:443
-2025-12-21 23:16:50,270 [DEBUG] https://piston-meta.mojang.com:443 "GET /v1/packages/cb4394a27089d19f65d5baa6cf0482c27c3c7865/manifest.json HTTP/1.1" 200 None
-2025-12-21 23:18:30,044 [DEBUG] Starting new HTTPS connection (1): launchermeta.mojang.com:443
-2025-12-21 23:18:30,784 [DEBUG] https://launchermeta.mojang.com:443 "GET /v1/products/java-runtime/2ec0cc96c44e5a76b9c8b7c39df7210883d12871/all.json HTTP/1.1" 200 None
-2025-12-21 23:18:30,786 [DEBUG] Starting new HTTPS connection (1): piston-meta.mojang.com:443
-2025-12-21 23:18:31,351 [DEBUG] https://piston-meta.mojang.com:443 "GET /v1/packages/cb4394a27089d19f65d5baa6cf0482c27c3c7865/manifest.json HTTP/1.1" 200 None
-2025-12-21 23:19:44,722 [DEBUG] Starting new HTTPS connection (1): launchermeta.mojang.com:443
-2025-12-21 23:19:45,259 [DEBUG] https://launchermeta.mojang.com:443 "GET /v1/products/java-runtime/2ec0cc96c44e5a76b9c8b7c39df7210883d12871/all.json HTTP/1.1" 200 None
-2025-12-21 23:19:45,261 [DEBUG] Starting new HTTPS connection (1): piston-meta.mojang.com:443
-2025-12-21 23:19:45,976 [DEBUG] https://piston-meta.mojang.com:443 "GET /v1/packages/cb4394a27089d19f65d5baa6cf0482c27c3c7865/manifest.json HTTP/1.1" 200 None
-2025-12-21 23:20:14,196 [DEBUG] Starting new HTTPS connection (1): launchermeta.mojang.com:443
-2025-12-21 23:20:14,850 [DEBUG] https://launchermeta.mojang.com:443 "GET /v1/products/java-runtime/2ec0cc96c44e5a76b9c8b7c39df7210883d12871/all.json HTTP/1.1" 200 None
-2025-12-21 23:20:14,852 [DEBUG] Starting new HTTPS connection (1): piston-meta.mojang.com:443
-2025-12-21 23:20:15,569 [DEBUG] https://piston-meta.mojang.com:443 "GET /v1/packages/cb4394a27089d19f65d5baa6cf0482c27c3c7865/manifest.json HTTP/1.1" 200 None
-2025-12-21 23:21:55,302 [DEBUG] Starting new HTTPS connection (1): launchermeta.mojang.com:443
-2025-12-21 23:21:55,924 [DEBUG] https://launchermeta.mojang.com:443 "GET /v1/products/java-runtime/2ec0cc96c44e5a76b9c8b7c39df7210883d12871/all.json HTTP/1.1" 200 None
-2025-12-21 23:21:55,926 [DEBUG] Starting new HTTPS connection (1): piston-meta.mojang.com:443
-2025-12-21 23:21:56,567 [DEBUG] https://piston-meta.mojang.com:443 "GET /v1/packages/cb4394a27089d19f65d5baa6cf0482c27c3c7865/manifest.json HTTP/1.1" 200 None
-2025-12-21 23:22:26,803 [DEBUG] Closed WebSocket
-2025-12-21 23:22:26,804 [DEBUG] Failed to write closing frame -> closing socket
-2025-12-21 23:22:26,804 [DEBUG] Closed WebSocket
-2025-12-22 20:40:14,023 [DEBUG] Initializing WebSocket
-2025-12-22 20:40:14,024 [DEBUG] Validating WebSocket request
-2025-12-22 20:40:14,042 [INFO] 127.0.0.1 - - [2025-12-22 20:40:14] "GET /ui.html HTTP/1.1" 200 3904 0.019381
-2025-12-22 20:40:14,239 [DEBUG] Initializing WebSocket
-2025-12-22 20:40:14,239 [DEBUG] Validating WebSocket request
-2025-12-22 20:40:14,243 [INFO] 127.0.0.1 - - [2025-12-22 20:40:14] "GET /eel.js HTTP/1.1" 200 6066 0.003258
-2025-12-22 20:40:14,247 [DEBUG] Initializing WebSocket
-2025-12-22 20:40:14,248 [DEBUG] Validating WebSocket request
-2025-12-22 20:40:14,256 [INFO] 127.0.0.1 - - [2025-12-22 20:40:14] "GET /ui.css HTTP/1.1" 200 10939 0.008902
-2025-12-22 20:40:14,307 [DEBUG] Initializing WebSocket
-2025-12-22 20:40:14,308 [DEBUG] Validating WebSocket request
-2025-12-22 20:40:14,324 [INFO] 127.0.0.1 - - [2025-12-22 20:40:14] "GET /ui.js HTTP/1.1" 200 14842 0.015879
-2025-12-22 20:40:14,531 [DEBUG] Initializing WebSocket
-2025-12-22 20:40:14,535 [DEBUG] Validating WebSocket request
-2025-12-22 20:40:14,675 [INFO] 127.0.0.1 - - [2025-12-22 20:40:14] "GET /art/background.png HTTP/1.1" 200 4519303 0.143025
-2025-12-22 20:40:14,847 [DEBUG] Initializing WebSocket
-2025-12-22 20:40:14,848 [DEBUG] Validating WebSocket request
-2025-12-22 20:40:14,848 [DEBUG] Attempting to upgrade connection
-2025-12-22 20:40:14,849 [DEBUG] WebSocket request accepted, switching protocols
-2025-12-22 20:41:08,279 [DEBUG] Starting new HTTPS connection (1): launchermeta.mojang.com:443
-2025-12-22 20:41:09,022 [DEBUG] https://launchermeta.mojang.com:443 "GET /v1/products/java-runtime/2ec0cc96c44e5a76b9c8b7c39df7210883d12871/all.json HTTP/1.1" 200 None
-2025-12-22 20:41:09,028 [DEBUG] Starting new HTTPS connection (1): piston-meta.mojang.com:443
-2025-12-22 20:41:09,675 [DEBUG] https://piston-meta.mojang.com:443 "GET /v1/packages/cb4394a27089d19f65d5baa6cf0482c27c3c7865/manifest.json HTTP/1.1" 200 None
-2025-12-22 20:41:39,892 [DEBUG] Closed WebSocket
-2025-12-22 20:41:39,893 [DEBUG] Failed to write closing frame -> closing socket
-2025-12-22 20:41:39,893 [DEBUG] Closed WebSocket
+2026-01-03 16:47:47,084 [DEBUG] Initializing WebSocket
+2026-01-03 16:47:47,085 [DEBUG] Validating WebSocket request
+2026-01-03 16:47:47,086 [INFO] 127.0.0.1 - - [2026-01-03 16:47:47] "GET /ui.html HTTP/1.1" 200 3912 0.001901
+2026-01-03 16:47:47,142 [DEBUG] Initializing WebSocket
+2026-01-03 16:47:47,142 [DEBUG] Validating WebSocket request
+2026-01-03 16:47:47,143 [INFO] 127.0.0.1 - - [2026-01-03 16:47:47] "GET /eel.js HTTP/1.1" 200 6066 0.001536
+2026-01-03 16:47:47,145 [DEBUG] Initializing WebSocket
+2026-01-03 16:47:47,145 [DEBUG] Validating WebSocket request
+2026-01-03 16:47:47,147 [INFO] 127.0.0.1 - - [2026-01-03 16:47:47] "GET /ui.css HTTP/1.1" 200 12079 0.002472
+2026-01-03 16:47:47,154 [DEBUG] Initializing WebSocket
+2026-01-03 16:47:47,155 [DEBUG] Validating WebSocket request
+2026-01-03 16:47:47,157 [INFO] 127.0.0.1 - - [2026-01-03 16:47:47] "GET /ui.js HTTP/1.1" 200 14833 0.002486
+2026-01-03 16:47:47,183 [DEBUG] Initializing WebSocket
+2026-01-03 16:47:47,183 [DEBUG] Validating WebSocket request
+2026-01-03 16:47:47,250 [INFO] 127.0.0.1 - - [2026-01-03 16:47:47] "GET /art/background.png HTTP/1.1" 200 4519303 0.066691
+2026-01-03 16:47:47,581 [DEBUG] Initializing WebSocket
+2026-01-03 16:47:47,581 [DEBUG] Validating WebSocket request
+2026-01-03 16:47:47,582 [DEBUG] Attempting to upgrade connection
+2026-01-03 16:47:47,582 [DEBUG] WebSocket request accepted, switching protocols
+2026-01-03 16:47:49,351 [DEBUG] Closed WebSocket
+2026-01-03 16:47:49,352 [DEBUG] Failed to write closing frame -> closing socket
+2026-01-03 16:47:49,352 [DEBUG] Closed WebSocket
+2026-01-03 18:19:55,510 [DEBUG] Initializing WebSocket
+2026-01-03 18:19:55,510 [DEBUG] Validating WebSocket request
+2026-01-03 18:19:55,512 [INFO] 127.0.0.1 - - [2026-01-03 18:19:55] "GET /ui.html HTTP/1.1" 200 3912 0.002659
+2026-01-03 18:19:55,562 [DEBUG] Initializing WebSocket
+2026-01-03 18:19:55,562 [DEBUG] Validating WebSocket request
+2026-01-03 18:19:55,564 [INFO] 127.0.0.1 - - [2026-01-03 18:19:55] "GET /eel.js HTTP/1.1" 200 6066 0.002032
+2026-01-03 18:19:55,565 [DEBUG] Initializing WebSocket
+2026-01-03 18:19:55,565 [DEBUG] Validating WebSocket request
+2026-01-03 18:19:55,576 [INFO] 127.0.0.1 - - [2026-01-03 18:19:55] "GET /ui.css HTTP/1.1" 200 12079 0.010720
+2026-01-03 18:19:55,596 [DEBUG] Initializing WebSocket
+2026-01-03 18:19:55,596 [DEBUG] Validating WebSocket request
+2026-01-03 18:19:55,598 [INFO] 127.0.0.1 - - [2026-01-03 18:19:55] "GET /ui.js HTTP/1.1" 200 14833 0.001601
+2026-01-03 18:19:55,631 [DEBUG] Initializing WebSocket
+2026-01-03 18:19:55,631 [DEBUG] Validating WebSocket request
+2026-01-03 18:19:55,715 [INFO] 127.0.0.1 - - [2026-01-03 18:19:55] "GET /art/background.png HTTP/1.1" 200 4519303 0.084354
+2026-01-03 18:19:56,130 [DEBUG] Initializing WebSocket
+2026-01-03 18:19:56,130 [DEBUG] Validating WebSocket request
+2026-01-03 18:19:56,130 [DEBUG] Attempting to upgrade connection
+2026-01-03 18:19:56,130 [DEBUG] WebSocket request accepted, switching protocols
+2026-01-03 18:20:10,537 [DEBUG] Starting new HTTPS connection (1): launchermeta.mojang.com:443
+2026-01-03 18:20:11,365 [DEBUG] https://launchermeta.mojang.com:443 "GET /v1/products/java-runtime/2ec0cc96c44e5a76b9c8b7c39df7210883d12871/all.json HTTP/1.1" 200 None
+2026-01-03 18:20:11,371 [DEBUG] Starting new HTTPS connection (1): piston-meta.mojang.com:443
+2026-01-03 18:20:12,290 [DEBUG] https://piston-meta.mojang.com:443 "GET /v1/packages/cb4394a27089d19f65d5baa6cf0482c27c3c7865/manifest.json HTTP/1.1" 200 None
+2026-01-03 18:21:58,406 [DEBUG] Closed WebSocket
+2026-01-03 18:21:58,407 [DEBUG] Failed to write closing frame -> closing socket
+2026-01-03 18:21:58,407 [DEBUG] Closed WebSocket
+2026-01-04 00:30:42,767 [DEBUG] Initializing WebSocket
+2026-01-04 00:30:42,767 [DEBUG] Validating WebSocket request
+2026-01-04 00:30:42,770 [INFO] 127.0.0.1 - - [2026-01-04 00:30:42] "GET /ui.html HTTP/1.1" 200 4489 0.002803
+2026-01-04 00:30:42,840 [DEBUG] Initializing WebSocket
+2026-01-04 00:30:42,840 [DEBUG] Validating WebSocket request
+2026-01-04 00:30:42,842 [INFO] 127.0.0.1 - - [2026-01-04 00:30:42] "GET /eel.js HTTP/1.1" 200 6066 0.002019
+2026-01-04 00:30:42,844 [DEBUG] Initializing WebSocket
+2026-01-04 00:30:42,844 [DEBUG] Validating WebSocket request
+2026-01-04 00:30:42,849 [INFO] 127.0.0.1 - - [2026-01-04 00:30:42] "GET /ui.css HTTP/1.1" 200 13749 0.004825
+2026-01-04 00:30:42,871 [DEBUG] Initializing WebSocket
+2026-01-04 00:30:42,871 [DEBUG] Validating WebSocket request
+2026-01-04 00:30:42,872 [INFO] 127.0.0.1 - - [2026-01-04 00:30:42] "GET /ui.js HTTP/1.1" 200 17288 0.001133
+2026-01-04 00:30:42,893 [DEBUG] Initializing WebSocket
+2026-01-04 00:30:42,893 [DEBUG] Validating WebSocket request
+2026-01-04 00:30:42,958 [INFO] 127.0.0.1 - - [2026-01-04 00:30:42] "GET /art/background.png HTTP/1.1" 200 4519303 0.065476
+2026-01-04 00:30:43,297 [DEBUG] Initializing WebSocket
+2026-01-04 00:30:43,297 [DEBUG] Validating WebSocket request
+2026-01-04 00:30:43,297 [DEBUG] Attempting to upgrade connection
+2026-01-04 00:30:43,298 [DEBUG] WebSocket request accepted, switching protocols
+2026-01-04 00:30:47,595 [DEBUG] Closed WebSocket
+2026-01-04 00:30:47,596 [DEBUG] Failed to write closing frame -> closing socket
+2026-01-04 00:30:47,596 [DEBUG] Closed WebSocket
+2026-01-04 00:32:22,172 [DEBUG] Initializing WebSocket
+2026-01-04 00:32:22,172 [DEBUG] Validating WebSocket request
+2026-01-04 00:32:22,174 [INFO] 127.0.0.1 - - [2026-01-04 00:32:22] "GET /ui.html HTTP/1.1" 200 4489 0.002475
+2026-01-04 00:32:22,331 [DEBUG] Initializing WebSocket
+2026-01-04 00:32:22,331 [DEBUG] Validating WebSocket request
+2026-01-04 00:32:22,333 [INFO] 127.0.0.1 - - [2026-01-04 00:32:22] "GET /eel.js HTTP/1.1" 200 6066 0.001759
+2026-01-04 00:32:22,335 [DEBUG] Initializing WebSocket
+2026-01-04 00:32:22,336 [DEBUG] Validating WebSocket request
+2026-01-04 00:32:22,340 [INFO] 127.0.0.1 - - [2026-01-04 00:32:22] "GET /ui.css HTTP/1.1" 200 13749 0.004531
+2026-01-04 00:32:22,348 [DEBUG] Initializing WebSocket
+2026-01-04 00:32:22,349 [DEBUG] Validating WebSocket request
+2026-01-04 00:32:22,351 [INFO] 127.0.0.1 - - [2026-01-04 00:32:22] "GET /ui.js HTTP/1.1" 200 17288 0.002527
+2026-01-04 00:32:22,389 [DEBUG] Initializing WebSocket
+2026-01-04 00:32:22,389 [DEBUG] Validating WebSocket request
+2026-01-04 00:32:22,455 [INFO] 127.0.0.1 - - [2026-01-04 00:32:22] "GET /art/background.png HTTP/1.1" 200 4519303 0.066050
+2026-01-04 00:32:22,792 [DEBUG] Initializing WebSocket
+2026-01-04 00:32:22,793 [DEBUG] Validating WebSocket request
+2026-01-04 00:32:22,793 [DEBUG] Attempting to upgrade connection
+2026-01-04 00:32:22,793 [DEBUG] WebSocket request accepted, switching protocols
+2026-01-04 00:32:26,539 [DEBUG] Initializing WebSocket
+2026-01-04 00:32:26,539 [DEBUG] Validating WebSocket request
+2026-01-04 00:32:26,543 [INFO] 127.0.0.1 - - [2026-01-04 00:32:26] "GET /ui.css HTTP/1.1" 200 13749 0.003499
+2026-01-04 00:32:26,559 [DEBUG] Initializing WebSocket
+2026-01-04 00:32:26,559 [DEBUG] Validating WebSocket request
+2026-01-04 00:32:26,563 [INFO] 127.0.0.1 - - [2026-01-04 00:32:26] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 919 0.003901
+2026-01-04 00:35:11,279 [DEBUG] Closed WebSocket
+2026-01-04 00:35:11,279 [DEBUG] Failed to write closing frame -> closing socket
+2026-01-04 00:35:11,279 [DEBUG] Closed WebSocket
+2026-01-04 00:35:25,626 [DEBUG] Initializing WebSocket
+2026-01-04 00:35:25,626 [DEBUG] Validating WebSocket request
+2026-01-04 00:35:25,627 [INFO] 127.0.0.1 - - [2026-01-04 00:35:25] "GET /ui.html HTTP/1.1" 200 4489 0.001219
+2026-01-04 00:35:25,656 [DEBUG] Initializing WebSocket
+2026-01-04 00:35:25,657 [DEBUG] Validating WebSocket request
+2026-01-04 00:35:25,658 [INFO] 127.0.0.1 - - [2026-01-04 00:35:25] "GET /eel.js HTTP/1.1" 200 6066 0.001683
+2026-01-04 00:35:25,659 [DEBUG] Initializing WebSocket
+2026-01-04 00:35:25,659 [DEBUG] Validating WebSocket request
+2026-01-04 00:35:25,661 [INFO] 127.0.0.1 - - [2026-01-04 00:35:25] "GET /ui.css HTTP/1.1" 200 13749 0.002302
+2026-01-04 00:35:25,668 [DEBUG] Initializing WebSocket
+2026-01-04 00:35:25,669 [DEBUG] Validating WebSocket request
+2026-01-04 00:35:25,670 [INFO] 127.0.0.1 - - [2026-01-04 00:35:25] "GET /ui.js HTTP/1.1" 200 17987 0.001850
+2026-01-04 00:35:25,696 [DEBUG] Initializing WebSocket
+2026-01-04 00:35:25,696 [DEBUG] Validating WebSocket request
+2026-01-04 00:35:25,750 [INFO] 127.0.0.1 - - [2026-01-04 00:35:25] "GET /art/background.png HTTP/1.1" 200 4519303 0.053269
+2026-01-04 00:35:26,077 [DEBUG] Initializing WebSocket
+2026-01-04 00:35:26,077 [DEBUG] Validating WebSocket request
+2026-01-04 00:35:26,077 [DEBUG] Attempting to upgrade connection
+2026-01-04 00:35:26,077 [DEBUG] WebSocket request accepted, switching protocols
+2026-01-04 00:35:26,642 [DEBUG] Initializing WebSocket
+2026-01-04 00:35:26,642 [DEBUG] Validating WebSocket request
+2026-01-04 00:35:26,643 [INFO] 127.0.0.1 - - [2026-01-04 00:35:26] "GET /ui.css HTTP/1.1" 200 13749 0.001535
+2026-01-04 00:35:26,656 [DEBUG] Initializing WebSocket
+2026-01-04 00:35:26,656 [DEBUG] Validating WebSocket request
+2026-01-04 00:35:26,659 [INFO] 127.0.0.1 - - [2026-01-04 00:35:26] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 919 0.003156
+2026-01-04 00:38:38,186 [DEBUG] Closed WebSocket
+2026-01-04 00:38:38,187 [DEBUG] Failed to write closing frame -> closing socket
+2026-01-04 00:38:38,187 [DEBUG] Closed WebSocket
+2026-01-04 00:38:53,035 [DEBUG] Initializing WebSocket
+2026-01-04 00:38:53,035 [DEBUG] Validating WebSocket request
+2026-01-04 00:38:53,037 [INFO] 127.0.0.1 - - [2026-01-04 00:38:53] "GET /ui.html HTTP/1.1" 200 3912 0.001613
+2026-01-04 00:38:53,073 [DEBUG] Initializing WebSocket
+2026-01-04 00:38:53,073 [DEBUG] Validating WebSocket request
+2026-01-04 00:38:53,074 [INFO] 127.0.0.1 - - [2026-01-04 00:38:53] "GET /eel.js HTTP/1.1" 200 6066 0.001245
+2026-01-04 00:38:53,076 [DEBUG] Initializing WebSocket
+2026-01-04 00:38:53,076 [DEBUG] Validating WebSocket request
+2026-01-04 00:38:53,079 [INFO] 127.0.0.1 - - [2026-01-04 00:38:53] "GET /ui.css HTTP/1.1" 200 12083 0.003344
+2026-01-04 00:38:53,088 [DEBUG] Initializing WebSocket
+2026-01-04 00:38:53,088 [DEBUG] Validating WebSocket request
+2026-01-04 00:38:53,090 [INFO] 127.0.0.1 - - [2026-01-04 00:38:53] "GET /ui.js HTTP/1.1" 200 14833 0.002132
+2026-01-04 00:38:53,119 [DEBUG] Initializing WebSocket
+2026-01-04 00:38:53,119 [DEBUG] Validating WebSocket request
+2026-01-04 00:38:53,169 [INFO] 127.0.0.1 - - [2026-01-04 00:38:53] "GET /art/background.png HTTP/1.1" 200 4519303 0.050501
+2026-01-04 00:38:53,503 [DEBUG] Initializing WebSocket
+2026-01-04 00:38:53,503 [DEBUG] Validating WebSocket request
+2026-01-04 00:38:53,503 [DEBUG] Attempting to upgrade connection
+2026-01-04 00:38:53,503 [DEBUG] WebSocket request accepted, switching protocols
+2026-01-04 00:39:03,558 [DEBUG] Closed WebSocket
+2026-01-04 00:39:03,558 [DEBUG] Failed to write closing frame -> closing socket
+2026-01-04 00:39:03,558 [DEBUG] Closed WebSocket
+2026-01-04 00:43:00,645 [DEBUG] Initializing WebSocket
+2026-01-04 00:43:00,645 [DEBUG] Validating WebSocket request
+2026-01-04 00:43:00,646 [INFO] 127.0.0.1 - - [2026-01-04 00:43:00] "GET /ui.html HTTP/1.1" 200 4726 0.001282
+2026-01-04 00:43:00,758 [DEBUG] Initializing WebSocket
+2026-01-04 00:43:00,758 [DEBUG] Validating WebSocket request
+2026-01-04 00:43:00,759 [INFO] 127.0.0.1 - - [2026-01-04 00:43:00] "GET /eel.js HTTP/1.1" 200 6066 0.001759
+2026-01-04 00:43:00,761 [DEBUG] Initializing WebSocket
+2026-01-04 00:43:00,761 [DEBUG] Validating WebSocket request
+2026-01-04 00:43:00,766 [INFO] 127.0.0.1 - - [2026-01-04 00:43:00] "GET /ui.css HTTP/1.1" 200 13008 0.005576
+2026-01-04 00:43:00,772 [DEBUG] Initializing WebSocket
+2026-01-04 00:43:00,772 [DEBUG] Validating WebSocket request
+2026-01-04 00:43:00,774 [INFO] 127.0.0.1 - - [2026-01-04 00:43:00] "GET /ui.js HTTP/1.1" 200 17982 0.002590
+2026-01-04 00:43:00,808 [DEBUG] Initializing WebSocket
+2026-01-04 00:43:00,808 [DEBUG] Validating WebSocket request
+2026-01-04 00:43:00,860 [INFO] 127.0.0.1 - - [2026-01-04 00:43:00] "GET /art/background.png HTTP/1.1" 200 4519303 0.052623
+2026-01-04 00:43:01,220 [DEBUG] Initializing WebSocket
+2026-01-04 00:43:01,220 [DEBUG] Validating WebSocket request
+2026-01-04 00:43:01,221 [DEBUG] Attempting to upgrade connection
+2026-01-04 00:43:01,221 [DEBUG] WebSocket request accepted, switching protocols
+2026-01-04 00:45:56,932 [DEBUG] Closed WebSocket
+2026-01-04 00:45:56,934 [DEBUG] Failed to write closing frame -> closing socket
+2026-01-04 00:45:56,934 [DEBUG] Closed WebSocket
+2026-01-04 00:46:09,969 [DEBUG] Initializing WebSocket
+2026-01-04 00:46:09,969 [DEBUG] Validating WebSocket request
+2026-01-04 00:46:10,003 [INFO] 127.0.0.1 - - [2026-01-04 00:46:10] "GET /ui.html HTTP/1.1" 200 4969 0.033660
+2026-01-04 00:46:10,046 [DEBUG] Initializing WebSocket
+2026-01-04 00:46:10,046 [DEBUG] Validating WebSocket request
+2026-01-04 00:46:10,047 [INFO] 127.0.0.1 - - [2026-01-04 00:46:10] "GET /eel.js HTTP/1.1" 200 6066 0.000881
+2026-01-04 00:46:10,048 [DEBUG] Initializing WebSocket
+2026-01-04 00:46:10,049 [DEBUG] Validating WebSocket request
+2026-01-04 00:46:10,058 [INFO] 127.0.0.1 - - [2026-01-04 00:46:10] "GET /ui.css HTTP/1.1" 200 13008 0.009880
+2026-01-04 00:46:10,079 [DEBUG] Initializing WebSocket
+2026-01-04 00:46:10,079 [DEBUG] Validating WebSocket request
+2026-01-04 00:46:10,114 [INFO] 127.0.0.1 - - [2026-01-04 00:46:10] "GET /ui.js HTTP/1.1" 200 19096 0.034737
+2026-01-04 00:46:10,114 [DEBUG] Initializing WebSocket
+2026-01-04 00:46:10,114 [DEBUG] Validating WebSocket request
+2026-01-04 00:46:10,164 [INFO] 127.0.0.1 - - [2026-01-04 00:46:10] "GET /art/background.png HTTP/1.1" 200 4519303 0.049520
+2026-01-04 00:46:10,497 [DEBUG] Initializing WebSocket
+2026-01-04 00:46:10,497 [DEBUG] Validating WebSocket request
+2026-01-04 00:46:10,497 [DEBUG] Attempting to upgrade connection
+2026-01-04 00:46:10,497 [DEBUG] WebSocket request accepted, switching protocols
+2026-01-04 00:51:10,708 [DEBUG] Closed WebSocket
+2026-01-04 00:51:10,708 [DEBUG] Failed to write closing frame -> closing socket
+2026-01-04 00:51:10,708 [DEBUG] Closed WebSocket
+2026-01-04 00:51:23,405 [DEBUG] Initializing WebSocket
+2026-01-04 00:51:23,405 [DEBUG] Validating WebSocket request
+2026-01-04 00:51:23,406 [INFO] 127.0.0.1 - - [2026-01-04 00:51:23] "GET /ui.html HTTP/1.1" 200 4966 0.001569
+2026-01-04 00:51:23,456 [DEBUG] Initializing WebSocket
+2026-01-04 00:51:23,456 [DEBUG] Validating WebSocket request
+2026-01-04 00:51:23,458 [INFO] 127.0.0.1 - - [2026-01-04 00:51:23] "GET /eel.js HTTP/1.1" 200 6066 0.001817
+2026-01-04 00:51:23,459 [DEBUG] Initializing WebSocket
+2026-01-04 00:51:23,460 [DEBUG] Validating WebSocket request
+2026-01-04 00:51:23,464 [INFO] 127.0.0.1 - - [2026-01-04 00:51:23] "GET /ui.css HTTP/1.1" 200 13008 0.003768
+2026-01-04 00:51:23,473 [DEBUG] Initializing WebSocket
+2026-01-04 00:51:23,474 [DEBUG] Validating WebSocket request
+2026-01-04 00:51:23,476 [INFO] 127.0.0.1 - - [2026-01-04 00:51:23] "GET /ui.js HTTP/1.1" 200 19102 0.002436
+2026-01-04 00:51:23,521 [DEBUG] Initializing WebSocket
+2026-01-04 00:51:23,521 [DEBUG] Validating WebSocket request
+2026-01-04 00:51:23,578 [INFO] 127.0.0.1 - - [2026-01-04 00:51:23] "GET /art/background.png HTTP/1.1" 200 4519303 0.057307
+2026-01-04 00:51:24,046 [DEBUG] Initializing WebSocket
+2026-01-04 00:51:24,046 [DEBUG] Validating WebSocket request
+2026-01-04 00:51:24,046 [DEBUG] Attempting to upgrade connection
+2026-01-04 00:51:24,046 [DEBUG] WebSocket request accepted, switching protocols
+2026-01-04 00:51:34,746 [DEBUG] Closed WebSocket
+2026-01-04 00:51:34,746 [DEBUG] Failed to write closing frame -> closing socket
+2026-01-04 00:51:34,746 [DEBUG] Closed WebSocket
+2026-01-04 00:53:09,903 [DEBUG] Initializing WebSocket
+2026-01-04 00:53:09,903 [DEBUG] Validating WebSocket request
+2026-01-04 00:53:09,904 [INFO] 127.0.0.1 - - [2026-01-04 00:53:09] "GET /ui.html HTTP/1.1" 200 4966 0.001622
+2026-01-04 00:53:09,948 [DEBUG] Initializing WebSocket
+2026-01-04 00:53:09,948 [DEBUG] Validating WebSocket request
+2026-01-04 00:53:09,950 [INFO] 127.0.0.1 - - [2026-01-04 00:53:09] "GET /eel.js HTTP/1.1" 200 6066 0.001710
+2026-01-04 00:53:09,951 [DEBUG] Initializing WebSocket
+2026-01-04 00:53:09,951 [DEBUG] Validating WebSocket request
+2026-01-04 00:53:09,954 [INFO] 127.0.0.1 - - [2026-01-04 00:53:09] "GET /ui.css HTTP/1.1" 200 13008 0.003320
+2026-01-04 00:53:09,959 [DEBUG] Initializing WebSocket
+2026-01-04 00:53:09,959 [DEBUG] Validating WebSocket request
+2026-01-04 00:53:09,960 [INFO] 127.0.0.1 - - [2026-01-04 00:53:09] "GET /ui.js HTTP/1.1" 200 19102 0.000939
+2026-01-04 00:53:09,986 [DEBUG] Initializing WebSocket
+2026-01-04 00:53:09,986 [DEBUG] Validating WebSocket request
+2026-01-04 00:53:10,035 [INFO] 127.0.0.1 - - [2026-01-04 00:53:10] "GET /art/background.png HTTP/1.1" 200 4519303 0.049335
+2026-01-04 00:53:10,369 [DEBUG] Initializing WebSocket
+2026-01-04 00:53:10,369 [DEBUG] Validating WebSocket request
+2026-01-04 00:53:10,369 [DEBUG] Attempting to upgrade connection
+2026-01-04 00:53:10,369 [DEBUG] WebSocket request accepted, switching protocols
+2026-01-04 00:53:38,692 [DEBUG] Closed WebSocket
+2026-01-04 00:53:38,692 [DEBUG] Failed to write closing frame -> closing socket
+2026-01-04 00:53:38,692 [DEBUG] Closed WebSocket
+2026-01-04 00:53:49,761 [DEBUG] Initializing WebSocket
+2026-01-04 00:53:49,761 [DEBUG] Validating WebSocket request
+2026-01-04 00:53:49,762 [INFO] 127.0.0.1 - - [2026-01-04 00:53:49] "GET /ui.html HTTP/1.1" 200 4966 0.001029
+2026-01-04 00:53:49,796 [DEBUG] Initializing WebSocket
+2026-01-04 00:53:49,797 [DEBUG] Validating WebSocket request
+2026-01-04 00:53:49,798 [INFO] 127.0.0.1 - - [2026-01-04 00:53:49] "GET /eel.js HTTP/1.1" 200 6066 0.001252
+2026-01-04 00:53:49,799 [DEBUG] Initializing WebSocket
+2026-01-04 00:53:49,799 [DEBUG] Validating WebSocket request
+2026-01-04 00:53:49,803 [INFO] 127.0.0.1 - - [2026-01-04 00:53:49] "GET /ui.css HTTP/1.1" 200 13008 0.003626
+2026-01-04 00:53:49,809 [DEBUG] Initializing WebSocket
+2026-01-04 00:53:49,809 [DEBUG] Validating WebSocket request
+2026-01-04 00:53:49,811 [INFO] 127.0.0.1 - - [2026-01-04 00:53:49] "GET /ui.js HTTP/1.1" 200 19102 0.002136
+2026-01-04 00:53:49,834 [DEBUG] Initializing WebSocket
+2026-01-04 00:53:49,834 [DEBUG] Validating WebSocket request
+2026-01-04 00:53:49,879 [INFO] 127.0.0.1 - - [2026-01-04 00:53:49] "GET /art/background.png HTTP/1.1" 200 4519303 0.044380
+2026-01-04 00:53:50,203 [DEBUG] Initializing WebSocket
+2026-01-04 00:53:50,203 [DEBUG] Validating WebSocket request
+2026-01-04 00:53:50,204 [DEBUG] Attempting to upgrade connection
+2026-01-04 00:53:50,204 [DEBUG] WebSocket request accepted, switching protocols
+2026-01-04 00:56:48,326 [DEBUG] Initializing WebSocket
+2026-01-04 00:56:48,326 [DEBUG] Validating WebSocket request
+2026-01-04 00:56:48,327 [INFO] 127.0.0.1 - - [2026-01-04 00:56:48] "GET /ui.html HTTP/1.1" 200 4966 0.001630
+2026-01-04 00:56:48,368 [DEBUG] Initializing WebSocket
+2026-01-04 00:56:48,369 [DEBUG] Validating WebSocket request
+2026-01-04 00:56:48,370 [INFO] 127.0.0.1 - - [2026-01-04 00:56:48] "GET /eel.js HTTP/1.1" 200 6066 0.001487
+2026-01-04 00:56:48,371 [DEBUG] Initializing WebSocket
+2026-01-04 00:56:48,372 [DEBUG] Validating WebSocket request
+2026-01-04 00:56:48,376 [INFO] 127.0.0.1 - - [2026-01-04 00:56:48] "GET /ui.css HTTP/1.1" 200 13008 0.004065
+2026-01-04 00:56:48,382 [DEBUG] Initializing WebSocket
+2026-01-04 00:56:48,383 [DEBUG] Validating WebSocket request
+2026-01-04 00:56:48,385 [INFO] 127.0.0.1 - - [2026-01-04 00:56:48] "GET /ui.js HTTP/1.1" 200 19090 0.002226
+2026-01-04 00:56:48,405 [DEBUG] Initializing WebSocket
+2026-01-04 00:56:48,405 [DEBUG] Validating WebSocket request
+2026-01-04 00:56:48,455 [INFO] 127.0.0.1 - - [2026-01-04 00:56:48] "GET /art/background.png HTTP/1.1" 200 4519303 0.049803
+2026-01-04 00:56:48,793 [DEBUG] Initializing WebSocket
+2026-01-04 00:56:48,794 [DEBUG] Validating WebSocket request
+2026-01-04 00:56:48,794 [DEBUG] Attempting to upgrade connection
+2026-01-04 00:56:48,794 [DEBUG] WebSocket request accepted, switching protocols
+2026-01-04 00:57:41,296 [DEBUG] Closed WebSocket
+2026-01-04 00:57:41,297 [DEBUG] Failed to write closing frame -> closing socket
+2026-01-04 00:57:41,297 [DEBUG] Closed WebSocket
+2026-01-04 00:57:53,751 [DEBUG] Initializing WebSocket
+2026-01-04 00:57:53,752 [DEBUG] Validating WebSocket request
+2026-01-04 00:57:53,752 [INFO] 127.0.0.1 - - [2026-01-04 00:57:53] "GET /ui.html HTTP/1.1" 200 4966 0.001149
+2026-01-04 00:57:53,793 [DEBUG] Initializing WebSocket
+2026-01-04 00:57:53,793 [DEBUG] Validating WebSocket request
+2026-01-04 00:57:53,795 [INFO] 127.0.0.1 - - [2026-01-04 00:57:53] "GET /eel.js HTTP/1.1" 200 6066 0.001600
+2026-01-04 00:57:53,796 [DEBUG] Initializing WebSocket
+2026-01-04 00:57:53,797 [DEBUG] Validating WebSocket request
+2026-01-04 00:57:53,801 [INFO] 127.0.0.1 - - [2026-01-04 00:57:53] "GET /ui.css HTTP/1.1" 200 13008 0.004153
+2026-01-04 00:57:53,810 [DEBUG] Initializing WebSocket
+2026-01-04 00:57:53,810 [DEBUG] Validating WebSocket request
+2026-01-04 00:57:53,812 [INFO] 127.0.0.1 - - [2026-01-04 00:57:53] "GET /ui.js HTTP/1.1" 200 19090 0.001767
+2026-01-04 00:57:53,838 [DEBUG] Initializing WebSocket
+2026-01-04 00:57:53,839 [DEBUG] Validating WebSocket request
+2026-01-04 00:57:53,893 [INFO] 127.0.0.1 - - [2026-01-04 00:57:53] "GET /art/background.png HTTP/1.1" 200 4519303 0.054150
+2026-01-04 00:57:54,220 [DEBUG] Initializing WebSocket
+2026-01-04 00:57:54,220 [DEBUG] Validating WebSocket request
+2026-01-04 00:57:54,220 [DEBUG] Attempting to upgrade connection
+2026-01-04 00:57:54,220 [DEBUG] WebSocket request accepted, switching protocols
+2026-01-04 00:58:37,788 [DEBUG] Closed WebSocket
+2026-01-04 00:58:37,789 [DEBUG] Failed to write closing frame -> closing socket
+2026-01-04 00:58:37,789 [DEBUG] Closed WebSocket
+2026-01-04 01:00:02,234 [DEBUG] Initializing WebSocket
+2026-01-04 01:00:02,235 [DEBUG] Validating WebSocket request
+2026-01-04 01:00:02,236 [INFO] 127.0.0.1 - - [2026-01-04 01:00:02] "GET /ui.html HTTP/1.1" 200 4966 0.001820
+2026-01-04 01:00:02,296 [DEBUG] Initializing WebSocket
+2026-01-04 01:00:02,296 [DEBUG] Validating WebSocket request
+2026-01-04 01:00:02,297 [INFO] 127.0.0.1 - - [2026-01-04 01:00:02] "GET /eel.js HTTP/1.1" 200 6066 0.001264
+2026-01-04 01:00:02,298 [DEBUG] Initializing WebSocket
+2026-01-04 01:00:02,298 [DEBUG] Validating WebSocket request
+2026-01-04 01:00:02,302 [INFO] 127.0.0.1 - - [2026-01-04 01:00:02] "GET /ui.css HTTP/1.1" 200 13008 0.004056
+2026-01-04 01:00:02,309 [DEBUG] Initializing WebSocket
+2026-01-04 01:00:02,310 [DEBUG] Validating WebSocket request
+2026-01-04 01:00:02,312 [INFO] 127.0.0.1 - - [2026-01-04 01:00:02] "GET /ui.js HTTP/1.1" 200 19090 0.002088
+2026-01-04 01:00:02,330 [DEBUG] Initializing WebSocket
+2026-01-04 01:00:02,330 [DEBUG] Validating WebSocket request
+2026-01-04 01:00:02,380 [INFO] 127.0.0.1 - - [2026-01-04 01:00:02] "GET /art/background.png HTTP/1.1" 200 4519303 0.050122
+2026-01-04 01:00:02,706 [DEBUG] Initializing WebSocket
+2026-01-04 01:00:02,706 [DEBUG] Validating WebSocket request
+2026-01-04 01:00:02,706 [DEBUG] Attempting to upgrade connection
+2026-01-04 01:00:02,706 [DEBUG] WebSocket request accepted, switching protocols

@@ -46,7 +46,7 @@ function closeTerminal() {
 
     // 啟動離場（CSS transition）
     terminalBack.classList.remove('show');
-    terminalOutput.value = '';
+    terminalOutput.value = ''; //清除
 
     // 如果目前焦點仍在 terminal 內，先 blur 再還原到先前元素（或 fallback）
     try {
@@ -187,14 +187,134 @@ document.addEventListener('DOMContentLoaded', () => {
   /* TIP：改為使用 class 切換 show */
   const tip = $('tip');
   const tipClose = $('tipClose');
-  if (tipClose && tip) {
-    tipClose.addEventListener('click', () => tip.classList.remove('show'));
-  }
+  const tipStatus = $('tipStatus');
+  const tipProgress = $('tipProgress');
+  const tipProgressFill = $('tipProgressFill');
+  const tipProgressLabel = $('tipProgressLabel');
+  let tipMax = 0;
+
+  
 
   // 依 AUTO_SHOW_TIP 決定是否在載入時顯示 tip（短延遲以確保 transition 正確觸發）
   if (tip && AUTO_SHOW_TIP) {
     // 若想立即無延遲顯示可移除 setTimeout
-    setTimeout(() => tip.classList.add('show'), 60);
+    tip.classList.add('show'), 60;
+  }
+
+  // Tip API: setStatus, setMax, setProgress, hide
+  function tip_set_status(status) {
+    if (!tip) return;
+    if (tipStatus) tipStatus.textContent = status;
+    tip.classList.add('show');
+  }
+
+  function tip_set_max(n) {
+    if (!tip || !tipProgress) return;
+    tipMax = Number(n) || 0;
+    tipProgress.hidden = false;
+    tipProgress.setAttribute('aria-hidden', 'false');
+    const progressBar = tipProgress.querySelector('.progress');
+    if (progressBar) {
+      progressBar.setAttribute('aria-valuemin', '0');
+      progressBar.setAttribute('aria-valuemax', String(tipMax));
+      progressBar.setAttribute('aria-valuenow', '0');
+    }
+    // clear indeterminate state
+    if (tipProgressFill) tipProgressFill.classList.remove('indeterminate');
+    tip.classList.add('show');
+  }
+
+  function tip_set_progress(p) {
+    if (!tip || !tipProgress) return;
+    const val = Number(p) || 0;
+    if (tipMax && tipMax > 0) {
+      const pct = Math.max(0, Math.min(100, Math.round(val / tipMax * 100)));
+      if (tipProgressFill) {
+        tipProgressFill.style.width = pct + '%';
+        tipProgressFill.setAttribute('aria-valuenow', String(val));
+        tipProgressFill.classList.remove('indeterminate');
+      }
+      if (tipProgressLabel) tipProgressLabel.textContent = `${val}/${tipMax}`;
+    } else {
+      // indeterminate mode: show animated fill and use label for basic info
+      if (tipProgressFill) tipProgressFill.classList.add('indeterminate');
+      if (tipProgressLabel) tipProgressLabel.textContent = `${val}`;
+    }
+    tip.classList.add('show');
+  }
+
+  function tip_hide() {
+    if (!tip) return;
+    tip.classList.remove('show');
+    if (tipProgress) {
+      tipProgress.hidden = true;
+      tipProgress.setAttribute('aria-hidden', 'true');
+      if (tipProgressFill) {
+        tipProgressFill.style.width = '0%';
+        tipProgressFill.classList.remove('indeterminate');
+      }
+      if (tipProgressLabel) tipProgressLabel.textContent = '0/0';
+      tipMax = 0;
+    }
+  }
+
+  if (tipClose && tip) {
+    tipClose.addEventListener('click', () => tip_hide());
+  }
+
+  // 讓 Python 端可以直接呼叫這些函式（eel）
+  if (typeof eel !== 'undefined' && eel.expose) {
+    try {
+      eel.expose(tip_set_status);
+      eel.expose(tip_set_max);
+      eel.expose(tip_set_progress);
+      eel.expose(tip_hide);
+    } catch (e) {
+      // ignore; older eel 版本可能行為不同
+      console.debug('eel.expose for tip API failed', e);
+    }
+  }
+
+  // Tip 測試序列：可從按鈕、console 或 Python (eel) 呼叫
+  function tip_test_sequence({ status='測試中...', total=100, step=8, interval=220 } = {}) {
+    return new Promise(resolve => {
+      tip_set_status(status);
+      if (total && total > 0) tip_set_max(total);
+
+      let current = 0;
+      const timer = setInterval(() => {
+        current = Math.min(total || current + step, total || current + step);
+        tip_set_progress(current);
+        if (total && current >= total) {
+          clearInterval(timer);
+          tip_set_status('完成');
+          setTimeout(() => { tip_hide(); resolve(true); }, 300000);
+        }
+      }, interval);
+
+      // 如果是 indeterminate（沒傳 total），設定一個安全停止點
+      if (!total || total <= 0) {
+        setTimeout(() => {
+          clearInterval(timer);
+          tip_set_status('完成（indeterminate 模式）');
+          setTimeout(() => { tip_hide(); resolve(true); }, 300000);
+        }, Math.max(4000, interval * 20));
+      }
+    });
+  }
+
+  // 綁定頁面上的測試按鈕
+  const demoProgressBtn = $('demoProgressBtn');
+  if (demoProgressBtn) {
+    demoProgressBtn.addEventListener('click', () => {
+      tip_test_sequence({ status: '開始安裝（測試）...', total: 100, step: 10, interval: 180 });
+    });
+  }
+
+  // 暴露給 console 與 Python (eel)
+  window.tip_test_sequence = tip_test_sequence;
+  if (typeof eel !== 'undefined' && eel.expose) {
+    try { eel.expose(tip_test_sequence); } catch (e) { console.debug('Cannot expose tip_test_sequence to eel', e); }
   }
 
   /* 帳戶面板顯示/隱藏：改為使用 classList，以觸發 CSS 動畫 */

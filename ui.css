@@ -3,7 +3,18 @@
   --sidebar-w: clamp(56px, 22vw, 200px);
   --bg: #f6f8fa;
   --gap: 20px;
-}
+
+  /* Animated gradient variables */
+  --grad-1: rgba(246,248,250,0.98);
+  --grad-2: rgba(233,245,255,0.95);
+  --grad-3: rgba(255,250,240,0.95);
+  --grad-angle: 120deg;
+  --grad-duration: 14s;
+
+  /* Accent transitions */
+  --accent-duration: 220ms;
+  --accent-danger: #f44336;
+} 
 
 /* 基本版面 */
 html, body {
@@ -97,11 +108,17 @@ html, body {
 .viewer {
   flex: 1;
   padding: 20px;
-  background: url(art/background.png) center center / cover no-repeat;
+  /* Soft animated gradient overlay + background image */
+  background-image: linear-gradient(var(--grad-angle), var(--grad-1), var(--grad-2), var(--grad-3)), url(art/background.png);
+  background-position: 0% 50%, center center;
+  background-size: 200% 200%, cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  animation: soft-gradient var(--grad-duration) ease-in-out infinite;
   position: relative;
   overflow: auto;
   min-width: 0;
-}
+} 
 
 /* 提示與按鈕 */
 /* TIP：右側滑入/滑出 */
@@ -125,6 +142,32 @@ html, body {
   transition: transform 320ms cubic-bezier(.2,.9,.2,1), opacity 220ms ease;
   will-change: transform, opacity;
 }
+
+/* Tip 內部的進度樣式 */
+.tip .tip-status { font-size: 14px; color: #444; }
+.tip .tip-progress { margin-top: 10px; }
+.tip .progress { width: 100%; height: 10px; background: rgba(0,0,0,0.06); border-radius: 8px; overflow: hidden; }
+.tip .progress .progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #4caf50, #1976d2); transition: width 260ms ease; }
+.tip .progress-label { font-size: 12px; color: #333; white-space: nowrap; }
+
+/* Indeterminate animation when max unknown */
+.tip .progress .progress-fill.indeterminate {
+  width: 100%;
+  background-size: 200% 100%;
+  animation: progress-indeterminate 1.4s linear infinite;
+}
+@keyframes progress-indeterminate {
+  0% { background-position: 0% 0%; }
+  100% { background-position: -200% 0%; }
+}
+
+/* 顯示狀態：滑入並允許互動 */
+.tip.show {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
 
 /* 顯示狀態：滑入並允許互動 */
 .tip.show {
@@ -181,19 +224,7 @@ html, body {
   opacity: 1;
 }
 
-/* 關閉按鈕（右上） */
-.close-x {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 28px;
-  height: 28px;
-  border: 0;
-  background: transparent;
-  font-size: 16px;
-  cursor: pointer;
-  z-index: 2;
-}
+
 
 /* 小螢幕微調（與現有規則一致） */
 @media (max-width: 520px) {
@@ -256,6 +287,35 @@ html, body {
   visibility: visible;
 }
 */
+
+/* Soft animated gradient for subtle background motion */
+@keyframes soft-gradient {
+  0%   { background-position: 0% 50%, center center; }
+  50%  { background-position: 100% 50%, center center; }
+  100% { background-position: 0% 50%, center center; }
+}
+
+/* 關閉按鈕（右上） */
+.close-x {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  border: 0;
+  background: transparent;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 2;
+  transition: background-color var(--accent-duration) ease, color var(--accent-duration) ease, transform var(--accent-duration) ease;
+}
+
+.close-x:hover {
+  background-color: var(--accent-danger);
+  color: #fff;
+  transform: scale(1.06);
+}
+
   
 
 
@@ -462,3 +522,4 @@ html, body {
   resize: none;
   outline: none;
 }
+

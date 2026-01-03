@@ -203,8 +203,8 @@ class Launcher:
         }
         return format_map.get(pack_format, "未知版本（可能為未來或錯誤）")
     
-    def install_game(ver: str):
-        minecraft_launcher_lib.install.install_minecraft_version(ver, minecraft_directory)
+    def install_game(ver: str, Callback=None):
+        minecraft_launcher_lib.install.install_minecraft_version(ver, minecraft_directory, callback=Callback)
 
 
 class other_function:

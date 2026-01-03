@@ -1,4 +1,5 @@
 import eel
+import tqdm
 import os
 import sys
 import logging
@@ -15,7 +16,7 @@ import tkinter.messagebox as messagebox
 logging.basicConfig(
     level=logging.DEBUG,
     filename="debug.log",
-    filemode="a",
+    filemode="w",
     format="%(asctime)s [%(levelname)s] %(message)s"
 )
 
@@ -53,10 +54,22 @@ def load_versionSelect(ver):
     select_ver = ver
     print(select_ver)
     
+def set_progress_bar(status: str = None, progress: int = None, max: int = None):
+    if status is not None:
+        eel.tip_set_status(status)
+    if progress is not None:
+        eel.tip_set_progress(progress)
+    if max is not None:
+        eel.tip_set_max(max)
 @eel.expose
 def launch_game():
+    process_bar= {
+    "setStatus": set_progress_bar,
+    "setProgress": set_progress_bar, # This function is called to set the progress.
+    "setMax": set_progress_bar, # This function is called to set to max progress.
+}
     try:
-        core.Launcher.install_game(ver=select_ver)
+        core.Launcher.install_game(ver=select_ver, Callback=process_bar)
         cmd=core.Launcher.normal(ver=select_ver)
         return_code=run_command(cmd)
         return f"遊戲啟動成功，回傳碼: {return_code}"

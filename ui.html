@@ -36,10 +36,22 @@
 
       <section class="viewer">
 
-        <div class="tip" id="tip">
-          <button class="close-x" id="">✕</button>
-          <h4>開發版提示</h4>
-          <div style="color:#444">你正在使用 UMCL 開發版：開發版包含一些實驗性新功能，較為不穩定。</div>
+        <div class="tip" id="tip" role="region" aria-live="polite">
+          <button class="close-x" id="tipClose">✕</button>
+          <h4>系統提示</h4>
+          <div class="tip-status" id="tipStatus" style="color:#444">你正在使用 UMCL 開發版：開發版包含一些實驗性新功能，較為不穩定。</div>
+
+          <!-- 共享進度區塊（預設隱藏，當有任務或 setMax 被呼叫時顯示） -->
+          <div class="tip-progress" id="tipProgress" hidden aria-hidden="true">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-top:10px;gap:8px;">
+              <div class="progress-label" id="tipProgressLabel" style="font-size:12px;color:#333">0/0</div>
+              <div style="flex:1;margin-left:8px;margin-right:8px">
+                <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="0" aria-valuenow="0">
+                  <div class="progress-fill" id="tipProgressFill"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <button class="launch" id="launchBtn">啟動遊戲</button>
@@ -55,8 +67,10 @@
           <div class="accountsList" id="accountsList"></div>
 
           <!-- 新增：在 panel 裡放一個按鈕用來觸發 create-account modal -->
-          <div style="padding:12px">
+          <div style="padding:12px;display:flex;gap:8px;flex-direction:column">
             <button id="openModalBtn" type="button" class="openModalBtn">新增帳戶</button>
+            <!-- 測試按鈕：用來測試 Tip/Progress 區塊 -->
+            <button id="demoProgressBtn" type="button" class="openModalBtn" title="測試 Tip/進度">測試 Tip/進度</button>
           </div>
         </div>
       </section>

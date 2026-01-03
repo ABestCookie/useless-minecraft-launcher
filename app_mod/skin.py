@@ -1,4 +1,6 @@
 from PIL import Image, ImageTk
+import io
+import base64
 import os
 import logging
 
@@ -69,13 +71,14 @@ def mojang_skin_checker(skin_path: str):
 
     return True, model_type, final_path
 
-def show_minecraft_face(skin_path, scale=8, include_hat=True):
+def get_face_image(skin_path, scale=8, include_hat=True):
     """
-    在 Tkinter 視窗中顯示 Minecraft 皮膚的臉部。
-    
+    從皮膚產生放大的臉部 PIL.Image（RGBA）。
+
     :param skin_path: 皮膚檔案路徑
-    :param scale: 放大倍率，默認 8 倍
+    :param scale: 放大倍率，預設 8
     :param include_hat: 是否包含帽子層
+    :return: PIL.Image (RGBA)
     """
     skin = Image.open(skin_path).convert("RGBA")
 
@@ -91,16 +94,64 @@ def show_minecraft_face(skin_path, scale=8, include_hat=True):
         # 合併臉和帽子
         face = Image.alpha_composite(face, hat)
 
-    # 放大
+    # 放大並以 NEAREST 保持像素風格
     face_big = face.resize((8 * scale, 8 * scale), Image.NEAREST)
+    return face_big
 
-    # 轉換成 Tkinter 圖像
+
+def show_minecraft_face(skin_path, scale=8, include_hat=True):
+    """
+    在 Tkinter 視窗中顯示 Minecraft 皮膚的臉部，回傳 `ImageTk.PhotoImage`（向後相容）。
+    """
+    face_big = get_face_image(skin_path, scale, include_hat)
     tk_image = ImageTk.PhotoImage(face_big)
-    
     return tk_image
+
+
+def show_minecraft_face_html(skin_path, scale=8, include_hat=True, as_data_uri=True, save_path=None):
+    """
+    產生可在 HTML 使用的臉部圖片。
+
+    回傳值行為說明：
+      - 若 `save_path` 為 None，且 `as_data_uri` 為 True：回傳 data URI 字串 'data:image/png;base64,...'
+      - 若 `save_path` 提供，且 `as_data_uri` 為 True：會先儲存檔案，回傳 (data_uri, save_path)
+      - 若 `as_data_uri` 為 False 且 `save_path` 提供：儲存檔案並回傳檔案路徑
+      - 若 `as_data_uri` 為 False 且 `save_path` 為 None：回傳 PNG 二進位資料（bytes）
+
+    :param skin_path: 皮膚路徑
+    :param scale: 放大倍率
+    :param include_hat: 是否包含帽子層
+    :param as_data_uri: 是否回傳 data URI（預設 True）
+    :param save_path: 若提供則同時儲存 PNG 到該路徑
+    """
+    face_big = get_face_image(skin_path, scale, include_hat)
+
+    buffer = io.BytesIO()
+    face_big.save(buffer, format='PNG')
+    data = buffer.getvalue()
+
+    if save_path:
+        with open(save_path, 'wb') as f:
+            f.write(data)
+
+    if as_data_uri:
+        encoded = base64.b64encode(data).decode('ascii')
+        data_uri = f"data:image/png;base64,{encoded}"
+        return (data_uri, save_path) if save_path else data_uri
+    else:
+        return save_path if save_path else data
 
 # 🚀 範例用法
 if __name__ == "__main__":
     skin = "user_data/skin.png"  # 可以是 JPG/BMP/PNG
     valid, model, final = mojang_skin_checker(skin)
     print("結果:", "有效" if valid else "無效", "| 模型:", model, "| 最終檔案:", final)
+
+    if valid and final:
+        # 產生 HTML data URI（可直接放到 <img src="...">）
+        data_uri = show_minecraft_face_html(final)
+        print("data URI 範例（前 120 字）：", data_uri[:120], "...")
+
+        # 同時儲存成檔案並回傳路徑
+        saved_path = show_minecraft_face_html(final, as_data_uri=False, save_path="user_data/face.png")
+        print("已儲存到：", saved_path)
