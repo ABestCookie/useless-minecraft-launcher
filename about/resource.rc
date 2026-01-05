@@ -1,0 +1,18 @@
+#include <windows.h>
+#include "resource.h"
+
+// 定義對話框
+IDD_ABOUTBOX DIALOGEX 0, 0, 220, 90
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "關於 我的程式"
+FONT 9, "Segoe UI"
+BEGIN
+    // 使用系統預設圖示 (ID 32512 是應用程式圖示)
+    ICON            32512, IDC_STATIC, 14, 14, 21, 20
+    LTEXT           "我的 Dev-C++ 應用程式", IDC_STATIC, 45, 15, 150, 8
+    LTEXT           "版本 1.0.0", IDC_STATIC, 45, 27, 150, 8
+    LTEXT           "Copyright (C) 2026", IDC_STATIC, 45, 39, 150, 8
+    
+    CONTROL         "", IDC_STATIC, "Static", SS_ETCHEDHORZ, 7, 65, 206, 1
+    DEFPUSHBUTTON   "確定", IDOK, 163, 70, 50, 14
+END
