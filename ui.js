@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const tipClose = $('tipClose');
   const tipStatus = $('tipStatus');
   const tipProgress = $('tipProgress');
-  const tipProgressFill = $('tipProgressFill');
+  const tipProgressBar = $('tipProgressBar');
   const tipProgressLabel = $('tipProgressLabel');
   let tipMax = 0;
 
@@ -213,14 +213,13 @@ document.addEventListener('DOMContentLoaded', () => {
     tipMax = Number(n) || 0;
     tipProgress.hidden = false;
     tipProgress.setAttribute('aria-hidden', 'false');
-    const progressBar = tipProgress.querySelector('.progress');
-    if (progressBar) {
-      progressBar.setAttribute('aria-valuemin', '0');
-      progressBar.setAttribute('aria-valuemax', String(tipMax));
-      progressBar.setAttribute('aria-valuenow', '0');
+    if (tipProgressBar) {
+      try { tipProgressBar.max = tipMax; tipProgressBar.value = 0; } catch(e) {}
+      tipProgressBar.setAttribute('aria-valuemin', '0');
+      tipProgressBar.setAttribute('aria-valuemax', String(tipMax));
+      tipProgressBar.setAttribute('aria-valuenow', '0');
+      tipProgressBar.classList.remove('indeterminate');
     }
-    // clear indeterminate state
-    if (tipProgressFill) tipProgressFill.classList.remove('indeterminate');
     tip.classList.add('show');
   }
 
@@ -228,16 +227,18 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!tip || !tipProgress) return;
     const val = Number(p) || 0;
     if (tipMax && tipMax > 0) {
-      const pct = Math.max(0, Math.min(100, Math.round(val / tipMax * 100)));
-      if (tipProgressFill) {
-        tipProgressFill.style.width = pct + '%';
-        tipProgressFill.setAttribute('aria-valuenow', String(val));
-        tipProgressFill.classList.remove('indeterminate');
+      if (tipProgressBar) {
+        try { tipProgressBar.value = val; } catch(e) {}
+        tipProgressBar.setAttribute('aria-valuenow', String(val));
+        tipProgressBar.classList.remove('indeterminate');
       }
       if (tipProgressLabel) tipProgressLabel.textContent = `${val}/${tipMax}`;
     } else {
-      // indeterminate mode: show animated fill and use label for basic info
-      if (tipProgressFill) tipProgressFill.classList.add('indeterminate');
+      // indeterminate mode: remove value to trigger indeterminate appearance and animate
+      if (tipProgressBar) {
+        try { tipProgressBar.removeAttribute('value'); } catch(e) {}
+        tipProgressBar.classList.add('indeterminate');
+      }
       if (tipProgressLabel) tipProgressLabel.textContent = `${val}`;
     }
     tip.classList.add('show');
@@ -249,9 +250,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (tipProgress) {
       tipProgress.hidden = true;
       tipProgress.setAttribute('aria-hidden', 'true');
-      if (tipProgressFill) {
-        tipProgressFill.style.width = '0%';
-        tipProgressFill.classList.remove('indeterminate');
+      if (tipProgressBar) {
+        try { tipProgressBar.value = 0; } catch(e) {}
+        tipProgressBar.classList.remove('indeterminate');
+        tipProgressBar.setAttribute('aria-valuenow', '0');
+        tipProgressBar.setAttribute('aria-valuemax', '0');
       }
       if (tipProgressLabel) tipProgressLabel.textContent = '0/0';
       tipMax = 0;

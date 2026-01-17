@@ -17,7 +17,9 @@
         <div class="toggle" id="sidebarToggle" aria-expanded="true">☰</div>
         <div class="sidebar-inner">
           <button class="account-btn" id="accountBtn" title="帳戶">
-            <div class="avatar" id="mainAvatar"></div>
+            <div class="avatar" id="mainAvatar">
+              <img id="mainAvatarImg" src="user_data/face.png" alt="使用者大頭貼" style="width:100%;height:100%;object-fit:cover;" />
+            </div>
             <div class="account-txt">
               <div style="font-weight:700">WafflyBat</div>
               <div style="font-size:12px;color:#666">Microsoft 帳戶</div>
@@ -47,7 +49,7 @@
               <div class="progress-label" id="tipProgressLabel" style="font-size:12px;color:#333">0/0</div>
               <div style="flex:1;margin-left:8px;margin-right:8px">
                 <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="0" aria-valuenow="0">
-                  <div class="progress-fill" id="tipProgressFill"></div>
+                  <progress id="tipProgressBar" style="width:100%;height:12px;"></progress>
                 </div>
               </div>
             </div>

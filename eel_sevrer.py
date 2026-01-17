@@ -54,24 +54,35 @@ def load_versionSelect(ver):
     select_ver = ver
     print(select_ver)
     
-def set_progress_bar(status: str = None, progress: int = None, max: int = None):
-    if status is not None:
-        eel.tip_set_status(status)
-    if progress is not None:
-        eel.tip_set_progress(progress)
-    if max is not None:
-        eel.tip_set_max(max)
+def set_status(status: str):
+    eel.tip_set_status(status)
+    print(status)
+
+
+def set_progress(progress: int):
+    eel.tip_set_progress(progress)
+    if current_max != 0:
+        print(f"{progress}/{current_max}")
+
+
+def set_max(new_max: int):
+    eel.tip_set_max(new_max)
+    global current_max
+    current_max = new_max
+    
 @eel.expose
 def launch_game():
     process_bar= {
-    "setStatus": set_progress_bar,
-    "setProgress": set_progress_bar, # This function is called to set the progress.
-    "setMax": set_progress_bar, # This function is called to set to max progress.
-}
+        "setStatus": set_status,
+        "setProgress": set_progress,
+        "setMax": set_max
+    }
     try:
+        #eel.tip_test_sequence()
+        eel.terminal_show("等待完整性驗證...") 
         core.Launcher.install_game(ver=select_ver, Callback=process_bar)
         cmd=core.Launcher.normal(ver=select_ver)
-        return_code=run_command(cmd)
+        return_code = run_command(cmd)
         return f"遊戲啟動成功，回傳碼: {return_code}"
     except Exception as e:
         logging.error(f"Failed to launch game: {e}")
