@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dialog Box</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .textToggleDisplayButtons {
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      align-content: flex-start;
+      user-select: none;
+    }
+
+    .textToggleDisplayButtonLabel {
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      border-left-width: 4px;
+      border-radius: 2px;
+      flex: 1 0 auto;
+      margin: 4px;
+      padding: 0 8px;
+      box-shadow: 1px 1px 2px black;
+      color: rgba(0, 0, 0, 0.7);
+      transition: 0.13s ease-in-out all;
+      background-color: white;
+      cursor: pointer;
+      border: none;
+      font-size: inherit;
+    }
+
+    .textToggleDisplayButtonLabel.cancelButton {
+      line-height: normal;
+    }
+
+    .textToggleDisplayButtonLabel.on {
+      border-color: rgba(0, 0, 0, 1);
+      color: rgba(0, 0, 0, 1);
+    }
+
+    .textToggleDisplay.hidden,
+    .textToggleDisplayButtonsStyle,
+    .textToggleDisplayStyle,
+    .textToggleDisplayButtonLabel:not(.on) .textToggleDisplayButtonLabelText.on,
+    .textToggleDisplayButtonLabel.on .textToggleDisplayButtonLabelText.off {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+  <style>
+    .goog-te-banner-frame.skiptranslate { display: none !important; }
+    body { top: 0px !important; }
+  </style>
+  <div id="google_translate_element"></div>
+
+  <script type="text/javascript">
+    document.cookie = "googtrans=/zh-TW/en";
+
+    function killGoogleToolbar() {
+        // 1. 持續檢查並移除 iframe
+        const checkIframe = setInterval(function() {
+            const toolbar = document.querySelector(".goog-te-banner-frame");
+            if (toolbar) {
+                toolbar.remove();
+                // 2. 修正 body 和 html 被 Google 改掉的位移
+                document.body.style.top = "0px";
+                document.documentElement.style.top = "0px"; // 針對 html 標籤
+                console.log("已強制移除 Google 欄位");
+            }
+        }, 100); // 縮短檢查時間到 100ms
+
+        // 3. 額外防線：強制 CSS 覆蓋
+        const style = document.createElement('style');
+        style.innerHTML = `
+            .skiptranslate, .goog-te-banner-frame { display: none !important; }
+            body, html { top: 0px !important; position: static !important; }
+        `;
+        document.head.appendChild(style);
+
+        setTimeout(() => clearInterval(checkIframe), 15000); // 延長監控到 15 秒
+    }
+
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'zh-TW',
+            includedLanguages: 'en',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: true
+        }, 'google_translate_element');
+    }
+
+    // 重點：直接在全局執行監控，不要等 Google 初始化完才執行
+    killGoogleToolbar();
+</script>
+
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  
+  <div id="dialogbox" style="position: relative; text-align: center; background-color: #f0eef5; border-radius: 8px; padding: 12px 48px; width: fit-content; margin: 0 auto; line-height: 100%; border: 1px solid #d5d4d7;" data-cur="cursor">
+    <div style="position: absolute; top: 3px; right: 6px;">
+      <a href="#top"><span style="color: #44415f;">✖</span></a>
+    </div>
+    
+    <div style="padding: 4px 0;" data-cur="cursor">
+      <span style="font-size: 90%; color: #1f1b2b;">
+        <b data-cur="cursor">
+          閱讀完本章劇情後，<br>
+          曉山瑞希將暫時不會出現在現實世界中<br>
+          真的要繼續嗎？
+        </b>
+      </span>
+    </div>
+
+    <p>
+      <span class="textToggleDisplayButtonsStyle" 
+            data-key-0="na" 
+            data-value-0="background-color:white;color:#1f1b2b;font-weight:bolder;border-width:1px;border-color:#d5d4d7;border-radius:20px;padding:0 28px;" 
+            data-key-1="ev145" 
+            data-value-1="background-color:#a0fce3;color:#1f1b2b;font-weight:bolder;border-width:1px;border-color:#d5d4d7;border-radius:20px;padding:0 28px;">
+      </span>
+    </p>
+
+    <span class="textToggleDisplayButtons" 
+          data-key-0="@radio" 
+          data-value-0="y" 
+          data-key-1="@default" 
+          data-value-1="na" 
+          data-key-2="@forceNoCancel" 
+          data-value-2="y">
+      
+      <span data-order="0" data-key="ev145" data-cur="cursor">
+        <button data-id="ev145" 
+                class="textToggleDisplayButtonLabel on" 
+                data-style-off="background-color:#a0fce3;color:#1f1b2b;font-weight:bolder;border-width:1px;border-color:#d5d4d7;border-radius:20px;padding:0 28px;" 
+                data-style-on="background-color:#a0fce3;color:#1f1b2b;font-weight:bolder;border-width:1px;border-color:#d5d4d7;border-radius:20px;padding:0 28px;" 
+                style="background-color:#a0fce3;color:#1f1b2b;font-weight:bolder;border-width:1px;border-color:#d5d4d7;border-radius:20px;padding:0 28px;" 
+                data-cur="cursor">
+          <span class="textToggleDisplayButtonLabelText on" style="" data-cur="cursor">閱讀</span>
+          <span class="textToggleDisplayButtonLabelText off" data-cur="cursor">閱讀</span>
+        </button>
+      </span>
+
+      <span data-order="1" data-key="na" data-cur="cursor">
+        <button data-id="na" 
+                class="textToggleDisplayButtonLabel after-on" 
+                data-style-off="background-color:white;color:#1f1b2b;font-weight:bolder;border-width:1px;border-color:#d5d4d7;border-radius:20px;padding:0 28px;" 
+                data-style-on="background-color:white;color:#1f1b2b;font-weight:bolder;border-width:1px;border-color:#d5d4d7;border-radius:20px;padding:0 28px;" 
+                style="background-color:white;color:#1f1b2b;font-weight:bolder;border-width:1px;border-color:#d5d4d7;border-radius:20px;padding:0 28px;" 
+                data-cur="cursor">
+          <span class="textToggleDisplayButtonLabelText on" data-cur="cursor">取消</span>
+          <span class="textToggleDisplayButtonLabelText off">取消</span>
+        </button>
+      </span>
+    </span>
+  </div>
+
+  <script>
+    "use strict";
+    window.RLQ = window.RLQ || [];
+    window.RLQ.push(["jquery", () => {
+      // CSS 清理函數
+      const cssSanitizer = (cssStr) => {
+        if (typeof cssStr !== "string") cssStr = "";
+        return cssStr
+          .replace(RegExp(decodeURIComponent("%3C!--"), "g"), "")
+          .replace(RegExp(decodeURIComponent("-%3E"), "g"), "")
+          .replace(/\/\//g, "")
+          .replace(/url/g, "")
+          .replace(/&/g, "")
+          .replace(/pointer-event/g, ";")
+          .replace(/display\s*:\s*none\s*!\s*important/g, "display: none");
+      };
+
+      // 數據集解析函數
+      const datasetParser = (ele) => {
+        const result = {
+          config: {},
+          data: {},
+        };
+        Object.entries(ele.dataset)
+          .filter(([n, m]) => n.startsWith("key-") && !/['"<>\\/]/.test(m))
+          .forEach(([__key, _key]) => {
+            const value = ele.dataset[`value-${__key.substring(4)}`];
+            if (_key.length > 0 && value.length > 0) {
+              const isConfig = _key.startsWith("@");
+              const key = isConfig ? _key.substring(1) : _key;
+              const base = result[isConfig ? "config" : "data"];
+              base[key] = value;
+
+              if (/@o(?:n|ff)$/.test(_key)) {
+                const id = _key.replace(/@o(?:n|ff)$/, "");
+                if (!(id in base)) {
+                  base[id] = value;
+                }
+              } else {
+                if (!(`${key}@on` in base)) {
+                  base[`${key}@on`] = value;
+                }
+                if (!(`${key}@off` in base)) {
+                  base[`${key}@off`] = value;
+                }
+              }
+            }
+          });
+        return result;
+      };
+
+      // 獲取有效的條目
+      const getEntries = (obj) =>
+        Object.entries(obj).filter(
+          ([k, n]) =>
+            !/@(?:on|off)$/.test(k) && !/['"<>\\/]/.test(n)
+        );
+
+      // 設置按鈕樣式
+      $(".textToggleDisplayButtonsStyle").each((_, ele) => {
+        const parsedDataset = datasetParser(ele);
+        getEntries(parsedDataset.data).forEach(([id]) => {
+          $(`.textToggleDisplayButtonLabel[data-id="${id}"]`).attr({
+            "data-style-off": parsedDataset.data[`${id}@off`] || "",
+            "data-style-on": parsedDataset.data[`${id}@on`] || "",
+          });
+        });
+      });
+
+      // 按鈕點擊事件處理
+      $(".textToggleDisplayButtonLabel").on("click", function () {
+        const button = $(this);
+        const isOn = button.hasClass("on");
+
+        // 切換按鈕狀態
+        button[isOn ? "removeClass" : "addClass"]("on").attr(
+          "style",
+          cssSanitizer(button.attr(isOn ? "data-style-off" : "data-style-on"))
+        );
+      });
+    }]);
+  </script>
+</body>
+</html>

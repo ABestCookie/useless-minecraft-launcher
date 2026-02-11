@@ -6,9 +6,65 @@
 const AUTO_SHOW_TIP = true;
 const keyboardEvent = window.event;
 
+/* ===== 全局 msgbox 函數（在 DOMContentLoaded 之前定義） ===== */
+let msgboxBack = null;
+let msgboxOk = null;
+let msgboxCancel = null;
+let msgboxTitle = null;
+let msgboxMsg = null;
+
+function showMsg(title = '提示', message = '', options = {}) {
+  // 延遲初始化，確保 DOM 已加載
+  if (!msgboxBack) {
+    msgboxBack = document.getElementById('msgboxBack');
+    msgboxOk = document.getElementById('msgboxOk');
+    msgboxCancel = document.getElementById('msgboxCancel');
+    msgboxTitle = document.getElementById('msgboxTitle');
+    msgboxMsg = document.getElementById('msgboxMsg');
+    aa12 = document.getElementById('aa12');
+  }
+  
+  if (!msgboxBack) return Promise.resolve(null);
+
+  // 設定內容（都使用 innerHTML 以支持 HTML 內容）
+  msgboxTitle.innerHTML = title;
+  msgboxMsg.innerHTML = message;
+
+  // 顯示
+  msgboxBack.classList.add('show');
+  msgboxBack.setAttribute('aria-hidden', 'false');
+
+  // 回傳一個 Promise，resolve 為按鈕結果 ('ok'|'cancel')
+  return new Promise(resolve => {
+    const clean = (result) => {
+      msgboxBack.classList.remove('show');
+      msgboxBack.setAttribute('aria-hidden', 'true');
+      // 移除事件聆聽器
+      msgboxOk.removeEventListener('click', onOk);
+      msgboxCancel.removeEventListener('click', onCancel);
+      // small delay 以等待動畫結束（非必要）
+      setTimeout(() => resolve(result), 180);
+    };
+    const onOk = () => clean('ok');
+    const onCancel = () => clean('cancel');
+
+    msgboxOk.addEventListener('click', onOk);
+    msgboxCancel.addEventListener('click', onCancel);
+
+    // 可按 Esc 關閉
+    const onKey = (e) => {
+      if (e.key === 'Escape') { onCancel(); document.removeEventListener('keydown', onKey); }
+    };
+    document.addEventListener('keydown', onKey, { once: true });
+  });
+}
+
+
 /* 新增：管理 terminal 的 focus 與 ESC handler（用於可靠關閉） */
 let lastTerminalFocusedElement = null;
 let terminalEscHandler = null;
+
+
 
 /* 更新：讓 terminal_show 也處理 focus 與 aria，並註冊 ESC 可以關閉 */
 function terminal_show(message, e) {
@@ -73,6 +129,13 @@ function closeTerminal() {
         terminalEscHandler = null;
     }
     lastTerminalFocusedElement = null;
+}
+
+function aboutAPP() {
+    showMsg('關於 UMCL', `<div>
+      <h4>Useless Minecraft Launcher (UMCL)</h4>
+      <p>版本：0.1.0<br/>作者：tsai cookie<br/>此程式為模擬用途，僅供學習與測試。</p>
+      </div>`);
 }
 
 
@@ -323,10 +386,30 @@ document.addEventListener('DOMContentLoaded', () => {
   /* 帳戶面板顯示/隱藏：改為使用 classList，以觸發 CSS 動畫 */
   const accountBtn = $('accountBtn');
   const accountPanel = $('accountPanel');
+  const mainbtn = $('account-txt');
+  
+  // 保存原始的 account-txt 內容
+  const originalAccountTxt = mainbtn ? mainbtn.innerHTML : '';
+  
   if (accountBtn && accountPanel) {
     accountBtn.addEventListener('click', () => {
       const isOpen = accountPanel.classList.toggle('show');
-      if (isOpen) populateAccounts();
+      if (isOpen) {
+        // accountPanel 打開時
+        populateAccounts();
+        // 改為返回
+        if (mainbtn) {
+          mainbtn.innerHTML = `
+            <div style="font-weight:700">返回</div>
+            <div style="font-size:12px;color:#666"></div>
+          `;
+        }
+      } else {
+        // accountPanel 關閉時，恢復原始內容
+        if (mainbtn) {
+          mainbtn.innerHTML = originalAccountTxt;
+        }
+      }
     });
   }
 
@@ -334,33 +417,45 @@ document.addEventListener('DOMContentLoaded', () => {
     const container = $('accountsList');
     if (!container) return;
     container.innerHTML = '';
-    const users = [
-      { name: 'WafflyBat', type: 'Microsoft' },
-      { name: 'PlayerOne', type: 'offline' },
-      { name: 'Guest', type: 'offline' }
-    ];
+    
+    // eel.account_get 返回 Promise，需要用 callback 或 async/await 處理
+    eel.account_get("list")(function(users) {
+      console.log('收到的原始資料：', users);
+      
+      // 如果返回空物件或 null，顯示提示
+      if (!users || Object.keys(users).length === 0) {
+        container.innerHTML = '<div style="padding:12px;color:#999">沒有帳號</div>';
+        return;
+      }
 
-    users.forEach(u => {
-      const div = document.createElement('div');
-      div.className = 'entry';
-      div.innerHTML = `
-        <img alt="" src="" style="background:#ddd"/>
-        <div style="flex:1">
-          <div style="font-weight:700">${u.name}</div>
-          <div style="font-size:12px;color:#888">${u.type} 帳戶</div>
-        </div>
-        <div style="display:flex;gap:6px">
-          <button class="controlBtn" onclick="alert('刷新 ${u.name}')">🔄</button>
-          <button class="controlBtn" onclick="alert('個人資料 ${u.name}')">👤</button>
-          <button class="controlBtn" onclick="if(confirm('刪除 ${u.name}?')){ this.closest('.entry').remove(); }">🗑️</button>
-        </div>
-      `;
-      container.appendChild(div);
+      
+
+      // users 現在是一個字典，鍵是帳號名，值是帳號資訊物件
+      // 直接遍歷字典的值
+      Object.values(users).forEach((u, index) => {
+        console.log(`第 ${index} 個帳號：`, u);
+        const div = document.createElement('div');
+        eel.skin_face_get(u.skin.path)(function(skinDataUrl) {
+          const img = div.querySelector('img');
+          if (img) img.src = skinDataUrl;
+        });
+        div.className = 'entry';
+        div.innerHTML = `
+          <img alt="" src="" style="background:#ddd"/>
+          <div style="flex:1">
+            <div style="font-weight:700">${u.user_name || '未知帳號'}</div>
+            <div style="font-size:12px;color:#888">${u.account_type || '未知類型'} 帳戶</div>
+          </div>
+          <div style="display:flex;gap:6px">
+            <button class="controlBtn" onclick="alert('刷新 ${u.user_name}')">🔄</button>
+            <button class="controlBtn" onclick="alert('個人資料 ${u.user_name}')">👤</button>
+            <button class="controlBtn" onclick="if(confirm('刪除 ${u.user_name}?')){ this.closest('.entry').remove(); }">🗑️</button>
+          </div>
+        `;
+        container.appendChild(div);
+      });
     });
   }
-
-  
-
 
   /* settings 按鈕改為開啟 panel（同上） */
   const settingsBtn = $('settingsBtn');
@@ -370,10 +465,18 @@ document.addEventListener('DOMContentLoaded', () => {
       const list = $('accountsList');
       if (list) list.innerHTML = `
       <div style="padding:12px;color:#666">
-        <button class="menu-btn" style="text-align: center;" onclick="alert('模擬更改設定')">⚙️ 更改設定（模擬）</button><br/><br/>
+        <button class="menu-btn" style="text-align: center;" onclick="showMsg('設定', '更改設定功能尚未實現').then(r => console.log('選擇：' + r))">⚙️ 更改設定</button><br/><br/>
         <button class="menu-btn" style="text-align: center;" onclick="terminal_show('模擬查看日誌')">📄 查看日誌</button><br/><br/>
-        <button class="menu-btn" style="text-align: center;" onclick="alert('模擬關於本程式')">ℹ️ 關於 UMCL（模擬）</button>
+        <button class="menu-btn" style="text-align: center;" onclick="showMsg('測試 Msgbox', '這是一個全局的訊息框測試')">🧪 測試 Msgbox</button><br/><br/>
+        <button class="menu-btn" style="text-align: center;" onclick="aboutAPP()">ℹ️ 關於 UMCL</button>
       </div>`;
+      // 改為返回
+      if (mainbtn) {
+        mainbtn.innerHTML = `
+          <div style="font-weight:700">返回</div>
+          <div style="font-size:12px;color:#666"></div>
+        `;
+      }
     });
   }
 
@@ -424,62 +527,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 新增：msgbox 行為（tkinter.msgbox 類似）
-  const showMsgBtn = $('showMsgBtn');
-  const msgboxBack = $('msgboxBack');
-  const msgboxOk = $('msgboxOk');
-  const msgboxCancel = $('msgboxCancel');
-  const msgboxTitle = document.getElementById('msgboxTitle');
-  const msgboxMsg = document.getElementById('msgboxMsg');
-
-  // 顯示訊息框：可傳入 title 與 message
-  function showMsg(title = '提示', message = '', options = {}) {
-    if (!msgboxBack) return Promise.resolve(null);
-
-    // 設定內容
-    msgboxTitle.textContent = title;
-    msgboxMsg.textContent = message;
-
-    // 顯示
-    msgboxBack.classList.add('show');
-    msgboxBack.setAttribute('aria-hidden', 'false');
-
-    // 回傳一個 Promise，resolve 為按鈕結果 ('ok'|'cancel')
-    return new Promise(resolve => {
-      const clean = (result) => {
-        msgboxBack.classList.remove('show');
-        msgboxBack.setAttribute('aria-hidden', 'true');
-        // 移除事件聆聽器
-        msgboxOk.removeEventListener('click', onOk);
-        msgboxCancel.removeEventListener('click', onCancel);
-        // small delay 以等待動畫結束（非必要）
-        setTimeout(() => resolve(result), 180);
-      };
-      const onOk = () => clean('ok');
-      const onCancel = () => clean('cancel');
-
-      msgboxOk.addEventListener('click', onOk);
-      msgboxCancel.addEventListener('click', onCancel);
-
-      // 可按 Esc 關閉
-      const onKey = (e) => {
-        if (e.key === 'Escape') { onCancel(); document.removeEventListener('keydown', onKey); }
-      };
-      document.addEventListener('keydown', onKey, { once: true });
-    });
-  }
-
-  // 連接按鈕（panel 內的按鈕）
-  if (showMsgBtn) {
-    showMsgBtn.addEventListener('click', () => {
-      showMsg('訊息', '這是一個模擬的訊息框（tkinter.msgbox 風格）').then(result => {
-        // 簡單示範處理結果
-        if (result === 'ok') alert('你按了 確定');
-        else alert('你按了 取消');
-      });
-    });
-  }
-
   const versionSelect = document.getElementById('versionSelect');
   eel.get_local_ver()(function(ver) {
     console.log(ver);
@@ -498,9 +545,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const terminalClose = document.getElementById('terminalClose');
   const terminalBack = document.getElementById('terminal');
-
-  if (e.key === 'Escape' ) {
-    closeTerminal();
+  
+  // 綁定 terminal 關閉按鈕
+  if (terminalClose) {
+    terminalClose.addEventListener('click', closeTerminal);
   }
 
   // 若需程式載入時就自動顯示 msgbox，可在此呼叫：
