@@ -1,0 +1,143 @@
+/* ===== account-modal.css - 帳戶建立彈出視窗樣式 ===== */
+
+/* Modal 容器（背景） */
+.modal-back {
+  position: fixed;
+  inset: 0;
+  /* 預設隱藏，但保留在 DOM 讓動畫可播放 */
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.0);
+  z-index: 1200;
+  transition: opacity 220ms ease, background 220ms ease, visibility 0ms linear 220ms;
+}
+
+/* 顯示狀態 */
+.modal-back.show {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  background: rgba(0,0,0,0.28);
+  transition-delay: 0ms;
+}
+
+/* Modal 對話框本體 */
+.modal {
+  width: clamp(300px, 40vw, 520px);
+  max-width: 92vw;
+  background: rgba(255,255,255,0.5);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  box-sizing: border-box;
+  transform: translateY(-12px) scale(0.98);
+  opacity: 0;
+  transition: transform 260ms cubic-bezier(.2,.9,.2,1), opacity 220ms ease;
+  will-change: transform, opacity;
+  position: relative;
+}
+
+/* show 時 modal 彈出 */
+.modal-back.show .modal {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+/* 關閉按鈕 */
+.close-x {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  border: 0;
+  background: transparent;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 2;
+  transition: background-color 220ms ease, color 220ms ease, transform 220ms ease;
+}
+
+.close-x:hover {
+  background-color: #f44336;
+  color: #fff;
+  transform: scale(1.06);
+}
+
+/* 帳戶輸入框樣式 */
+.acctNameInput {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.acctNameInput:focus {
+  outline: none;
+  border-color: #1976d2;
+  box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.1);
+}
+
+/* skin 選擇按鈕 */
+.pickSkinBtn,
+.previewSkinBtn {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #f5f5f5;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 220ms ease, border-color 220ms ease;
+  flex: 1;
+}
+
+.pickSkinBtn:hover,
+.previewSkinBtn:hover {
+  background: #e8e8e8;
+  border-color: #999;
+}
+
+.pickSkinBtn:focus,
+.previewSkinBtn:focus {
+  outline: none;
+  border-color: #1976d2;
+  box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.1);
+}
+
+/* 建立按鈕 */
+.createAcctBtn {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(135deg, #4caf50, #45a049);
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 220ms ease, transform 220ms ease;
+}
+
+.createAcctBtn:hover {
+  background: linear-gradient(135deg, #45a049, #3d8b40);
+  transform: translateY(-2px);
+}
+
+.createAcctBtn:active {
+  transform: translateY(0);
+}
+
+/* 小螢幕微調 */
+@media (max-width: 520px) {
+  .modal {
+    width: calc(92vw);
+    padding: 12px;
+  }
+}

@@ -1,0 +1,55 @@
+/* ===== msgbox.css - 獨立的消息框樣式 ===== */
+
+/* msgbox 容器（模態背景） */
+.modal-back.msgbox-back {
+  position: fixed;
+  inset: 0;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.0);
+  z-index: 1200;
+  transition: opacity 220ms ease, background 220ms ease, visibility 0ms linear 220ms;
+}
+
+/* 顯示狀態 */
+.modal-back.msgbox-back.show {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  background: rgba(0,0,0,0.28);
+  transition-delay: 0ms;
+}
+
+/* msgbox 對話框本體 */
+.modal.msgbox-modal {
+  width: clamp(300px, 40vw, 520px);
+  max-width: 92vw;
+  background: rgba(255,255,255,0.5);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  box-sizing: border-box;
+  transform: translateY(-12px) scale(0.98);
+  opacity: 0;
+  transition: transform 260ms cubic-bezier(.2,.9,.2,1), opacity 220ms ease;
+  will-change: transform, opacity;
+  position: relative;
+}
+
+/* 顯示時動畫 */
+.modal-back.msgbox-back.show .modal.msgbox-modal {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+/* 小螢幕微調 */
+@media (max-width: 520px) {
+  .modal.msgbox-modal {
+    width: calc(92vw);
+    padding: 12px;
+  }
+}

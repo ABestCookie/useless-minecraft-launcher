@@ -1,0 +1,186 @@
+:root {
+            --glass: rgba(255, 255, 255, 0.12);
+            --border: rgba(255, 255, 255, 0.25);
+            --ios-blue: #0A84FF;
+        }
+
+        body {
+            margin: 0; padding: 40px;
+            font-family: -apple-system, "SF Pro Display", sans-serif;
+            background: url('./art/background_cli.jpg') center/cover;
+            color: white;
+            display: flex; justify-content: center;
+        }
+
+        /* 遊戲設定大卡片 */
+        .settings-card {
+            width: 100%; max-width: 600px;
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        h2 { font-weight: 600; margin-bottom: 30px; letter-spacing: -0.5px; }
+
+        .group-label { font-size: 13px; color: rgba(255,255,255,0.5); margin: 20px 5px 10px; }
+
+        /* 設定橫列 */
+        .row {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 15px 10px;
+            background: rgba(255,255,255,0.05);
+            margin-bottom: 2px; /* 創造微小縫隙 */
+            transition: 0.2s;
+        }
+        .row:first-child { border-radius: 15px 15px 0 0; }
+        .row:last-child { border-radius: 0 0 15px 15px; }
+        .row:hover { background: rgba(255,255,255,0.08); }
+
+        /* 輸入框樣式 */
+        input[type="text"], input[type="number"] {
+            background: rgba(0,0,0,0.3);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: #55EFFF; /* 給點科技感的淺藍 */
+            padding: 6px 12px;
+            text-align: right;
+            outline: none;
+        }
+
+        /* 儲存按鈕 - 液態感 */
+        .btn-save {
+            margin-top: 30px; width: 100%;
+            padding: 15px; border-radius: 15px;
+            border: none; background: var(--ios-blue);
+            color: white; font-size: 16px; font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 8px 15px rgba(10, 132, 255, 0.3);
+            transition: 0.3s;
+        }
+        .btn-save:hover { transform: scale(1.02); filter: brightness(1.1); }
+        /* --- 輸入框基礎樣式與動畫 --- */
+input[type="text"], input[type="number"] {
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    color: #55d7ff;
+    padding: 8px 15px;
+    text-align: right;
+    outline: none;
+    
+    /* 設定動畫過渡 */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 0 rgba(85, 239, 255, 0);
+}
+
+/* --- 當輸入框被點擊 (Focus) 時的動畫 --- */
+input[type="text"]:focus, input[type="number"]:focus {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #325bff; /* 變為亮藍色 */
+    width: 220px;           /* 輕微伸長增加動態感 */
+    padding-right: 20px;
+    
+    /* 外發光效果 (Glow) */
+    box-shadow: 0 0 15px rgba(85, 239, 255, 0.4),
+                inset 0 0 5px rgba(85, 239, 255, 0.2);
+    
+    /* 輕微上浮效果 */
+    transform: translateY(-2px);
+}
+
+/* --- 當滑鼠懸停 (Hover) 時的微動 --- */
+input[type="text"]:hover, input[type="number"]:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* --- (進階) 讓文字輸入時有閃爍光暈 --- */
+input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+    transition: opacity 0.3s;
+}
+
+input:focus::placeholder {
+    opacity: 0.5;
+}
+
+/* 這裡是針對整個 Row 的動畫，讓它在進入時逐行滑入 */
+.row {
+    animation: slideIn 0.5s ease forwards;
+    opacity: 0;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* 讓每一行有延遲交錯出現的感覺 */
+.row:nth-child(1) { animation-delay: 0.1s; }
+.row:nth-child(2) { animation-delay: 0.2s; }
+.row:nth-child(3) { animation-delay: 0.3s; }
+/* 隱藏原生 Checkbox */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* 軌道樣式 (未開啟) */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: .4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 34px;
+}
+
+/* 圓形撥桿樣式 */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* 開啟狀態的樣式 (亮藍色液態感) */
+input:checked + .slider {
+    background-color: var(--ios-blue);
+    border-color: #55EFFF;
+    box-shadow: 0 0 15px rgba(10, 132, 255, 0.5);
+}
+
+input:checked + .slider:before {
+    transform: translateX(18px);
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 滑鼠懸停時的微亮 */
+.slider:hover {
+    background: rgba(255, 255, 255, 0.15);
+}

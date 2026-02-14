@@ -17,6 +17,9 @@ logging.basicConfig(
     format="%(asctime)s [%(levelname)s] %(message)s"  # 日誌格式：時間 [日誌等級] 消息
 )
 
+
+late_wrote = None  # 用來標記不需立即返回的錯誤
+
 # ===== 讀取帳號信息函數 =====
 def read(username=None):
     """
@@ -77,6 +80,7 @@ def write(name, account_type, skin: str=None):
         - "E01": 帳號已存在
         - "E02": 皮膚文件無效
     """
+    global late_wrote  # 聲明使用全域變數 late_wrote
     
     # ===== 第一部分：檢查帳號文件和判斷寫入模式 =====
     try:
@@ -87,11 +91,12 @@ def write(name, account_type, skin: str=None):
                 # 帳號文件為空，需要用寫入模式（會創建新文件）
                 mode_type = "w"
                 logging.warning("Account file is empty, creating a new one.")
+                
             elif name in data:
                 # 帳號已存在，返回錯誤代碼E01
                 mode_type = "w"
                 logging.warning(f"Account '{name}' already exists, overwriting.")
-                return "E01"  # E01: Account already exists
+                return ["E01", f"Account '{name}' already exists, overwriting."]  # E01: Account already exists
             else:
                 # 帳號不存在，可以追加新帳號
                 mode_type = "a"
@@ -109,7 +114,7 @@ def write(name, account_type, skin: str=None):
             logging.error("Failed to load skin. Please check the skin file.")
             image_road = r"art/steve.png"  # 使用默認皮膚（Steve）
             model = "Steve"
-            return "E02"  # E02: Invalid skin file
+            late_wrote = ["E02", "Failed to load skin. Please check the skin file."]  # E02: Invalid skin file  
         else:
             # 皮膚文件有效
             logging.info(f"Skin '{skin}' is valid. Model type: {model}. Final path: {final}")
@@ -124,10 +129,21 @@ def write(name, account_type, skin: str=None):
         logging.info("No skin provided, using default skin.")
         image_road = r"art/steve.png"
         model = "Steve"
+        
+    if account_type != "offline":
+        if account_type == "Microsoft":
+            logging.warning("Microsoft account creation is not supported in this version.")
+            return ["E03", "Microsoft account creation is not supported in this version."]  # E03: Unsupported account type
+        # 目前只支持離線帳號，其他類型返回錯誤
+        logging.error(f"Unknown account type: {account_type}. Please use 'offline' for offline accounts.")
+        return ["E03", "Unknown account type. Please use 'offline' for offline accounts."]  # E03: Unsupported account type
+        
+        
+    
 
     # ===== 第三部分：構建帳號數據 =====
     difault_data={
-                        (name): {  # 帳號名稱作為鍵
+            (name): {  # 帳號名稱作為鍵
                             "user_name": name,  # 玩家名稱
                             "account_type": account_type,  # 帳號類型（offline/online）
                             #以下因為是離線帳號，所以這些信息可以是隨機值
@@ -137,7 +153,7 @@ def write(name, account_type, skin: str=None):
                             "client_token": "*empty*",  # 客戶端令牌（離線帳號不需要）
                             "skin": {"model": model, "path": image_road if skin else None}   # 皮膚信息
                     }
-                }
+            }
 
     # ===== 第四部分：寫入帳號數據到文件 =====
     try:
@@ -148,27 +164,22 @@ def write(name, account_type, skin: str=None):
                     data= json.load(r)
                 if not data or data == {}:
                     logging.error("Account data is empty. Cannot update. Please create an account first.")
-                    return
+                    return ["F01", "Account data is empty. Cannot update. Please create an account first."]  # F01: File not found or empty
                 data[name] = difault_data[name]  # 將新帳號數據添加到現有數據中
                 with open("user_data/account.json", "w", encoding="utf-8") as f:
                     json.dump(data, f, indent=4)
                 logging.info(f"Account '{name}' create successfully.")
-            else:
-                # 寫入模式：創建新的帳號文件
-                if account_type == "offline":
-                    # 離線帳號創建
-                    json.dump(difault_data, f, indent=4)
-                    logging.info(f"Offline account '{name}' create successfully.")
+                if late_wrote is not None:
+                    return late_wrote # 返回之前標記的錯誤信息
                 else:
-                    # 不支持的帳號類型
-                    logging.error(f"Unknown account type: {account_type}. Please use 'offline' for offline accounts.")
-                    if account_type == "online":
-                        logging.warning("Online account creation is not supported in this version.")
-                    return
+                    return None
+            else:
+                json.dump(difault_data, f, indent=4)
+                logging.info(f"Offline account '{name}' create successfully.")
     except FileNotFoundError:
         # 帳號文件不存在時的錯誤處理
         logging.error("Account file not found. Please create an account first.")
-        return
+        return ["F01", "Account file not found. Please create an account first."]  # F01: File not found
 
 
 # ===== 刪除帳號函數 =====
@@ -198,6 +209,7 @@ def delete(username):
             else:
                 # 要刪除的帳號不存在
                 logging.error(f"Account '{username}' not found.")
+                return "E01"  # E01: Account not found
     except FileNotFoundError:
         # 帳號文件不存在
         logging.error("Account file not found. Please create an account first.")
@@ -207,6 +219,6 @@ def delete(username):
 if __name__ == "__main__":
     # 這段代碼只在直接運行此文件時才會執行
     # 用於測試帳號創建功能
-    os.chdir("C:\\Users\\Yachi\\Desktop\\useless minecraft launcher")
-    # 創建一個名為"WafflyBat"的離線帳號，並使用指定的皮膚文件
-    write("WafflyBat", "offline", "create", "user_data/skin.png")
+    os.chdir("C:\\Users\\tsai cookie\\Documents\\GitHub\\useless-minecraft-launcher")
+    # 創建一個名為"Waffly"的離線帳號，並使用指定的皮膚文件
+    print(write("Waffly", "Microsoft", "user_data/skin.png"))

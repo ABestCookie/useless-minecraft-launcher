@@ -7,7 +7,8 @@ import app_mod.account as account
 import app_mod.skin as skin
 import app_mod.server as server
 import app_mod.core as core
-import tkinter.messagebox as messagebox
+import threading
+import tkinter as tk
 
 
 logging.basicConfig(
@@ -85,7 +86,7 @@ def launch_game():
         return f"遊戲啟動成功，回傳碼: {return_code}"
     except Exception as e:
         logging.error(f"Failed to launch game: {e}")
-        messagebox.showerror("啟動失敗", f"無法啟動遊戲：{e}")
+        eel.showMsg("啟動失敗", f"無法啟動遊戲：{e}")
         return "遊戲啟動失敗"
     
 
@@ -116,17 +117,67 @@ def account_get(mode, name=None):
 @eel.expose
 def skin_face_get(path, scale=8, include_hat=True):
     return skin.show_minecraft_face_html(path, scale=scale, include_hat=include_hat)
+
+@eel.expose
+def dir_open(path):
+    if os.path.exists(path):
+        if sys.platform == 'win32':
+            os.startfile(path)
+        elif sys.platform == 'darwin':
+            subprocess.Popen(['open', path])
+        else:
+            subprocess.Popen(['xdg-open', path])
+    else:
+        eel.showMsg("錯誤", f"路徑不存在：{path}")
+
+@eel.expose        
+def account_write(name, account_type, skin=None):
+    result = account.write(name, account_type, skin)
+    if isinstance(result, list) and result[0].startswith("E"):
+        if result[0] == "E02":
+            eel.showMsg("錯誤", f"{result[1]}\n已使用默認皮膚創建帳號。")
+        else:
+            # 如果返回的是錯誤代碼，顯示錯誤消息
+            eel.showMsg("錯誤", result[1])
+    elif isinstance(result, list) and result[0].startswith("F"):
+        if result[0] == "F01":
+            eel.showMsg("錯誤", result[1])
+    else:
+        # 成功創建帳號，顯示成功消息
+        eel.showMsg("成功", f"帳號 '{name}' 已成功創建。")
     
-    
+        
+def on_close(page, sockets):
+    print(f"頁面 {page} 已關閉")
+    if not sockets:
+        print("所有視窗都關了！準備結束 Python...")
+        os._exit(0)
+@eel.expose        
+def ok():
+    root.withdraw()
 
 if __name__ == "__main__":
-    cmd=[r"C:\Users\tsai cookie\Documents\GitHub\useless-minecraft-launcher\ui\chrome-win\chrome.exe", 
-         "--app=http://localhost:486/index.html", 
+    cmd=[r"C:\Users\tsai cookie\Documents\GitHub\useless-minecraft-launcher\ui\chrome-win\chrome.exe",
+         "--app=http://localhost:486/index.html",
          "--window-size=900,700"]
     
+    def start_eel():
+        eel.init(".")
+        eel.start('index.html', mode='custom', port=486, cmdline_args=cmd, close_callback=on_close)
     
-    eel.init(".")
-    eel.start('index.html', mode='custom', port=486, cmdline_args=cmd)
+    
+    root = tk.Tk()
+    screenwidth = root.winfo_screenwidth()
+    screenheight = root.winfo_screenheight()
+    width, height = 300, 200
+    geometry = '%dx%d+%d+%d' % (width, height, (screenwidth - width) / 2, (screenheight - height) / 2) #window致中
+    root.geometry(geometry)
+    root.title("啟動器服務器")
+    root.overrideredirect(True)
+    t1=tk.Label(root, text="啟動器服務器正在運行中...", font=("Arial", 12))
+    t1.pack(expand=True)
+    threading.Thread(target=start_eel).start()
+    root.mainloop()
     
     #print(account_get("single", "WafflyBat"))
    

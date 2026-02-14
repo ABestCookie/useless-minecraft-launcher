@@ -1,3 +1,30 @@
 Logs
 *.log
-\ui\chrome-win\
+ui/chrome-win/
+# --- Python 相關 ---
+app_mod/__pycache__/
+*.py[cod]
+*$py.class
+.env
+venv/
+ENV/
+
+# --- Eel / 打包相關 ---
+dist/
+build/
+*.spec
+
+# --- Minecraft 啟動器專屬 (極重要) ---
+# 這裡排除你在開發時產生的遊戲資料與設定
+user_data/
+
+logs/
+.minecraft/
+*.log
+instances/
+
+*.dat
+
+# --- 作業系統相關 ---
+.DS_Store
+Thumbs.db

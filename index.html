@@ -7,6 +7,7 @@
   <link rel="icon" href="./art/java.ico" type="image/x-icon"/>
   <script type="text/javascript" src="/eel.js"></script>
   <link rel="stylesheet" href="ui.css">
+  <link rel="stylesheet" href="msgbox.css">
 </head>
 <body>
   <div class="app" role="application" aria-label="UMCL">
@@ -79,40 +80,29 @@
     </div>
   </div>
 
-  <div class="modal-back" id="modalBack" aria-hidden="true">
-    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalBody">
-      <button class="close-x" id="modalClose" title="關閉">✕</button>
-      <h3 id="modalTitle">新增帳戶</h3>
-      <div id="modalBody">
-        <input id="acctName" placeholder="帳戶名稱" class="acctNameInput" type="text"/>
-        <div style="margin-top:10px;display:flex;gap:8px">
-          <input id="pickSkin" class="pickSkinBtn" type='button' value="選取 skin (模擬)"/>
-          <button id="previewSkin" class="previewSkinBtn" type="button" value="預覽 skin">預覽 skin</button>
-        </div>
-        <div style="margin-top:18px">
-          <button id="createAcct" class="createAcctBtn" type="button">新增</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <div class="terminal", id="terminal">
     <button class="close-x" id="terminalClose" title="關閉" onclick="closeTerminal()">✕</button>
     <textarea id="terminalOutput" class="terminalOutput" cols="60" rows="40" readonly></textarea>
   </div>
 
-  <!-- 新增：msgbox 對話框 -->
-  <div class="modal-back" id="msgboxBack" aria-hidden="true">
-    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="msgboxTitle">
-      <h3 id="msgboxTitle">提示</h3>
-      <div id="msgboxMsg" style="margin: 4px 0; padding: 0px; white-space: pre-wrap; line-height: 1.2;"></div>
-      <div id="aa12" style="display:flex;gap:8px;justify-content:flex-end;margin-top:12px">
-        <button id="msgboxCancel" type="button">取消</button>
-        <button id="msgboxOk" type="button">確定</button>
+  <!-- 新增：更新說明面板（支援嵌入網頁內容） -->
+  <div class="update-panel-back" id="updatePanelBack" aria-hidden="true">
+    <div class="update-panel" role="dialog" aria-modal="true" aria-labelledby="updatePanelTitle">
+      <div class="update-panel-header">
+        <h2 id="updatePanelTitle">更新說明</h2>
+        <button class="close-x" id="updatePanelClose" title="關閉">✕</button>
+      </div>
+      <div class="update-panel-content" id="updatePanelContent">
+        <!-- 此處會被填入 HTML 或 iframe 內容 -->
       </div>
     </div>
   </div>
 
   <script src="ui.js"></script>
+  <script src="msgbox.js"></script>
+  <script>
+    eel.ok(); /* 啟動後立即隱藏啟動器服務器窗口 */
+  </script>
 </body>
 </html>

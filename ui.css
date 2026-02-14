@@ -175,60 +175,7 @@ html, body {
   pointer-events: auto;
 }
 
-/* Replace/override existing modal-back / modal to use tip-like semi-transparent style
-   並採用 tkinter.msgbox 類似的置中彈出樣式與動畫 */
-.modal-back {
-  position: fixed;
-  inset: 0;
-  /* 預設隱藏，但保留在 DOM 讓動畫可播放 */
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0,0,0,0.0); /* 先透明，show 時變暗 */
-  z-index: 1200;
-  transition: opacity 220ms ease, background 220ms ease, visibility 0ms linear 220ms;
-}
-
-.modal-back.show {
-  visibility: visible;
-  opacity: 1;
-  pointer-events: auto;
-  background: rgba(0,0,0,0.28);
-  transition-delay: 0ms;
-}
-
-/* 對話框本體：保持原本彈出動畫（transform/opacity） */
-.modal {
-  width: clamp(300px, 40vw, 520px);
-  max-width: 92vw;
-  background: rgba(255,255,255,0.5);
-  border-radius: 12px;
-  padding: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-  box-sizing: border-box;
-
-  transform: translateY(-12px) scale(0.98);
-  opacity: 0;
-  transition: transform 260ms cubic-bezier(.2,.9,.2,1), opacity 220ms ease;
-  will-change: transform, opacity;
-  position: relative; /* 讓 .close-x 定位正確 */
-}
-
-/* show 時 modal 彈出（enter），移除 .show 會看到 exit 動畫 */
-.modal-back.show .modal {
-  transform: translateY(0) scale(1);
-  opacity: 1;
-}
-
-
-
-/* 小螢幕微調（與現有規則一致） */
-@media (max-width: 520px) {
-  .modal { width: calc(92vw); padding: 12px; }
-}
+/* modal-back 和 .modal CSS 已移至獨立的 account-modal.css 和 msgbox.css */
 
 /* collapsed 行為 */
 .sidebar.collapsed .sidebar-inner {
@@ -520,5 +467,115 @@ html, body {
   font-size: 14px;
   resize: none;
   outline: none;
+}
+
+/* ===== 更新說明面板樣式（獨立於 modal 的大型容器） ===== */
+.update-panel-back {
+  position: fixed;
+  inset: 0;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.0);
+  z-index: 1200;
+  transition: opacity 220ms ease, background 220ms ease, visibility 0ms linear 220ms;
+}
+
+.update-panel-back.show {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  background: rgba(0,0,0,0.28);
+  transition-delay: 0ms;
+}
+
+/* 更新說明面板本體：比 modal 大得多，適合嵌入網頁內容 */
+.update-panel {
+  width: clamp(500px, 85vw, 900px);
+  height: clamp(400px, 80vh, 750px);
+  background: rgba(255,255,255,0.95);
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  transform: translateY(-12px) scale(0.98);
+  opacity: 0;
+  transition: transform 260ms cubic-bezier(.2,.9,.2,1), opacity 220ms ease;
+  will-change: transform, opacity;
+}
+
+.update-panel-back.show .update-panel {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+/* 更新面板的標題欄（含關閉按鈕） */
+.update-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f0f2f4;
+  flex-shrink: 0;
+}
+
+.update-panel-header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.update-panel-header .close-x {
+  margin: 0;
+  padding: 4px 8px;
+}
+
+/* 更新面板主要內容區（可滾動） */
+.update-panel-content {
+  flex: 1;
+  overflow: auto;
+  padding: 20px;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* iframe 或嵌入元素的樣式 */
+.update-panel-content iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 4px;
+}
+
+/* HTML 內容容器 */
+.update-panel-content > *:first-child {
+  margin-top: 0;
+}
+
+.update-panel-content > *:last-child {
+  margin-bottom: 0;
+}
+
+/* 小螢幕微調 */
+@media (max-width: 700px) {
+  .update-panel {
+    width: calc(92vw);
+    height: calc(90vh);
+    padding: 12px;
+  }
+  .update-panel-header {
+    padding: 12px;
+  }
+  .update-panel-content {
+    padding: 12px;
+  }
 }
 

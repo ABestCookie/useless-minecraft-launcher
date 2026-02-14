@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>設定 - Useless! Minecraft Launcher</title>
+        <link rel="icon" href="./art/java.ico" type="image/x-icon"/>
+        <script src="eel.js"></script>
+        <link rel="stylesheet" href="setting.css">
+    </head>
+<body>
+
+<div class="settings-card">
+    <h2>🎮 遊戲進階設定</h2>
+
+    <div class="group-label">JAVA & 性能分配</div>
+    <div class="setting-list">
+        <div class="row">
+            <span>最大記憶體 (MB)</span>
+            <input type="number" id="cfg_ram" value="4096">
+        </div>
+        <div class="row">
+            <span>Java 執行路徑</span>
+            <input type="text" id="cfg_javapath" placeholder="Default Javaw.exe">
+        </div>
+        <div class="row">
+            <span>JVM 啟動參數</span>
+            <input type="text" id="cfg_jvm" value="-XX:+UseG1GC">
+        </div>
+    </div>
+
+    <div class="group-label">啟動與顯示</div>
+    <div class="setting-list">
+        <div class="row">
+            <span>視窗寬度</span>
+            <input type="number" id="cfg_w" value="1920">
+        </div>
+        <div class="row">
+            <span>視窗高度</span>
+            <input type="number" id="cfg_h" value="1080">
+        </div>
+        <div class="row">
+            <span>自動連接伺服器</span>
+            <input type="text" id="cfg_ip" placeholder="Server IP">
+        </div>
+        <div class="row">
+            <span>啟動後自動全螢幕</span>
+            <label class="switch">
+                <input type="checkbox" id="game_fullscreen">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </div>
+
+    <button class="btn-save" onclick="handleSave()">確認並套用</button>
+</div>
+
+<script>
+    // --- 接口說明 ---
+    // 這裡就是你跟 Python 溝通的「窗口」
+    async function handleSave() {
+        // 1. 抓取所有資料
+        const gameData = {
+            ram: document.getElementById('cfg_ram').value,
+            java: document.getElementById('cfg_javapath').value,
+            jvm: document.getElementById('cfg_jvm').value,
+            resolution: [
+                document.getElementById('cfg_w').value,
+                document.getElementById('cfg_h').value
+            ],
+            server: document.getElementById('cfg_ip').value,
+            fullscreen: document.getElementById('game_fullscreen').checked
+        };
+
+        console.log("資料包已打包:", gameData);
+
+        // 2. 這裡串接你的 Python 函式
+        // await eel.save_game_config(gameData)();
+        
+        alert("遊戲設定已儲存！");
+    }
+</script>
+
+</body>
+</html>

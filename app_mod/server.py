@@ -11,10 +11,9 @@ logging.basicConfig(
 
 httpd = None  # 全域變數
 
-def run_server(ROOT):
+def run_server(ROOT = os.getcwd(), PORT:int = 1936):
     global httpd
     logging.info(f"Server script is running on {os.getcwd()}")
-    PORT = 1936
     
 
 

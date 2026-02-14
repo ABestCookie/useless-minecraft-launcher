@@ -6,59 +6,121 @@
 const AUTO_SHOW_TIP = true;
 const keyboardEvent = window.event;
 
-/* ===== 全局 msgbox 函數（在 DOMContentLoaded 之前定義） ===== */
-let msgboxBack = null;
-let msgboxOk = null;
-let msgboxCancel = null;
-let msgboxTitle = null;
-let msgboxMsg = null;
+/* showMsg 函式已移至獨立的 msgbox.js */
 
-function showMsg(title = '提示', message = '', options = {}) {
+/* ===== 更新說明面板函數（獨立於 showMsg） ===== */
+let updatePanelBack = null;
+let updatePanelClose = null;
+let updatePanelTitle = null;
+let updatePanelContent = null;
+let lastUpdatePanelFocusedElement = null;
+
+/**
+ * 顯示更新說明面板
+ * @param {string} title - 標題
+ * @param {string|{html?:string, url?:string}} content - 內容（HTML 字符串或含 html/url 的對象）
+ * @param {object} options - 其他選項（暫保留擴展）
+ * @returns {Promise<'closed'>} - Promise，resolve 為 'closed'
+ */
+function showUpdatePanel(title = '更新說明', content = '', options = {}) {
   // 延遲初始化，確保 DOM 已加載
-  if (!msgboxBack) {
-    msgboxBack = document.getElementById('msgboxBack');
-    msgboxOk = document.getElementById('msgboxOk');
-    msgboxCancel = document.getElementById('msgboxCancel');
-    msgboxTitle = document.getElementById('msgboxTitle');
-    msgboxMsg = document.getElementById('msgboxMsg');
-    aa12 = document.getElementById('aa12');
+  if (!updatePanelBack) {
+    updatePanelBack = document.getElementById('updatePanelBack');
+    updatePanelClose = document.getElementById('updatePanelClose');
+    updatePanelTitle = document.getElementById('updatePanelTitle');
+    updatePanelContent = document.getElementById('updatePanelContent');
   }
   
-  if (!msgboxBack) return Promise.resolve(null);
+  if (!updatePanelBack) return Promise.resolve('closed');
 
-  // 設定內容（都使用 innerHTML 以支持 HTML 內容）
-  msgboxTitle.innerHTML = title;
-  msgboxMsg.innerHTML = message;
+  // 設定標題
+  updatePanelTitle.textContent = title;
 
-  // 顯示
-  msgboxBack.classList.add('show');
-  msgboxBack.setAttribute('aria-hidden', 'false');
+  // 清空內容區
+  updatePanelContent.innerHTML = '';
+  //小小彩蛋
+  if (options.subaru) {
+    updatePanelContent.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/eQhMS-KYZEY?si=Qm1hQTRigpnR4ydp&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
 
-  // 回傳一個 Promise，resolve 為按鈕結果 ('ok'|'cancel')
+// 處理內容：支援字符串（HTML）或對象（html/url）
+  } else if (typeof content === 'string') { 
+    // 直接作為 HTML 插入
+    updatePanelContent.innerHTML = content;
+  } else if (typeof content === 'object' && content !== null) {
+    if (content.url) {
+      // 嵌入 iframe（用來加載別的網頁）
+      const iframe = document.createElement('iframe');
+      iframe.src = content.url;
+      iframe.setAttribute('sandbox', 'allow-same-origin allow-scripts allow-popups');
+      updatePanelContent.appendChild(iframe);
+    } else if (content.html) {
+      // 直接插入 HTML
+      updatePanelContent.innerHTML = content.html;
+    }
+  }
+
+  // 顯示面板
+  updatePanelBack.classList.add('show');
+  updatePanelBack.setAttribute('aria-hidden', 'false');
+
+  // 管理焦點：記錄先前焦點、聚焦到關閉按鈕
+  lastUpdatePanelFocusedElement = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+  if (updatePanelClose && typeof updatePanelClose.focus === 'function') {
+    updatePanelClose.focus();
+  }
+
+  // 回傳 Promise，resolve 為 'closed'
   return new Promise(resolve => {
-    const clean = (result) => {
-      msgboxBack.classList.remove('show');
-      msgboxBack.setAttribute('aria-hidden', 'true');
-      // 移除事件聆聽器
-      msgboxOk.removeEventListener('click', onOk);
-      msgboxCancel.removeEventListener('click', onCancel);
-      // small delay 以等待動畫結束（非必要）
-      setTimeout(() => resolve(result), 180);
-    };
-    const onOk = () => clean('ok');
-    const onCancel = () => clean('cancel');
+    const clean = () => {
+      updatePanelBack.classList.remove('show');
+      updatePanelBack.setAttribute('aria-hidden', 'true');
+      
+      // 還原焦點
+      try {
+        const active = document.activeElement;
+        if (active && updatePanelBack.contains(active)) {
+          try { active.blur(); } catch (e) { /* ignore */ }
+        }
+        if (lastUpdatePanelFocusedElement && typeof lastUpdatePanelFocusedElement.focus === 'function') {
+          lastUpdatePanelFocusedElement.focus();
+        }
+      } catch (e) { /* ignore */ }
 
-    msgboxOk.addEventListener('click', onOk);
-    msgboxCancel.addEventListener('click', onCancel);
+      // 移除事件監聽
+      updatePanelClose.removeEventListener('click', onClose);
+      document.removeEventListener('keydown', onEscClose);
 
-    // 可按 Esc 關閉
-    const onKey = (e) => {
-      if (e.key === 'Escape') { onCancel(); document.removeEventListener('keydown', onKey); }
+      lastUpdatePanelFocusedElement = null;
+      setTimeout(() => resolve('closed'), 180);
     };
-    document.addEventListener('keydown', onKey, { once: true });
+
+    const onClose = () => clean();
+    const onEscClose = (e) => {
+      if (e.key === 'Escape') clean();
+    };
+
+    // 綁定關閉按鈕與 Esc
+    updatePanelClose.addEventListener('click', onClose);
+    document.addEventListener('keydown', onEscClose);
+
+    // 點擊背景關閉（可選，加上這個讓使用者體驗更直覺）
+    const onBackClick = (e) => {
+      if (e.target === updatePanelBack) clean();
+    };
+    updatePanelBack.addEventListener('click', onBackClick);
   });
 }
 
+// 暴露給 eel（Python 可直接呼叫）
+if (typeof eel !== 'undefined' && eel.expose) {
+  try {
+    eel.expose(showUpdatePanel);
+  } catch (e) {
+    console.debug('eel.expose for showUpdatePanel failed', e);
+  }
+}
+
+/* showMsg 函式已移至 msgbox.js，showMsg 已暴露給 eel，可直接在 eel 中呼叫 */
 
 /* 新增：管理 terminal 的 focus 與 ESC handler（用於可靠關閉） */
 let lastTerminalFocusedElement = null;
@@ -132,10 +194,7 @@ function closeTerminal() {
 }
 
 function aboutAPP() {
-    showMsg('關於 UMCL', `<div>
-      <h4>Useless Minecraft Launcher (UMCL)</h4>
-      <p>版本：0.1.0<br/>作者：tsai cookie<br/>此程式為模擬用途，僅供學習與測試。</p>
-      </div>`);
+    showUpdatePanel('關於 UMCL', {url: './docs/index.html#/about.md' });
 }
 
 
@@ -156,78 +215,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // 追蹤開啟 modal 前的焦點，用來在關閉時還原
   let lastFocusedElement = null;
 
-  // 取得 modal 相關節點
+  // 取得 modal 相關節點（已移除，modal 現在在 account.html）
   const openModalBtn = $('openModalBtn');
-  const modalBack = $('modalBack');
-  const modalClose = $('modalClose');
 
-  // ESC handler 名義（會在 open 時加入，close 時移除）
-  function onEscClose(e) {
-    if (e.key === 'Escape') closeModal();
-  }
-
-  // 開啟 modal：記錄先前焦點、加上 .show、更新 aria 並將焦點移到第一個輸入
-  function openModal() {
-    if (!modalBack) return;
-
-    // 記住先前有焦點的元素（可能為 null）
-    lastFocusedElement = document.activeElement instanceof HTMLElement ? document.activeElement : null;
-
-    // 顯示 modal（觸發 CSS enter 動畫）
-    modalBack.classList.add('show');
-    modalBack.setAttribute('aria-hidden', 'false');
-
-    // focus 管理：把焦點放到第一個可輸入元素或關閉按鈕
-    const firstFocusable = modalBack.querySelector('input, button, [tabindex]');
-    if (firstFocusable && typeof firstFocusable.focus === 'function') firstFocusable.focus();
-
-    // 加入 ESC 監聽器
-    document.addEventListener('keydown', onEscClose);
-  }
-
-  // 關閉 modal：移除 .show，先還原焦點再設定 aria-hidden（避免 aria-hidden 在有焦點時被套用）
-  function closeModal() {
-    if (!modalBack) return;
-
-    // 先移除 show 以啟動 exit 動畫
-    modalBack.classList.remove('show');
-
-    // 如果目前焦點仍在 modal 內，嘗試移出焦點：先 blur，然後 restore 到先前元素或 fallback
-    const active = document.activeElement;
-    if (active && modalBack.contains(active)) {
-      try {
-        (active).blur();
-      } catch (e) { /* ignore */ }
-    }
-
-    // 嘗試把焦點還原到開啟前的元素；若沒有則聚焦到開啟 modal 的按鈕或帳戶按鈕
-    try {
-      if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
-        lastFocusedElement.focus();
-      } else {
-        const fallback = openModalBtn || $('accountBtn') || $('sidebarToggle');
-        if (fallback && typeof fallback.focus === 'function') fallback.focus();
-      }
-    } catch (e) {
-      // ignore focus errors
-    }
-
-    // 在確保焦點已移出 modal 後，才把 aria-hidden 設回 true（避免 assistive tech 被隱藏時仍有 descendant 保持 focus）
-    modalBack.setAttribute('aria-hidden', 'true');
-
-    // 移除 ESC 監聽器
-    document.removeEventListener('keydown', onEscClose);
-
-    // 清除記錄（非必要）
-    lastFocusedElement = null;
-  }
-
-  // 綁定按鈕與遮罩點擊（點遮罩空白處關閉）
-  if (openModalBtn) openModalBtn.addEventListener('click', openModal);
-  if (modalClose) modalClose.addEventListener('click', closeModal);
-  if (modalBack) {
-    modalBack.addEventListener('click', (e) => {
-      if (e.target === modalBack) closeModal();
+  // openModalBtn 改為開啟 account.html（獨立視窗）
+  if (openModalBtn) {
+    openModalBtn.addEventListener('click', () => {
+      window.open('account.html', '_blank', 'width=800,height=600');
     });
   }
 
@@ -466,7 +460,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (list) list.innerHTML = `
       <div style="padding:12px;color:#666">
         <button class="menu-btn" style="text-align: center;" onclick="showMsg('設定', '更改設定功能尚未實現').then(r => console.log('選擇：' + r))">⚙️ 更改設定</button><br/><br/>
-        <button class="menu-btn" style="text-align: center;" onclick="terminal_show('模擬查看日誌')">📄 查看日誌</button><br/><br/>
+        <button class="menu-btn" style="text-align: center;" onclick="showUpdatePanel('日誌', {url: 'http://localhost:1936/logs/'})">📄 查看日誌</button><br/><br/>
         <button class="menu-btn" style="text-align: center;" onclick="showMsg('測試 Msgbox', '這是一個全局的訊息框測試')">🧪 測試 Msgbox</button><br/><br/>
         <button class="menu-btn" style="text-align: center;" onclick="aboutAPP()">ℹ️ 關於 UMCL</button>
       </div>`;
@@ -498,23 +492,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if ($('previewSkin')) $('previewSkin').addEventListener('click', () => {
     window.open('./plugin/mc-skinviewer/index.html', '_blank');
   });
-  if ($('createAcct')) {
-    $('createAcct').addEventListener('click', () => {
-      const name = $('acctName').value.trim();
-      if (!name) { alert('帳戶名稱不能為空'); return; }
-      alert('新增帳戶：' + name + '（模擬）');
-      // 使用 closeModal() 取代直接操作 style.display，保持行為一致
-      closeModal();
-    });
-  }
-  // 用 closeModal 替代直接修改 style（確保 focus/aria 正確處理）
-  if ($('modalClose')) $('modalClose').addEventListener('click', () => { closeModal(); });
-
-  // openCreateAccount 也改用 openModal()
-  window.openCreateAccount = () => {
-    openModal();
-    if ($('acctName')) $('acctName').value = '';
-  };
+  
+  // modal 相關的事件聆聽器已移至 account.html 和 account-modal.js
+  // createAcct, modalClose, openCreateAccount 等已廢棄
 
   // launchBtn 行為保持不變
   const launchBtn = $('launchBtn');
