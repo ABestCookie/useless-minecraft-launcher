@@ -1,0 +1,11 @@
+{
+    "ram": "4096",
+    "java": "",
+    "jvm": "-XX:+UseG1GC",
+    "resolution": [
+        "1920",
+        "1080"
+    ],
+    "server": "",
+    "fullscreen": false
+}

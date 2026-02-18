@@ -459,7 +459,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const list = $('accountsList');
       if (list) list.innerHTML = `
       <div style="padding:12px;color:#666">
-        <button class="menu-btn" style="text-align: center;" onclick="showMsg('設定', '更改設定功能尚未實現').then(r => console.log('選擇：' + r))">⚙️ 更改設定</button><br/><br/>
+        <button class="menu-btn" style="text-align: center;" onclick="window.open('./setting.html', '_blank', 'width=700,height=800')">⚙️ 更改設定</button><br/><br/>
         <button class="menu-btn" style="text-align: center;" onclick="showUpdatePanel('日誌', {url: 'http://localhost:1936/logs/'})">📄 查看日誌</button><br/><br/>
         <button class="menu-btn" style="text-align: center;" onclick="showMsg('測試 Msgbox', '這是一個全局的訊息框測試')">🧪 測試 Msgbox</button><br/><br/>
         <button class="menu-btn" style="text-align: center;" onclick="aboutAPP()">ℹ️ 關於 UMCL</button>

@@ -6,7 +6,9 @@
         <title>設定 - Useless! Minecraft Launcher</title>
         <link rel="icon" href="./art/java.ico" type="image/x-icon"/>
         <script src="eel.js"></script>
+        <script src="msgbox.js"></script>
         <link rel="stylesheet" href="setting.css">
+        <link rel="stylesheet" href="msgbox.css">
     </head>
 <body>
 
@@ -16,7 +18,7 @@
     <div class="group-label">JAVA & 性能分配</div>
     <div class="setting-list">
         <div class="row">
-            <span>最大記憶體 (MB)</span>
+            <span>最大記憶體 (MB)<small>(總記憶體: <span id="total-mem">未知</span> MB)</small></span>
             <input type="number" id="cfg_ram" value="4096">
         </div>
         <div class="row">
@@ -52,32 +54,62 @@
         </div>
     </div>
 
-    <button class="btn-save" onclick="handleSave()">確認並套用</button>
+    <button class="btn-save" id="save-btn" onclick="handleSave()">確認並套用</button>
 </div>
 
 <script>
     // --- 接口說明 ---
     // 這裡就是你跟 Python 溝通的「窗口」
+    const saveBtn = document.getElementById('save-btn');
+    const totalMemSpan = document.getElementById('total-mem');
+    eel.html_get_mem()(function(totalMem) {
+        totalMemSpan.innerText = "";
+        totalMemSpan.innerText = totalMem;
+    });
+    eel.html_get_config()(function(config) {
+        document.getElementById('cfg_ram').value = config.ram || 4096;
+        document.getElementById('cfg_javapath').value = config.java || "";
+        document.getElementById('cfg_jvm').value = config.jvm || "-XX:+UseG1GC";
+        document.getElementById('cfg_w').value = config.resolution ? config.resolution[0] : 1920;
+        document.getElementById('cfg_h').value = config.resolution ? config.resolution[1] : 1080;
+        document.getElementById('cfg_ip').value = config.server || "";
+        document.getElementById('game_fullscreen').checked = config.fullscreen || false;
+    });
     async function handleSave() {
         // 1. 抓取所有資料
-        const gameData = {
-            ram: document.getElementById('cfg_ram').value,
-            java: document.getElementById('cfg_javapath').value,
-            jvm: document.getElementById('cfg_jvm').value,
-            resolution: [
-                document.getElementById('cfg_w').value,
-                document.getElementById('cfg_h').value
-            ],
-            server: document.getElementById('cfg_ip').value,
-            fullscreen: document.getElementById('game_fullscreen').checked
-        };
+        if (document.getElementById('cfg_ram').value > parseInt(totalMemSpan.innerText)) {
+            showMsg("錯誤", "分配的記憶體超過總記憶體！");
+            return;
+        } else if (document.getElementById('cfg_ram').value < 512) {
+            showMsg("錯誤", "分配的記憶體不建議小於 512MB！");
+            return;
+        } else {
+            const gameData = {
+                ram: document.getElementById('cfg_ram').value,
+                java: document.getElementById('cfg_javapath').value,
+                jvm: document.getElementById('cfg_jvm').value,
+                resolution: [
+                    document.getElementById('cfg_w').value,
+                    document.getElementById('cfg_h').value
+                ],
+                server: document.getElementById('cfg_ip').value,
+                fullscreen: document.getElementById('game_fullscreen').checked
+            };
 
-        console.log("資料包已打包:", gameData);
+            console.log("資料包已打包:", gameData);
+            saveBtn.innerText = "儲存中...";
 
-        // 2. 這裡串接你的 Python 函式
-        // await eel.save_game_config(gameData)();
+            // 2. 這裡串接你的 Python 函式
+            msg = await eel.save_game_config(gameData)();
+            if (msg === 0) {
+                showMsg("", "遊戲設定已儲存！");
+                saveBtn.innerText = "確認並套用";
+            } else {
+                showMsg("錯誤", msg);
+                saveBtn.innerText = "確認並套用";
+            }
         
-        alert("遊戲設定已儲存！");
+        }  
     }
 </script>
 

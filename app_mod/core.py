@@ -21,6 +21,8 @@ import pathlib
 #生成一些先秦時代的魔法語言
 import secrets
 
+import traceback
+
 #尋找並指派電腦上的 .minecraft 資料夾給 minecraft_directory 變數
 try:
     minecraft_directory = minecraft_launcher_lib.utils.get_minecraft_directory()
@@ -62,8 +64,11 @@ class Launcher:
     @staticmethod
     def normal(ver: str, wide: int = 800, high: int = 600, 
                username: str = f"player{random.randrange(100,1000)}", 
-               executablePath: str = minecraft_launcher_lib.utils.get_java_executable(), 
-               memory:int = 1536, kib:str = "M"): #管啟動的，生成啟動檔
+               executablePath: str = None, 
+               memory:int = 1536, kib:str = "M", 
+               server: str = None, port: int = None, 
+               jvm_argv: list = None, 
+               full_screen: bool = False):
         global options
         t = {"username": "The Username", "uuid": "The UUID", "token": "The access token"}
         options = minecraft_launcher_lib.utils.generate_test_options()
@@ -71,11 +76,20 @@ class Launcher:
         options["resolutionHeight"] = str(high)
         options["gameDirectory"] = minecraft_directory
         options["launcherName"]="UMCL by Cookie"
-        options["executablePath"]=executablePath
+        if executablePath == None or executablePath == "":
+            options["executablePath"]=minecraft_launcher_lib.utils.get_java_executable()
+        else:
+            options["executablePath"]=executablePath
         options["jvmArguments"]=[f"-Xmx{memory}{kib}"]
+        if jvm_argv:
+            options["jvmArguments"].extend(jvm_argv)
+        if full_screen == True:
+            options["jvmArguments"].extend(["-Dorg.lwjgl.opengl.Window.undecorated=true"])
         options["username"] = str(username)
         options["token"] = secrets.token_urlsafe(10)
-        
+        if server is not None and port is not None:
+            options["server"] = server 
+            options["port"] = port 
         options["uuid"] = secrets.token_urlsafe(10)
         options["accessToken"] = secrets.token_urlsafe(10)
         #以下是偵測版本正不正確，如本地沒有此版本就抱錯
@@ -84,7 +98,7 @@ class Launcher:
             minecraft_command = minecraft_launcher_lib.command.get_minecraft_command(ver, minecraft_directory, options)
             
             #把list 轉成 文字
-
+            """
             with open("launch_cmd_temp.bat","w") as f:
                 f.write("javaw ")
             long=len(minecraft_command)
@@ -98,6 +112,8 @@ class Launcher:
                         f.write(i)
                         if (times == long) == False:
                             f.write(" ")
+                            """
+
                             
             return minecraft_command
             
@@ -105,6 +121,7 @@ class Launcher:
 
 
         except Exception as e:
+            traceback.print_exc()
             print(f"Launch error: {e}")
 #這部份給我自己debug的
     def normal_debug(debug):
@@ -208,37 +225,23 @@ class Launcher:
 
 
 class other_function:
-    def download(url):
-        try:
-            size_in_bytes, size_in_mb = other_function.get_file_size(url)
-            if size_in_bytes is not None:
-                print(f"文件大小: {size_in_bytes} bytes ({size_in_mb:.2f} MB)")
-            else:
-                print("伺服器未提供文件大小資訊")
-        except Exception as e:
-            print(e)
-
-        filename = url.split('/')[-1]
-        r = req.get(url, stream=True)
-        with open(filename, 'wb') as f:
-            for data in tqdm(r.iter_content(1024)):
-                f.write(data)
-        return filename
     
-    def get_file_size(url):
-    # 發送 HEAD 請求來檢查文件資訊
-        response = req.head(url)
     
-        if response.status_code == 200:  # 確保請求成功
-            content_length = response.headers.get('Content-Length')
-            if content_length is not None:
-                size_in_bytes = int(content_length)
-                size_in_mb = size_in_bytes / (1024 * 1024)  # 將位元組轉換為 MB
-                return size_in_bytes, size_in_mb
-            else:
-                return None, None  # 沒有 Content-Length 標頭
+    def game_config(mode, data=None):
+        if mode == "save":
+            with open("app_config/game_config.json", "w", encoding="utf-8") as f:
+                json.dump(data, f, ensure_ascii=False, indent=4)
+            return "配置已保存"
+        elif mode == "load":
+            try:
+                with open("app_config/game_config.json", "r", encoding="utf-8") as f:
+                    return json.load(f)
+            except FileNotFoundError:
+                return None
         else:
-            raise Exception(f"無法檢查文件大小，HTTP 狀態碼：{response.status_code}")
+            raise ValueError("無效的模式，請使用 'save' 或 'load'")
+    
+    
 
     
     
