@@ -7,5 +7,6 @@
         "1080"
     ],
     "server": "",
-    "fullscreen": false
+    "fullscreen": false,
+    "ngrok": false
 }

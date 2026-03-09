@@ -8,6 +8,7 @@ import json
 from PIL import Image
 import platform
 import sys
+import time
 
 #downloader
 import requests as req
@@ -235,13 +236,76 @@ class other_function:
         elif mode == "load":
             try:
                 with open("app_config/game_config.json", "r", encoding="utf-8") as f:
-                    return json.load(f)
+                    data = json.load(f)
+                    print(data)
+                    return data
             except FileNotFoundError:
                 return None
         else:
             raise ValueError("無效的模式，請使用 'save' 或 'load'")
+        
+        
+ 
+
+
+    def get_all_java_listen_ports():
+        java_ports = []
     
+        # 遍歷所有進程
+        for proc in psutil.process_iter(['pid', 'name']):
+            try:
+                # 鎖定 Java 相關進程
+                if 'java' in proc.info['name'].lower() or 'javaw' in proc.info['name'].lower():
+                    connections = proc.connections(kind='tcp')
+                    for conn in connections:
+                        # 只找正在監聽 (LISTEN) 的連線
+                        if conn.status == psutil.CONN_LISTEN:
+                            port = conn.laddr.port
+                            # 排除掉一些常見的系統保留或已知非遊戲 Port (可選)
+                            # 例如 5005 是常用的 Java Debug Port
+                            if port not in java_ports:
+                                java_ports.append(port)
+
+            except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
+                continue
+            
+        # 由小到大排序，方便前端顯示
+        return sorted(java_ports)
     
+    def start_ngrok_tunnel(port):
+        # 1. 在背景啟動 ngrok (使用 subprocess.Popen 避免卡住主程式)
+        # 確保你已經把 ngrok.exe 放進專案目錄或加入環境變數
+        print(f"正在啟動 ngrok 隧道，監聽本地端口 {port}...")
+        cmd = ["ngrok", "tcp", str(port)]
+    
+        # creationflags=0x08000000 是 Windows 專屬：完全不顯示黑框
+        subprocess.Popen(cmd, creationflags=0x08000000)
+        
+        for i in range(10):  # 最多檢查 10 次，每次間隔 2 秒
+            time.sleep(2)  # 每秒檢查一次 ngrok 是否已經啟動並提供網址
+            try:
+                response = req.get("http://127.0.0.1:4040/api/tunnels")
+                if response.status_code == 200:
+                    data = response.json()
+        
+                    # 4. 解析 JSON 拿到公網地址
+                    # data['tunnels'][0]['public_url'] 通常長這樣: "tcp://0.tcp.jp.ngrok.io:12345"
+                    public_url = data['tunnels'][0]['public_url']
+        
+                    # 去掉 tcp:// 字頭，方便玩家直接複製
+                    clean_url = public_url.replace("tcp://", "")
+        
+                    return clean_url
+                elif response.status_code == 404:
+                    print("ngrok API 尚未啟動，繼續等待...")
+                    continue
+            except Exception as e:
+                traceback.print_exc()
+                print(f"無法抓取 ngrok 網址: {e}")
+                break
+        return None
+    
+        
 
     
     

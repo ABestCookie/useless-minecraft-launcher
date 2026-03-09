@@ -462,6 +462,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <button class="menu-btn" style="text-align: center;" onclick="window.open('./setting.html', '_blank', 'width=700,height=800')">⚙️ 更改設定</button><br/><br/>
         <button class="menu-btn" style="text-align: center;" onclick="showUpdatePanel('日誌', {url: 'http://localhost:1936/logs/'})">📄 查看日誌</button><br/><br/>
         <button class="menu-btn" style="text-align: center;" onclick="showMsg('測試 Msgbox', '這是一個全局的訊息框測試')">🧪 測試 Msgbox</button><br/><br/>
+        <button class="menu-btn" style="text-align: center;" onclick="window.electronAPI.openDevTools()">ui除錯</button><br/><br/>
         <button class="menu-btn" style="text-align: center;" onclick="aboutAPP()">ℹ️ 關於 UMCL</button>
       </div>`;
       // 改為返回
@@ -502,7 +503,7 @@ document.addEventListener('DOMContentLoaded', () => {
     launchBtn.addEventListener('click', () => {
       terminalBack.classList.add('show');
       eel.launch_game()(function(response) {
-        alert(response);
+        showMsg("遊戲啟動結果", response);
       });
     });
   }

@@ -10,10 +10,13 @@ import app_mod.server as server
 import app_mod.core as core
 import threading
 import tkinter as tk
+import tkinter.messagebox as messagebox
 import traceback
+import time
 
-# 強制標準輸出使用 UTF-8
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+# 強制標準輸出使用 UTF-8，啟用 line buffering 避免輸出卡住
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', line_buffering=True)
+lan_stop=True
 
 
 logging.basicConfig(
@@ -22,6 +25,56 @@ logging.basicConfig(
     filemode="w",
     format="%(asctime)s [%(levelname)s] %(message)s"
 )
+
+def show_wan(port):
+    sharing_main.destroy()
+    call_back = core.other_function.start_ngrok_tunnel(port)
+    if call_back != None:
+        wan_main = tk.Tk()
+        wan_main.title("auto wan sharing tools")
+        wan_main.geometry("400x200")
+        wan_main.resizable(False, False)
+        wan_main.attributes("-topmost", True)
+        wan_main.attributes("-topmost", False)   
+        tk.Label(wan_main, text=f"已成功為端口 {port} 建立穿透，以下是連接資訊").pack()
+        entry = tk.Entry(wan_main, width=50)
+        entry.insert(0, call_back)
+        entry.config(state='readonly')
+        entry.pack()
+        tk.Button(wan_main, text="複製連接資訊", command=lambda: [wan_main.clipboard_clear(), wan_main.clipboard_append(call_back), messagebox.showinfo("提示", "已複製到剪貼簿")]).pack()
+        wan_main.mainloop()
+        lan_stop = False  # 停止局域網穿透偵測
+    else:
+        messagebox.showerror("錯誤", "建立穿透失敗，請檢查 ngrok 配置或網絡狀態")
+
+def auto_wan_sharing():
+    def close():
+        global lan_stop
+        lan_stop = False
+        sharing_main.destroy()
+    global lan_stop
+    if core.other_function.game_config(mode="load")["ngrok"] == True:
+        print("正在啟動局域網穿透偵測...")
+        while lan_stop:
+            tcp_port = core.other_function.get_all_java_listen_ports()
+            if tcp_port != []:
+                global sharing_main
+                sharing_main = tk.Tk()
+                sharing_main.title("auto wan sharing tools")
+                sharing_main.geometry("200x300")
+                sharing_main.resizable(False, False)
+                sharing_main.attributes("-topmost", True)
+                sharing_main.attributes("-topmost", False)
+                tk.Label(sharing_main, text="請選擇多人遊戲所在port").pack()
+                for port in tcp_port:
+                    tk.Button(sharing_main, text=port, command=lambda p=port: show_wan(p)).pack()
+                tk.Button(sharing_main, text="錯誤偵測?點此取消此進程偵測", command=lambda : close()).pack()
+                sharing_main.mainloop()
+            else:
+                print("未偵測到多人遊戲端口，10秒後重新檢測")
+                time.sleep(10)
+        
+                
 
 def run_command(command):
     # 防呆：命令不能是 None，也不能含有 None 元素
@@ -86,12 +139,14 @@ def set_max(new_max: int):
     
 @eel.expose
 def launch_game():
+    global lan_stop
     process_bar= {
         "setStatus": set_status,
         "setProgress": set_progress,
         "setMax": set_max
     }
     config=core.other_function.game_config(mode="load")
+    print(config)
     
     # 解析伺服器地址
     server_str=config["server"]
@@ -121,7 +176,7 @@ def launch_game():
     try:
         eel.terminal_show("等待完整性驗證...") 
         core.Launcher.install_game(ver=select_ver, Callback=process_bar)
-
+        threading.Thread(target=auto_wan_sharing).start()  # 啟動局域網穿透偵測線程
         cmd = core.Launcher.normal(
             ver=select_ver,
             wide=config["resolution"][0], high=config["resolution"][1],
@@ -133,14 +188,17 @@ def launch_game():
         if not cmd:  # 包括 None、空清單等
             logging.error(f"Launcher.normal 回傳空命令: {cmd!r}")
             eel.showMsg("錯誤", "無法取得啟動命令，請檢查設定。")
+            lan_stop = False  # 停止局域網穿透偵測
             return "遊戲啟動命令錯誤"
 
         return_code = run_command(cmd)
+        lan_stop = False  # 停止局域網穿透偵測
         return f"遊戲啟動成功，回傳碼: {return_code}"
     except Exception as e:
         traceback.print_exc()
         logging.error(f"Failed to launch game: {e}")
         eel.showMsg("啟動失敗", f"無法啟動遊戲：{e}")
+        lan_stop = False  # 停止局域網穿透偵測
         return "遊戲啟動失敗"
 @eel.expose    
 def save_game_config(gameData):
@@ -222,13 +280,12 @@ def ok():
     root.withdraw()
 
 if __name__ == "__main__":
-    cmd=[r"C:\Users\tsai cookie\Documents\GitHub\useless-minecraft-launcher\ui\chrome-win\chrome.exe",
-         "--app=http://localhost:486/index.html",
-         "--window-size=900,700"]
+    cmd=[r"C:\Users\tsai cookie\Documents\GitHub\useless-minecraft-launcher\node_modules\electron\dist\electron.exe",
+         f"{os.getcwd()}",]
     
     def start_eel():
         eel.init(".")
-        eel.start('index.html', mode='custom', port=486, cmdline_args=cmd, close_callback=on_close)
+        eel.start('index.html', mode='custom', port=486, close_callback=on_close, cmdline_args=cmd)
     
     
     root = tk.Tk()

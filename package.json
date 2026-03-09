@@ -1,0 +1,27 @@
+{
+  "name": "useless-minecraft-launcher",
+  "version": "1.0.0",
+  "description": "一個立志於整合minecraft版本的啟動器專案",
+  "homepage": "https://github.com/ABestCookie/useless-minecraft-launcher#readme",
+  "bugs": {
+    "url": "https://github.com/ABestCookie/useless-minecraft-launcher/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ABestCookie/useless-minecraft-launcher.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "main.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "start python eel_sevrer.py"
+  },
+  "devDependencies": {
+    "electron": "^40.8.0" 
+  }
+}

@@ -9,6 +9,10 @@
         <script src="msgbox.js"></script>
         <link rel="stylesheet" href="setting.css">
         <link rel="stylesheet" href="msgbox.css">
+        <script>
+            // 加強版：當 Console 被打開時，直接在控制台噴出紅字警告
+            console.log("%c妳為什麼要演奏春日影！", "color: red; font-size: 50px; font-weight: bold; text-shadow: 2px 2px black;");
+        </script>
     </head>
 <body>
 
@@ -26,7 +30,7 @@
             <input type="text" id="cfg_javapath" placeholder="Default Javaw.exe">
         </div>
         <div class="row">
-            <span>JVM 啟動參數</span>
+            <span>JVM 啟動參數<small><small><small>(拜託如果看不懂就不要改)</small></small></small></span>
             <input type="text" id="cfg_jvm" value="-XX:+UseG1GC">
         </div>
     </div>
@@ -54,6 +58,17 @@
         </div>
     </div>
 
+    <div class="group-label">多人遊戲設定</div>
+    <div class="setting-list">
+        <div class="row">
+            <span>自動局域網穿透(ngrok)</span>
+            <label class="switch">
+                <input type="checkbox" id="enable_ngrok">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </div>
+
     <button class="btn-save" id="save-btn" onclick="handleSave()">確認並套用</button>
 </div>
 
@@ -74,6 +89,7 @@
         document.getElementById('cfg_h').value = config.resolution ? config.resolution[1] : 1080;
         document.getElementById('cfg_ip').value = config.server || "";
         document.getElementById('game_fullscreen').checked = config.fullscreen || false;
+        document.getElementById('enable_ngrok').checked = config.ngrok || false;
     });
     async function handleSave() {
         // 1. 抓取所有資料
@@ -93,7 +109,8 @@
                     document.getElementById('cfg_h').value
                 ],
                 server: document.getElementById('cfg_ip').value,
-                fullscreen: document.getElementById('game_fullscreen').checked
+                fullscreen: document.getElementById('game_fullscreen').checked,
+                ngrok: document.getElementById('enable_ngrok').checked
             };
 
             console.log("資料包已打包:", gameData);
