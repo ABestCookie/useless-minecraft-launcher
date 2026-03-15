@@ -14,14 +14,29 @@
   "author": "",
   "type": "commonjs",
   "main": "main.js",
-  "directories": {
-    "doc": "docs"
+  "build": {
+    "appId": "com.abestcookie.uselessminecraftlauncher",
+    "productName": "Useless Minecraft Launcher",
+    "files": [
+      "main.js",
+      "preload.js",
+      "package.json"
+    ],
+    "win": {
+      "target": "portable",
+      "icon": "art/icon.ico"
+    },
+    "directories": {
+      "output": "dist_electron"
+    }
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "start python eel_sevrer.py"
+    "start": "start python eel_sevrer.py",
+    "build": "electron-builder"
   },
   "devDependencies": {
-    "electron": "^40.8.0" 
+    "electron": "^40.8.0",
+    "electron-builder": "^26.8.1"
   }
 }

@@ -9,6 +9,27 @@ from PIL import Image
 import platform
 import sys
 import time
+import logging
+
+logger = logging.getLogger()
+logger.setLevel(logging.DEBUG)
+
+# 檔案handler
+file_handler = logging.FileHandler("debug.log", mode="w")
+file_handler.setLevel(logging.DEBUG)
+
+# 控制台handler
+console_handler = logging.StreamHandler()
+console_handler.setLevel(logging.DEBUG)
+
+# 格式器
+formatter = logging.Formatter("%(asctime)s [%(levelname)s] %(message)s")
+file_handler.setFormatter(formatter)
+console_handler.setFormatter(formatter)
+
+# 添加handlers
+logger.addHandler(file_handler)
+logger.addHandler(console_handler)
 
 #downloader
 import requests as req
@@ -27,32 +48,32 @@ import traceback
 #尋找並指派電腦上的 .minecraft 資料夾給 minecraft_directory 變數
 try:
     minecraft_directory = minecraft_launcher_lib.utils.get_minecraft_directory()
-    print(f"找到 Minecraft 資料夾：{minecraft_directory}")
+    logger.info(f"找到 Minecraft 資料夾：{minecraft_directory}")
 except minecraft_launcher_lib.utils.MinecraftDirectoryNotFound:
-    print("未找到 Minecraft 資料夾，請確保已安裝 Minecraft Launcher")
+    logger.error("未找到 Minecraft 資料夾，請確保已安裝 Minecraft Launcher")
     sys.exit(1)
 
 total_memory_mb= int(tuple(psutil.virtual_memory())[0] / (1024 * 1024))  # 總記憶體大小（MB）
-print(f"總記憶體大小：{total_memory_mb} MB")
+logger.debug(f"總記憶體大小：{total_memory_mb} MB")
 
 home_path=f"{pathlib.Path.home()}" + "\\Desktop\\" #取得Desktop資料夾的位置
-print(f"桌面路徑：{home_path}")
+logger.debug(f"桌面路徑：{home_path}")
 
 def system_check():
     if platform.system() == "Windows":
         win_ver = sys.getwindowsversion()
         if win_ver.build >= 22000:
-            print("這是 Windows 11")
+            logger.info("這是 Windows 11")
             
             is_bedrock_launch=True
         elif win_ver.build >= 10240:   
-            print("這是 Windows 10")
+            logger.info("這是 Windows 10")
             is_bedrock_launch=True 
         else:
-            print("這是更早版本的 Windows")
+            logger.info("這是更早版本的 Windows")
             is_bedrock_launch=False
     else:
-        print(f"這不是Windows系統，這是{platform.system()}")
+        logger.info(f"這不是Windows系統，這是{platform.system()}")
         is_bedrock_launch=False
 
     return is_bedrock_launch
@@ -122,8 +143,7 @@ class Launcher:
 
 
         except Exception as e:
-            traceback.print_exc()
-            print(f"Launch error: {e}")
+            logger.exception(f"Launch error: {e}")
 #這部份給我自己debug的
     def normal_debug(debug):
         if debug == "mcdir":
@@ -138,7 +158,7 @@ class Launcher:
                 local_ver_list.append(i["id"])
             
         except Exception as e:
-            print(f"ERROR {e}")
+            logger.exception(f"ERROR {e}")
         return local_ver_list
     def analyze_resourcepack(path: str) -> dict:
         """
@@ -237,7 +257,7 @@ class other_function:
             try:
                 with open("app_config/game_config.json", "r", encoding="utf-8") as f:
                     data = json.load(f)
-                    print(data)
+                    logger.debug(data)
                     return data
             except FileNotFoundError:
                 return None
@@ -275,7 +295,7 @@ class other_function:
     def start_ngrok_tunnel(port):
         # 1. 在背景啟動 ngrok (使用 subprocess.Popen 避免卡住主程式)
         # 確保你已經把 ngrok.exe 放進專案目錄或加入環境變數
-        print(f"正在啟動 ngrok 隧道，監聽本地端口 {port}...")
+        logger.info(f"正在啟動 ngrok 隧道，監聽本地端口 {port}...")
         cmd = ["ngrok", "tcp", str(port)]
     
         # creationflags=0x08000000 是 Windows 專屬：完全不顯示黑框
@@ -297,11 +317,10 @@ class other_function:
         
                     return clean_url
                 elif response.status_code == 404:
-                    print("ngrok API 尚未啟動，繼續等待...")
+                    logger.info("ngrok API 尚未啟動，繼續等待...")
                     continue
             except Exception as e:
-                traceback.print_exc()
-                print(f"無法抓取 ngrok 網址: {e}")
+                logger.exception(f"無法抓取 ngrok 網址: {e}")
                 break
         return None
     

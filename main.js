@@ -1,5 +1,6 @@
 const { app, BrowserWindow, shell } = require('electron');
 const path = require('path');
+const http = require('http');
 
 
 function createWindow() {
@@ -23,8 +24,48 @@ function createWindow() {
   
     
     
-  // 載入你的本地 HTTP 伺服器網址
-  mainWindow.loadURL('http://localhost:486'); 
+  // 載入你的本地 HTTP 伺服器網址，並重試直到連上
+  let isLoaded = false;
+
+  function checkServerAndLoad() {
+    if (isLoaded) return;
+
+    const req = http.request({
+      hostname: 'localhost',
+      port: 486,
+      path: '/',
+      method: 'GET',
+      timeout: 5000
+    }, (res) => {
+      
+      if (res.statusCode === 200) {
+        mainWindow.loadURL('http://localhost:486');
+      } else {
+        
+        setTimeout(checkServerAndLoad, 1000);
+      }
+    });
+
+    req.on('error', (err) => {
+      
+      setTimeout(checkServerAndLoad, 1000);
+    });
+
+    req.on('timeout', () => {
+      
+      req.destroy();
+      setTimeout(checkServerAndLoad, 1000);
+    });
+
+    req.end();
+  }
+
+  mainWindow.webContents.on('did-finish-load', () => {
+    
+    isLoaded = true;
+  });
+
+  checkServerAndLoad(); // 初始檢查並載入 
   
 
   // --- 攔截跳轉邏輯 ---
@@ -43,7 +84,7 @@ function createWindow() {
   mainWindow.webContents.setWindowOpenHandler(({ url }) => {
     // 檢查：如果網址包含 'setting.html' 或者是你本地伺服器的檔案
     if (url.includes('setting.html') || url.startsWith('http://localhost:486')) {
-      console.log("偵測到內部頁面，允許在 Electron 開啟新視窗:", url);
+      
       return { 
         action: 'allow',
         overrideBrowserWindowOptions: {
@@ -56,7 +97,7 @@ function createWindow() {
     }
 
     // 其他外部連結（如 Google, Discord）依然丟給瀏覽器
-    console.log("外部連結，丟給系統瀏覽器:", url);
+    
     shell.openExternal(url);
     return { action: 'deny' };
   });

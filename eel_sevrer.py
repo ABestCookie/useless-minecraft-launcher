@@ -13,18 +13,64 @@ import tkinter as tk
 import tkinter.messagebox as messagebox
 import traceback
 import time
+import ctypes
+import json
 
 # 強制標準輸出使用 UTF-8，啟用 line buffering 避免輸出卡住
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', line_buffering=True)
+try:
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', line_buffering=True)
+except AttributeError:
+    # 在打包環境中 sys.stdout 可能為 None，跳過重新包裝
+    pass
 lan_stop=True
 
+show_console = False
 
-logging.basicConfig(
-    level=logging.DEBUG,
-    filename="debug.log",
-    filemode="w",
-    format="%(asctime)s [%(levelname)s] %(message)s"
-)
+# 取得 Windows 控制台的視窗控制權
+kernel32 = ctypes.WinDLL('kernel32')
+user32 = ctypes.WinDLL('user32')
+
+
+logger = logging.getLogger()
+logger.setLevel(logging.DEBUG)
+
+# 檔案handler
+file_handler = logging.FileHandler("debug.log", mode="w")
+file_handler.setLevel(logging.DEBUG)
+
+# 控制台handler
+console_handler = logging.StreamHandler()
+console_handler.setLevel(logging.DEBUG)
+
+# 格式器
+formatter = logging.Formatter("%(asctime)s [%(levelname)s] %(message)s")
+file_handler.setFormatter(formatter)
+console_handler.setFormatter(formatter)
+
+# 添加handlers
+logger.addHandler(file_handler)
+logger.addHandler(console_handler)
+
+
+def toggle_console(show=True):
+    logger.info(f"切換控制台顯示狀態: {'顯示' if show else '隱藏'}")
+    # 取得當前控制台視窗句柄
+    hWnd = kernel32.GetConsoleWindow()
+    if hWnd:
+        if show:
+            user32.ShowWindow(hWnd, 5) # 5 = SW_SHOW (顯示)
+        else:
+            user32.ShowWindow(hWnd, 0) # 0 = SW_HIDE (隱藏)
+
+@eel.expose          
+def on_escape():
+    global show_console
+    show_console = not show_console
+    toggle_console(show_console)
+    
+kernel32.AllocConsole()
+toggle_console(False)
+
 
 def show_wan(port):
     sharing_main.destroy()
@@ -54,7 +100,7 @@ def auto_wan_sharing():
         sharing_main.destroy()
     global lan_stop
     if core.other_function.game_config(mode="load")["ngrok"] == True:
-        print("正在啟動局域網穿透偵測...")
+        logger.info("正在啟動局域網穿透偵測...")
         while lan_stop:
             tcp_port = core.other_function.get_all_java_listen_ports()
             if tcp_port != []:
@@ -71,7 +117,7 @@ def auto_wan_sharing():
                 tk.Button(sharing_main, text="錯誤偵測?點此取消此進程偵測", command=lambda : close()).pack()
                 sharing_main.mainloop()
             else:
-                print("未偵測到多人遊戲端口，10秒後重新檢測")
+                logger.info("未偵測到多人遊戲端口，10秒後重新檢測")
                 time.sleep(10)
         
                 
@@ -103,7 +149,7 @@ def run_command(command):
 
     # 等待進程結束並獲取回傳碼
     return_code = process.wait()
-    print(f"進程結束，回傳碼: {return_code}")
+    logger.info(f"進程結束，回傳碼: {return_code}")
     return return_code
 
 
@@ -117,17 +163,17 @@ def load_versionSelect(ver):
     
     global select_ver
     select_ver = ver
-    print(select_ver)
+    logger.debug(f"選擇版本: {select_ver}")
     
 def set_status(status: str):
     eel.tip_set_status(status)
-    print(status)
+    logger.debug(status)
 
 
 def set_progress(progress: int):
     eel.tip_set_progress(progress)
     if current_max != 0:
-        print(f"{progress}/{current_max}")
+        logger.debug(f"{progress}/{current_max}")
 
 
 def set_max(new_max: int):
@@ -146,7 +192,7 @@ def launch_game():
         "setMax": set_max
     }
     config=core.other_function.game_config(mode="load")
-    print(config)
+    logger.debug(config)
     
     # 解析伺服器地址
     server_str=config["server"]
@@ -271,35 +317,22 @@ def account_write(name, account_type, skin=None):
     
         
 def on_close(page, sockets):
-    print(f"頁面 {page} 已關閉")
+    logger.info(f"頁面 {page} 已關閉")
     if not sockets:
-        print("所有視窗都關了！準備結束 Python...")
+        logger.info("所有視窗都關了！準備結束 Python...")
         os._exit(0)
-@eel.expose        
-def ok():
-    root.withdraw()
+
 
 if __name__ == "__main__":
-    cmd=[r"C:\Users\tsai cookie\Documents\GitHub\useless-minecraft-launcher\node_modules\electron\dist\electron.exe",
-         f"{os.getcwd()}",]
+    with open("app_config/electron_path.json", "r") as f:
+        electron_path = json.load(f).get("electron_path", "")
+    cmd=[electron_path,
+         ".",]
     
     def start_eel():
         eel.init(".")
         eel.start('index.html', mode='custom', port=486, close_callback=on_close, cmdline_args=cmd)
     
-    
-    root = tk.Tk()
-    screenwidth = root.winfo_screenwidth()
-    screenheight = root.winfo_screenheight()
-    width, height = 300, 200
-    geometry = '%dx%d+%d+%d' % (width, height, (screenwidth - width) / 2, (screenheight - height) / 2) #window致中
-    root.geometry(geometry)
-    root.title("啟動器服務器")
-    root.overrideredirect(True)
-    t1=tk.Label(root, text="UI啟動中...", font=("Arial", 12))
-    t1.pack(expand=True)
-    threading.Thread(target=start_eel).start()
-    root.mainloop()
-    
-    #print(account_get("single", "WafflyBat"))
+    start_eel()
+    # logger.debug(account_get("single", "WafflyBat"))
 

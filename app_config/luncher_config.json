@@ -1,0 +1,9 @@
+"main": {
+    "version": "0.1.0",
+    "executable": "eel_server.exe"
+},
+"autoupdate": {
+    "enable": true,
+    "url": "https://api.github.com/repos/YachiSama/MinecraftLauncher/releases/latest",
+    "TEMP_ZIP": "update_package.zip"
+}
