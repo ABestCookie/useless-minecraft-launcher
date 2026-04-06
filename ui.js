@@ -126,92 +126,9 @@ if (typeof eel !== 'undefined' && eel.expose) {
 
 /* showMsg 函式已移至 msgbox.js，showMsg 已暴露給 eel，可直接在 eel 中呼叫 */
 
-/* 新增：管理 terminal 的 focus 與 ESC handler（用於可靠關閉） */
-let lastTerminalFocusedElement = null;
-let terminalEscHandler = null;
-
-
-
-/* 更新：讓 terminal_show 也處理 focus 與 aria，並註冊 ESC 可以關閉 */
-function terminal_show(message, e) {
-    const terminalOutput = document.getElementById('terminalOutput');
-    const terminalBack = document.getElementById('terminal');
-    if (terminalOutput && terminalBack) {
-        // 記錄顯示前的焦點，以便關閉時還原
-        lastTerminalFocusedElement = document.activeElement instanceof HTMLElement ? document.activeElement : null;
-
-        terminalBack.classList.add('show');
-        terminalBack.setAttribute('aria-hidden', 'false');
-
-        terminalOutput.value += message + '\n';
-        terminalOutput.scrollTop = terminalOutput.scrollHeight;
-
-        // 把焦點放到 textarea 以便使用者可以直接滾動 / 複製
-        if (typeof terminalOutput.focus === 'function') terminalOutput.focus();
-
-        // 註冊 ESC 關閉（儲存引用以便後續移除）
-        terminalEscHandler = function(evt) {
-            if (evt.key === 'Escape') closeTerminal();
-        };
-        document.addEventListener('keydown', terminalEscHandler);
-    }
-}
-
-eel.expose(terminal_show);
-
-/* 新增：可從其他地方呼叫的關閉函式（負責 aria / focus 還原 / 清除事件） */
-function closeTerminal() {
-    
-    const terminalOutput = document.getElementById('terminalOutput');
-    const terminalBack = document.getElementById('terminal');
-    if (!terminalBack) return;
-
-    // 啟動離場（CSS transition）
-    terminalBack.classList.remove('show');
-    terminalOutput.value = ''; //清除
-
-    // 如果目前焦點仍在 terminal 內，先 blur 再還原到先前元素（或 fallback）
-    try {
-        const active = document.activeElement;
-        if (active && terminalBack.contains(active)) {
-            try { active.blur(); } catch (e) { /* ignore */ }
-        }
-
-        if (lastTerminalFocusedElement && typeof lastTerminalFocusedElement.focus === 'function') {
-            lastTerminalFocusedElement.focus();
-        } else {
-            // fallback：嘗試把焦點交給某些常見按鈕（若存在）
-            const fallback = document.getElementById('openModalBtn') || document.getElementById('accountBtn') || document.getElementById('sidebarToggle');
-            if (fallback && typeof fallback.focus === 'function') fallback.focus();
-        }
-    } catch (e) { /* ignore focus errors */ }
-
-    // 在確保 focus 移出後更新 aria（避免 assistive tech 在有 focus 時被隱藏）
-    terminalBack.setAttribute('aria-hidden', 'true');
-
-    // 移除 ESC 監聽
-    if (terminalEscHandler) {
-        document.removeEventListener('keydown', terminalEscHandler);
-        terminalEscHandler = null;
-    }
-    lastTerminalFocusedElement = null;
-}
-
 function aboutAPP() {
     showUpdatePanel('關於 UMCL', {url: './docs/index.html#/about.md' });
 }
-
-
-function terminal_show(message, e) {
-    const terminalOutput = document.getElementById('terminalOutput');
-    const terminalBack = document.getElementById('terminal');
-    if (terminalOutput) {
-        terminalBack.classList.add('show');
-        terminalOutput.value += message + '\n';
-        terminalOutput.scrollTop = terminalOutput.scrollHeight;
-    }
-}
-
 
 document.addEventListener('DOMContentLoaded', () => {
   const $ = id => document.getElementById(id);
@@ -467,7 +384,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <button class="menu-btn" style="text-align: center;" onclick="showUpdatePanel('日誌', {url: 'http://localhost:1936/logs/'})">📄 查看日誌</button>
         <button class="menu-btn" style="text-align: center;" onclick="showMsg('測試 Msgbox', '這是一個全局的訊息框測試')">🧪 測試 Msgbox</button>
         <button class="menu-btn" style="text-align: center;" onclick="window.electronAPI.openDevTools()">ui除錯</button>
-        <button class="menu-btn" style="text-align: center;" onclick="eel.on_escape()">python除錯控制台</button>
+        <button class="menu-btn" style="text-align: center;" onclick="window.electronAPI.showTer()">python除錯控制台</button>
         <button class="menu-btn" style="text-align: center;" onclick="aboutAPP()">ℹ️ 關於 UMCL</button>
       </div>`;
       // 改為返回
@@ -506,7 +423,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const launchBtn = $('launchBtn');
   if (launchBtn) {
     launchBtn.addEventListener('click', () => {
-      terminalBack.classList.add('show');
       eel.launch_game()(function(response) {
         console.log("遊戲啟動結果", response);
       });
@@ -528,14 +444,6 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('選擇的版本：', selectedVersion);
     eel.load_versionSelect(selectedVersion);
   });
-
-  const terminalClose = document.getElementById('terminalClose');
-  const terminalBack = document.getElementById('terminal');
-  
-  // 綁定 terminal 關閉按鈕
-  if (terminalClose) {
-    terminalClose.addEventListener('click', closeTerminal);
-  }
 
   // 若需程式載入時就自動顯示 msgbox，可在此呼叫：
   // showMsg('歡迎', '啟動完成').then(...);

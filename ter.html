@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal</title>
+    <script src="/xterm.js"></script>
+    <link rel="stylesheet" href="/xterm.css">
+    <script src="/xterm-addon-fit.js"></script>
+    <script src="/eel.js"></script>
+</head>
+<body>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #terminal {
+            width: 100vw;
+            height: 100vh;
+            display: block; /* 確保它是區塊元素 */
+        }
+    </style>
+    <div id="terminal"></div>
+
+<script>
+    eel.expose(on_terminal_exit);
+    function on_terminal_exit() {
+        console.log("Terminal exited");
+    }
+    // 確保只宣告一次 term
+    const term = new Terminal({ 
+        allowTransparency: true, 
+        cursorBlink: true,
+        theme: { background: 'transparent' } 
+    });
+
+    // 偵錯：檢查 Addon 是否存在
+    if (window.FitAddon) {
+        const fitAddon = new FitAddon.FitAddon();
+        term.loadAddon(fitAddon);
+        console.log("FitAddon loaded successfully");
+        
+        window.resizeTerminal = function() {
+            try {
+                fitAddon.fit(); 
+                console.log(`Resizing: Cols ${term.cols}, Rows ${term.rows}`);
+                eel.resize_pty(term.cols, term.rows);
+            } catch (e) {
+                console.error("Fit error:", e);
+            }
+        };
+    } else {
+        console.error("FitAddon not found! Please check your script tags.");
+    }
+
+    term.open(document.getElementById('terminal'));
+
+    term.onData(data => {
+        eel.send_to_pty(data);
+    });
+
+    eel.expose(on_pty_output);
+    function on_pty_output(data) {
+        term.write(data);
+    }
+
+    window.addEventListener('resize', () => {
+        if (window.resizeTerminal) window.resizeTerminal();
+    });
+
+    window.onload = function() {
+        console.log("Page loaded, starting backend...");
+        eel.start(); // 觸發你 Python 端的 start()
+        setTimeout(() => {
+            if (window.resizeTerminal) window.resizeTerminal();
+        }, 500); // 給一點緩衝時間讓 DOM 渲染完畢
+    };
+</script>
+</body>
+</html>

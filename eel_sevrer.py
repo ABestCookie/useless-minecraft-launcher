@@ -16,6 +16,15 @@ import time
 import ctypes
 import json
 
+from winpty import PTY
+
+#cui選單部分
+from prompt_toolkit import Application
+from prompt_toolkit.key_binding import KeyBindings
+from prompt_toolkit.layout import Layout, HSplit
+from prompt_toolkit.widgets import Frame, Label
+from prompt_toolkit.formatted_text import HTML
+
 # 強制標準輸出使用 UTF-8，啟用 line buffering 避免輸出卡住
 try:
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', line_buffering=True)
@@ -24,11 +33,6 @@ except AttributeError:
     pass
 lan_stop=True
 
-show_console = False
-
-# 取得 Windows 控制台的視窗控制權
-kernel32 = ctypes.WinDLL('kernel32')
-user32 = ctypes.WinDLL('user32')
 
 
 logger = logging.getLogger()
@@ -51,25 +55,69 @@ console_handler.setFormatter(formatter)
 logger.addHandler(file_handler)
 logger.addHandler(console_handler)
 
+# 儲存使用者目前正在輸入的文字
+user_input_buffer = ""
 
-def toggle_console(show=True):
-    logger.info(f"切換控制台顯示狀態: {'顯示' if show else '隱藏'}")
-    # 取得當前控制台視窗句柄
-    hWnd = kernel32.GetConsoleWindow()
-    if hWnd:
-        if show:
-            user32.ShowWindow(hWnd, 5) # 5 = SW_SHOW (顯示)
-        else:
-            user32.ShowWindow(hWnd, 0) # 0 = SW_HIDE (隱藏)
+# --- 1. 核心：監聽自身的類別 ---
+class EelStdout:
+    def __init__(self):
+        self.terminal = sys.__stdout__ # 保留原始系統輸出到黑框框
 
-@eel.expose          
-def on_escape():
-    global show_console
-    show_console = not show_console
-    toggle_console(show_console)
+    def write(self, message):
+        self.terminal.write(message)   # 依然在開發終端印出
+        if message:
+            try:
+                # 這裡直接呼叫前端的 on_pty_output
+                eel.on_pty_output(message)
+            except:
+                pass
+
+    def flush(self):
+        self.terminal.flush()
+        
+        
+# --- 2. 替換系統輸出 ---
+sys.stdout = EelStdout()
+sys.stderr = EelStdout()
+
+@eel.expose
+def send_to_pty(data):
+    global user_input_buffer
     
-kernel32.AllocConsole()
-toggle_console(False)
+    # 處理特殊按鍵
+    if data == '\r': # 按下 Enter
+        print(f"\n[執行指令]: {user_input_buffer}") # 這會觸發 stdout 傳回前端
+        
+        # --- 這裡放你的邏輯判斷 ---
+        if user_input_buffer.lower() == "help":
+            print("可用指令: help, clear, exit, start_game")
+        elif user_input_buffer.lower() == "exit":
+            import os
+            os._exit(0)
+        # -----------------------
+        
+        user_input_buffer = "" # 清空緩衝區
+    elif data == '\x7f': # 退格鍵 (Backspace)
+        if len(user_input_buffer) > 0:
+            user_input_buffer = user_input_buffer[:-1]
+            eel.on_pty_output('\b \b') # 通知前端刪除一個字元
+    else:
+        user_input_buffer += data
+        eel.on_pty_output(data) # 讓使用者看到的輸入即時顯示（回顯）
+
+@eel.expose
+def start():
+    print("=== Useless Launcher Console ===")
+    print("請輸入指令 (輸入 'help' 查看更多):")
+    
+@eel.expose
+def resize_pty(cols, rows):
+    """同步前端與後端的終端機大小"""
+    print(f"Resizing PTY to {cols} cols and {rows} rows")
+    try:
+        process.set_size(cols, rows)
+    except Exception as e:
+        print(f"Resize Error: {e}") 
 
 
 def show_wan(port):
@@ -144,7 +192,7 @@ def run_command(command):
     
     # 即時循環讀取每一行
     for line in process.stdout:
-        eel.terminal_show(line.strip())
+        print(line.strip())
         # 在這裡可以進行日誌寫入文件、GUI 更新或條件判斷
 
     # 等待進程結束並獲取回傳碼
