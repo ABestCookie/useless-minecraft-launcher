@@ -32,11 +32,15 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "start python eel_sevrer.py",
+    "dev": "start python eel_sevrer.py",
+    "dev_electron": "start electron .",
     "build": "electron-builder"
   },
   "devDependencies": {
     "electron": "^40.8.0",
     "electron-builder": "^26.8.1"
+  },
+  "dependencies": {
+    "@xterm/xterm": "^6.0.0"
   }
 }

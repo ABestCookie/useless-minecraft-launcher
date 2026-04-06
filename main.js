@@ -1,103 +1,121 @@
-const { app, BrowserWindow, shell } = require('electron');
+const { app, BrowserWindow, shell, ipcMain } = require('electron');  // ipcMain 移到這裡
 const path = require('path');
 const http = require('http');
 
+// 共用的 webPreferences
+const sharedWebPrefs = {
+  preload: path.join(__dirname, 'preload.js'),
+  nodeIntegration: false,
+  contextIsolation: true,
+};
 
 function createWindow() {
+  // ── 主視窗 ──────────────────────────────────────────
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
+    show: false,                          // 加上這個避免白屏
     alwaysOnTop: false,
     autoHideMenuBar: true,
-    icon: path.join(__dirname, 'art/java.ico'), // 實現你之前想要的強制最上層
-    webPreferences: {
-      preload: path.join(__dirname, 'preload.js'), // 載入剛剛建的檔案
-      nodeIntegration: false, // 為了安全，通常設為 false
-      contextIsolation: true, // 啟用上下文隔離，增強安全性
+    icon: path.join(__dirname, 'art/java.ico'),
+    webPreferences: sharedWebPrefs
+  });
+
+  // ── ter 視窗（背景常駐）─────────────────────────────
+  const terWindow = new BrowserWindow({
+    width: 900,
+    height: 650,
+    show: false,                          // 隱藏，等前端呼叫才顯示
+    alwaysOnTop: true,                    // 呼出時保持最上層
+    autoHideMenuBar: true,
+    skipTaskbar: true,                    // 不出現在工作列
+    icon: path.join(__dirname, 'art/java.ico'),
+    webPreferences: sharedWebPrefs
+  });
+
+  // ── IPC 事件 ─────────────────────────────────────────
+  ipcMain.on('open-devtools', () => {
+    mainWindow.webContents.openDevTools({ mode: 'detach' });
+  });
+
+  ipcMain.on('show-ter', () => {
+    if (terWindow.isVisible()) {
+      terWindow.focus();
+    } else {
+      terWindow.show();
     }
   });
-  // 監聽前端發來的訊號
-  const { ipcMain } = require('electron');
-  ipcMain.on('open-devtools', () => {
-      mainWindow.webContents.openDevTools({mode: 'detach' });
+
+  ipcMain.on('hide-ter', () => {
+    terWindow.hide();
   });
-  
-    
-    
-  // 載入你的本地 HTTP 伺服器網址，並重試直到連上
-  let isLoaded = false;
 
-  function checkServerAndLoad() {
-    if (isLoaded) return;
+  ipcMain.on('toggle-ter', () => {
+    terWindow.isVisible() ? terWindow.hide() : terWindow.show();
+  });
 
-    const req = http.request({
-      hostname: 'localhost',
-      port: 486,
-      path: '/',
-      method: 'GET',
-      timeout: 5000
-    }, (res) => {
-      
-      if (res.statusCode === 200) {
-        mainWindow.loadURL('http://localhost:486');
-      } else {
-        
-        setTimeout(checkServerAndLoad, 1000);
-      }
-    });
+  // ── 載入邏輯（共用，帶重試）──────────────────────────
+  function loadWhenReady(window, url) {
+    let isLoaded = false;
 
-    req.on('error', (err) => {
-      
-      setTimeout(checkServerAndLoad, 1000);
-    });
+    function check() {
+      if (isLoaded) return;
+      const req = http.request(
+        { hostname: 'localhost', port: 486, path: new URL(url).pathname, method: 'GET', timeout: 5000 },
+        (res) => {
+          if (res.statusCode === 200) {
+            window.loadURL(url);
+          } else {
+            setTimeout(check, 1000);
+          }
+        }
+      );
+      req.on('error', () => setTimeout(check, 1000));
+      req.on('timeout', () => { req.destroy(); setTimeout(check, 1000); });
+      req.end();
+    }
 
-    req.on('timeout', () => {
-      
-      req.destroy();
-      setTimeout(checkServerAndLoad, 1000);
-    });
-
-    req.end();
+    window.webContents.on('did-finish-load', () => { isLoaded = true; });
+    check();
   }
 
-  mainWindow.webContents.on('did-finish-load', () => {
-    
-    isLoaded = true;
+  // 兩個視窗同時開始嘗試載入
+  loadWhenReady(mainWindow, 'http://localhost:486');
+  loadWhenReady(terWindow,  'http://localhost:486/ter.html');
+
+  // 主視窗渲染完才顯示
+  mainWindow.once('ready-to-show', () => {
+    mainWindow.show();
   });
 
-  checkServerAndLoad(); // 初始檢查並載入 
-  
-
-  // --- 攔截跳轉邏輯 ---
-  
-  // 1. 防止主視窗內容被換掉 (will-navigate)
-  mainWindow.webContents.on('will-navigate', (event, url) => {
-    const currentUrl = mainWindow.webContents.getURL();
-    // 如果跳轉目標不是原本的伺服器，就攔截
-    if (!url.startsWith('http://localhost:8080')) {
+  // ter 視窗關閉按鈕改成「隱藏」而非真的關閉
+  terWindow.on('close', (event) => {
+    if (!app.isQuiting) {
       event.preventDefault();
-      shell.openExternal(url); // 改用外部瀏覽器開啟 (如 Chrome)
+      terWindow.hide();
     }
   });
 
-  // 2. 處理 window.open(url, '_blank')
+  // ── 攔截跳轉（主視窗）────────────────────────────────
+  mainWindow.webContents.on('will-navigate', (event, url) => {
+    if (!url.startsWith('http://localhost:486')) {
+      event.preventDefault();
+      shell.openExternal(url);
+    }
+  });
+
   mainWindow.webContents.setWindowOpenHandler(({ url }) => {
-    // 檢查：如果網址包含 'setting.html' 或者是你本地伺服器的檔案
     if (url.includes('setting.html') || url.startsWith('http://localhost:486')) {
-      
-      return { 
+      return {
         action: 'allow',
         overrideBrowserWindowOptions: {
           width: 700,
           height: 800,
-          alwaysOnTop: true, // 設定頁面也可以考慮置頂
-          autoHideMenuBar: true // 隱藏上方選單讓它更像一個獨立 App
+          alwaysOnTop: true,
+          autoHideMenuBar: true
         }
       };
     }
-
-    // 其他外部連結（如 Google, Discord）依然丟給瀏覽器
-    
     shell.openExternal(url);
     return { action: 'deny' };
   });
@@ -105,7 +123,8 @@ function createWindow() {
 
 app.whenReady().then(createWindow);
 
-// 當所有視窗關閉時退出程式 (Windows/Linux 標準)
+app.on('before-quit', () => { app.isQuiting = true; });
+
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') app.quit();
 });

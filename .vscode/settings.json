@@ -1,4 +1,11 @@
 {
     "python-envs.defaultEnvManager": "ms-python.python:system",
-    "python-envs.pythonProjects": []
+    "python-envs.pythonProjects": [],
+    "workbench.colorCustomizations": {
+
+    },
+    "editor.tokenColorCustomizations": {
+        "comments": "#0b9001fc"              // 註解顏色
+    }
+
 }
