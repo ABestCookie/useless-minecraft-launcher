@@ -19,7 +19,7 @@ pack_build/
 # --- Minecraft 啟動器專屬 (極重要) ---
 # 這裡排除你在開發時產生的遊戲資料與設定
 user_data/
-
+plugin/
 _internal/
 dist_electron/
 

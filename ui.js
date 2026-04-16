@@ -22,7 +22,7 @@ let lastUpdatePanelFocusedElement = null;
  * @param {object} options - 其他選項（暫保留擴展）
  * @returns {Promise<'closed'>} - Promise，resolve 為 'closed'
  */
-function showUpdatePanel(title = '更新說明', content = '', options = {}) {
+function showUpdatePanel(title = '更新說明', content = '', options = {}, subaru = false) {
   // 延遲初始化，確保 DOM 已加載
   if (!updatePanelBack) {
     updatePanelBack = document.getElementById('updatePanelBack');
@@ -39,7 +39,7 @@ function showUpdatePanel(title = '更新說明', content = '', options = {}) {
   // 清空內容區
   updatePanelContent.innerHTML = '';
   //小小彩蛋
-  if (options.subaru) {
+  if (subaru === true) {
     updatePanelContent.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/eQhMS-KYZEY?si=Qm1hQTRigpnR4ydp&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
 
 // 處理內容：支援字符串（HTML）或對象（html/url）
@@ -109,10 +109,6 @@ function showUpdatePanel(title = '更新說明', content = '', options = {}) {
     };
     updatePanelBack.addEventListener('click', onBackClick);
   });
-}
-
-function subaru() {
-  showUpdatePanel('嘻嘻嘻嘻嘻嘻', {subaru: true});
 }
 
 // 暴露給 eel（Python 可直接呼叫）
@@ -381,7 +377,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (list) list.innerHTML = `
       <div style="padding:12px;color:#666">
         <button class="menu-btn" style="text-align: center;" onclick="window.open('./setting.html', '_blank', 'width=700,height=800')">⚙️ 更改設定</button>
-        <button class="menu-btn" style="text-align: center;" onclick="showUpdatePanel('日誌', {url: 'http://localhost:1936/logs/'})">📄 查看日誌</button>
+        <button class="menu-btn" style="text-align: center;" onclick="window.open('./modern_log_viewer.html', '_blank')">📄 查看日誌</button>
         <button class="menu-btn" style="text-align: center;" onclick="showMsg('測試 Msgbox', '這是一個全局的訊息框測試')">🧪 測試 Msgbox</button>
         <button class="menu-btn" style="text-align: center;" onclick="window.electronAPI.openDevTools()">ui除錯</button>
         <button class="menu-btn" style="text-align: center;" onclick="window.electronAPI.showTer()">python除錯控制台</button>

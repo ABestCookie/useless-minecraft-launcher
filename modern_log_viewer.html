@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Useless Launcher - Log Center</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.1.0/pako.min.js"></script>
+    <script src="eel.js"></script>
+    <style>
+        :root {
+            --bg-color: #050505;
+            /* 調整面板透明度 (0.7 -> 0.5) 讓背景更明顯 */
+            --container-bg: rgba(20, 20, 20, 0.5); 
+            --header-bg: rgba(30, 30, 30, 0.8);
+            --text-main: #e0e0e0;
+            --text-dim: #888;
+            --accent-color: #4fc3f7;
+            --info-color: #81c784;
+            --warn-color: #ffd54f;
+            --error-color: #e57373;
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --mark-bg: #ffeb3b; 
+            --mark-text: #000;
+        }
+
+        body {
+            background: url('art/background.png');
+
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'JetBrains Mono', 'Fira Code', monospace;
+            margin: 0;
+            padding: 10px;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+
+        .glass-panel {
+            width: 100%;
+            height: 100%;
+            background: var(--container-bg);
+            backdrop-filter: blur(25px);  /*增強模糊感 */
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+        }
+
+        /* 標頭與內容樣式維持不變... */
+        .log-header {
+            background: var(--header-bg);
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid var(--glass-border);
+            flex-wrap: wrap; /* 關鍵：允許換行 */
+        }
+
+        .title-group h1 { font-size: 0.9rem; margin: 0; color: var(--accent-color); white-space: nowrap; }
+
+        .log-selector, .search-box {
+            background: rgba(0, 0, 0, 0.4);
+            color: var(--text-main);
+            border: 1px solid var(--glass-border);
+            border-radius: 4px;
+            padding: 6px 8px;
+            font-size: 0.8rem;
+            outline: none;
+        }
+
+        .search-box { width: 140px; transition: width 0.3s; }
+        .search-box:focus { width: 180px; border-color: var(--accent-color); }
+
+        .local-file-label {
+            background: rgba(79, 195, 247, 0.1);
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .filter-group { display: flex; gap: 5px; margin-left: auto; }
+        
+        /* 響應式優化：小螢幕配置 (手機或縮小視窗) */
+        @media (max-width: 768px) {
+            body { padding: 5px; }
+            .log-header { padding: 8px; gap: 8px; }
+            
+            .title-group { width: 100%; margin-bottom: 2px; } /* 標題佔滿一行 */
+            
+            .log-selector, .search-box, .local-file-label {
+                flex-grow: 1; /* 讓元件自動撐開 */
+                font-size: 0.75rem;
+            }
+            
+            .search-box { width: auto; min-width: 100px; }
+            .search-box:focus { width: auto; }
+            
+            .filter-group { 
+                width: 100%; 
+                margin-left: 0; 
+                justify-content: space-between; 
+                padding-top: 5px;
+                border-top: 1px solid rgba(255,255,255,0.05);
+            }
+            
+            .filter-btn { flex: 1; text-align: center; padding: 8px 0; }
+            
+            .timestamp { width: 70px; font-size: 0.75rem; }
+            .level-tag { width: 50px; font-size: 0.75rem; }
+            .log-row { padding: 4px 10px; font-size: 0.8rem; }
+        }
+
+        /* 超小螢幕進一步縮寫標籤 */
+        @media (max-width: 480px) {
+            .timestamp { display: none; } /* 隱藏時間戳以騰出空間 */
+            .level-tag { width: 45px; }
+        }
+
+        .filter-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            color: var(--text-dim);
+            padding: 4px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.75rem;
+            transition: 0.2s;
+        }
+        .filter-btn.active[data-level="info"] { color: var(--info-color); border-color: var(--info-color); background: rgba(129, 199, 132, 0.1); }
+        .filter-btn.active[data-level="warn"] { color: var(--warn-color); border-color: var(--warn-color); background: rgba(255, 213, 79, 0.1); }
+        .filter-btn.active[data-level="error"] { color: var(--error-color); border-color: var(--error-color); background: rgba(229, 115, 115, 0.1); }
+
+        .log-content { flex-grow: 1; overflow-y: auto; padding: 10px 0; scrollbar-width: thin; }
+        .log-row { display: flex; padding: 2px 20px; font-size: 0.85rem; border-left: 3px solid transparent; }
+        .log-row.info { border-left-color: var(--info-color); }
+        .log-row.warn { border-left-color: var(--warn-color); }
+        .log-row.error { border-left-color: var(--error-color); }
+        .timestamp { color: var(--text-dim); width: 85px; flex-shrink: 0; }
+        .level-tag { width: 55px; flex-shrink: 0; font-weight: bold; margin-right: 8px; }
+        .message { flex-grow: 1; word-break: break-all; }
+
+        body.hide-info .log-row.info, body.hide-warn .log-row.warn, body.hide-error .log-row.error { display: none; }
+    </style>
+</head>
+<body ondragover="handleDragOver(event)" ondragleave="handleDragLeave()" ondrop="handleDrop(event)">
+
+
+    <div class="glass-panel">
+        <div class="log-header">
+            <div class="title-group"><h1>LOG CENTER</h1></div>
+            
+            <select class="log-selector" id="fileSelector" onchange="onFileChanged()">
+                <option value="">遠端檔案...</option>
+            </select>
+
+            <label class="local-file-label">
+                開啟本地
+                <input type="file" id="localFileInput" style="display:none" accept=".log,.gz,.txt" onchange="handleFileSelect(event)">
+            </label>
+
+            <input type="text" class="search-box" id="searchInput" placeholder="搜尋..." oninput="handleSearch()">
+
+            <div class="filter-group">
+                <button class="filter-btn active" data-level="info" onclick="toggleLevel('info')">INFO</button>
+                <button class="filter-btn active" data-level="warn" onclick="toggleLevel('warn')">WARN</button>
+                <button class="filter-btn active" data-level="error" onclick="toggleLevel('error')">ERR</button>
+                <button class="filter-btn" onclick="clearLogs()">CLR</button>
+            </div>
+        </div>
+
+        <div class="log-content" id="logContainer">
+            </div>
+    </div>
+
+<script>
+    // JS 邏輯維持不變 (已整合高亮、Eel 接口、純 JS 讀取與小屏優化)
+    const container = document.getElementById('logContainer');
+    const selector = document.getElementById('fileSelector');
+    let originalData = [];
+
+    if (window.eel) {
+        eel.expose(addLog);
+    }
+
+    function updateFileList() {
+        eel.updatefilelist()(list => {
+            selector.innerHTML = '<option value="">遠端檔案...</option>';
+            if (!Array.isArray(list)) {
+                console.warn('updatefilelist returned invalid value:', list);
+                return;
+            }
+            list.forEach(f => { const o = document.createElement('option'); o.value = o.innerText = f; selector.appendChild(o); });
+            loadLatestLog(list);
+        });
+    }
+
+    function loadLatestLog(list) {
+        if (!Array.isArray(list) || list.length === 0) return;
+        const latest = list.includes('latest.log') ? 'latest.log' : list.slice().sort().pop();
+        selector.value = latest;
+        onFileChanged();
+    }
+
+    function addLog(level, msg, trace = null) {
+        const time = new Date().toLocaleTimeString('zh-TW', {hour12:false});
+        const newData = { time, level, msg, trace };
+        originalData.push(newData);
+        const term = document.getElementById('searchInput').value.toLowerCase();
+        if (!term || msg.toLowerCase().includes(term)) { renderLogRow(newData); }
+    }
+
+    function renderLogRow(data) {
+        const row = document.createElement('div');
+        row.className = `log-row ${data.level.toLowerCase()}`;
+        const term = document.getElementById('searchInput').value;
+        let displayMsg = data.msg;
+        if (term && term.trim() !== "") {
+            const regex = new RegExp(`(${escapeRegExp(term)})`, 'gi');
+            displayMsg = data.msg.replace(regex, '<mark>$1</mark>');
+        }
+        row.innerHTML = `<span class="timestamp">${data.time}</span><span class="level-tag">[${data.level.toUpperCase()}]</span><span class="message">${displayMsg}</span>`;
+        container.appendChild(row);
+        container.scrollTop = container.scrollHeight;
+    }
+
+    function handleSearch() {
+        const term = document.getElementById('searchInput').value.toLowerCase();
+        container.innerHTML = '';
+        originalData.forEach(data => { if (!term || data.msg.toLowerCase().includes(term)) renderLogRow(data); });
+    }
+
+    function escapeRegExp(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+    async function onFileChanged() {
+        if (!selector.value) return;
+        clearLogs();
+
+        if (window.electronAPI?.readLogFile) {
+            const content = await window.electronAPI.readLogFile(selector.value);
+            if (typeof content === 'string') {
+                processFile(content);
+                return;
+            }
+            console.warn('readLogFile returned non-string content:', content);
+        }
+
+        if (window.eel) {
+            eel.read_log_file(selector.value)((content) => {
+                if (typeof content === 'string') {
+                    processFile(content);
+                } else {
+                    console.warn('read_log_file returned non-string content:', content);
+                }
+            });
+        }
+    }
+    function toggleLevel(l) { 
+        document.body.classList.toggle(`hide-${l}`); 
+        document.querySelector(`[data-level="${l}"]`).classList.toggle('active'); 
+    }
+    function clearLogs() { container.innerHTML = ''; originalData = []; }
+
+    function handleFileSelect(e) { processFile(e.target.files[0]); }
+    function handleDragOver(e) { e.preventDefault(); document.body.classList.add('drag-over'); }
+    function handleDragLeave() { document.body.classList.remove('drag-over'); }
+    function handleDrop(e) { e.preventDefault(); document.body.classList.remove('drag-over'); processFile(e.dataTransfer.files[0]); }
+
+    async function processFile(fileOrText) {
+        if (!fileOrText) return;
+        clearLogs();
+
+        if (typeof fileOrText === 'string') {
+            parseLogText(fileOrText);
+            return;
+        }
+
+        const file = fileOrText;
+        if (!(file instanceof File)) {
+            console.warn('processFile expected File or string, got:', fileOrText);
+            return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            let text = "";
+            try {
+                if (file.name.endsWith('.gz')) {
+                    text = new TextDecoder("utf-8").decode(pako.ungzip(new Uint8Array(e.target.result)));
+                } else { text = e.target.result; }
+                parseLogText(text);
+            } catch (err) { addLog('error', `解析失敗: ${err.message}`); }
+        };
+        file.name.endsWith('.gz') ? reader.readAsArrayBuffer(file) : reader.readAsText(file);
+    }
+
+    function parseLogText(text) {
+        text.split('\n').forEach(line => {
+            if (!line.trim()) return;
+            let lv = line.toUpperCase().includes('ERROR') ? 'error' : (line.toUpperCase().includes('WARN') ? 'warn' : 'info');
+            addLog(lv, line.trim());
+        });
+    }
+    window.onload = updateFileList;
+</script>
+</body>
+</html>

@@ -32,6 +32,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start_ter": "start python terminal_main.py",
     "dev": "start python eel_sevrer.py",
     "dev_electron": "start electron .",
     "build": "electron-builder"

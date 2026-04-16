@@ -1,5 +1,6 @@
 const { app, BrowserWindow, shell, ipcMain } = require('electron');  // ipcMain 移到這裡
 const path = require('path');
+const fs = require('fs');
 const http = require('http');
 
 // 共用的 webPreferences
@@ -21,38 +22,25 @@ function createWindow() {
     webPreferences: sharedWebPrefs
   });
 
-  // ── ter 視窗（背景常駐）─────────────────────────────
-  const terWindow = new BrowserWindow({
-    width: 900,
-    height: 650,
-    show: false,                          // 隱藏，等前端呼叫才顯示
-    alwaysOnTop: true,                    // 呼出時保持最上層
-    autoHideMenuBar: true,
-    skipTaskbar: true,                    // 不出現在工作列
-    icon: path.join(__dirname, 'art/java.ico'),
-    webPreferences: sharedWebPrefs
-  });
-
   // ── IPC 事件 ─────────────────────────────────────────
   ipcMain.on('open-devtools', () => {
     mainWindow.webContents.openDevTools({ mode: 'detach' });
   });
 
-  ipcMain.on('show-ter', () => {
-    if (terWindow.isVisible()) {
-      terWindow.focus();
-    } else {
-      terWindow.show();
+  ipcMain.handle('read-log-file', async (event, filename) => {
+    const safeName = path.basename(String(filename));
+    const filePath = path.join(__dirname, 'logs', safeName);
+    try {
+      if (!fs.existsSync(filePath) || !fs.statSync(filePath).isFile()) {
+        return '';
+      }
+      return fs.readFileSync(filePath, { encoding: 'utf8' });
+    } catch (error) {
+      console.warn('read-log-file failed:', error);
+      return '';
     }
   });
 
-  ipcMain.on('hide-ter', () => {
-    terWindow.hide();
-  });
-
-  ipcMain.on('toggle-ter', () => {
-    terWindow.isVisible() ? terWindow.hide() : terWindow.show();
-  });
 
   // ── 載入邏輯（共用，帶重試）──────────────────────────
   function loadWhenReady(window, url) {
@@ -81,20 +69,12 @@ function createWindow() {
 
   // 兩個視窗同時開始嘗試載入
   loadWhenReady(mainWindow, 'http://localhost:486');
-  loadWhenReady(terWindow,  'http://localhost:486/ter.html');
 
   // 主視窗渲染完才顯示
   mainWindow.once('ready-to-show', () => {
     mainWindow.show();
   });
 
-  // ter 視窗關閉按鈕改成「隱藏」而非真的關閉
-  terWindow.on('close', (event) => {
-    if (!app.isQuiting) {
-      event.preventDefault();
-      terWindow.hide();
-    }
-  });
 
   // ── 攔截跳轉（主視窗）────────────────────────────────
   mainWindow.webContents.on('will-navigate', (event, url) => {

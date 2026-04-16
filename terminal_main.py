@@ -3,10 +3,11 @@ from winpty import PTY
 import threading
 import os
 import sys  # 必須引入 sys 才能重導向輸出
+import json
 
 # 初始化 PTY，啟動 cmd.exe
 process = PTY(80, 24)
-process.spawn(r"cmd.exe")
+process.spawn("python eel_sevrer.py")  # 啟動後端主程式，這裡可以換成你想啟動的命令
 
 @eel.expose
 def send_to_pty(data):
@@ -47,6 +48,6 @@ def start():
     threading.Thread(target=read_from_pty, daemon=True).start()
 
 eel.init('.')
-# 測試監聽：這行現在會出現在你的 HTML 終端機裡
-print("[系統] Python 監聽已啟動...") 
-eel.start('ter.html', size=(800, 600))
+
+
+eel.start('ter.html', size=(800, 600), mode='custom', port=5090, cmdline_args=cmd)

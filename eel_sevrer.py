@@ -15,6 +15,7 @@ import traceback
 import time
 import ctypes
 import json
+import gzip
 
 from winpty import PTY
 
@@ -55,69 +56,6 @@ console_handler.setFormatter(formatter)
 logger.addHandler(file_handler)
 logger.addHandler(console_handler)
 
-# 儲存使用者目前正在輸入的文字
-user_input_buffer = ""
-
-# --- 1. 核心：監聽自身的類別 ---
-class EelStdout:
-    def __init__(self):
-        self.terminal = sys.__stdout__ # 保留原始系統輸出到黑框框
-
-    def write(self, message):
-        self.terminal.write(message)   # 依然在開發終端印出
-        if message:
-            try:
-                # 這裡直接呼叫前端的 on_pty_output
-                eel.on_pty_output(message)
-            except:
-                pass
-
-    def flush(self):
-        self.terminal.flush()
-        
-        
-# --- 2. 替換系統輸出 ---
-sys.stdout = EelStdout()
-sys.stderr = EelStdout()
-
-@eel.expose
-def send_to_pty(data):
-    global user_input_buffer
-    
-    # 處理特殊按鍵
-    if data == '\r': # 按下 Enter
-        print(f"\n[執行指令]: {user_input_buffer}") # 這會觸發 stdout 傳回前端
-        
-        # --- 這裡放你的邏輯判斷 ---
-        if user_input_buffer.lower() == "help":
-            print("可用指令: help, clear, exit, start_game")
-        elif user_input_buffer.lower() == "exit":
-            import os
-            os._exit(0)
-        # -----------------------
-        
-        user_input_buffer = "" # 清空緩衝區
-    elif data == '\x7f': # 退格鍵 (Backspace)
-        if len(user_input_buffer) > 0:
-            user_input_buffer = user_input_buffer[:-1]
-            eel.on_pty_output('\b \b') # 通知前端刪除一個字元
-    else:
-        user_input_buffer += data
-        eel.on_pty_output(data) # 讓使用者看到的輸入即時顯示（回顯）
-
-@eel.expose
-def start():
-    print("=== Useless Launcher Console ===")
-    print("請輸入指令 (輸入 'help' 查看更多):")
-    
-@eel.expose
-def resize_pty(cols, rows):
-    """同步前端與後端的終端機大小"""
-    print(f"Resizing PTY to {cols} cols and {rows} rows")
-    try:
-        process.set_size(cols, rows)
-    except Exception as e:
-        print(f"Resize Error: {e}") 
 
 
 def show_wan(port):
@@ -268,7 +206,7 @@ def launch_game():
         jvm = []
 
     try:
-        eel.terminal_show("等待完整性驗證...") 
+        print("等待完整性驗證...") 
         core.Launcher.install_game(ver=select_ver, Callback=process_bar)
         threading.Thread(target=auto_wan_sharing).start()  # 啟動局域網穿透偵測線程
         cmd = core.Launcher.normal(
@@ -362,7 +300,30 @@ def account_write(name, account_type, skin=None):
     else:
         # 成功創建帳號，顯示成功消息
         eel.showMsg("成功", f"帳號 '{name}' 已成功創建。")
-    
+      
+      
+@eel.expose  
+def updatefilelist():
+    return os.listdir("logs/")
+
+@eel.expose
+def read_log_file(filename):
+    safe_name = os.path.basename(str(filename))
+    file_path = os.path.join("logs", safe_name)
+    if not os.path.isfile(file_path):
+        eel.showMsg("錯誤", f"檔案不存在：{safe_name}")
+        return ""
+    try:
+        if file_path.endswith(".gz"):
+            with gzip.open(file_path, "rt", encoding="utf-8", errors="ignore") as f:
+                return f.read()
+        else:
+            with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
+                return f.read()
+    except Exception as e:
+        eel.showMsg("錯誤", f"讀取檔案失敗：{e}")
+        return ""
+        
         
 def on_close(page, sockets):
     logger.info(f"頁面 {page} 已關閉")
@@ -374,8 +335,7 @@ def on_close(page, sockets):
 if __name__ == "__main__":
     with open("app_config/electron_path.json", "r") as f:
         electron_path = json.load(f).get("electron_path", "")
-    cmd=[electron_path,
-         ".",]
+        cmd=[electron_path, "."]
     
     def start_eel():
         eel.init(".")

@@ -1,29 +1,29 @@
-from imgui_bundle import imgui, immapp
-import pyperclip
+# pip install textual
+from textual.app import App, ComposeResult
+from textual.widgets import Header, Footer, Static, ListView, ListItem, Label
+from textual.binding import Binding
 
-def gui():
-    # 這是你的 ngrok 網址
-    public_url = "0.tcp.jp.ngrok.io:12345"
+class MyApp(App):
+    CSS = """
+    Screen { background: #000080; }
+    ListView { border: solid white; background: #000080; }
+    ListItem.--highlight { background: #aaaaaa; color: #000080; }
+    """
 
-    # 設定 UI 內容
-    imgui.text("Minecraft 聯機助手")
-    imgui.separator()
-    imgui.text(f"網址: {public_url}")
+    BINDINGS = [
+        Binding("q", "quit", "離開"),
+        Binding("f1", "help", "說明"),
+    ]
 
-    if imgui.button("點擊複製網址"):
-        pyperclip.copy(public_url)
-        # 你可以加個狀態顯示「已複製」
-    
-    if imgui.button("關閉疊層"):
-        # 這裡可以直接控制結束程式
-        import os
-        os._exit(0)
+    def compose(self) -> ComposeResult:
+        yield Header()          # 自動產生頂部標題列
+        yield ListView(
+            ListItem(Label("開始新遊戲")),
+            ListItem(Label("載入存檔")),
+            ListItem(Label("設定")),
+            ListItem(Label("離開")),
+        )
+        yield Footer()          # 自動產生底部快捷鍵列
 
-# 啟動應用
-# immapp.run 會自動處理視窗建立、置頂邏輯
-immapp.run(
-    gui_function=gui, 
-    window_title="MC Helper Overlay",
-    window_size=(300, 150),
-    # 這裡可以加入更多參數，例如 window_restore_pos=False
-)
+app = MyApp()
+app.run()
